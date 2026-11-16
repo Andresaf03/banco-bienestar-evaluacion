@@ -1,0 +1,5 @@
+estimador,valor,ee,etiqueta,panel,diseno,resultado,fe_tamano,ic_bajo,ic_alto
+TWFE estático,12.5968361715169,2.62646067699059,municipio_trim_esc_inclusion_total_capt_ahorro_banca_pc,municipio_trim,escalonado,capt_ahorro_banca_pc,FALSE,7.44906783780469,17.7446045052292
+Sun y Abraham,10.4025486252889,2.64613963565899,municipio_trim_esc_inclusion_total_capt_ahorro_banca_pc,municipio_trim,escalonado,capt_ahorro_banca_pc,FALSE,5.21621024133338,15.5888870092445
+Borusyak et al.,16.4017242886044,3.16157414111674,municipio_trim_esc_inclusion_total_capt_ahorro_banca_pc,municipio_trim,escalonado,capt_ahorro_banca_pc,FALSE,10.2051528375625,22.5982957396464
+Callaway y Sant'Anna,2.40414343120263,3.70539783972626,municipio_trim_esc_inclusion_total_capt_ahorro_banca_pc,municipio_trim,escalonado,capt_ahorro_banca_pc,FALSE,-4.85830288305337,9.66658974545862

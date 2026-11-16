@@ -1,0 +1,5 @@
+estimador,valor,ee,etiqueta,panel,diseno,resultado,fe_tamano,ic_bajo,ic_alto
+TWFE estático,0.436709911310673,0.181170063988461,municipio_esc_estab_consumo_pc,municipio,escalonado,estab_consumo_pc,FALSE,0.0816231108164712,0.791796711804874
+Sun y Abraham,0.684513847855968,0.123657534782303,municipio_esc_estab_consumo_pc,municipio,escalonado,estab_consumo_pc,FALSE,0.442149533265646,0.926878162446291
+Borusyak et al.,0.714701523146181,0.196836217157194,municipio_esc_estab_consumo_pc,municipio,escalonado,estab_consumo_pc,FALSE,0.328909626664975,1.10049341962739
+Callaway y Sant'Anna,0.156975653625421,0.129579448305924,municipio_esc_estab_consumo_pc,municipio,escalonado,estab_consumo_pc,FALSE,-0.0969953981907599,0.410946705441601

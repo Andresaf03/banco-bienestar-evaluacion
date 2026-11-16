@@ -1,0 +1,8 @@
+lb,ub,method,Delta,Mbar,etiqueta,panel,diseno,resultado,referencia_e
+-4.07484805202398,5.88367992262411,C-LF,DeltaRM,0,municipio_elecciones_esc_elecciones_pct_bloque_gobierno,municipio_elecciones,escalonado,pct_bloque_gobierno,-1
+-5.68974448034531,6.96027754150498,C-LF,DeltaRM,0.25,municipio_elecciones_esc_elecciones_pct_bloque_gobierno,municipio_elecciones,escalonado,pct_bloque_gobierno,-1
+-8.11208912282727,8.5751739698263,C-LF,DeltaRM,0.5,municipio_elecciones_esc_elecciones_pct_bloque_gobierno,municipio_elecciones,escalonado,pct_bloque_gobierno,-1
+-12.9567784077912,12.3432656359094,C-LF,DeltaRM,1,municipio_elecciones_esc_elecciones_pct_bloque_gobierno,municipio_elecciones,escalonado,pct_bloque_gobierno,-1
+-17.8014676927552,16.3805067067127,C-LF,DeltaRM,1.5,municipio_elecciones_esc_elecciones_pct_bloque_gobierno,municipio_elecciones,escalonado,pct_bloque_gobierno,-1
+-22.9153063824393,20.6868971822362,C-LF,DeltaRM,2,municipio_elecciones_esc_elecciones_pct_bloque_gobierno,municipio_elecciones,escalonado,pct_bloque_gobierno,-1
+-4.01671156677923,5.82554343737931,Original,,,municipio_elecciones_esc_elecciones_pct_bloque_gobierno,municipio_elecciones,escalonado,pct_bloque_gobierno,-1

@@ -1,0 +1,9 @@
+{
+  "name": "presentacion-cdaii",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Deck de Ciencia de Datos Aplicada II (pptxgenjs); ver README.md",
+  "dependencies": {
+    "pptxgenjs": "^3.12.0"
+  }
+}

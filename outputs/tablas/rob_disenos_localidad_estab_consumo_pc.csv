@@ -1,0 +1,5 @@
+diseno,estimador,valor,ee,pre_sig,pre_n,pre_wald_p,resultado
+B1 panel completo,Callaway y Sant'Anna,1.5308197986572,0.290351015261675,1,15,0.0230560040466887,estab_consumo_pc
+B2 panel completo + FE semestre × decil,TWFE estático,4.14650018807012,0.240261331751979,,,,estab_consumo_pc
+B2 panel completo + FE semestre × decil,Sun y Abraham,2.42595033022826,0.169858312073107,,,,estab_consumo_pc
+B2 panel completo + FE semestre × decil,Borusyak et al.,4.41435063516915,0.23289558336053,,,,estab_consumo_pc

@@ -1,0 +1,5 @@
+estimador,valor,ee,etiqueta,panel,diseno,resultado,fe_tamano,ic_bajo,ic_alto
+TWFE estático,-0.0519270088624742,0.0548112915463985,municipio_esc_estab_restaurantes_pc,municipio,escalonado,estab_restaurantes_pc,FALSE,-0.15935516623954,0.0555011485145916
+Sun y Abraham,0.0193247126727484,0.0405623167450616,municipio_esc_estab_restaurantes_pc,municipio,escalonado,estab_restaurantes_pc,FALSE,-0.0601759672770784,0.0988253926225751
+Borusyak et al.,-0.0526942450981894,0.0651214388374467,municipio_esc_estab_restaurantes_pc,municipio,escalonado,estab_restaurantes_pc,FALSE,-0.180329919841013,0.074941429644634
+Callaway y Sant'Anna,0.01516222548513,0.0328405466166181,municipio_esc_estab_restaurantes_pc,municipio,escalonado,estab_restaurantes_pc,FALSE,-0.0492040631160502,0.0795285140863102

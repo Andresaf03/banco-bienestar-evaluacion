@@ -1,0 +1,8 @@
+lb,ub,method,Delta,Mbar,etiqueta,panel,diseno,resultado,referencia_e
+-0.215254804543366,0.131687528158379,C-LF,DeltaRM,0,municipio_efipem_esc_efipem_log_impuestos_pc,municipio_efipem,escalonado,log_impuestos_pc,-1
+-0.272027186258196,0.213692079524246,C-LF,DeltaRM,0.25,municipio_efipem_esc_efipem_log_impuestos_pc,municipio_efipem,escalonado,log_impuestos_pc,-1
+-0.335107610385786,0.302004673302872,C-LF,DeltaRM,0.5,municipio_efipem_esc_efipem_log_impuestos_pc,municipio_efipem,escalonado,log_impuestos_pc,-1
+-0.467576501053725,0.50386203051116,C-LF,DeltaRM,1,municipio_efipem_esc_efipem_log_impuestos_pc,municipio_efipem,escalonado,log_impuestos_pc,-1
+-0.618969518959941,0.718335472544966,C-LF,DeltaRM,1.5,municipio_efipem_esc_efipem_log_impuestos_pc,municipio_efipem,escalonado,log_impuestos_pc,-1
+-0.833442960993747,0.932808914578771,C-LF,DeltaRM,2,municipio_efipem_esc_efipem_log_impuestos_pc,municipio_efipem,escalonado,log_impuestos_pc,-1
+-0.218037456629412,0.134470180244425,Original,,,municipio_efipem_esc_efipem_log_impuestos_pc,municipio_efipem,escalonado,log_impuestos_pc,-1

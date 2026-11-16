@@ -1,0 +1,8 @@
+lb,ub,method,Delta,Mbar,etiqueta,panel,diseno,resultado,referencia_e
+0.231249073340004,0.436445509640517,C-LF,DeltaRM,0,localidad_act_estab_salud_pc,localidad,actualizaciones,estab_salud_pc,-9
+0.136543025816692,0.531151557163831,C-LF,DeltaRM,0.25,localidad_act_estab_salud_pc,localidad,actualizaciones,estab_salud_pc,-9
+-0.005516045468279,0.64164194594103,C-LF,DeltaRM,0.5,localidad_act_estab_salud_pc,localidad,actualizaciones,estab_salud_pc,-9
+-0.273849846784334,0.925760088510971,C-LF,DeltaRM,1,localidad_act_estab_salud_pc,localidad,actualizaciones,estab_salud_pc,-9
+-0.57375233060816,1.20987823108091,C-LF,DeltaRM,1.5,localidad_act_estab_salud_pc,localidad,actualizaciones,estab_salud_pc,-9
+-0.857870473178101,1.49399637365085,C-LF,DeltaRM,2,localidad_act_estab_salud_pc,localidad,actualizaciones,estab_salud_pc,-9
+0.215530868224214,0.45216371475631,Original,,,localidad_act_estab_salud_pc,localidad,actualizaciones,estab_salud_pc,-9

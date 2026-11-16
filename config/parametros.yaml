@@ -1,0 +1,494 @@
+# Parámetros del diseño. Ver docs/decisiones.md para el porqué de cada decisión.
+# Rediseño del 2026-09-26 (reunión con el asesor): la unidad principal pasa a ser la LOCALIDAD,
+# se agregan resultados reales (emprendimiento, consumo, salud) del DENUE y matching como
+# especificación alterna. Se prueban tres unidades: localidad, municipio y anillos.
+
+# ---------------------------------------------------------------- unidades y periodicidad
+unidades:
+  principal: "localidad"
+  todas: ["localidad", "municipio", "anillo"]
+  anillos_km: [1, 2, 5, 10]
+  # Muestra de localidades: evita las ~100 mil localidades diminutas donde un establecimiento
+  # mueve la tasa por mil habitantes de forma absurda.
+  # Aplica a **todas** las localidades, con sucursal o sin ella (desde 2026-09-29).
+  localidad_pob_minima: 50
+  # No se exige presencia en el DENUE: "cero establecimientos" es un dato válido, y exigirla
+  # dejaría fuera justo a las localidades más rurales (las 223 tratadas sin DENUE tienen mediana
+  # de 39 habitantes, así que el umbral de población ya las filtra).
+  localidad_requiere_denue: false
+
+periodicidad:
+  denue: "semestral"      # 18 versiones DENUE 2016-01 … 2025-05
+  bdif: "trimestral"      # 40 trimestres 2016T1 … 2025T4
+
+periodo:
+  # Panel semestral (DENUE): s = 1 en 2016S1. Las 18 versiones publicadas cubren 19 semestres
+  # calendario: el INEGI no publicó versión en la primera mitad de 2023, así que **2023S1 no
+  # existe para ninguna unidad** (hueco común, no desbalance entre unidades). El paquete `did`
+  # lo admite porque solo usa los valores de `tname` presentes en los datos.
+  semestral_inicio: "2016S1"
+  semestral_fin: "2025S1"
+  n_semestres_calendario: 19
+  n_versiones_denue: 18
+  semestres_sin_denue: ["2023S1"]
+  # Panel trimestral (BDIF, resultados financieros municipales): t = 1 en 2019T1
+  inicio: "2019Q1"
+  fin: "2024Q4"
+  # El panel trimestral de la BDIF llega a 2025T4 (fase 0, 2026-09-30): más periodos posteriores y
+  # las cohortes de 2025. `fin` se queda en 2024T4 para el DENUE y las localidades, y la ventana
+  # preregistrada del bloque financiero sigue siendo 2019T1–2024T4 (`estimacion.ventana_trimestral`).
+  fin_trimestral: "2025Q4"
+  robustez_inicio: "2016Q1"
+  n_trimestres: 24
+
+indice_t:
+  base: "2019Q1"
+  valor_base: 1
+  nunca_tratado: 0
+
+indice_s:
+  base: "2016S1"
+  valor_base: 1
+  nunca_tratado: 0
+
+# ---------------------------------------------------------------- tratamiento
+tratamiento:
+  definicion: >
+    Primer periodo en que la unidad tiene al menos una sucursal del Banco del Bienestar en
+    operación. A nivel municipio sale de `sucursales_bienestar.parquet` (BDIF neta de Banjército,
+    ver docs/data_audit.md P2). A nivel localidad se combina esa fecha municipal con el directorio
+    georreferenciado del Banco del Bienestar: en 1,270 de 1,482 cohortes hay una sola sucursal en
+    el municipio, así que la fecha identifica la localidad sin ambigüedad.
+  variable: "suc_bienestar"
+  umbral: 1
+  excluir_banjercito: true
+  ya_tratados_inicio: "excluir"   # alterna: "control" (Fonseca y Matray 2024)
+  localidad_ambigua: "excluir"    # municipios con 2+ sucursales; se incluyen en robustez
+  anticipacion:
+    base: 0
+    robustez: [1]
+
+grupo_comparacion:
+  principal: "notyettreated"
+  robustez: ["nevertreated"]
+
+# ---------------------------------------------------------------- resultados
+# Bloques temáticos en el orden en que se construyen y estiman.
+bloques:
+  emprendimiento:
+    descripcion: "Establecimientos y micronegocios (proxy de emprendimiento, informal incluido)"
+    fuente: "denue"
+    scian: "todos"
+    variables: ["estab_total", "estab_micro", "empleo_est"]
+  consumo:
+    descripcion: "Comercio al por menor y alimentos/bebidas; TPV y transacciones"
+    fuente: ["denue", "bdif"]
+    scian: ["46", "72"]
+    variables: ["estab_comercio", "estab_alimentos", "tpv", "transacciones_tpv"]
+  salud:
+    descripcion: "Consultorios, clínicas y farmacias"
+    fuente: "denue"
+    scian: ["62", "46411"]
+    variables: ["estab_salud", "estab_farmacia"]
+  financiero:
+    descripcion: "Banca múltiple y cajas de ahorro; contratos de captación y crédito"
+    fuente: ["denue", "bdif"]
+    scian: ["5221", "5223"]
+    variables: ["estab_banca", "estab_cajas", "contratos_captacion", "contratos_credito"]
+
+resultados:
+  # Denominadores: la localidad es pequeña, así que se normaliza por mil habitantes.
+  por_cada_localidad: 1000
+  por_cada_municipio: 10000
+  denominador_localidad: "pobtot_2020"          # ITER 2020, fijo
+  denominador_municipio: "poblacion_adulta_bdif"
+  # Trimestre en que se fija el denominador municipal (P-6): la BDIF usa proyección CONAPO hasta
+  # 2020T3 y Censo 2020 desde 2020T4, con saltos municipales de −20% a +13%. Un denominador fijo
+  # evita que ese cambio de fuente aparezca como escalón en las tasas.
+  denominador_municipio_periodo: "2022Q4"
+  sectores_privado: ["banca_multiple", "socap", "sofipo"]
+  sectores_eacp: ["socap", "sofipo"]
+  sectores_total: ["banca_multiple", "banca_desarrollo", "socap", "sofipo"]
+  # Series municipales de la BDIF que entran al panel trimestral: `nombre` = suma de `variable` en
+  # `sectores`. Cada una se convierte en tasa por diez mil adultos (`<nombre>_pc`) y se rellena con
+  # cero solo desde el primer trimestre en que se publica con esa desagregación.
+  #   - `eacp` es la serie combinada de SOCAP + SOFIPO: continua 2016T1–2025T4 en captación
+  #     (ahorro, plazo, vista), crédito (consumo, vivienda) y tarjetas de débito. Desde 2022T4 la
+  #     BDIF publica además `socap` y `sofipo`; sumarlas con `eacp` duplicaría.
+  #   - `banca` = banca múltiple + banca de desarrollo (incluye al propio Banco del Bienestar):
+  #     "inclusión total", con el efecto mecánico del banco adentro.
+  #   - `banca_desarrollo` = Banco del Bienestar + Banjército: primera etapa de inclusión (2022T4+).
+  series_bdif:
+    - {nombre: sucursales_privado, variable: sucursales, sectores: [banca_multiple, socap, sofipo]}
+    - {nombre: sucursales_bm, variable: sucursales, sectores: [banca_multiple]}
+    - {nombre: sucursales_eacp, variable: sucursales, sectores: [socap, sofipo]}
+    - {nombre: sucursales_total, variable: sucursales,
+       sectores: [banca_multiple, banca_desarrollo, socap, sofipo]}
+    - {nombre: cajeros_privado, variable: cajeros, sectores: [banca_multiple, socap, sofipo]}
+    - {nombre: tpv_privado, variable: tpv, sectores: [banca_multiple, socap, sofipo]}
+    - {nombre: transacciones_tpv_privado, variable: transacciones_tpv,
+       sectores: [banca_multiple, socap, sofipo]}
+    - {nombre: captacion_privado, variable: capt_total, sectores: [banca_multiple, socap, sofipo]}
+    - {nombre: credito_privado, variable: cred_total, sectores: [banca_multiple, socap, sofipo]}
+    - {nombre: corresponsales_total, variable: corresponsales, sectores: [todos]}
+    - {nombre: capt_ahorro_eacp, variable: capt_ahorro, sectores: [eacp]}
+    - {nombre: capt_plazo_eacp, variable: capt_plazo, sectores: [eacp]}
+    - {nombre: capt_vista_eacp, variable: capt_vista, sectores: [eacp]}
+    - {nombre: cred_consumo_eacp, variable: cred_consumo, sectores: [eacp]}
+    - {nombre: cred_vivienda_eacp, variable: cred_vivienda, sectores: [eacp]}
+    - {nombre: tarjetas_debito_eacp, variable: tarjetas_debito, sectores: [eacp]}
+    - {nombre: capt_ahorro_banca, variable: capt_ahorro, sectores: [banca]}
+    - {nombre: capt_plazo_banca, variable: capt_plazo, sectores: [banca]}
+    - {nombre: tarjetas_debito_banca, variable: tarjetas_debito, sectores: [banca]}
+    - {nombre: cuentas_celular_total, variable: cuentas_celular, sectores: [todos]}
+    - {nombre: capt_total_bd, variable: capt_total, sectores: [banca_desarrollo]}
+    - {nombre: tarjetas_debito_bd, variable: tarjetas_debito, sectores: [banca_desarrollo]}
+    # (Las cuentas en celular de la banca de desarrollo valen cero en todos los municipios y
+    # trimestres: el banco no las reporta. No entran.)
+
+# ---------------------------------------------------------------- Censos Económicos (fase 1)
+# Una cohorte: primera sucursal entre inicio_tratamiento y fin_exposicion (el CE 2024 levanta datos
+# de 2023, así que esas aperturas están expuestas en su año de referencia). Las aperturas
+# posteriores quedan fuera de la muestra principal (exposición parcial). La exposición "temprana"
+# (hasta fin_exposicion_temprana) contra "tardía" es la prueba de dosis.
+ce:
+  inicio_tratamiento: "2019Q2"
+  fin_exposicion: "2023Q4"
+  fin_exposicion_temprana: "2022Q2"
+  por_cada: 1000
+
+# ---------------------------------------------------------------- DENUE
+denue:
+  url_pagina: "https://www.inegi.org.mx/app/descarga/?ti=6"
+  patron_url: "https://www.inegi.org.mx/contenidos/masiva/denue/{version}/denue_00_{sector}_{mmaa}_csv.zip"
+  conservar_zip: false   # streaming: se agrega y se borra (solo 16 GB libres en la máquina)
+  micro_max_personas: 5  # `per_ocu` = "0 a 5 personas"
+  # Punto medio del rango de personas ocupadas, para estimar empleo.
+  per_ocu_punto_medio:
+    "0 a 5 personas": 3
+    "6 a 10 personas": 8
+    "11 a 30 personas": 20
+    "31 a 50 personas": 40
+    "51 a 100 personas": 75
+    "101 a 250 personas": 175
+    "251 y más personas": 350
+
+# ---------------------------------------------------------------- covariables y matching
+# Decisión P-5 (2026-09-29). En logaritmos: en escala cruda el PS se volvía extremo frente a controles
+# casi todos en cero. `grado_marginacion_2020` sale porque es una discretización del índice. El nivel
+# previo del resultado se conserva: se mide en 2016S1, 3.5 años y una actualización integral antes de
+# la primera apertura, así que el canal de reversión a la media es mínimo, y la selección de sitios
+# fue por niveles (cabeceras con actividad). La robustez lo quita.
+covariables_previas:
+  - log_poblacion_2020
+  - indice_marginacion_2020
+  - banca_mun_2019          # 1{sucursal de banca múltiple en el municipio en 2019T1}, BDIF
+  - log1p_estab_previos     # log(1 + establecimientos DENUE en 2016S1)
+  # - distancia_banca_km   # requiere variables/distancia.py (pendiente): la distancia a la
+  #                       # sucursal de banca múltiple más cercana no está en los paneles
+
+# Emparejamiento (2026-09-29): localidades de la especificación principal; exacto por estado ×
+# cabecera y Mahalanobis en logaritmos. No se empareja sobre el salto de la actualización 2019S2
+# (s = 8): es el placebo del diseño. Si la |dif. estandarizada| máxima supera `smd_maximo`, el
+# balance se reporta como fallido.
+matching:
+  usar: true
+  n_controles: 3
+  bloquear_por: ["cve_ent", "es_cabecera"]
+  variables: ["log_poblacion_2020", "indice_marginacion_2020", "log1p_estab_previos",
+              "log1p_nivel_previo"]
+  periodos_previos: [1, 7]
+  metrica: "mahalanobis"
+  # Con reemplazo (Abadie e Imbens): sin él solo se emparejaban 365 de 1,106 tratadas, porque las
+  # cabeceras lejanas de toda sucursal son pocas en cada estado. Con reemplazo se emparejan 924.
+  con_reemplazo: true
+  # Distancia de Mahalanobis máxima de un par. Sin caliper la |dif. estandarizada| máxima quedaba en
+  # 0.25–0.30 (balance fallido en consumo y salud); con 1.0 baja a 0.03–0.06 y se empareja
+  # alrededor de la mitad de las tratadas. Se eligió mirando solo el balance, nunca resultados.
+  caliper: 1.0
+  smd_maximo: 0.25
+
+# ---------------------------------------------------------------- estimación
+estimacion:
+  metodo: "dr"
+  bootstrap: true
+  bandas_simultaneas: true
+  # Se agrupa por municipio en **todos** los paneles: la fecha de tratamiento es municipal y los
+  # choques del DENUE son espaciales. En los paneles municipales coincide con la unidad.
+  cluster: "cve_mun"
+  n_boot: 999
+  balance_e: 4            # semestres post para el event study balanceado
+  # Cohortes más chicas que esto no se estiman (no tienen varianza utilizable y dominan los rezagos
+  # largos del event study). Lo leen `leer_panel()` en R y el matching en Python: un solo umbral
+  # para que las dos muestras coincidan.
+  min_cohorte: 5
+  # Ventana entre actualizaciones del DENUE (diseño escalonado, **secundario** desde 2026-09-29):
+  # de 2019S2 (s = 8) a 2024S1 (s = 17). Dentro de ella el DENUE casi no se actualiza: las
+  # localidades tratadas crecen +1.9% en 4.5 años y en 2022 solo cambia ~10% de ellas de una versión
+  # a otra, contra +11 a +12% en cada actualización integral. Un nulo aquí es, sobre todo, falta de
+  # medición. Poner `ventana_semestral:` sin valor usa el panel completo.
+  ventana_semestral: [8, 17]
+  # Ventana del diseño escalonado en el panel trimestral (t = 1 en 2019T1): la preregistrada para el
+  # bloque financiero es 2019T1–2024T4. El panel llega a 2025T4 y la extensión es una variante.
+  ventana_trimestral: [1, 24]
+  estimadores: ["cs", "twfe", "sunab", "bjs"]
+  # Diseño principal para el DENUE (2026-09-29): diferencias entre actualizaciones integrales. Solo
+  # en las versiones que siguen a una actualización integral el resultado refleja la actividad real,
+  # así que se comparan: 2016S1 y 2019S1 (antes), 2019S2 (actualización previa a todo tratamiento),
+  # 2024S1 (fin de la ventana) y 2024S2 (actualización posterior). Las aperturas entre 2020S1 y
+  # 2024S1 forman una sola cohorte fechada en `g`. Estimando principal: ATT(g, post_principal).
+  # Placebo: ATT(g, 8) = salto de la actualización 2019S2, que prueba si las tratadas reciben más
+  # establecimientos nuevos en una actualización integral por su composición y no por la sucursal.
+  diseno_principal: "actualizaciones"
+  actualizaciones:
+    periodos: [1, 7, 8, 17, 18]
+    periodos_robustez: [1, 7, 8, 17, 19]   # el post pasa a 2025S1
+    g: 17
+    g_min: 9          # aperturas desde 2020S1, después de la actualización 2019S2
+    temprana_max: 14  # exposición "temprana": aperturas hasta 2022S2 (dosis y heterogeneidad)
+    post_principal: 18
+  # Grupo de control a nivel localidad (C2 de la revisión del 2026-09-29): el 91% de los "nunca
+  # tratados" estaba en un municipio que abrió una sucursal. `dist<k>` = sin sucursal propia y a
+  # k km o más de cualquier localidad con sucursal del Banco del Bienestar.
+  controles:
+    principal: "dist10"
+    alternativas: ["dist5", "dist20", "municipal", "todos", "solo_sucursal"]
+  radio_derrame_km: 10
+  # Diseños alternativos (preregistrados en docs/decisiones.md, 2026-10-02; 08_disenos_alternativos.R).
+  # Decaimiento espacial: localidades sin sucursal por banda de distancia a la sucursal más cercana,
+  # cada una contra los mismos controles a ≥10 km, en el diseño entre actualizaciones.
+  bandas_derrame_km: [[0, 2], [2, 5], [5, 10]]
+  # DiD apilado (Cengiz et al. 2019; pesos de Wing, Freedman y Hollingsworth 2024) en el panel
+  # trimestral 2019T1–2025T4: ventana de evento balanceada e ∈ [−k_pre, k_post] (e = −1 de
+  # referencia). Con k_post = 7 entran todas las cohortes 2022T1–2024T1 (t = 13…21) y la de 2024T1
+  # llega justo a 2025T4. Controles limpios: nunca tratados y aún no tratados al cierre de la
+  # ventana de la cohorte (G > g + k_post).
+  apilado:
+    ventana: [1, 28]
+    k_pre: 8
+    k_post: 7
+  # Régimen de levantamiento de los Censos Económicos que alimenta las actualizaciones integrales del
+  # DENUE (exploratorio, 2026-10-02): recorrido total manzana por manzana en las cabeceras
+  # municipales y las localidades con al menos `umbral_poblacion` habitantes (Censo 2020); muestra
+  # probabilística en el resto del territorio rural (INEGI, CE 2024, Metodología, 2025).
+  regimen_censal:
+    umbral_poblacion: 2500
+  # Inferencia múltiple y potencia (preregistradas en docs/decisiones.md).
+  sesoi_pct: 5          # umbral de equivalencia: ±5% de la media previa de las tratadas
+  n_boot_rw: 9999       # réplicas del bootstrap de Romano–Wolf
+  # Familias de Romano–Wolf: `prefijo` + resultado = etiqueta de la especificación en la maestra.
+  familias_rw:
+    denue_localidad:
+      prefijo: "localidad_act_"
+      resultados: [estab_emprendimiento_pc, micro_emprendimiento_pc, empleo_est_emprendimiento_pc,
+                   estab_consumo_pc, estab_abarrotes_pc, estab_restaurantes_pc, estab_salud_pc,
+                   estab_farmacia_pc, estab_consultorios_pc]
+    financiera:
+      prefijo: "municipio_trim_esc_"
+      resultados: [sucursales_privado_pc, sucursales_bm_pc, sucursales_eacp_pc]
+    imss:                 # fase 1 (preregistrada el 2026-09-30)
+      prefijo: "municipio_trim_esc_imss_"
+      resultados: [ta_pc, ta_micro_pc, ta_pequena_pc, log_salario_diario]
+    ce:                   # fase 1 (preregistrada el 2026-09-30)
+      prefijo: "municipio_ce_esc_ce_"
+      resultados: [ue_pc, personal_ocupado_pc, log_remuneraciones, log_vacb, log_produccion_bruta]
+    eacp:                 # fase 0 (preregistrada el 2026-09-30)
+      prefijo: "municipio_trim_esc_eacp_"
+      resultados: [capt_ahorro_eacp_pc, capt_plazo_eacp_pc, capt_vista_eacp_pc,
+                   cred_consumo_eacp_pc, cred_vivienda_eacp_pc, tarjetas_debito_eacp_pc]
+
+# Dimensiones de heterogeneidad (las corre analisis/04_heterogeneidad.R). Los anillos salieron de
+# la batería el 2026-09-29: fallan tendencias paralelas y quedan como descriptivo.
+heterogeneidad:
+  - desierto_bancario     # municipio sin banca múltiple en 2019T1 (BDIF)
+  - grado_marginacion_2020
+  - tamano_localidad
+  - exposicion            # aperturas hasta 2022S2 contra 2023S1–2024S1
+
+# Lo que corre analisis/05_robustez.R (preregistrado en docs/decisiones.md, 2026-09-29).
+robustez:
+  principal:            # diseño entre actualizaciones, localidad
+    - controles_dist5
+    - controles_dist20
+    - controles_municipal
+    - controles_todos
+    - solo_sucursal       # dosis: aperturas tempranas contra tardías
+    - sin_nivel_previo
+    - sin_covariables
+    - piso_1000
+    - post_2025S1
+    - incluir_ambiguas_y_sospechosas
+    - cluster_estado
+    - muestra_emparejada
+  disenos:              # ¿están justificadas las alternativas a la principal?
+    - ventana_escalonada        # A (en la maestra)
+    - panel_completo_cs         # B1
+    - panel_completo_fe_tamano  # B2: TWFE, Sun y Abraham y BJS con FE semestre × decil
+    - goodman_bacon
+  escalonado:           # localidad y BDIF
+    - anticipacion_1
+    - nunca_tratados_control
+    - sin_covariables
+    - cohortes_30
+    - incluir_ambiguas_y_sospechosas
+    - cluster_estado
+  honestdid: true       # base universal, Σ agrupada por municipio
+
+semillas:
+  r: 20240915
+  python: 20240915
+
+# ---------------------------------------------------------------- fase 2 (preregistro 2026-10-07)
+# Fuentes nuevas, fuera de la maestra (analisis/10_fase2.R, salidas fase2_*). Ver docs/decisiones.md.
+fase2:
+  # 1. Modelo Power Pivot del Portafolio CNBV (2022-01 en adelante): tratamiento observado.
+  portafolio_modelo:
+    archivo: "data/raw/cnbv_portafolio/BD_Operativa_202607.xlsx"
+    clave_bienestar: "037166"
+    clave_banjercito: "037019"
+    tipo_sucursales: 31
+    desde: "2022Q1"
+  # 2. EIC 2015 / Censo 2020 / EIC 2025: una cohorte (G = 3) con aperturas en [inicio, fin].
+  eic:
+    inicio_tratamiento: "2020Q2"
+    fin_tratamiento: "2025Q3"
+    fin_exposicion_temprana: "2022Q2"
+    edad_minima: 12
+    ocupado:                 # códigos de CONACT que cuentan como ocupado
+      2015: [10, 11, 12, 13, 14, 15, 16]
+      2020: [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+      2025: [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+    si_celular: {2015: 3, 2020: 5, 2025: 5}
+    no_celular: {2015: 4, 2020: 6, 2025: 6}
+    si_internet: {2015: 5, 2020: 7, 2025: 7}
+    no_internet: {2015: 6, 2020: 8, 2025: 8}
+    familia_rw: [pct_negocio, pct_cuenta_propia, pct_empleador, pct_ocupacion, log_ingreso_trabajo]
+    mecanismo: [pct_hog_programas, pct_hog_remesas, pct_viv_internet, pct_viv_celular,
+                pct_trabaja_otro_mun, log_poblacion_est]
+  # 3. VIIRS anual por localidad.
+  viirs:
+    anios: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
+    # Ventana de México (lon_min, lat_max, lon_max, lat_min) para recortar el ráster global.
+    ventana_mexico: [-118.5, 33.0, -86.5, 14.3]
+    radio_km: 1.0
+    anillo_km: [1.0, 3.0]
+    # 2016–2021 vienen con precisión de 0.1 nW y 2022–2024 con enteros: se redondea a enteros para que
+    # el margen extensivo no cambie de definición en 2022 (verificado el 2026-10-07, antes de estimar).
+    armonizar_precision: true
+    familia_rw: [log1p_luz_1km, luz_1km_pos, log1p_luz_anillo]
+  # 4. EFIPEM municipal anual.
+  efipem:
+    anios: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
+    familia_rw: [log_impuestos_pc, log_predial_pc, log_derechos_pc]
+  # 5. ENOE (si alcanza): trimestres 2019T1–2025T4 sin 2020T2.
+  enoe:
+    inicio: "2019Q1"
+    fin: "2025Q4"
+    excluir: ["2020Q2"]
+    edad_minima: 15
+    familia_rw: [pct_negocio, pct_informal, pct_ocupacion, log_ingreso]
+# Fase 3 (preregistro del 2026-10-11 en docs/decisiones.md): delitos (SESNSP) y elecciones (INE).
+fase3:
+  delitos:
+    inicio: "2019Q1"
+    fin: "2025Q4"
+    # 2015–2016 cubren solo 1,931 municipios (2,466+ desde 2017): el pre-periodo extendido
+    # arranca en 2017T1 (regla 10).
+    inicio_largo: "2017Q1"
+    por_habitantes: 100000
+    piso_robustez: 5000
+    # resultado -> (tipo de delito, subtipos; vacío = todos los del tipo)
+    resultados:
+      robo_transeunte: {tipo: "Robo", subtipos: ["Robo a transeúnte en vía pública",
+                                                 "Robo a transeúnte en espacio abierto al público"]}
+      robo_negocio: {tipo: "Robo", subtipos: ["Robo a negocio"]}
+      extorsion: {tipo: "Extorsión", subtipos: []}
+      robo_total: {tipo: "Robo", subtipos: []}
+      homicidio_doloso: {tipo: "Homicidio", subtipos: ["Homicidio doloso"]}
+      dano_propiedad: {tipo: "Daño a la propiedad", subtipos: []}
+    familia_rw: [tasa_robo_transeunte, tasa_robo_negocio, tasa_extorsion, tasa_robo_total,
+                 tasa_homicidio_doloso]
+    secundarios: [tasa_dano_propiedad]
+  elecciones:
+    anios: [2015, 2018, 2021, 2024]
+    # Una cohorte (G = 4): primera sucursal entre las elecciones de 2021 y 2024. Los trimestres de
+    # la elección son ambiguos (la BDIF reporta al cierre) y salen junto con las aperturas previas.
+    inicio_tratamiento: "2021Q3"
+    fin_tratamiento: "2024Q1"
+    trimestres_ambiguos: ["2021Q2", "2024Q2"]
+    fin_exposicion_temprana: "2022Q4"
+    bloque: ["MORENA", "PT", "PVEM"]
+    # Casillas fuera: especiales (sin lista nominal) y mesas sin sección (prisión, anticipado).
+    tipos_fuera: ["S", "SMR", "P", "A", "M", "V"]
+    estatus_fuera: "no instalada|no entregado|no recibido|suspensi"
+    familia_rw: [pct_participacion, pct_bloque_gobierno]
+    secundarios: [pct_morena, pct_nulos]
+
+# ---------------------------------------------------------------- fase 4 (preregistro 2026-10-14)
+# Efectos fijos, grupo de control y covariables, derrames, bancarización y uso. Detalle en
+# docs/decisiones.md; plan en docs/contexto/plan_fase4.md. No toca la especificación principal.
+fase4:
+  # Regionalización del Reporte sobre las Economías Regionales de Banxico (abr–jun 2018, nota 1).
+  regiones_banxico:
+    norte: ["02", "05", "08", "19", "26", "28"]
+    centro_norte: ["01", "03", "06", "10", "14", "16", "18", "24", "25", "32"]
+    centro: ["09", "11", "13", "15", "17", "21", "22", "29"]
+    sur: ["04", "07", "12", "20", "23", "27", "30", "31"]
+  evento_twfe: {min: -8, max: 8}           # extremos agrupados, ref = -1
+  apilado: {k_pre: 8, k_post: 7}           # el de 08_disenos_alternativos.R
+  controles_minimos_vecinos: 100           # regla de H1(e) sobre la mediana de las pilas
+  permutaciones: 199
+  semilla: 20261014
+  honest_sd_m: [0, 0.005, 0.01, 0.02]
+  calibre_ps: 0.2                          # en desviaciones estándar del logit del puntaje
+  placebo: {inicio: "2017Q2", fin: "2021Q4", adelanto: 8}
+  tendencia_previa: {inicio: "2017Q2", fin: "2018Q4"}
+  # Portafolio CNBV (operativa 2016–2021, modelo Power Pivot 2022–2026). Los saldos se toman a fin
+  # de trimestre; las transacciones se suman en los tres meses (siguen el pago bimestral).
+  portafolio:
+    fin: "2025Q4"
+    banco: {operativa: "Banco del Bienestar", modelo: "037166"}
+    banjercito: {operativa: "Banjército", modelo: "037019"}
+    series:
+      tarjetas_debito:
+        operativa: ["Núm.Contr.Otorgaron Tarj.Débito Pers.Fis.Femenino",
+                    "Núm.Contr.Otorgaron Tarj.Débito Pers.Fis.Masculino",
+                    "Núm. Contr. Otorgaron Tarj. Débito Pers. Morales"]
+        modelo: ["Núm. Contr. Tarjeta de Débito"]
+        flujo: false
+      tarjetas_credito:
+        operativa: ["Núm. Contr. Tarjetas Personas Físicas (Cart.Cons.)"]
+        modelo: ["Núm. Contr. Tarjeta de Crédito"]
+        flujo: false
+      establecimientos_tpv:
+        operativa: ["Número de Establecimientos con TPV"]
+        modelo: ["Número de Establecimientos con TPV"]
+        flujo: false
+      transacciones_cajero:
+        operativa: ["Número de Transacciones en Cajeros Automáticos"]
+        modelo: ["Número de Transacciones en Cajeros Automáticos"]
+        flujo: true
+  familias:
+    financiero_fe: [sucursales_privado_pc, sucursales_bm_pc, sucursales_eacp_pc]
+    bancarizacion: [tarjetas_debito_bb_pc, transacciones_cajero_bb_pc]
+    privado_largo: [tarjetas_credito_bm_pc, establecimientos_tpv_privado_pc]
+
+# Efecto inyectado (exploratorio; analisis/15_poder_inyectado.R): ¿el DiD detecta un efecto chico que
+# sí existe? Sucursales privadas ficticias sobre los datos, como en Bertrand, Duflo y Mullainathan
+# (2004). `pct` es el efecto buscado en % de la media previa de las tratadas.
+poder_inyectado:
+  # Con las fechas reales solo varían el sorteo y el ee: bastan menos réplicas.
+  replicas: {reasignadas: 200, reales: 100, todas: 200}
+  # Se repiten con las fechas barajadas entre todas las unidades (ver `calibrado` en el script).
+  escenarios_todas: ["atraccion_2.8", "atraccion_5", "desplazamiento_2.8", "desplazamiento_5"]
+  semilla: 20261104
+  nucleos: 6
+  rezago_gradual_max: 4    # trimestres; "gradual" = la sucursal abre entre 0 y 4 trimestres después
+  escenarios:
+    - {nombre: "sin_efecto", tipo: "ninguno", pct: 0}
+    - {nombre: "atraccion_2.8", tipo: "atraccion", pct: 2.8}
+    - {nombre: "atraccion_5", tipo: "atraccion", pct: 5}
+    - {nombre: "atraccion_7.6", tipo: "atraccion", pct: 7.6}
+    - {nombre: "atraccion_5_gradual", tipo: "atraccion", pct: 5, gradual: true}
+    - {nombre: "desplazamiento_2.8", tipo: "desplazamiento", pct: 2.8}
+    - {nombre: "desplazamiento_5", tipo: "desplazamiento", pct: 5}

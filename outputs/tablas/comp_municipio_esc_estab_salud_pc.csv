@@ -1,0 +1,5 @@
+estimador,valor,ee,etiqueta,panel,diseno,resultado,fe_tamano,ic_bajo,ic_alto
+TWFE estático,-0.0211369117846078,0.0344416210606074,municipio_esc_estab_salud_pc,municipio,escalonado,estab_salud_pc,FALSE,-0.0886412486325745,0.0463674250633589
+Sun y Abraham,0.0339531790651281,0.030401450784935,municipio_esc_estab_salud_pc,municipio,escalonado,estab_salud_pc,FALSE,-0.0256325695511114,0.0935389276813675
+Borusyak et al.,-0.0068940317535655,0.0423814648128959,municipio_esc_estab_salud_pc,municipio,escalonado,estab_salud_pc,FALSE,-0.0899601763988929,0.0761721128917619
+Callaway y Sant'Anna,0.0445332828110848,0.0214749347099992,municipio_esc_estab_salud_pc,municipio,escalonado,estab_salud_pc,FALSE,0.00244318420913723,0.0866233814130324

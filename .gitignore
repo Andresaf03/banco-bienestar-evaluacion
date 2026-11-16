@@ -1,0 +1,64 @@
+# Datos: nada se versiona salvo .gitkeep y MANIFEST.csv
+data/**
+!data/**/
+!data/**/.gitkeep
+!data/raw/MANIFEST.csv
+
+# Literatura (PDFs)
+literatura/*
+!literatura/.gitkeep
+!literatura/README.md
+
+# Salidas pesadas
+outputs/**
+!outputs/**/
+!outputs/**/.gitkeep
+!outputs/figuras/*.png
+!outputs/tablas/*.csv
+!outputs/tablas/*.md
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# R / renv
+renv/library/
+renv/local/
+renv/cellar/
+renv/lock/
+renv/python/
+renv/sandbox/
+renv/staging/
+.Rhistory
+.RData
+.Rproj.user/
+
+# Notebooks
+notebooks/.ipynb_checkpoints/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Entregables renderizados con Quarto (`make entregables` los regenera desde los .qmd)
+entregables/04_final/trabajo_final.pdf
+entregables/02_metodologia/metodologia.pdf
+entregables/02_metodologia/metodologia.docx
+entregables/03_presentacion/presentacion.html
+entregables/05_ciencia_datos/presentacion_cdaii.pptx
+entregables/05_ciencia_datos/node_modules/
+entregables/06_politica_publica/presentacion_ppii.pptx
+entregables/06_politica_publica/presentacion_ppii.pdf
+entregables/06_politica_publica/node_modules/
+app/node_modules/
+app/dist/
+.claude/
+entregables/**/*_files/
+.quarto/
+
+# Render en PDF del deck de CDA II (LibreOffice; se publica en el repo público)
+entregables/05_ciencia_datos/presentacion_cdaii.pdf

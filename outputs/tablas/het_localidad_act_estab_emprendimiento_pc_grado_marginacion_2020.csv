@@ -1,0 +1,4 @@
+dimension,grupo,unidades,tratadas,att,ee,media_base,covariables,panel,diseno,resultado,ic_bajo,ic_alto,referencia,dif_vs_ref,z_dif,p_dif
+grado_marginacion_2020,alta marginación,7388,373,10.6109878034865,3.3198439416193,79.0947540011818,TRUE,localidad,actualizaciones,estab_emprendimiento_pc,4.10421324361921,17.1177623633538,alta marginación,,,
+grado_marginacion_2020,baja marginación,10642,520,3.1803967123041,1.07688132192794,60.5880999470845,TRUE,localidad,actualizaciones,estab_emprendimiento_pc,1.06974810570147,5.29104531890674,alta marginación,-7.43059109118242,-2.12902728946476,0.0332520026722864
+grado_marginacion_2020,marginación media,4795,213,11.3397756315957,3.41308067204009,75.1486241357429,TRUE,localidad,actualizaciones,estab_emprendimiento_pc,4.65026043806737,18.029290825124,alta marginación,0.728787828109171,0.15306317568779,0.878348455173615

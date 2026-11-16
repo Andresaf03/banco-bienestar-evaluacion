@@ -1,0 +1,6 @@
+tipo,termino,valor,ee,ic_bajo,ic_alto,panel,diseno,resultado
+simple,ATT,-2.93618597098089,1.18682810053229,-5.26232630386425,-0.61004563809752,municipio_elecciones,escalonado,pct_participacion
+group,4,-2.93618597098089,1.16993759275299,-5.22922151693624,-0.643150425025529,municipio_elecciones,escalonado,pct_participacion
+dynamic,-2,-5.01543933564722,1.06782529955195,-7.26748049672017,-2.76339817457426,municipio_elecciones,escalonado,pct_participacion
+dynamic,-1,3.56215800086148,1.71669020320639,-0.0583377862805121,7.18265378800347,municipio_elecciones,escalonado,pct_participacion
+dynamic,0,-2.93618597098089,1.20652746350961,-5.48074968466014,-0.391622257301636,municipio_elecciones,escalonado,pct_participacion

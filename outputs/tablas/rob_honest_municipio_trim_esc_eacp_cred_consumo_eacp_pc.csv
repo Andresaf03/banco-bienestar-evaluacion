@@ -1,0 +1,8 @@
+lb,ub,method,Delta,Mbar,etiqueta,panel,diseno,resultado,referencia_e
+2.40974000140523,5.71903675911744,C-LF,DeltaRM,0,municipio_trim_esc_eacp_cred_consumo_eacp_pc,municipio_trim,escalonado,cred_consumo_eacp_pc,-1
+-93.5598659722496,101.688642732772,C-LF,DeltaRM,0.25,municipio_trim_esc_eacp_cred_consumo_eacp_pc,municipio_trim,escalonado,cred_consumo_eacp_pc,-1
+-196.148065461329,204.276842221851,C-LF,DeltaRM,0.5,municipio_trim_esc_eacp_cred_consumo_eacp_pc,municipio_trim,escalonado,cred_consumo_eacp_pc,-1
+-398.015167681775,406.143944442298,C-LF,DeltaRM,1,municipio_trim_esc_eacp_cred_consumo_eacp_pc,municipio_trim,escalonado,cred_consumo_eacp_pc,-1
+-596.572973144509,604.701749905032,C-LF,DeltaRM,1.5,municipio_trim_esc_eacp_cred_consumo_eacp_pc,municipio_trim,escalonado,cred_consumo_eacp_pc,-1
+-798.440075364955,806.568852125477,C-LF,DeltaRM,2,municipio_trim_esc_eacp_cred_consumo_eacp_pc,municipio_trim,escalonado,cred_consumo_eacp_pc,-1
+1.05246503514397,7.07631172537877,Original,,,municipio_trim_esc_eacp_cred_consumo_eacp_pc,municipio_trim,escalonado,cred_consumo_eacp_pc,-1

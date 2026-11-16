@@ -1,0 +1,5 @@
+variante,termino,unidades,tratadas,controles,clusters,att,ee,ee_boot,media_base,pre_n,pre_sig,pre_wald_p,panel,resultado,efecto_pct
+resultado neto de la media estado × elección,ATT global,1833,1375,458,1833,2.25663251474324,2.10223548922387,2.62825995774094,45.081585647427,2,0,0.0920329113798271,municipio_elecciones,pct_bloque_gobierno,5.00566358156045
+con el nivel de 2015 como covariable,ATT global,1833,1375,458,1833,-1.87810531978278,1.06225625372534,1.05413433990623,45.081585647427,2,2,8.58969194850702e-08,municipio_elecciones,pct_bloque_gobierno,-4.1660143333711
+sin el filtro de lista nominal (todos los municipios),ATT global,1924,1439,485,1924,0.764298668640189,2.41977230225722,3.00323400416583,45.2864809306485,2,1,2.612954921629e-05,municipio_elecciones,pct_bloque_gobierno,1.68769719557285
+G observado (modelo Portafolio 2022+),ATT global,1840,1382,458,1840,-1.82942653529474,0.952580836775941,0.962631624194107,45.1134696820512,2,2,1.28063853958571e-09,municipio_elecciones,pct_bloque_gobierno,-4.05516700042825

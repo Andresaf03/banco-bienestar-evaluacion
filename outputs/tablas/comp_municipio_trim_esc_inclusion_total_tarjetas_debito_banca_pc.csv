@@ -1,0 +1,5 @@
+estimador,valor,ee,etiqueta,panel,diseno,resultado,fe_tamano,ic_bajo,ic_alto
+TWFE estático,2496.06792567955,194.376690748038,municipio_trim_esc_inclusion_total_tarjetas_debito_banca_pc,municipio_trim,escalonado,tarjetas_debito_banca_pc,FALSE,2115.09661237932,2877.03923897979
+Sun y Abraham,3803.09108995722,246.68888576834,municipio_trim_esc_inclusion_total_tarjetas_debito_banca_pc,municipio_trim,escalonado,tarjetas_debito_banca_pc,FALSE,3319.58975846495,4286.59242144948
+Borusyak et al.,3922.56318432094,260.945861917122,municipio_trim_esc_inclusion_total_tarjetas_debito_banca_pc,municipio_trim,escalonado,tarjetas_debito_banca_pc,FALSE,3411.11869304862,4434.00767559326
+Callaway y Sant'Anna,3313.56691162872,219.974225172057,municipio_trim_esc_inclusion_total_tarjetas_debito_banca_pc,municipio_trim,escalonado,tarjetas_debito_banca_pc,FALSE,2882.42535276439,3744.70847049306

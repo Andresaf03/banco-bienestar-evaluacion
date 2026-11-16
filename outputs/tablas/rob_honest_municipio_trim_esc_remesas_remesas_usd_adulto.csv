@@ -1,0 +1,8 @@
+lb,ub,method,Delta,Mbar,etiqueta,panel,diseno,resultado,referencia_e
+1.05741054729617,7.67199637962722,C-LF,DeltaRM,0,municipio_trim_esc_remesas_remesas_usd_adulto,municipio_trim,escalonado,remesas_usd_adulto,-1
+-24.0780156155618,32.8074225424851,C-LF,DeltaRM,0.25,municipio_trim_esc_remesas_remesas_usd_adulto,municipio_trim,escalonado,remesas_usd_adulto,-1
+-51.8592761113521,60.5886830382756,C-LF,DeltaRM,0.5,municipio_trim_esc_remesas_remesas_usd_adulto,municipio_trim,escalonado,remesas_usd_adulto,-1
+-110.067631435865,118.797038362789,C-LF,DeltaRM,1,municipio_trim_esc_remesas_remesas_usd_adulto,municipio_trim,escalonado,remesas_usd_adulto,-1
+-166.953069593912,175.682476520836,C-LF,DeltaRM,1.5,municipio_trim_esc_remesas_remesas_usd_adulto,municipio_trim,escalonado,remesas_usd_adulto,-1
+-223.838507751959,232.567914678882,C-LF,DeltaRM,2,municipio_trim_esc_remesas_remesas_usd_adulto,municipio_trim,escalonado,remesas_usd_adulto,-1
+0.684358327902697,8.04504859902089,Original,,,municipio_trim_esc_remesas_remesas_usd_adulto,municipio_trim,escalonado,remesas_usd_adulto,-1

@@ -1,0 +1,4 @@
+type,peso,estimacion,etiqueta,resultado,twfe
+Treated vs Untreated,0.988182746020722,0.580031908328505,localidad_esc_estab_emprendimiento_pc,estab_emprendimiento_pc,0.574353382229354
+Earlier vs Later Treated,0.00917106105341657,0.160513824658806,localidad_esc_estab_emprendimiento_pc,estab_emprendimiento_pc,0.574353382229354
+Later vs Earlier Treated,0.00264619292586054,-0.11194339062158,localidad_esc_estab_emprendimiento_pc,estab_emprendimiento_pc,0.574353382229354

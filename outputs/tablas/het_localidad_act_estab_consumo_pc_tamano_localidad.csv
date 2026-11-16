@@ -1,0 +1,4 @@
+dimension,grupo,unidades,tratadas,att,ee,media_base,covariables,panel,diseno,resultado,ic_bajo,ic_alto,referencia,dif_vs_ref,z_dif,p_dif
+tamano_localidad,chica,7683,47,-0.647690374338484,0.618610547453573,2.19473289683569,TRUE,localidad,actualizaciones,estab_consumo_pc,-1.86014476780409,0.564764019127126,chica,,,
+tamano_localidad,grande,7586,996,3.26997629137404,0.639345060993463,38.857180039311,TRUE,localidad,actualizaciones,estab_consumo_pc,2.01688299813328,4.52306958461479,chica,3.91766666571252,4.4037045809671,1.06417834311856e-05
+tamano_localidad,mediana,7556,63,0.283215736804201,1.85095612238539,14.0137163773378,TRUE,localidad,actualizaciones,estab_consumo_pc,-3.34459160003508,3.91102307364348,chica,0.930906111142685,0.476997932114006,0.633363594152732

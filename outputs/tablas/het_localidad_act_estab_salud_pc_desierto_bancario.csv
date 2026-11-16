@@ -1,0 +1,3 @@
+dimension,grupo,unidades,tratadas,att,ee,media_base,covariables,panel,diseno,resultado,ic_bajo,ic_alto,referencia,dif_vs_ref,z_dif,p_dif
+desierto_bancario,0,15111,339,0.189348068151318,0.084292412829057,3.29190516541354,TRUE,localidad,actualizaciones,estab_salud_pc,0.0241379748363848,0.354558161466252,0,,,
+desierto_bancario,1,7714,767,0.41522342168464,0.0787412116365147,3.56632652155801,TRUE,localidad,actualizaciones,estab_salud_pc,0.260893482778025,0.569553360591255,0,0.225875353533322,1.95819101173168,0.05020760342862

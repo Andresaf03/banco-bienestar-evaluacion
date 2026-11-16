@@ -1,0 +1,3 @@
+dimension,grupo,unidades,tratadas,att,ee,media_base,covariables,panel,diseno,resultado,ic_bajo,ic_alto,referencia,dif_vs_ref,z_dif,p_dif
+desierto_bancario,0,15111,339,3.24807205401892,1.35048117343273,61.2811727459534,TRUE,localidad,actualizaciones,estab_emprendimiento_pc,0.601177592291392,5.89496651574646,0,,,
+desierto_bancario,1,7714,767,9.03135476573703,1.55335975587201,73.3252863037286,TRUE,localidad,actualizaciones,estab_emprendimiento_pc,5.98682558919397,12.0758839422801,0,5.78328271171811,2.80969538130372,0.00495884100550276

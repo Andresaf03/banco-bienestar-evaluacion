@@ -1,0 +1,4 @@
+etiqueta,panel,diseno,resultado,estimador,termino,valor,ee,ee_boot,n_unidades,n_tratadas,n_controles,n_clusters,media_base,pre_n,pre_sig,pre_wald_p,placebo,placebo_ee,variante,familia
+municipio_efipem_esc_efipem_log_impuestos_pc,municipio_efipem,escalonado,log_impuestos_pc,Callaway y Sant'Anna,ATT global,-0.04076133079032,0.0513884177021412,0.0524149659936866,1861,1419,442,1861,4.39790451703725,7,1,0.171113401299422,,,efipem,efipem
+municipio_efipem_esc_efipem_log_predial_pc,municipio_efipem,escalonado,log_predial_pc,Callaway y Sant'Anna,ATT global,0.0978415574963218,0.0661927302828224,0.0693635898338934,1674,1289,385,1674,3.96597501840246,7,0,0.0377739586849055,,,efipem,efipem
+municipio_efipem_esc_efipem_log_derechos_pc,municipio_efipem,escalonado,log_derechos_pc,Callaway y Sant'Anna,ATT global,-0.0644557720024839,0.05326796309063,0.0587959331856769,1947,1447,500,1947,4.52455152797908,7,0,0.788574126055082,,,efipem,efipem

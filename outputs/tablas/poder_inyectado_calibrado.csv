@@ -1,0 +1,5 @@
+fechas,escenario,tipo,pct,gradual,replicas,fallidas,municipios_media,sucursales_media,efecto_pct_media,att_pct_media,att_pct_de,ee_pct_media,detecta,nulo_informativo,cobertura_ic95
+todas,atraccion_2.8,atraccion,2.8,FALSE,200,0,57.7,63.015,2.8367156154225,3.38351422175659,1.44201463460517,1.39938117841301,0.725,0.375,0.985
+todas,atraccion_5,atraccion,5,FALSE,200,0,97.32,112.47,5.10161814514216,5.64841675147624,1.55788694497254,1.56439208097984,0.985,0.025,0.985
+todas,desplazamiento_2.8,desplazamiento,2.8,FALSE,200,0,72.71,86.56,-2.78918945109831,-2.24239084476423,1.09940956897442,1.30979425883309,0.44,0.735,0.985
+todas,desplazamiento_5,desplazamiento,5,FALSE,200,0,117.53,154.31,-5.01111028771467,-4.46431168138058,1.24451708450115,1.41562791027756,0.9,0.08,0.985

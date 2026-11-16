@@ -1,0 +1,6 @@
+tipo,termino,valor,ee,ic_bajo,ic_alto,panel,diseno,resultado
+simple,ATT,2.89958104587362,3.90050050095535,-4.7452594576793,10.5444215494265,municipio_elecciones,escalonado,pct_morena
+group,4,2.89958104587362,4.05438639407216,-5.04687026591703,10.8460323576643,municipio_elecciones,escalonado,pct_morena
+dynamic,-2,-4.48442711939848,1.4910504643703,-7.406832328696,-1.56202191010096,municipio_elecciones,escalonado,pct_morena
+dynamic,-1,2.19949316297237,4.90544749846612,-7.41500726207333,11.8139935880181,municipio_elecciones,escalonado,pct_morena
+dynamic,0,2.89958104587362,3.91453403402915,-4.7727646770798,10.571926768827,municipio_elecciones,escalonado,pct_morena

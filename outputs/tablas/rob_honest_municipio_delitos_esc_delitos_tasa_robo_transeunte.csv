@@ -1,0 +1,8 @@
+lb,ub,method,Delta,Mbar,etiqueta,panel,diseno,resultado,referencia_e
+-0.840815814131386,0.0383831822578458,C-LF,DeltaRM,0,municipio_delitos_esc_delitos_tasa_robo_transeunte,municipio_delitos,escalonado,tasa_robo_transeunte,-1
+-1.37598042062918,0.535321745434366,C-LF,DeltaRM,0.25,municipio_delitos_esc_delitos_tasa_robo_transeunte,municipio_delitos,escalonado,tasa_robo_transeunte,-1
+-2.10227524373332,1.26161656853851,C-LF,DeltaRM,0.5,municipio_delitos_esc_delitos_tasa_robo_transeunte,municipio_delitos,escalonado,tasa_robo_transeunte,-1
+-3.63131697658415,2.75243225806807,C-LF,DeltaRM,1,municipio_delitos_esc_delitos_tasa_robo_transeunte,municipio_delitos,escalonado,tasa_robo_transeunte,-1
+-5.16035870943499,4.31970003424018,C-LF,DeltaRM,1.5,municipio_delitos_esc_delitos_tasa_robo_transeunte,municipio_delitos,escalonado,tasa_robo_transeunte,-1
+-6.72762648560709,5.88696781041228,C-LF,DeltaRM,2,municipio_delitos_esc_delitos_tasa_robo_transeunte,municipio_delitos,escalonado,tasa_robo_transeunte,-1
+-0.842443230588632,0.0400105987150988,Original,,,municipio_delitos_esc_delitos_tasa_robo_transeunte,municipio_delitos,escalonado,tasa_robo_transeunte,-1

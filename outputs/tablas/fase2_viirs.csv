@@ -1,0 +1,4 @@
+etiqueta,panel,diseno,resultado,estimador,termino,valor,ee,ee_boot,n_unidades,n_tratadas,n_controles,n_clusters,media_base,pre_n,pre_sig,pre_wald_p,placebo,placebo_ee,variante,familia
+localidad_viirs_esc_viirs_log1p_luz_1km,localidad_viirs,escalonado,log1p_luz_1km,Callaway y Sant'Anna,ATT global,0.00324735832596694,0.0092358685468247,0.0439550137082011,22825,1106,21719,1921,4.15721838890815,7,2,0.000114343381246806,,,viirs,viirs
+localidad_viirs_esc_viirs_luz_1km_pos,localidad_viirs,escalonado,luz_1km_pos,Callaway y Sant'Anna,ATT global,-0.00622717204750248,0.00153187110684223,0.00695286421930639,22825,1106,21719,1921,1,7,4,1.93706709336381e-17,,,viirs,viirs
+localidad_viirs_esc_viirs_log1p_luz_anillo,localidad_viirs,escalonado,log1p_luz_anillo,Callaway y Sant'Anna,ATT global,-0.0171403839007466,0.0118787591673128,0.0601519732775531,22825,1106,21719,1921,4.76795449675219,7,1,0.00565658749524235,,,viirs,viirs

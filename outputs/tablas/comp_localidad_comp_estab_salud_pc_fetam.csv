@@ -1,0 +1,5 @@
+estimador,valor,ee,etiqueta,panel,diseno,resultado,fe_tamano,ic_bajo,ic_alto
+TWFE estático,0.44721704159052,0.02889305240835,localidad_comp_estab_salud_pc,localidad,completo,estab_salud_pc,TRUE,0.390587699466726,0.503846383714314
+Sun y Abraham,0.256124660778112,0.0218438816320174,localidad_comp_estab_salud_pc,localidad,completo,estab_salud_pc,TRUE,0.213311439496802,0.298937882059422
+Borusyak et al.,0.470253449026289,0.0268065780913802,localidad_comp_estab_salud_pc,localidad,completo,estab_salud_pc,TRUE,0.417713521418423,0.522793376634155
+Callaway y Sant'Anna,0.153913857056802,0.0314389157185387,localidad_comp_estab_salud_pc,localidad,completo,estab_salud_pc,TRUE,0.0922947145354755,0.215532999578128

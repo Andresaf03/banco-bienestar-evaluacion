@@ -1,0 +1,9 @@
+{
+  "name": "presentacion-ppii",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Deck de Tópicos de Política Pública II (pptxgenjs); ver README.md",
+  "dependencies": {
+    "pptxgenjs": "^3.12.0"
+  }
+}

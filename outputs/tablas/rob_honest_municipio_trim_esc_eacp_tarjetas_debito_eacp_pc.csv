@@ -1,0 +1,8 @@
+lb,ub,method,Delta,Mbar,etiqueta,panel,diseno,resultado,referencia_e
+-29.2729885577915,-8.54216276551233,C-LF,DeltaRM,0,municipio_trim_esc_eacp_tarjetas_debito_eacp_pc,municipio_trim,escalonado,tarjetas_debito_eacp_pc,-1
+-70.7346401423488,26.0092135549521,C-LF,DeltaRM,0.25,municipio_trim_esc_eacp_tarjetas_debito_eacp_pc,municipio_trim,escalonado,tarjetas_debito_eacp_pc,-1
+-105.286016462813,67.4708651395094,C-LF,DeltaRM,0.5,municipio_trim_esc_eacp_tarjetas_debito_eacp_pc,municipio_trim,escalonado,tarjetas_debito_eacp_pc,-1
+-188.209319631928,157.304443572717,C-LF,DeltaRM,1,municipio_trim_esc_eacp_tarjetas_debito_eacp_pc,municipio_trim,escalonado,tarjetas_debito_eacp_pc,-1
+-278.042898065136,240.227746741832,C-LF,DeltaRM,1.5,municipio_trim_esc_eacp_tarjetas_debito_eacp_pc,municipio_trim,escalonado,tarjetas_debito_eacp_pc,-1
+-360.966201234251,323.151049910947,C-LF,DeltaRM,2,municipio_trim_esc_eacp_tarjetas_debito_eacp_pc,municipio_trim,escalonado,tarjetas_debito_eacp_pc,-1
+-30.7047306054137,-7.1104207178904,Original,,,municipio_trim_esc_eacp_tarjetas_debito_eacp_pc,municipio_trim,escalonado,tarjetas_debito_eacp_pc,-1

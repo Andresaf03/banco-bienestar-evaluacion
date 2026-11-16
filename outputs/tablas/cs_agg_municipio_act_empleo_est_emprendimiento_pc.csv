@@ -1,0 +1,7 @@
+tipo,termino,valor,ee,ic_bajo,ic_alto,panel,diseno,resultado
+simple,ATT,0.0962539679663159,27.0757755333916,-52.971290930972,53.1637988669046,municipio,actualizaciones,empleo_est_emprendimiento_pc
+group,17,0.0962539679663159,26.6533326214973,-53.3459667409506,53.5384746768833,municipio,actualizaciones,empleo_est_emprendimiento_pc
+dynamic,-10,-1.82616557511585,26.4347036148296,-61.7304811794621,58.0781500292304,municipio,actualizaciones,empleo_est_emprendimiento_pc
+dynamic,-9,-27.7415664847693,42.724811861371,-124.561286923931,69.078153954392,municipio,actualizaciones,empleo_est_emprendimiento_pc
+dynamic,0,1.10683027519201,20.5657611647717,-45.4977341416742,47.7113946920582,municipio,actualizaciones,empleo_est_emprendimiento_pc
+dynamic,1,-0.914322339259376,36.8886378043545,-84.5085488319975,82.6799041534788,municipio,actualizaciones,empleo_est_emprendimiento_pc

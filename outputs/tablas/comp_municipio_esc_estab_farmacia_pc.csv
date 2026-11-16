@@ -1,0 +1,5 @@
+estimador,valor,ee,etiqueta,panel,diseno,resultado,fe_tamano,ic_bajo,ic_alto
+TWFE estático,0.0682983167863466,0.0255267854294411,municipio_esc_estab_farmacia_pc,municipio,escalonado,estab_farmacia_pc,FALSE,0.0182667367035602,0.118329896869133
+Sun y Abraham,0.0932021749212274,0.0168297311464813,municipio_esc_estab_farmacia_pc,municipio,escalonado,estab_farmacia_pc,FALSE,0.0602165080046322,0.126187841837823
+Borusyak et al.,0.107145776669597,0.0300060801440449,municipio_esc_estab_farmacia_pc,municipio,escalonado,estab_farmacia_pc,FALSE,0.0483349402700464,0.165956613069147
+Callaway y Sant'Anna,0.0768673983562712,0.0400119449216492,municipio_esc_estab_farmacia_pc,municipio,escalonado,estab_farmacia_pc,FALSE,-0.00155457264156163,0.155289369354104

@@ -1,0 +1,3 @@
+dimension,grupo,unidades,tratadas,att,ee,media_base,covariables,panel,diseno,resultado,ic_bajo,ic_alto,referencia,dif_vs_ref,z_dif,p_dif
+desierto_bancario,0,547,525,0.0179034566640542,0.0186435088060968,0.667879720715201,TRUE,municipio_trim,escalonado,sucursales_eacp_pc,-0.0186371491413508,0.0544440624694592,0,,,
+desierto_bancario,1,1410,932,0.00346535417805036,0.0092484377065715,0.443001159052879,TRUE,municipio_trim,escalonado,sucursales_eacp_pc,-0.014661250640092,0.0215919589961927,0,-0.0144381024860038,-0.693759588917815,0.487832989303639

@@ -1,0 +1,5 @@
+estimador,valor,ee,etiqueta,panel,diseno,resultado,fe_tamano,ic_bajo,ic_alto
+TWFE estático,61.9262720085678,13.7335230078772,municipio_trim_esc_panel_corto_credito_privado_pc,municipio_trim,escalonado,credito_privado_pc,FALSE,35.0090615322764,88.8434824848592
+Sun y Abraham,73.2218913773764,13.8788395098103,municipio_trim_esc_panel_corto_credito_privado_pc,municipio_trim,escalonado,credito_privado_pc,FALSE,46.0198657909366,100.423916963816
+Borusyak et al.,82.5405755070091,16.7394091248908,municipio_trim_esc_panel_corto_credito_privado_pc,municipio_trim,escalonado,credito_privado_pc,FALSE,49.731936499742,115.349214514276
+Callaway y Sant'Anna,-4.44096760267972,30.3988784126204,municipio_trim_esc_panel_corto_credito_privado_pc,municipio_trim,escalonado,credito_privado_pc,FALSE,-64.0216744618279,55.1397392564684

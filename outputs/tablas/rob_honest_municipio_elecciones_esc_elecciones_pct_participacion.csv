@@ -1,0 +1,8 @@
+lb,ub,method,Delta,Mbar,etiqueta,panel,diseno,resultado,referencia_e
+-5.07863801638963,-0.793733925572127,C-LF,DeltaRM,0,municipio_elecciones_esc_elecciones_pct_participacion,municipio_elecciones,escalonado,pct_participacion,-1
+-6.19643908355941,0.137766963736027,C-LF,DeltaRM,0.25,municipio_elecciones_esc_elecciones_pct_participacion,municipio_elecciones,escalonado,pct_participacion,-1
+-7.68684050645246,1.44186820876743,C-LF,DeltaRM,0.5,municipio_elecciones_esc_elecciones_pct_participacion,municipio_elecciones,escalonado,pct_participacion,-1
+-10.6676433522385,4.42267105455352,C-LF,DeltaRM,1,municipio_elecciones_esc_elecciones_pct_participacion,municipio_elecciones,escalonado,pct_participacion,-1
+-13.8347463758863,7.58977407820123,C-LF,DeltaRM,1.5,municipio_elecciones_esc_elecciones_pct_participacion,municipio_elecciones,escalonado,pct_participacion,-1
+-17.001849399534,10.756877101849,C-LF,DeltaRM,2,municipio_elecciones_esc_elecciones_pct_participacion,municipio_elecciones,escalonado,pct_participacion,-1
+-5.07389701413319,-0.798474927828586,Original,,,municipio_elecciones_esc_elecciones_pct_participacion,municipio_elecciones,escalonado,pct_participacion,-1

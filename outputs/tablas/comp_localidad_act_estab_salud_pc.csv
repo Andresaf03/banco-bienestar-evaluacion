@@ -1,0 +1,3 @@
+estimador,valor,ee,etiqueta,panel,diseno,resultado,fe_tamano,ic_bajo,ic_alto
+DiD 2x2 sin covariables,0.696041079981039,0.038819327713174,localidad_act_estab_salud_pc,localidad,actualizaciones,estab_salud_pc,FALSE,0.61995659575916,0.772125564202917
+Callaway y Sant'Anna,0.333847291490262,0.0603666313255308,localidad_act_estab_salud_pc,localidad,actualizaciones,estab_salud_pc,FALSE,0.215530868224214,0.45216371475631

@@ -1,0 +1,5 @@
+tipo,termino,valor,ee,ic_bajo,ic_alto,panel,diseno,resultado
+simple,ATT,4.78802043093337,6.25827880475407,-7.47798063159499,17.0540214934617,municipio_enigh_pagos,escalonado,pct_gasto_electronico
+group,3,4.78802043093337,6.26807994625231,-7.49719051593892,17.0732313778057,municipio_enigh_pagos,escalonado,pct_gasto_electronico
+dynamic,-1,4.24993526412422,5.1389058394651,-5.82213510116995,14.3220056294184,municipio_enigh_pagos,escalonado,pct_gasto_electronico
+dynamic,0,4.78802043093337,6.33122633721619,-7.62095516798181,17.1969960298485,municipio_enigh_pagos,escalonado,pct_gasto_electronico

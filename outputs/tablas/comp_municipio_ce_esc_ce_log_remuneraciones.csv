@@ -1,0 +1,5 @@
+estimador,valor,ee,etiqueta,panel,diseno,resultado,fe_tamano,ic_bajo,ic_alto
+TWFE estático,0.0636459965825559,0.0537991052542685,municipio_ce_esc_ce_log_remuneraciones,municipio_ce,escalonado,log_remuneraciones,FALSE,-0.0417983121162899,0.169090305281402
+Sun y Abraham,0.0763504947309756,0.0512792138522594,municipio_ce_esc_ce_log_remuneraciones,municipio_ce,escalonado,log_remuneraciones,FALSE,-0.0241549175749802,0.176855907036931
+Borusyak et al.,0.0640439504019065,0.0538551290091586,municipio_ce_esc_ce_log_remuneraciones,municipio_ce,escalonado,log_remuneraciones,FALSE,-0.0415101628388026,0.169598063642616
+Callaway y Sant'Anna,0.125919809554722,0.0789186413979588,municipio_ce_esc_ce_log_remuneraciones,municipio_ce,escalonado,log_remuneraciones,FALSE,-0.0287578852941088,0.280597504403553

@@ -1,0 +1,4 @@
+dimension,grupo,unidades,tratadas,att,ee,media_base,covariables,panel,diseno,resultado,ic_bajo,ic_alto,referencia,dif_vs_ref,z_dif,p_dif
+tamano_localidad,chica,653,246,0.00533484904230586,0.0196486689170111,0.640816529933819,TRUE,municipio_trim,escalonado,sucursales_privado_pc,-0.0331758343791875,0.0438455324637992,chica,,,
+tamano_localidad,grande,652,634,-0.000908247585724167,0.0123121335407102,1.21493957544816,TRUE,municipio_trim,escalonado,sucursales_privado_pc,-0.0250395858983637,0.0232230907269153,chica,-0.00624309662803003,-0.269244393372797,0.787741620162213
+tamano_localidad,mediana,652,577,0.0263899188068184,0.0169949959509876,0.738314109355834,TRUE,municipio_trim,escalonado,sucursales_privado_pc,-0.00691966117452133,0.0596994987881581,chica,0.0210550697645125,0.810470003547496,0.417670098363973

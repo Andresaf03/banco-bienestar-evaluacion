@@ -1,0 +1,316 @@
+# Registro de fuentes. `estado` se actualiza conforme avanza la descarga:
+#   descargada | manual | parcial | no_descargada | pendiente
+# Los enlaces se descubrieron navegando las páginas oficiales (ver docs/descarga_manual.md).
+
+cnbv_bdif:
+  nombre: "CNBV, Bases de Datos de Inclusión Financiera (BDIF)"
+  descripcion: >
+    Bases trimestrales por municipio: infraestructura (sucursales, cajeros, TPV, corresponsales),
+    captación, crédito y transacciones, por sector (banca múltiple, banca de desarrollo, SOCAP,
+    SOFIPO). Incluye población y población adulta por municipio.
+  url_pagina: "https://www.gob.mx/cnbv/acciones-y-programas/bases-de-datos-de-inclusion-financiera"
+  url_base_archivos: "https://www.cnbv.gob.mx/Inclusi%C3%B3n/BasesDeDatos/"
+  patron_archivo: "Base_de_Datos_de_Inclusion_Financiera_{YYYYMM}.{xlsm|xlsx}"
+  url_reportes: "https://www.cnbv.gob.mx/Inclusi%C3%B3n/Anexos%20Inclusin%20Financiera/"
+  uso: "Tratamiento (sucursales banca de desarrollo), resultados por sector, denominador (población adulta)"
+  frecuencia: "trimestral"
+  cobertura_descargada: "2016Q1 – 2025Q4 (40 bases) + 56 reportes PDF (2018Q4 – 2025Q4)"
+  metodo_descarga: "automatica (requests)"
+  estado: descargada
+  notas: >
+    Cambio de metodología de corresponsales en 2019T1. El layout de las hojas cambia entre
+    trimestres (ver docs/diccionarios/cnbv_bdif.md).
+
+cnbv_portafolio:
+  nombre: "CNBV, Portafolio de Información: operativa de banca de desarrollo por institución"
+  descripcion: >
+    Archivos mensuales BD_Operativa_YYYYMM.xls(x) (2016-01 a 2021-12; lista SharePoint paginada) con sucursales, cajeros, TPV,
+    etc. por institución (Banco del Bienestar, Banjército, Banobras, Nafin, Bancomext, SHF) y
+    localidad INEGI. Único insumo público que separa Banjército del Banco del Bienestar a nivel
+    municipal. El archivo 2026 es un modelo Power Pivot no legible con herramientas abiertas.
+  url_pagina: "https://portafolioinfo.cnbv.gob.mx/PortafolioInformacion/Forms/AllItems.aspx"
+  patron_archivo: "BD_Operativa_{YYYYMM}.xlsx"
+  uso: "Identificar municipios con sucursal de Banjército (excluir del tratamiento); validar BDIF"
+  frecuencia: "mensual (2016-01 – 2021-12; hoja pivote en 2016, hoja plana desde 2016-09)"
+  metodo_descarga: "automatica (requests)"
+  estado: descargada
+
+babien:
+  nombre: "Banco del Bienestar, Directorio de Ubicaciones de Sucursales"
+  descripcion: "Foto actual de sucursales con domicilio y coordenadas (no es una serie)."
+  url_pagina: "https://datos.gob.mx/dataset/sucursales"
+  url_recurso: "https://repodatos.atdt.gob.mx/api_update/babien/sucursales/sucursalesbabien_1ertrim2026.csv"
+  licencia: "CC BY 4.0"
+  uso: "Validación cruzada con BDIF 2024T4; cruce espacial para asignar cve_mun"
+  frecuencia: "foto (1er trim. 2026)"
+  metodo_descarga: "manual (datos.gob.mx y repodatos.atdt.gob.mx devuelven 403 a clientes no navegador)"
+  ruta_manual: "data/manual/babien/"
+  estado: manual
+
+inegi_mg:
+  nombre: "INEGI, Marco Geoestadístico (diciembre 2024)"
+  descripcion: "Polígonos municipales (00mun) y catálogo de claves geoestadísticas."
+  url_pagina: "https://www.inegi.org.mx/app/biblioteca/ficha.html?upc=794551132173"
+  url_zip_nacional: "https://www.inegi.org.mx/contenidos/productos/prod_serv/contenidos/espanol/bvinegi/productos/geografia/marcogeo/794551132173_s.zip"
+  url_catalogo_api: "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/{cve_ent}"
+  uso: "Cruce espacial, contigüidad, distancias, catálogo de municipios"
+  frecuencia: "anual"
+  metodo_descarga: "automatica (extracción parcial por rangos HTTP del zip nacional de 3.1 GB; API de catálogo)"
+  estado: descargada
+
+conapo_marginacion:
+  nombre: "CONAPO, Índice de marginación municipal 2020 (y 2010, 2015)"
+  descripcion: "Índice, grado e indicadores de marginación por municipio."
+  url_pagina: "https://www.gob.mx/conapo/documentos/indices-de-marginacion-2020-284372"
+  url_archivos:
+    - "https://conapo.segob.gob.mx/work/models/CONAPO/Datos_Abiertos/Municipio/IMM_2020.xlsx"
+    - "https://conapo.segob.gob.mx/work/models/CONAPO/Datos_Abiertos/Municipio/IMM_DP2_2010.xlsx"
+    - "https://conapo.segob.gob.mx/work/models/CONAPO/Datos_Abiertos/Municipio/IMM_DP2_2015.xlsx"
+  uso: "Covariable previa y heterogeneidad (grado de marginación)"
+  frecuencia: "quinquenal"
+  metodo_descarga: "automatica; el servidor conapo.segob.gob.mx no respondía al planear (fallback manual)"
+  ruta_manual: "data/manual/conapo_marginacion/"
+  estado: manual
+
+conapo_proyecciones:
+  nombre: "CONAPO, Proyecciones de población municipal"
+  descripcion: "Población por municipio, sexo y edad (denominador alternativo)."
+  url_pagina: "https://datos.gob.mx/dataset/proyecciones-de-poblacion"
+  uso: "Denominador alternativo si la población adulta de la BDIF no sirve"
+  frecuencia: "anual (proyección)"
+  metodo_descarga: "manual (datos.gob.mx devuelve 403 a clientes no navegador; recursos pobproy_quinq1/ggrupos/inddemo.csv)"
+  ruta_manual: "data/manual/conapo_proyecciones/"
+  estado: manual
+
+inegi_censo:
+  nombre: "INEGI, Censo de Población y Vivienda 2020 (ITER)"
+  descripcion: "Principales resultados por localidad; las filas con loc=0000 son totales municipales."
+  url_archivo: "https://www.inegi.org.mx/contenidos/programas/ccpv/2020/datosabiertos/iter/iter_00_cpv2020_csv.zip"
+  url_diccionario: "https://www.inegi.org.mx/contenidos/programas/ccpv/2020/doc/fd_iter_cpv2020.pdf"
+  url_iter_2010: "https://www.inegi.org.mx/contenidos/programas/ccpv/2010/datosabiertos/iter_nal_2010_csv.zip"
+  uso: "Covariables previas (población, estructura por edad)"
+  frecuencia: "decenal"
+  metodo_descarga: "automatica"
+  estado: descargada
+
+literatura:
+  nombre: "Documentos y papers"
+  descripcion: "PDFs con fuente pública (ASF, IMCO, DOF, CNBV, papers)."
+  uso: "Contexto institucional y método"
+  metodo_descarga: "automatica"
+  ruta: "literatura/"
+  estado: descargada
+
+inegi_ce:
+  nombre: "INEGI, Censos Económicos: datos abiertos por entidad (CE 2024 y comparativo 2004–2019 en SCIAN 2023)"
+  descripcion: >
+    Resultados definitivos de los Censos Económicos por entidad federativa, con desglose municipal.
+    El CE 2024 y el comparativo histórico 2019, 2014, 2009 y 2004 (homologado a SCIAN 2023) se
+    publican en la misma carpeta de datos abiertos. Patrón y claves de entidad descubiertos en la
+    pestaña "Datos abiertos" de la página del CE 2024 (2026-09-30).
+  url_pagina: "https://www.inegi.org.mx/programas/ce/2024/#datos_abiertos"
+  patron_url: "https://www.inegi.org.mx/contenidos/programas/ce/2024/datosabiertos/conjunto_de_datos_ce_{entidad}_{anio}_csv.zip"
+  anios: [2004, 2009, 2014, 2019, 2024]
+  entidades: [nac, ags, bc, bcs, camp, coah, col, chis, chih, cdmx, dgo, gto, gro, hgo, jal, mex,
+              mich, mor, nay, nl, oax, pue, qro, qroo, slp, sin, son, tab, tamps, tlax, ver, yuc, zac]
+  uso: "Diferencias largas municipales entre censos (fase 1): unidades, personal, remuneraciones, VACB y financiamiento."
+  frecuencia: "quinquenal"
+  metodo_descarga: "automatica"
+  estado: no_descargada
+
+imss:
+  nombre: "IMSS, datos abiertos: puestos de trabajo afiliados por municipio (asegurados)"
+  descripcion: >
+    Archivos mensuales `asg-AAAA-MM-DD.csv` (separados por `|`, ~385 MB) con puestos afiliados por
+    municipio del catálogo IMSS (no INEGI), sector, tamaño del registro patronal y salario. Se
+    bajan solo los cierres de trimestre 2019T1–2025T4, por streaming (el crudo no se conserva).
+  url_pagina: "http://datos.imss.gob.mx/group/asegurados"
+  url_diccionario: "http://datos.imss.gob.mx/sites/default/files/diccionario_de_datos_1.xlsx"
+  patron_url: "http://datos.imss.gob.mx/sites/default/files/asg-{fecha}.csv"
+  # Fechas descubiertas en las páginas `asg-<año>` del portal (2026-09-30).
+  fechas: [2019-03-31, 2019-06-30, 2019-09-30, 2019-12-31, 2020-03-31, 2020-06-30, 2020-09-30,
+           2020-12-31, 2021-03-31, 2021-06-30, 2021-09-30, 2021-12-31, 2022-03-31, 2022-06-30,
+           2022-09-30, 2022-12-31, 2023-03-31, 2023-06-30, 2023-09-30, 2023-12-31, 2024-03-31,
+           2024-06-30, 2024-09-30, 2024-12-31, 2025-03-31, 2025-06-30, 2025-09-30, 2025-12-31]
+  uso: "Resultado de la fase 1: empleo formal y empleo en microempresas, medidos cada trimestre."
+  frecuencia: "mensual (se usan cierres de trimestre)"
+  metodo_descarga: "streaming"
+  estado: no_descargada
+
+banxico_remesas:
+  nombre: "Banco de México, SIE: ingresos por remesas por municipio (cuadro CE166)"
+  descripcion: >
+    Remesas trimestrales por municipio desde 2013. Se exporta desde la interfaz del SIE con el mismo
+    formulario del botón "Exportar series en formato CSV" (la API pide token). Las series traen solo
+    el nombre del municipio: el cruce a la clave INEGI es una excepción controlada a la regla 6.
+  url_cuadro: "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadro&idCuadro=CE166&sector=1&locale=es"
+  url_exportar: "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarSeries"
+  id_cuadro: "CE166"
+  anio_inicial: 2013
+  anio_final: 2026
+  series_minimas: 2400
+  archivo: "ce166_remesas_municipio.csv"
+  uso: "Resultado de la fase 1: ¿se registran más remesas donde abre el banco?"
+  frecuencia: "trimestral"
+  metodo_descarga: "automatica"
+  estado: no_descargada
+
+enif:
+  nombre: "INEGI/CNBV, Encuesta Nacional de Inclusión Financiera (ENIF)"
+  descripcion: "Encuesta de hogares sobre uso de servicios financieros (2012, 2015, 2018, 2021, 2024)."
+  url_pagina: "https://www.inegi.org.mx/programas/enif/2024/"
+  uso: >
+    Contraste a nivel personas (fase 1, descriptivo): tenencia de cuenta, cuenta en el Banco del
+    Bienestar y distancia a sucursal, por región y tamaño de localidad. No es representativa por
+    municipio, así que no entra en la estimación causal.
+  # Enlaces descubiertos en la pestaña "Microdatos" de cada edición (2026-09-30). La de 2018 solo se
+  # publica en DBF.
+  archivos:
+    - {anio: 2018, url: "https://www.inegi.org.mx/contenidos/programas/enif/2018/microdatos/enif_2018_bd_dbf.zip"}
+    - {anio: 2021, url: "https://www.inegi.org.mx/contenidos/programas/enif/2021/microdatos/enif_2021_bd_csv.zip"}
+    - {anio: 2021, url: "https://www.inegi.org.mx/contenidos/programas/enif/2021/microdatos/enif_2021_fd_pdf.zip"}
+    - {anio: 2024, url: "https://www.inegi.org.mx/contenidos/programas/enif/2024/microdatos/enif_2024_bd_csv.zip"}
+    - {anio: 2024, url: "https://www.inegi.org.mx/contenidos/programas/enif/2024/microdatos/enif_2024_modelo_logico_pdf.zip"}
+    # Tabulados oficiales (pestaña "Datos abiertos"), para el descriptivo: los microdatos de 2024 no
+    # traen descriptor de variables. En 2024 se usa la población de 18 a 70 años, comparable con 2018
+    # y 2021.
+    - {anio: 2018, url: "https://www.inegi.org.mx/contenidos/programas/enif/2018/tabulados/enif_2018_tabulados_generales.xlsx"}
+    - {anio: 2018, url: "https://www.inegi.org.mx/contenidos/programas/enif/2018/tabulados/enif_2018_tabulados_ahorro.xlsx"}
+    - {anio: 2021, url: "https://www.inegi.org.mx/contenidos/programas/enif/2021/tabulados/enif_2021_tabulados_generales_xlsx.zip"}
+    - {anio: 2021, url: "https://www.inegi.org.mx/contenidos/programas/enif/2021/tabulados/enif_2021_tabulados_ahorro_xlsx.zip"}
+    - {anio: 2024, url: "https://www.inegi.org.mx/contenidos/programas/enif/2024/tabulados/enif_2024_tab_18_a_70_anios_generales_xlsx.zip"}
+    - {anio: 2024, url: "https://www.inegi.org.mx/contenidos/programas/enif/2024/tabulados/enif_2024_tab_18_a_70_anios_ahorro_xlsx.zip"}
+  metodo_descarga: "automatica"
+  estado: no_descargada
+
+# ---------------------------------------------------------------- fase 2 (2026-10-07)
+# Fuentes del ranking de docs/contexto/fuentes_panel_candidatas.md; preregistro en docs/decisiones.md.
+# URLs verificadas el 2026-10-07 en las páginas oficiales (pestañas "Microdatos" y "Datos abiertos").
+
+inegi_eic:
+  nombre: "INEGI, Encuesta Intercensal 2015, Censo 2020 (cuestionario ampliado) y Encuesta Intercensal 2025"
+  descripcion: >
+    Microdatos de viviendas y personas por entidad, representativos por municipio. Se agregan por
+    municipio con el factor de expansión (streaming: el crudo no se conserva, solo su hash en
+    MANIFEST). Mismos mnemónicos en los tres cortes (INGR_*, SITTRA/SITUACION_TRAB, CONACT,
+    INGTRMEN, MUN_TRAB); los códigos de CELULAR, INTERNET y CONACT cambian en 2015.
+  url_pagina:
+    - "https://www.inegi.org.mx/programas/intercensal/2015/"
+    - "https://www.inegi.org.mx/programas/ccpv/2020/"
+    - "https://www.inegi.org.mx/programas/eic/2025/"
+  cortes:
+    - anio: 2015
+      patron_url: "https://www.inegi.org.mx/contenidos/programas/intercensal/2015/microdatos/eic2015_{clave}_csv.zip"
+      claves: ["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16",
+               "17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32"]
+      descriptor: "https://www.inegi.org.mx/contenidos/programas/intercensal/2015/doc/eic2015_fd.xls"
+    - anio: 2020
+      patron_url: "https://www.inegi.org.mx/contenidos/programas/ccpv/2020/microdatos/Censo2020_CA_{clave}_csv.zip"
+      claves: ["ags","bc","bcs","cam","coa","col","chs","chh","cdmx","dgo","gto","gro","hgo","jal",
+               "mex","mich","mor","nay","nl","oax","pue","qro","qroo","slp","sin","son","tab","tam",
+               "tla","ver","yuc","zac"]
+      descriptor: "https://www.inegi.org.mx/contenidos/programas/ccpv/2020/doc/Censo2020_CA_descriptor_bd.xlsx"
+    - anio: 2025
+      patron_url: "https://www.inegi.org.mx/contenidos/programas/eic/2025/microdatos/eic2025_micro_{clave}_csv.zip"
+      claves: ["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16",
+               "17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32"]
+      descriptor: "https://www.inegi.org.mx/contenidos/programas/eic/2025/microdatos/eic2025_micro_fd.xlsx"
+  uso: "Fase 2: emprendimiento por personas, canal de dispersión y crecimiento (municipio, 3 cortes)"
+  frecuencia: "quinquenal"
+  metodo_descarga: "streaming"
+  estado: descargada
+
+viirs:
+  nombre: "VIIRS Nighttime Lights (VNL V2 anual, EOG) redistribuido en Zenodo por OpenGeoHub"
+  descripcion: >
+    Compuestos anuales de radiancia nocturna (500 m, COG Int16 con escala 10). 2012–2024 son los
+    valores observados del VNL V2 (`average_masked`); 2000–2011 son extrapolación y no se usan. El
+    original de EOG exige cuenta (eogdata.mines.edu redirige a OpenID); esta copia es CC-BY sin
+    registro.
+  url_pagina: "https://zenodo.org/records/17294744"
+  patron_url: "https://zenodo.org/records/17294744/files/nightlights.average_viirs.v21_m_500m_s_{anio}0101_{anio}1231_go_epsg4326_v20250904.tif"
+  anios: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
+  licencia: "CC-BY 4.0"
+  uso: "Fase 2: actividad local continua por localidad (luz a 1 km y anillo de 1–3 km)"
+  frecuencia: "anual"
+  metodo_descarga: "automatica (Zenodo limita peticiones: 429)"
+  estado: descargada
+
+efipem:
+  nombre: "INEGI, Estadística de Finanzas Públicas Estatales y Municipales (EFIPEM), municipal anual"
+  url_pagina: "https://www.inegi.org.mx/programas/finanzas/"
+  url_archivo: "https://www.inegi.org.mx/contenidos/programas/finanzas/datosabiertos/conjunto_de_datos_efipem_municipal_csv.zip"
+  uso: "Fase 2: ingresos propios municipales (impuestos, predial, derechos) como actividad formal"
+  frecuencia: "anual (1989–2025; 2025 preliminar)"
+  metodo_descarga: "automatica"
+  estado: descargada
+
+enoe:
+  nombre: "INEGI, Encuesta Nacional de Ocupación y Empleo (ENOE y ENOE^N), microdatos trimestrales"
+  descripcion: >
+    La tabla SDEM trae `ent`, `mun`, `loc` y `ageb`: se agrega por municipio y trimestre. ENOE^N
+    desde 2020T3 (prefijo `enoe_n_`); 2020T2 fue telefónica (ETOE) y no entra.
+  url_pagina: "https://www.inegi.org.mx/programas/enoe/15ymas/"
+  url_base: "https://www.inegi.org.mx/contenidos/programas/enoe/15ymas/microdatos/"
+  # Nombres verificados el 2026-10-07 (HEAD; el INEGI responde 200 con una página de error de
+  # 2,263 bytes a los nombres que no existen, así que se valida que cada archivo sea un zip).
+  eras:
+    - {desde: "2019Q1", hasta: "2020Q1", patron: "{anio}trim{trimestre}_csv.zip"}
+    - {desde: "2020Q3", hasta: "2022Q4", patron: "enoe_n_{anio}_trim{trimestre}_csv.zip"}
+    - {desde: "2023Q1", hasta: "2025Q4", patron: "enoe_{anio}_trim{trimestre}_csv.zip"}
+  uso: "Fase 2 (si alcanza): réplica de Bruhn y Love con dueños de negocio, informalidad e ingreso"
+  frecuencia: "trimestral"
+  metodo_descarga: "streaming"
+  estado: descargada
+
+# --------------------------------------------------------------------------- fase 3 (2026-10-11)
+ine_sicee:
+  nombre: "INE, Sistema de Consulta de la Estadística de las Elecciones (SICEE): diputaciones federales de MR"
+  descripcion: >
+    Resultados oficiales de los cómputos distritales por casilla, un zip por proceso electoral.
+    Rutas descubiertas en https://sicee.ine.mx/downloadzip (ámbito Federal, 2026-10-11).
+  url_pagina: "https://sicee.ine.mx/downloadzip"
+  patron_url: "https://sicee.ine.mx/ACTASSICEEN2024/download/FEDERALES_{anio}/DIPUTACIONES_FED_MR_{anio}.zip"
+  anios: [2015, 2018, 2021, 2024]
+  licencia: >
+    Términos del SICEE: copiar, difundir, adaptar, extraer, explotar y crear derivados, citando el
+    conjunto de datos, la liga y la fecha de consulta; sin aparentar postura oficial del INE.
+  uso: "Fase 3: participación y voto por el bloque en el gobierno (Morena, PT y PVEM) por municipio"
+  frecuencia: "trienal (2015, 2018, 2021, 2024)"
+  metodo_descarga: "automatica"
+  estado: descargada
+
+sesnsp:
+  nombre: "SESNSP, incidencia delictiva municipal del fuero común (delitos), metodología 2015-2025"
+  descripcion: >
+    Carpetas de investigación por municipio, año, tipo, subtipo y modalidad, con un mes por
+    columna. Corte de agosto de 2026. Desde 2026 hay metodología nueva (RNID) en archivos aparte,
+    que no se usan.
+  url_pagina: "https://www.gob.mx/sesnsp/acciones-y-programas/datos-abiertos-de-incidencia-delictiva"
+  url_recurso: "https://sspcgob-my.sharepoint.com/:u:/g/personal/cni_sspc_gob_mx/IQCIHz1ZZoXjRZ3IySsQQqgFAYKdzEOXXK1YXfhhEhyDMcs?e=PsagaS"
+  archivo: "Municipal-Delitos-2015-2025_ago2026.zip"
+  uso: "Fase 3: robo a transeúnte, robo a negocio, extorsión, robo total y homicidio doloso por 100 mil habitantes"
+  frecuencia: "mensual (2015-01 – 2025-12)"
+  metodo_descarga: "manual (SharePoint; enlace anónimo de la página del SESNSP, una sola vez con autorización)"
+  ruta_manual: "data/manual/sesnsp/"
+  estado: manual
+
+enigh:
+  nombre: "INEGI, Encuesta Nacional de Ingresos y Gastos de los Hogares (ENIGH), nueva serie"
+  descripcion: >
+    Conjunto de datos en CSV de cada edición (hogares, viviendas, gastos, ingresos y concentrado),
+    de la pestaña "Datos abiertos" de cada página del programa (rutas vistas el 2026-10-14).
+    Levantamiento del 21 de agosto al 28 de noviembre en todas las olas. `ubica_geo` = entidad +
+    municipio.
+  url_pagina: "https://www.inegi.org.mx/programas/enigh/nc/2024/"
+  url_base: "https://www.inegi.org.mx/contenidos/programas/enigh/nc/"
+  archivos:
+    2016: "2016/datosabiertos/conjunto_de_datos_enigh2016_nueva_serie_csv.zip"
+    2018: "2018/datosabiertos/conjunto_de_datos_enigh_2018_ns_csv.zip"
+    2020: "2020/datosabiertos/conjunto_de_datos_enigh_ns_2020_csv.zip"
+    2022: "2022/datosabiertos/conjunto_de_datos_enigh_ns_2022_csv.zip"
+    2024: "2024/datosabiertos/conjunto_de_datos_enigh2024_ns_csv.zip"
+  uso: "Fase 4 (C2, D y B3): forma de pago, ahorro, ingreso y beneficios gubernamentales por municipio y ola"
+  frecuencia: "bienal (2016–2024)"
+  metodo_descarga: "automatica"
+  estado: descargada

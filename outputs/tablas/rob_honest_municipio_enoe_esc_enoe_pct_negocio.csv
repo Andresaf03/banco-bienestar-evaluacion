@@ -1,0 +1,8 @@
+lb,ub,method,Delta,Mbar,etiqueta,panel,diseno,resultado,referencia_e
+-1.10165378623535,1.96088787591432,C-LF,DeltaRM,0,municipio_enoe_esc_enoe_pct_negocio,municipio_enoe,escalonado,pct_negocio,-1
+-7.78356286728916,8.92120983534537,C-LF,DeltaRM,0.25,municipio_enoe_esc_enoe_pct_negocio,municipio_enoe,escalonado,pct_negocio,-1
+-15.8575363402292,16.9951833082854,C-LF,DeltaRM,0.5,municipio_enoe_esc_enoe_pct_negocio,municipio_enoe,escalonado,pct_negocio,-1
+-32.2838961644864,33.4215431325427,C-LF,DeltaRM,1,municipio_enoe_esc_enoe_pct_negocio,municipio_enoe,escalonado,pct_negocio,-1
+-48.4318431103665,49.8479029568,C-LF,DeltaRM,1.5,municipio_enoe_esc_enoe_pct_negocio,municipio_enoe,escalonado,pct_negocio,-1
+-64.8582029346238,65.99584990268,C-LF,DeltaRM,2,municipio_enoe_esc_enoe_pct_negocio,municipio_enoe,escalonado,pct_negocio,-1
+-1.32914915425936,2.18838324393834,Original,,,municipio_enoe_esc_enoe_pct_negocio,municipio_enoe,escalonado,pct_negocio,-1

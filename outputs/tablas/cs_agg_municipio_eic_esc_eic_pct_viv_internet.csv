@@ -1,0 +1,5 @@
+tipo,termino,valor,ee,ic_bajo,ic_alto,panel,diseno,resultado
+simple,ATT,2.6484978845709,1.81880483122985,-0.916294079547057,6.21328984868886,municipio_eic,escalonado,pct_viv_internet
+group,3,2.6484978845709,1.86314822241654,-1.00320552922533,6.30020129836713,municipio_eic,escalonado,pct_viv_internet
+dynamic,-1,-0.346521029752149,1.08912804147406,-2.48117276559395,1.78813070608965,municipio_eic,escalonado,pct_viv_internet
+dynamic,0,2.6484978845709,1.81718397821448,-0.913117266012692,6.21011303515449,municipio_eic,escalonado,pct_viv_internet

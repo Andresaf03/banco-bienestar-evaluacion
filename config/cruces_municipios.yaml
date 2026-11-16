@@ -1,0 +1,17 @@
+# Correcciones manuales del cruce de municipios por nombre (excepción controlada a la regla 6,
+# autorizada el 2026-09-30). Clave de la fuente -> cve_mun INEGI. Solo casos verificables; los
+# homónimos sin información para distinguirlos (p. ej. los dos "San Juan Mixtepec" de Oaxaca en
+# el IMSS) se dejan pendientes en vez de adivinar. Revisar contra docs/diccionarios/cruce_*.md.
+imss:
+  Y35: "02001"   # Isla de Cedros: localidad del municipio de Ensenada, B.C.
+  M48: "11023"   # Santa Ana Pacueco: localidad del municipio de Pénjamo, Gto.
+banxico: {}
+# INE (fase 3, diputaciones federales 2015–2024): clave "EE-MMM|nombre normalizado" (el INE
+# reasigna claves). Los homónimos de Oaxaca se distinguen por tamaño: lista nominal de 2024 contra
+# población de 18+ del Censo 2020 (la numeración INE de Oaxaca está corrida respecto de la INEGI).
+ine:
+  "20-208|san juan mixtepec": "20208"    # LN 6,170 contra 5,230 adultos (20209: 451)
+  "20-209|san juan mixtepec": "20209"    # LN 508 contra 451 adultos
+  "20-316|san pedro mixtepec": "20318"   # LN 39,995 contra 33,200 adultos (Puerto Escondido)
+  "20-317|san pedro mixtepec": "20319"   # LN 713 contra 665 adultos
+  "20-549|heroica villa tezoatlan segura y luna cuna ind oax": "20549"  # nombre abreviado por el INE

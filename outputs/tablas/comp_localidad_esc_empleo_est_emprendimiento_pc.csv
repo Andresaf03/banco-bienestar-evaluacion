@@ -1,0 +1,5 @@
+estimador,valor,ee,etiqueta,panel,diseno,resultado,fe_tamano,ic_bajo,ic_alto
+TWFE estático,0.949726953871335,2.21094552704063,localidad_esc_empleo_est_emprendimiento_pc,localidad,escalonado,empleo_est_emprendimiento_pc,FALSE,-3.38364665090823,5.2831005586509
+Sun y Abraham,2.53908253171852,2.07406845897904,localidad_esc_empleo_est_emprendimiento_pc,localidad,escalonado,empleo_est_emprendimiento_pc,FALSE,-1.52601694935089,6.60418201278794
+Borusyak et al.,1.26714120196109,2.13007342267091,localidad_esc_empleo_est_emprendimiento_pc,localidad,escalonado,empleo_est_emprendimiento_pc,FALSE,-2.90772599089987,5.44200839482204
+Callaway y Sant'Anna,3.09573114730972,2.2861117225575,localidad_esc_empleo_est_emprendimiento_pc,localidad,escalonado,empleo_est_emprendimiento_pc,FALSE,-1.38496549353781,7.57642778815725

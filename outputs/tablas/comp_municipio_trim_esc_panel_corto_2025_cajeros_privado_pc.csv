@@ -1,0 +1,5 @@
+estimador,valor,ee,etiqueta,panel,diseno,resultado,fe_tamano,ic_bajo,ic_alto
+TWFE estático,0.0442953903443495,0.048740619494949,municipio_trim_esc_panel_corto_2025_cajeros_privado_pc,municipio_trim,escalonado,cajeros_privado_pc,FALSE,-0.0512344684499214,0.13982524913862
+Sun y Abraham,-0.0510575945731739,0.0551210218193058,municipio_trim_esc_panel_corto_2025_cajeros_privado_pc,municipio_trim,escalonado,cajeros_privado_pc,FALSE,-0.15909281213006,0.0569776229837119
+Borusyak et al.,-0.0188635477040494,0.0555062041958639,municipio_trim_esc_panel_corto_2025_cajeros_privado_pc,municipio_trim,escalonado,cajeros_privado_pc,FALSE,-0.127653708846469,0.0899266134383699
+Callaway y Sant'Anna,-0.200387907980315,0.101750191522997,municipio_trim_esc_panel_corto_2025_cajeros_privado_pc,municipio_trim,escalonado,cajeros_privado_pc,FALSE,-0.399814618785442,-0.000961197175187861

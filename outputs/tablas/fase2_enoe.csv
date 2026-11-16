@@ -1,0 +1,5 @@
+etiqueta,panel,diseno,resultado,estimador,termino,valor,ee,ee_boot,n_unidades,n_tratadas,n_controles,n_clusters,media_base,pre_n,pre_sig,pre_wald_p,placebo,placebo_ee,variante,familia
+municipio_enoe_esc_enoe_pct_negocio,municipio_enoe,escalonado,pct_negocio,Callaway y Sant'Anna,ATT global,2.11803841087641,1.54630004994801,1.58723528842862,158,146,12,158,25.8443101894775,19,0,0.2313947691136,,,enoe,enoe
+municipio_enoe_esc_enoe_pct_informal,municipio_enoe,escalonado,pct_informal,Callaway y Sant'Anna,ATT global,3.93932553531325,1.6015864792076,1.69262739282791,158,146,12,158,30.1929559224961,19,2,0.0798269213817452,,,enoe,enoe
+municipio_enoe_esc_enoe_pct_ocupacion,municipio_enoe,escalonado,pct_ocupacion,Callaway y Sant'Anna,ATT global,0.507160883623323,1.12774898204991,1.10651263172049,158,146,12,158,58.9383078445912,19,0,0.571331706496358,,,enoe,enoe
+municipio_enoe_esc_enoe_log_ingreso,municipio_enoe,escalonado,log_ingreso,Callaway y Sant'Anna,ATT global,0.0330336051785546,0.0327337222247981,0.0342204693013776,158,146,12,158,8.67872948877946,19,2,0.046841754175987,,,enoe,enoe

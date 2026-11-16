@@ -1,0 +1,8 @@
+lb,ub,method,Delta,Mbar,etiqueta,panel,diseno,resultado,referencia_e
+-0.018095352003759,0.0516345667214961,C-LF,DeltaRM,0,localidad_viirs_esc_viirs_log1p_luz_1km,localidad_viirs,escalonado,log1p_luz_1km,-1
+-0.0421401515641917,0.0708704063698422,C-LF,DeltaRM,0.25,localidad_viirs_esc_viirs_log1p_luz_1km,localidad_viirs,escalonado,log1p_luz_1km,-1
+-0.0758028709487975,0.0997241658423615,C-LF,DeltaRM,0.5,localidad_viirs_esc_viirs_log1p_luz_1km,localidad_viirs,escalonado,log1p_luz_1km,-1
+-0.152746229542182,0.174263044479703,C-LF,DeltaRM,1,localidad_viirs_esc_viirs_log1p_luz_1km,localidad_viirs,escalonado,log1p_luz_1km,-1
+-0.229689588135567,0.251206403073088,C-LF,DeltaRM,1.5,localidad_viirs_esc_viirs_log1p_luz_1km,localidad_viirs,escalonado,log1p_luz_1km,-1
+-0.309037426684995,0.330554241622516,C-LF,DeltaRM,2,localidad_viirs_esc_viirs_log1p_luz_1km,localidad_viirs,escalonado,log1p_luz_1km,-1
+-0.0188553328941508,0.0523945476118877,Original,,,localidad_viirs_esc_viirs_log1p_luz_1km,localidad_viirs,escalonado,log1p_luz_1km,-1

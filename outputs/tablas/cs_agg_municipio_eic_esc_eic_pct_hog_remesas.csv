@@ -1,0 +1,5 @@
+tipo,termino,valor,ee,ic_bajo,ic_alto,panel,diseno,resultado
+simple,ATT,-0.52618471049059,0.335985580305697,-1.18470434721455,0.132334926233366,municipio_eic,escalonado,pct_hog_remesas
+group,3,-0.52618471049059,0.357426400889844,-1.22672758335846,0.174358162377278,municipio_eic,escalonado,pct_hog_remesas
+dynamic,-1,-0.973018729112269,0.770007272877612,-2.48220525178629,0.536167793561757,municipio_eic,escalonado,pct_hog_remesas
+dynamic,0,-0.52618471049059,0.355016480710293,-1.22200422660092,0.169634805619743,municipio_eic,escalonado,pct_hog_remesas

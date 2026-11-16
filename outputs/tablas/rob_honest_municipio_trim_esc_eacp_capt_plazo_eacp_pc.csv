@@ -1,0 +1,8 @@
+lb,ub,method,Delta,Mbar,etiqueta,panel,diseno,resultado,referencia_e
+-17.4755027586216,-2.44341082006781,C-LF,DeltaRM,0,municipio_trim_esc_eacp_capt_plazo_eacp_pc,municipio_trim,escalonado,capt_plazo_eacp_pc,-1
+-47.5396866357291,27.6207730570397,C-LF,DeltaRM,0.25,municipio_trim_esc_eacp_capt_plazo_eacp_pc,municipio_trim,escalonado,capt_plazo_eacp_pc,-1
+-84.284800263305,62.6956542469985,C-LF,DeltaRM,0.5,municipio_trim_esc_eacp_capt_plazo_eacp_pc,municipio_trim,escalonado,capt_plazo_eacp_pc,-1
+-156.10479508084,134.515649064533,C-LF,DeltaRM,1,municipio_trim_esc_eacp_capt_plazo_eacp_pc,municipio_trim,escalonado,capt_plazo_eacp_pc,-1
+-227.924789898374,206.335643882068,C-LF,DeltaRM,1.5,municipio_trim_esc_eacp_capt_plazo_eacp_pc,municipio_trim,escalonado,capt_plazo_eacp_pc,-1
+-301.415017153526,279.82587113722,C-LF,DeltaRM,2,municipio_trim_esc_eacp_capt_plazo_eacp_pc,municipio_trim,escalonado,capt_plazo_eacp_pc,-1
+-18.9853783323322,-0.933535246357234,Original,,,municipio_trim_esc_eacp_capt_plazo_eacp_pc,municipio_trim,escalonado,capt_plazo_eacp_pc,-1

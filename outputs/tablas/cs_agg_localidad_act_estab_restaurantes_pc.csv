@@ -1,0 +1,7 @@
+tipo,termino,valor,ee,ic_bajo,ic_alto,panel,diseno,resultado
+simple,ATT,0.44546534005507,0.710976686922595,-0.948023360160827,1.83895404027097,localidad,actualizaciones,estab_restaurantes_pc
+group,17,0.44546534005507,0.691702956848786,-0.910247543368414,1.80117822347855,localidad,actualizaciones,estab_restaurantes_pc
+dynamic,-10,0.0478793753628298,0.0967247301727224,-0.169016143901531,0.264774894627191,localidad,actualizaciones,estab_restaurantes_pc
+dynamic,-9,0.288400152600898,0.94311798801039,-1.82644747087441,2.40324777607621,localidad,actualizaciones,estab_restaurantes_pc
+dynamic,0,0.0854253854738988,0.276540795210525,-0.534689648890718,0.705540419838516,localidad,actualizaciones,estab_restaurantes_pc
+dynamic,1,0.805505294636241,1.2516766505513,-2.00125422371662,3.6122648129891,localidad,actualizaciones,estab_restaurantes_pc

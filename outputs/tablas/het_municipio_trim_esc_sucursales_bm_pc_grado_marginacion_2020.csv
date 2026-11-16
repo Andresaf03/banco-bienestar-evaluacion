@@ -1,0 +1,4 @@
+dimension,grupo,unidades,tratadas,att,ee,media_base,covariables,panel,diseno,resultado,ic_bajo,ic_alto,referencia,dif_vs_ref,z_dif,p_dif
+grado_marginacion_2020,alta marginación,703,476,0.00123315480850683,0.00128200750757209,0.0869087508778833,FALSE,municipio_trim,escalonado,sucursales_bm_pc,-0.00127953373424443,0.00374584335125809,alta marginación,,,
+grado_marginacion_2020,baja marginación,852,703,-0.00215446315090312,0.00825811350122388,0.668085230670002,TRUE,municipio_trim,escalonado,sucursales_bm_pc,-0.0183400681935459,0.0140311418917397,alta marginación,-0.00338761795940995,-0.405361378049821,0.685211896026279
+grado_marginacion_2020,marginación media,402,278,0.00832803179899568,0.00360955683418544,0.285515762965907,FALSE,municipio_trim,escalonado,sucursales_bm_pc,0.0012534304038418,0.0154026331941496,alta marginación,0.00709487699048885,1.85222457890587,0.063993580719715

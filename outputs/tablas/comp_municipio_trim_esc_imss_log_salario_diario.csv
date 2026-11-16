@@ -1,0 +1,5 @@
+estimador,valor,ee,etiqueta,panel,diseno,resultado,fe_tamano,ic_bajo,ic_alto
+TWFE estático,-0.0134965925314497,0.0065657236068779,municipio_trim_esc_imss_log_salario_diario,municipio_trim,escalonado,log_salario_diario,FALSE,-0.0263651743333748,-0.00062801072952463
+Sun y Abraham,-0.0206178461357268,0.00754850119040061,municipio_trim_esc_imss_log_salario_diario,municipio_trim,escalonado,log_salario_diario,FALSE,-0.0354126366061697,-0.00582305566528391
+Borusyak et al.,-0.0211326179063577,0.00952983452812169,municipio_trim_esc_imss_log_salario_diario,municipio_trim,escalonado,log_salario_diario,FALSE,-0.0398107503601024,-0.00245448545261288
+Callaway y Sant'Anna,-0.0185246115365416,0.0104953865197763,municipio_trim_esc_imss_log_salario_diario,municipio_trim,escalonado,log_salario_diario,FALSE,-0.0390951911191304,0.00204596804604719

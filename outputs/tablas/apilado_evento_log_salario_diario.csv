@@ -1,0 +1,33 @@
+e,att,ee,controles,resultado
+-8,0.00313232140700805,0.00997333967081341,limpios (nunca + aún no tratados),log_salario_diario
+-7,0.00444458367072269,0.00888116672343732,limpios (nunca + aún no tratados),log_salario_diario
+-6,0.00175578932883044,0.00741753225993877,limpios (nunca + aún no tratados),log_salario_diario
+-5,0.00408247483205598,0.00626084108824093,limpios (nunca + aún no tratados),log_salario_diario
+-4,-0.00587603391714379,0.00527013722064294,limpios (nunca + aún no tratados),log_salario_diario
+-3,-0.00674617672570888,0.00453036120074625,limpios (nunca + aún no tratados),log_salario_diario
+-2,-0.00542122135474059,0.00332820835719634,limpios (nunca + aún no tratados),log_salario_diario
+-1,0,0,limpios (nunca + aún no tratados),log_salario_diario
+0,-0.00767571565085894,0.00352579847688132,limpios (nunca + aún no tratados),log_salario_diario
+1,-0.00322168414980636,0.00445582884177249,limpios (nunca + aún no tratados),log_salario_diario
+2,-0.0101636328903172,0.00494099706413004,limpios (nunca + aún no tratados),log_salario_diario
+3,-0.0104881488137204,0.00553777705888708,limpios (nunca + aún no tratados),log_salario_diario
+4,-0.0157666863914878,0.00676472738175368,limpios (nunca + aún no tratados),log_salario_diario
+5,-0.0182830451842969,0.00780690046272701,limpios (nunca + aún no tratados),log_salario_diario
+6,-0.0250556177830621,0.00894665924208186,limpios (nunca + aún no tratados),log_salario_diario
+7,-0.024659514778704,0.0101023572302762,limpios (nunca + aún no tratados),log_salario_diario
+-8,0.000732466352531712,0.0104073995885008,solo nunca tratados,log_salario_diario
+-7,0.00244398197071499,0.00922948911273189,solo nunca tratados,log_salario_diario
+-6,-0.0013480982617119,0.00771325336640944,solo nunca tratados,log_salario_diario
+-5,0.000870016204259412,0.00650133195459695,solo nunca tratados,log_salario_diario
+-4,-0.00836808987845154,0.00550369045755076,solo nunca tratados,log_salario_diario
+-3,-0.00861296880741646,0.00461350993665932,solo nunca tratados,log_salario_diario
+-2,-0.00489247163057717,0.00336870332874031,solo nunca tratados,log_salario_diario
+-1,0,0,solo nunca tratados,log_salario_diario
+0,-0.00830537527270467,0.00377708627208816,solo nunca tratados,log_salario_diario
+1,-0.0034329010239009,0.00462648857026003,solo nunca tratados,log_salario_diario
+2,-0.0109944362085542,0.00504650717585724,solo nunca tratados,log_salario_diario
+3,-0.0102439536126254,0.00577584583041409,solo nunca tratados,log_salario_diario
+4,-0.0173028392267796,0.00709799101992975,solo nunca tratados,log_salario_diario
+5,-0.0189426163747404,0.00812924027749988,solo nunca tratados,log_salario_diario
+6,-0.0259549016445765,0.00911875866227218,solo nunca tratados,log_salario_diario
+7,-0.0253961031581601,0.0102848354477544,solo nunca tratados,log_salario_diario

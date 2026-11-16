@@ -1,0 +1,4 @@
+dimension,grupo,unidades,tratadas,att,ee,media_base,covariables,panel,diseno,resultado,ic_bajo,ic_alto,referencia,dif_vs_ref,z_dif,p_dif
+tamano_localidad,chica,7683,47,0.747283692406596,0.970282065832319,4.46207639819688,TRUE,localidad,actualizaciones,estab_emprendimiento_pc,-1.15443421146987,2.64900159628306,chica,,,
+tamano_localidad,grande,7586,996,7.50944655540721,1.33281594951306,75.0005503348141,TRUE,localidad,actualizaciones,estab_emprendimiento_pc,4.89717529634105,10.1217178144734,chica,6.76216286300061,4.10178820990119,4.09969442504515e-05
+tamano_localidad,mediana,7556,63,6.87457328885262,2.77723938544077,33.4054989150466,TRUE,localidad,actualizaciones,estab_emprendimiento_pc,1.43128411694257,12.3178624607627,chica,6.12728959644603,2.08279855690129,0.0372695891880267

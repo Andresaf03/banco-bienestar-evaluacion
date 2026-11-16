@@ -1,0 +1,8 @@
+lb,ub,method,Delta,Mbar,etiqueta,panel,diseno,resultado,referencia_e
+-0.0107685249856981,0.0095947877052307,C-LF,DeltaRM,0,municipio_trim_esc_sucursales_eacp_pc,municipio_trim,escalonado,sucursales_eacp_pc,-1
+-0.0433498252911846,0.0462487505489024,C-LF,DeltaRM,0.25,municipio_trim_esc_sucursales_eacp_pc,municipio_trim,escalonado,sucursales_eacp_pc,-1
+-0.0881491132112282,0.0869753759307606,C-LF,DeltaRM,0.5,municipio_trim_esc_sucursales_eacp_pc,municipio_trim,escalonado,sucursales_eacp_pc,-1
+-0.17367502651313,0.176573951770848,C-LF,DeltaRM,1,municipio_trim_esc_sucursales_eacp_pc,municipio_trim,escalonado,sucursales_eacp_pc,-1
+-0.263273602353217,0.266172527610935,C-LF,DeltaRM,1.5,municipio_trim_esc_sucursales_eacp_pc,municipio_trim,escalonado,sucursales_eacp_pc,-1
+-0.352872178193304,0.351698440912836,C-LF,DeltaRM,2,municipio_trim_esc_sucursales_eacp_pc,municipio_trim,escalonado,sucursales_eacp_pc,-1
+-0.0133429526776538,0.0121692153971864,Original,,,municipio_trim_esc_sucursales_eacp_pc,municipio_trim,escalonado,sucursales_eacp_pc,-1

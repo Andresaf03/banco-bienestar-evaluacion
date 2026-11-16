@@ -1,0 +1,812 @@
+---
+title: "¿Atrajo o desplazó? La expansión del Banco del Bienestar, la banca privada y la actividad económica local en México"
+subtitle: "Trabajo final · Tópicos de Política Pública II · ITAM"
+author:
+  - Andrés Álvarez
+  - Fernando Barba
+  - Luis Islas
+date: 2026-10-15
+date-format: "D [de] MMMM [de] YYYY"
+lang: es
+abstract: |
+  Entre 2019 y 2024 el Banco del Bienestar pasó de 540 a unas 3,150 sucursales. Estimamos si la
+  primera sucursal de un municipio atrajo o desplazó a la banca privada, con diferencias en
+  diferencias escalonadas (Callaway y Sant'Anna 2021), datos de la CNBV y un diseño preregistrado:
+  1,457 municipios tratados y 500 de comparación. El banco abrió cuentas donde llegó (3,284 tarjetas
+  de débito por 10 mil adultos), con una transacción en cajero por tarjeta cada dos meses. Las
+  sucursales privadas no cambian: el intervalo al 90% descarta efectos mayores a ±5%, y el
+  resultado se sostiene con casi todas las regresiones de efectos fijos, otros controles y un
+  placebo de fecha. El crédito privado tampoco se mueve. El aumento de 10% en el padrón de
+  establecimientos no se comporta como efecto de la sucursal. La expansión funcionó como red de
+  dispersión, no como palanca del sistema financiero local.
+format:
+  pdf:
+    documentclass: article
+    papersize: letter
+    fontsize: 11pt
+    geometry: margin=2.5cm
+    linestretch: 2
+    mainfont: "Palatino"
+    number-sections: true
+    colorlinks: true
+    linkcolor: "blue"
+    fig-pos: "H"
+    tbl-cap-location: top
+    filters:
+      - notas.lua
+    include-in-header:
+      text: |
+        \usepackage{booktabs}
+        \usepackage{caption}
+        \captionsetup{font={small,singlespacing},labelfont=bf}
+        \usepackage{etoolbox}
+        \AtBeginEnvironment{longtable}{\singlespacing\small}
+        \AtBeginEnvironment{table}{\singlespacing}
+        \renewcommand{\arraystretch}{1.1}
+        \newenvironment{notas}{\par\vspace{6pt}\begin{singlespace}\footnotesize\setlength{\parindent}{0pt}}{\end{singlespace}}
+crossref:
+  fig-prefix: Figura
+  tbl-prefix: Tabla
+  fig-title: Figura
+  tbl-title: Tabla
+---
+
+# Introducción
+
+Entre 2019 y 2024 el Banco del Bienestar pasó de 540 a unas 3,150 sucursales, y casi dos tercios de
+los municipios que recibieron una no tenían banca múltiple. Pero el banco apenas presta: a fines de 2025 tenía medio crédito por cada 100 cuentas, contra 61 de la banca
+múltiple en los mismos municipios. ¿Qué le pasa a la banca privada cuando llega una red pública que
+abre cuentas pero no presta?
+
+La expansión es parte del Plan Nacional de Desarrollo 2019–2024, que convirtió al Banco del Ahorro
+Nacional y Servicios Financieros (Bansefi) en el Banco del Bienestar. La Secretaría de la Defensa
+Nacional (SEDENA) construyó las sucursales: al cierre de 2022 había 1,873 terminadas, pero solo 922
+en operación, según la Auditoría Superior de la Federación (ASF 2023).
+
+Nuestra pregunta es la de la propuesta del equipo: **¿la primera sucursal del Banco del Bienestar en
+un municipio atrajo o desplazó a la banca privada —bancos comerciales (banca múltiple) y entidades
+de ahorro y crédito popular (EACP)—, y fue mayor el efecto donde no había banca múltiple?** El
+resultado principal son las sucursales privadas por cada 10 mil adultos, y la hipótesis nula es que
+no cambian. Como pregunta complementaria, estudiamos si cambió la actividad económica del lugar.
+
+La dirección del efecto no es obvia. Una sucursal pública puede **atraer** a la banca privada si
+bancariza a la población, o **desplazarla** si compite por los mismos clientes. Como el Banco del Bienestar funcionó
+sobre todo como dispersor de programas sociales (ASF 2023), sus propias cuentas suben por
+construcción; la pregunta relevante es qué pasa con el **resto** del sistema.
+
+Usamos diferencias en diferencias con adopción escalonada (Callaway y Sant'Anna 2021), con el
+tratamiento fechado en el primer trimestre con una sucursal **en operación** según la Base de Datos
+de Inclusión Financiera (BDIF) de la Comisión Nacional Bancaria y de Valores (CNBV). La muestra, la ventana, la especificación principal, las
+familias de pruebas múltiples y el umbral de equivalencia se preregistraron antes de la corrida
+final (`docs/decisiones.md`), y un apéndice muestra qué pasa al cambiar cada decisión discrecional.
+Encontramos cuatro cosas:
+
+1. **Primera etapa fuerte.** Donde abrió, el banco sumó unas 3,284 tarjetas de débito propias por
+   cada 10 mil adultos, con tendencias previas planas; en sus cajeros hay una transacción por
+   tarjeta cada dos meses.
+2. **Nulo informativo en la banca privada.** Las sucursales privadas cambian +0.7% (intervalo al 90%
+   dentro de ±2.4%; comparando solo por calendario, dentro de ±4.2%), y la captación y el crédito privados, −0.2% y −0.1%. El
+   resultado se sostiene con casi todas las regresiones de efectos fijos, otros grupos de control y
+   un placebo de fecha.
+3. **Ningún efecto atribuible a la sucursal sobre la actividad económica.** El Directorio
+   Estadístico Nacional de Unidades Económicas (DENUE) registra cerca de 10% más establecimientos en las localidades con sucursal, pero sin dosis, extendido a las vecinas y
+   ausente en los Censos Económicos y en las encuestas de hogares.
+4. **Sin heterogeneidad financiera por desierto bancario**, la segunda pregunta de la propuesta.
+
+Contribuimos de tres formas. Primero, hasta donde sabemos, esta es la primera evaluación causal del
+plan, con datos administrativos de todos los municipios. Segundo, frente a Brasil, donde la banca pública sí prestó
+(Fonseca y Matray 2024), estudiamos una red pública que abre cuentas pero no presta, y mostramos que
+así no mueve la oferta privada. Tercero, separamos un nulo de la falta de potencia con un umbral de
+equivalencia preregistrado, y dejamos una lección de medición: el DENUE solo se actualiza por
+completo cada cinco años.
+
+La sección 2 describe el contexto institucional; la 3, la evidencia previa; la 4, los datos; la 5,
+la estrategia empírica, y la 6, los resultados. La 7 los discute y la 8 concluye. Los apéndices
+reúnen las pruebas adicionales.
+
+# Contexto institucional
+
+El Banco del Bienestar es el último eslabón de una línea larga: el Patronato del Ahorro Nacional
+(Pahnal, 1949) se convirtió en Bansefi en 2001, y Bansefi en Banco del Bienestar en 2019. Aportela
+(1999) encuentra que la expansión de Pahnal en 1993 aumentó de 3 a 5 puntos la tasa de ahorro de los hogares
+de bajos ingresos. La expansión reciente tuvo tres rasgos que condicionan el diseño. La **ubicación
+no fue aleatoria**: un acuerdo presidencial de 2020 destinó inmuebles federales y el gobierno definió
+zonas prioritarias (ASF 2023), sin un criterio de focalización identificable, según el Instituto Mexicano para la Competitividad
+(IMCO 2022).
+**Construida no es operando**: fechamos el tratamiento con sucursales en operación, no con obra. Y
+fue **un banco que casi no presta**: en 2022 no hubo crédito de primer ni segundo piso y la
+prioridad fue construir y dispersar recursos (ASF 2023).
+
+# Evidencia previa sobre sucursales y acceso financiero
+
+Bruhn y Love (2014) evalúan la apertura de 815 sucursales de Banco Azteca en 2002 y encuentran
++7.6% en dueños de negocio informal y alrededor de +7% en ingreso. Fonseca y Matray (2024), el
+trabajo más cercano al nuestro, evalúan "Banco para Todos" en Brasil: los depósitos y el crédito
+subieron, la banca privada casi no reaccionó y el número de empresas y el empleo subieron alrededor
+de 10%. Burgess y Pande (2005) y Célerier y Matray (2019) muestran que la oferta de sucursales
+importa más donde no había ninguna, lo que motiva la heterogeneidad por desierto bancario. Otra
+literatura advierte que acceso no es uso (Dupas et al. 2018; Prina 2015; Karlan et al. 2014), algo
+relevante para un banco cuya función principal fue dispersar transferencias.
+
+En el método, la adopción escalonada con efectos heterogéneos sesga el estimador de efectos fijos de
+dos vías (TWFE, por sus siglas en inglés; Goodman-Bacon 2021; de Chaisemartin y D'Haultfœuille 2020). Contrastamos el estimador de
+Callaway y Sant'Anna (2021) con Sun y Abraham (2021), Borusyak et al. (2024), el TWFE extendido de
+Wooldridge (2021) y las diferencias en diferencias (DiD) apiladas de Cengiz et al. (2019) con los pesos de Wing et al. (2024). La
+sensibilidad a violaciones de tendencias paralelas sigue a Rambachan y Roth (2023), y las pruebas
+múltiples a Romano y Wolf (2005) y Benjamini y Hochberg (1995).
+
+# Datos
+
+**Tratamiento.** La BDIF (2016T1–2025T4, municipal y trimestral) reporta sucursales por tipo de
+institución. Descontamos a Banjército, el otro banco de desarrollo con captación al menudeo, con el
+Portafolio de Información de la CNBV. El tratamiento $G_i$ es el primer trimestre con una sucursal
+del Banco del Bienestar en operación. De 2,456 municipios con límites constantes, 487 ya tenían una
+sucursal heredada en 2019T1 (los excluimos), 1,469 recibieron la primera entre 2019T2 y 2024T4 —casi
+todos entre 2022 y 2024— y 500 no la habían recibido al cierre de 2024. El 86% de los tratados abrió
+una sola sucursal, así que el tratamiento es binario. El panel principal (2019T1–2024T4) tiene
+1,457 tratados entre 2022T1 y 2024T1, con al menos 12 trimestres previos, y 500 de comparación;
+salen 8 fechas dudosas por Banjército y 4 aperturas aisladas de 2019–2021.
+
+**Variables de resultado.** Las sucursales se reportan por sector en todo el periodo; contratos, cajeros y
+terminales por sector, solo desde 2022T4. Todo va por 10 mil adultos con un **denominador fijo** de
+2022T4, porque la población adulta de la CNBV cambia de fuente en 2020T4. Antes de abrir, los
+municipios tratados tenían 0.93 sucursales privadas por cada 10 mil adultos, unas 2,600 en total.
+Eran mucho más grandes que los controles (27 mil habitantes contra 4 mil) y tenían banca múltiple
+más a menudo (36% contra 4%; @tbl-descriptivas), por eso la comparación condiciona en covariables.
+Para la actividad económica usamos el DENUE del Instituto Nacional de Estadística y Geografía
+(INEGI; 18 versiones semestrales, por localidad), los Censos Económicos 2004–2024, el empleo formal
+del Instituto Mexicano del Seguro Social (IMSS) y, en los apéndices, encuestas de hogares (Encuesta
+Intercensal y Encuesta Nacional de Ingresos y Gastos de los Hogares, ENIGH).
+
+**Covariables previas.** Logaritmo de la población 2020, índice de marginación 2020 del Consejo Nacional de
+Población (CONAPO),
+presencia de banca múltiple en 2019T1 y, en el DENUE, logaritmo de los establecimientos en 2016S1.
+
+# Estrategia empírica
+
+Sea $G_i$ el periodo de la primera sucursal y $Y_{it}$ las sucursales privadas por 10 mil adultos.
+El parámetro básico es el efecto promedio en el periodo $t$ sobre la cohorte que se trata en $g$,
+$$ATT(g,t) = \mathbb{E}\left[Y_{it}(1) - Y_{it}(0) \mid G_i = g\right],$$
+identificado bajo tendencias paralelas condicionales a las covariables previas, con el estimador
+doblemente robusto de Callaway y Sant'Anna (2021) y los municipios **aún no tratados** como
+comparación: los 500 nunca tratados son más pequeños y rurales. Reportamos el efecto global
+(promedio por cohorte ponderado por tamaño) y el estudio de evento. El orden de apertura no fue
+aleatorio respecto de lo observable —los municipios más poblados abrieron 1.4 meses antes por
+desviación estándar—, pero el nivel previo de sucursales privadas no predice la fecha dentro del
+estado (apéndice, @tbl-calendario).
+
+**Otros supuestos.** Además de tendencias paralelas condicionales, suponemos que la banca privada no
+reacciona a la obra, visible antes de la apertura (lo probamos con un trimestre de anticipación), y
+que la sucursal no afecta a los municipios de comparación (lo probamos en los vecinos; apéndice,
+@tbl-fase4).
+
+**Inferencia y criterios preregistrados.** Errores estándar agrupados por municipio, calculados con
+la función de influencia; pre-prueba de Wald conjunta de los coeficientes previos; sensibilidad de
+Rambachan y Roth (2023); Romano–Wolf dentro de familias preregistradas y Benjamini–Hochberg en el
+resto. Solo afirmamos un **nulo informativo** si el intervalo al 90% queda dentro de ±5% de la media
+previa de las tratadas, un umbral menor que el +7.6% de Bruhn y Love (2014).
+
+**El problema de medición del DENUE.** El DENUE se actualiza por completo solo con los Censos
+Económicos, en noviembre de 2019 y de 2024 (INEGI 2019, 2024). Entre esas dos actualizaciones casi no
+se mueve: en 2022 cambia el conteo de cerca de 10% de las localidades tratadas por versión, contra 83% en cada actualización
+integral. Por eso su especificación principal es un **diseño entre actualizaciones**: las aperturas
+de 2020 a 2024 forman una cohorte, el estimando es el efecto en la actualización de 2024 y el
+**placebo** es el salto de la de 2019. El control son las localidades sin sucursal a 10 km o más de
+cualquier localidad con sucursal.
+
+# Resultados
+
+## Primera etapa: el banco abrió cuentas donde llegó
+
+La @fig-evento muestra el salto en sucursales totales: de cero a +2 por 10 mil adultos en el trimestre
+de apertura, con previos planos. Las cuentas propias del banco suben con claridad (@tbl-primera).
+Con el Portafolio de la CNBV, que separa al banco desde 2016, la primera etapa vale para las 1,457
+tratadas: +3,284 tarjetas de débito por 10 mil adultos. En los cajeros del banco hay unas 1.5
+transacciones por tarjeta cada trimestre, el ritmo del pago bimestral de los programas (apéndice,
+@tbl-fase4). No observamos pagos con tarjeta ni retiros en otros cajeros, así que esto acota el uso
+del cajero del banco, no el de la cuenta.
+
+## Actividad financiera privada: ni atracción ni desplazamiento
+
+La primera sucursal del banco no cambió la presencia de la banca privada (@tbl-financiera). Las
+sucursales privadas por 10 mil adultos cambian +0.7% de su media previa (ee 1.0%), así que no
+rechazamos la hipótesis nula, y el intervalo al 90% de esta especificación queda dentro de ±2.4%.
+En los municipios tratados, que suman 28 millones de adultos, eso equivale a unas 60 de sus 2,600
+sucursales privadas; en la discusión explicamos por qué sostenemos ±5%. Banca múltiple,
+−0.2% (±2.8%); EACP, +1.5% (±4.3%). Los tres son nulos informativos con previos planos y Romano–Wolf
+p ≥ 0.70. La captación y el crédito privados cambian −0.2% y −0.1%, y las tarjetas de crédito
+privadas, con una serie larga que reconstruimos, +0.8%. El resultado se sostiene con el panel hasta 2025, con
+regresiones de efectos fijos, otros grupos de control, un placebo de fecha y sin derrames a los
+vecinos (apéndice, @tbl-fase4-estimadores). La única excepción es el TWFE extendido de Wooldridge
+con covariables (+6.8%). No viene del ajuste por covariables en sí: Callaway y Sant'Anna con el
+mismo ajuste lineal da +2.1%, y el TWFE extendido identificado solo por el calendario, +1.3%. Con la
+sensibilidad de Rambachan y Roth y tendencias lineales permitidas, el efecto promedio de los tres
+primeros trimestres tras la apertura queda entre −4.0% y +2.2%.
+
+El crédito al consumo de las EACP (+4.3%, significativo después de Romano–Wolf) no lo leemos como
+efecto: en el DiD apilado los previos suben de forma continua hasta la apertura (Wald previa
+p < 0.001).
+
+## Actividad económica local
+
+En el DENUE, las localidades con sucursal muestran 10.4% más establecimientos en la actualización
+de 2024 (@tbl-actividad, @fig-resumen), con micronegocios y empleo estimado en la misma magnitud.
+El placebo de 2019 es pequeño y no significativo, y el efecto aguanta otros radios, un piso de
+población, errores por estado y una muestra emparejada. Pero comercio y salud reprueban la
+pre-prueba, y el intervalo de Rambachan y Roth incluye el cero con $\bar M = 1$.
+
+Las fuentes que no dependen del padrón no muestran ese aumento. En los Censos Económicos las
+unidades económicas de los municipios tratados no cambian (−0.9%; se descartan efectos de más de
+±4%), con tres placebos planos. El empleo formal del IMSS es demasiado ruidoso para concluir y el
+salario baja 1.9%. En las encuestas de hogares la proporción de patrones y cuenta propia tampoco
+sube (apéndice). Y el +10% no crece con el tiempo que lleva abierta la sucursal y aparece igual en
+las localidades vecinas sin sucursal, a menos de 2 km (apéndice, @fig-decaimiento). Lo leemos como
+un aumento del padrón en la zona de la cabecera, no como un efecto de la sucursal.
+
+## Heterogeneidad: desierto bancario
+
+En la actividad financiera no hay diferencias entre municipios con y sin banca múltiple previa
+(q ≥ 0.6; @tbl-hetero). En el DENUE el aumento es mayor en los desiertos bancarios (12.3% contra
+5.3%, q = 0.04).
+
+# Discusión
+
+**El banco como red de dispersión.** La primera etapa es grande y la respuesta privada es nula. Es
+lo que se espera de un banco que no prestó. A diferencia de Brasil, donde
+la banca pública sí prestó y los municipios crecieron (Fonseca y Matray 2024), aquí no hay canal de
+crédito que transmita la expansión a la actividad real. La coincidencia está en el lado privado:
+tampoco hay desplazamiento.
+
+**Acceso no es uso.** En los cajeros del banco hay una transacción por tarjeta cada dos meses, y la
+Encuesta Nacional de Inclusión Financiera (ENIF) muestra que la tenencia de cuenta subió casi igual en localidades rurales que urbanas entre
+2021 y 2024. La ENIGH no tiene potencia para medir el uso ni el bienestar de los hogares por
+municipio (apéndice).
+
+**Limitaciones.** La ubicación no fue aleatoria. Las pre-pruebas, los placebos y la sensibilidad de
+Rambachan y Roth acotan el sesgo, pero no lo eliminan: el nulo aguanta violaciones de tendencias
+paralelas de hasta un cuarto de la mayor previa, no del mismo tamaño. En banca múltiple, tres
+regresiones de efectos fijos dan −2.2% a −2.5%: un desplazamiento, si existe, es menor a 5%. En la
+otra dirección, el +6.8% del TWFE extendido con covariables no desaparece al recortar al soporte
+común, pero se apoya en comparar contra los nunca tratados, y esa comparación da +1.9% aun con
+fechas barajadas al azar. Solo por calendario el efecto es −1.9% (de −4.2% a +0.3%; p = 0.14 al
+barajar fechas). Por eso sostenemos ±5%, no ±2.4%: un efecto inyectado de ±5% se detecta entre 90% y
+98% de las veces, y uno de ±2.8%, entre 44% y 72% (apéndice). La BDIF separa por
+sector los contratos solo desde 2022T4, y las cohortes de 2024 tienen poco periodo posterior. La
+seguridad y el voto quedan sin respuesta (apéndice, @tbl-fase3).
+
+**Implicaciones de política.** Construir sucursales públicas amplió la red de dispersión y la
+tenencia de cuentas, pero no profundizó el sistema financiero local ni movió la actividad económica
+de forma medible. Si el objetivo es inclusión financiera con efectos reales, importa lo que la
+sucursal ofrece —crédito y ahorro con condiciones atractivas— más que su presencia física.
+
+# Conclusiones
+
+La primera sucursal del Banco del Bienestar abrió cuentas del propio banco, pero no atrajo ni desplazó a la banca privada ni a las cooperativas y financieras
+populares: el intervalo al 90% queda dentro de ±5% en sucursales privadas, aun comparando solo por
+calendario, y en todas las series financieras principales. En actividad económica, el aumento de
+cerca de 10% en el padrón de establecimientos de las localidades con sucursal es robusto como hecho
+estadístico, pero no se comporta como un efecto de la sucursal. La evaluación deja también una
+lección metodológica: con fuentes que se actualizan por completo cada cinco años, el diseño debe
+seguir el calendario de la medición, no el del tratamiento. Dos datos que hoy no son públicos
+permitirían ir más lejos: las fechas de obra de cada sucursal, para separar su efecto del de su
+ubicación, y las cuentas activas y los saldos del banco, para saber si sus cuentas se usan más allá
+de cobrar programas.
+
+{{< pagebreak >}}
+
+```{=latex}
+\singlespacing
+```
+
+# Referencias {.unnumbered}
+
+::: {.small}
+
+Aportela, Fernando. 1999. "Effects of Financial Access on Savings by Low-Income People." Unpublished, Banco de México.
+
+Auditoría Superior de la Federación. 2023. *Control interno y gobernanza del Banco del Bienestar, S.N.C., I.B.D.* Auditoría combinada de cumplimiento y desempeño 2022-2-06HJO-21-0018-2023, Cuenta Pública 2022.
+
+Benjamini, Yoav, and Yosef Hochberg. 1995. "Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing." *Journal of the Royal Statistical Society: Series B (Methodological)* 57 (1): 289–300.
+
+Bertrand, Marianne, Esther Duflo, and Sendhil Mullainathan. 2004. "How Much Should We Trust Differences-in-Differences Estimates?" *Quarterly Journal of Economics* 119 (1): 249–75.
+
+Borusyak, Kirill, Xavier Jaravel, and Jann Spiess. 2024. "Revisiting Event-Study Designs: Robust and Efficient Estimation." *Review of Economic Studies* 91 (6): 3253–85.
+
+Bruhn, Miriam, and Inessa Love. 2014. "The Real Impact of Improved Access to Finance: Evidence from Mexico." *Journal of Finance* 69 (3): 1347–76.
+
+Burgess, Robin, and Rohini Pande. 2005. "Do Rural Banks Matter? Evidence from the Indian Social Banking Experiment." *American Economic Review* 95 (3): 780–95.
+
+Callaway, Brantly, and Pedro H. C. Sant'Anna. 2021. "Difference-in-Differences with Multiple Time Periods." *Journal of Econometrics* 225 (2): 200–230.
+
+Célerier, Claire, and Adrien Matray. 2019. "Bank-Branch Supply, Financial Inclusion, and Wealth Accumulation." *Review of Financial Studies* 32 (12): 4767–4809.
+
+Cengiz, Doruk, Arindrajit Dube, Attila Lindner, and Ben Zipperer. 2019. "The Effect of Minimum Wages on Low-Wage Jobs." *Quarterly Journal of Economics* 134 (3): 1405–54.
+
+Comisión Nacional Bancaria y de Valores. 2025. "Bases de Datos de Inclusión Financiera." Base de datos. https://www.gob.mx/cnbv/acciones-y-programas/bases-de-datos-de-inclusion-financiera.
+
+Comisión Nacional Bancaria y de Valores. 2026. "Portafolio de Información: Banca de Desarrollo, información operativa." Base de datos.
+
+de Chaisemartin, Clément, and Xavier D'Haultfœuille. 2020. "Two-Way Fixed Effects Estimators with Heterogeneous Treatment Effects." *American Economic Review* 110 (9): 2964–96.
+
+Dupas, Pascaline, Dean Karlan, Jonathan Robinson, and Diego Ubfal. 2018. "Banking the Unbanked? Evidence from Three Countries." *American Economic Journal: Applied Economics* 10 (2): 257–97.
+
+Fonseca, Julia, and Adrien Matray. 2024. "Financial Inclusion, Economic Development, and Inequality: Evidence from Brazil." *Journal of Financial Economics* 156: 103854.
+
+Goodman-Bacon, Andrew. 2021. "Difference-in-Differences with Variation in Treatment Timing." *Journal of Econometrics* 225 (2): 254–77.
+
+Instituto Mexicano para la Competitividad. 2022. *Banco del Bienestar a la deriva*. Ciudad de México: IMCO.
+
+Instituto Nacional de Estadística y Geografía. 2019. "El INEGI presenta el DENUE Interactivo 11/2019, actualizado con los Censos Económicos 2019." Comunicado de prensa 556/19.
+
+Instituto Nacional de Estadística y Geografía. 2024. "DENUE Interactivo 11/2024." Comunicado de prensa.
+
+Instituto Nacional de Estadística y Geografía. 2025. *Censos Económicos 2024: Metodología*. Aguascalientes: INEGI.
+
+Karlan, Dean, Aishwarya Lakshmi Ratan, and Jonathan Zinman. 2014. "Savings by and for the Poor: A Research Review and Agenda." *Review of Income and Wealth* 60 (1): 36–78.
+
+Prina, Silvia. 2015. "Banking the Poor via Savings Accounts: Evidence from a Field Experiment." *Journal of Development Economics* 115: 16–31.
+
+Rambachan, Ashesh, and Jonathan Roth. 2023. "A More Credible Approach to Parallel Trends." *Review of Economic Studies* 90 (5): 2555–91.
+
+Romano, Joseph P., and Michael Wolf. 2005. "Stepwise Multiple Testing as Formalized Data Snooping." *Econometrica* 73 (4): 1237–82.
+
+Simmons, Joseph P., Leif D. Nelson, and Uri Simonsohn. 2011. "False-Positive Psychology: Undisclosed Flexibility in Data Collection and Analysis Allows Presenting Anything as Significant." *Psychological Science* 22 (11): 1359–66.
+
+Sun, Liyang, and Sarah Abraham. 2021. "Estimating Dynamic Treatment Effects in Event Studies with Heterogeneous Treatment Effects." *Journal of Econometrics* 225 (2): 175–99.
+
+Wing, Coady, Seth M. Freedman, and Alex Hollingsworth. 2024. "Stacked Difference-in-Differences." NBER Working Paper 32054.
+
+Wooldridge, Jeffrey M. 2021. "Two-Way Fixed Effects, the Two-Way Mundlak Regression, and Difference-in-Differences Estimators." SSRN Working Paper 3906345.
+
+:::
+
+{{< pagebreak >}}
+
+{{< include ../_tablas/tab_descriptivas.md >}}
+
+: Estadísticas descriptivas en 2019T1: municipios tratados y de comparación {#tbl-descriptivas}
+
+::: {.notas}
+*Notas:* Media y desviación estándar (de) en 2019T1, antes de cualquier apertura de la muestra.
+Tratados: los 1,457 municipios que reciben su primera sucursal del Banco del Bienestar entre 2022T1
+y 2024T1; controles: los 500 que no abren antes de 2025. Excluye los 487 municipios con sucursal
+heredada de Bansefi. *Diferencia estandarizada:* diferencia de medias entre la raíz de la varianza
+promedio de ambos grupos; el umbral convencional de desbalance es 0.1, así que sin ajuste los grupos
+no son comparables. Las
+sucursales privadas son banca múltiple más EACP. *Fuente:* BDIF (CNBV), Censo 2020 (INEGI) y CONAPO.
+:::
+
+{{< pagebreak >}}
+
+![Estudio de evento: sucursales totales y sucursales privadas por 10 mil adultos. *Notas:* Callaway y Sant'Anna (2021), doblemente robusto, con los municipios aún no tratados como comparación: 1,457 municipios tratados entre 2022T1 y 2024T1 y 500 de comparación. Cada punto es el efecto promedio $e$ trimestres después de la primera sucursal; antes de la apertura, cada punto compara un trimestre con el anterior (prueba de tendencias previas). Las bandas son intervalos simultáneos al 95%. Los paneles tienen escalas distintas: el izquierdo incluye las sucursales del propio banco; el derecho, solo banca múltiple y entidades de ahorro y crédito popular (EACP). *Fuente:* BDIF (CNBV), 2019T1–2024T4.](../../outputs/figuras/fig_evento_financiero.png){#fig-evento width=100%}
+
+{{< pagebreak >}}
+
+{{< include ../_tablas/tab_primera_etapa.md >}}
+
+: Primera etapa: sucursales y cuentas del Banco del Bienestar por 10 mil adultos {#tbl-primera}
+
+::: {.notas}
+*Notas:* Cada renglón es una variable dependiente. *Efecto (ee):* efecto promedio de la primera
+sucursal sobre los municipios tratados, con el estimador doblemente robusto de Callaway y Sant'Anna
+(2021), los municipios aún no tratados como comparación y las covariables previas; error estándar
+agrupado por municipio entre paréntesis. *Media previa:* media de la variable en los tratados antes
+de abrir. *Previos (p):* prueba conjunta de que los efectos antes de la apertura son cero. Las
+sucursales totales usan el panel 2019T1–2024T4. Contratos y tarjetas usan el panel 2022T4–2025T4,
+el primero en que la CNBV separa a la banca de desarrollo (Banco del Bienestar y Banjército); por
+eso solo entran las cohortes con dos trimestres previos en ese panel (766 tratados). *Fuente:* BDIF
+y Portafolio de Información (CNBV).
+:::
+
+{{< pagebreak >}}
+
+{{< include ../_tablas/tab_financiera.md >}}
+
+: Efecto de la primera sucursal del Banco del Bienestar sobre la banca privada, por 10 mil adultos {#tbl-financiera}
+
+::: {.notas}
+*Notas:* Cada renglón es una variable dependiente. *Efecto (ee):* efecto promedio sobre los
+municipios tratados (Callaway y Sant'Anna 2021, doblemente robusto, con los aún no tratados como
+comparación); error estándar agrupado por municipio entre paréntesis. *% de la media:* efecto entre
+la media previa de los tratados. *Se descarta más de:* mayor valor absoluto del intervalo al 90%; el
+resultado es un nulo informativo si es menor que 5%. *Previos (p):* prueba conjunta de que los
+efectos antes de la apertura son cero. *p (RW):* valor p ajustado por pruebas múltiples con Romano y
+Wolf (2005), dentro de cada familia preregistrada. *DiD apilado:* diferencias en diferencias apiladas con los pesos de Wing et
+al. (2024), ventana de −8 a +7 trimestres. BM: banca múltiple; EACP: entidades de ahorro y crédito
+popular. Ventanas: 2019T1–2024T4 en las tres primeras filas; 2019T1–2025T4 en la serie hasta 2025T4
+y en las de EACP; 2022T4–2024T4 en los contratos privados, que la CNBV separa por sector solo desde
+2022T4 (por eso tienen menos tratados). *Fuente:* BDIF (CNBV).
+:::
+
+{{< pagebreak >}}
+
+![Efectos de la primera sucursal sobre la actividad financiera y económica, en % de la media previa. *Notas:* Puntos: efecto de Callaway y Sant'Anna (2021); líneas: intervalo al 90%. La banda sombreada es la región de equivalencia de ±5%: un intervalo dentro de ella es un nulo informativo. † reprueba la prueba de tendencias previas, en Callaway y Sant'Anna o en el DiD apilado. Financiero: municipios, 2019T1–2024T4 (contratos desde 2022T4; EACP hasta 2025T4). DENUE: localidades, diseño entre las actualizaciones de 2019 y 2024. CE: municipios, Censos Económicos 2004–2024. IMSS: municipios, 2019T1–2025T4. *Fuente:* BDIF (CNBV); DENUE y Censos Económicos (INEGI); IMSS.](../../outputs/figuras/fig_resumen_efectos.png){#fig-resumen width=92%}
+
+{{< pagebreak >}}
+
+{{< include ../_tablas/tab_actividad.md >}}
+
+: Efecto de la primera sucursal sobre la actividad económica local {#tbl-actividad}
+
+::: {.notas}
+*Notas:* Cada renglón es una variable dependiente; error estándar agrupado por municipio entre
+paréntesis. DENUE: localidades, por mil habitantes, en el diseño entre actualizaciones (efecto en la
+de 2024; *placebo:* el salto de la de 2019); los tratados son localidades con sucursal y los
+controles, localidades sin sucursal a 10 km o más. CE: Censos Económicos, municipios, por mil
+habitantes, una cohorte medida en el censo de 2024 (el valor agregado, en logaritmo). IMSS:
+municipios, puestos por 10 mil adultos y salario en logaritmo, 2019T1–2025T4. En los logaritmos, el
+porcentaje está en puntos log × 100. *Previos (p):* prueba conjunta de que los efectos antes de la
+apertura son cero. *IC robusto ($\bar M = 1$):* intervalo de Rambachan y Roth (2023) que permite
+violaciones de tendencias paralelas tan grandes como la mayor observada antes de la apertura.
+*Fuente:* DENUE y Censos Económicos (INEGI); IMSS.
+:::
+
+{{< pagebreak >}}
+
+{{< include ../_tablas/tab_heterogeneidad.md >}}
+
+: Heterogeneidad por desierto bancario {#tbl-hetero}
+
+::: {.notas}
+*Notas:* Efecto de Callaway y Sant'Anna (2021) estimado por separado en municipios (o localidades,
+en el DENUE) con y sin banca múltiple en 2019T1, cada grupo con sus propios controles; error
+estándar entre paréntesis. Unidades de cada variable: DENUE y CE, por mil habitantes; BDIF, por 10
+mil adultos. *Diferencia:* desierto bancario menos el grupo con banca. *q ajustado (BH):*
+Benjamini y Hochberg (1995) sobre todas las diferencias de heterogeneidad. *Fuente:* BDIF (CNBV);
+DENUE y Censos Económicos (INEGI).
+:::
+
+{{< pagebreak >}}
+
+# Apéndice: calendario de aperturas y el aumento del DENUE {.unnumbered}
+
+**¿Qué predice el calendario de aperturas?** Con los aún no tratados como comparación, la identificación descansa en que el orden de apertura no
+responda a la tendencia del resultado. La @tbl-calendario regresa el año de apertura de los 1,457
+municipios tratados sobre las covariables previas estandarizadas y el nivel de sucursales privadas
+en 2019T1. Es un diagnóstico descriptivo que añadimos después de la revisión del 8 de octubre de
+2026, fuera del preregistro. Los municipios más poblados abrieron antes (1.4 meses por desviación
+estándar, contra una desviación estándar del calendario de 7.8 meses) y, dentro de cada estado,
+también los más marginados. Las covariables explican el 5% de la variación del calendario (15% con
+efectos fijos de estado, sobre todo por diferencias entre estados), y el nivel previo de sucursales
+privadas no predice la fecha cuando se compara dentro del mismo estado. El orden no es aleatorio
+respecto de lo observable, pero esas diferencias son justamente las que el estimador doblemente
+robusto condiciona. Lo que no puede descartar es una selección por tendencias no observadas: eso es
+lo que miden las pre-pruebas y la sensibilidad de Rambachan y Roth.
+
+{{< include ../_tablas/tab_calendario.md >}}
+
+: Predictores de la fecha de apertura entre los municipios tratados {#tbl-calendario}
+
+::: {.notas}
+*Notas:* Regresión de la fecha de apertura de los 1,457 municipios tratados sobre las covariables
+previas estandarizadas. Coeficientes en meses de adelanto (−) o atraso (+) por desviación estándar
+de cada predictor; errores robustos a heterocedasticidad entre paréntesis. Descriptivo, no
+preregistrado. *Fuente:* BDIF (CNBV), CONAPO e INEGI.
+:::
+
+**DiD apilado.** Construimos una pila por cohorte, con sus tratadas y sus controles limpios (nunca
+tratados o aún no tratados al cierre de la ventana), en una ventana de evento de −8 a +7
+trimestres, ponderada para identificar el efecto agregado con pesos iguales a la participación de
+cada cohorte. Coincide con el estimador principal en todas las series financieras (@tbl-financiera)
+y es lo que revela la tendencia previa del crédito al consumo de las EACP.
+
+**¿Qué es el +10% del DENUE?** Cuatro pruebas adicionales (@fig-decaimiento, @tbl-espacial):
+
+- *Gradiente por exposición.* El levantamiento urbano del censo de 2024 fue de febrero a mayo de
+  ese año (INEGI 2025). Las sucursales de 2022 llevaban más de un año abiertas; las de 2023–2024,
+  meses o nada. Si la sucursal causara el aumento, las primeras deberían mostrar más. Dan lo mismo:
+  +11.2% contra +10.0% (p = 0.68).
+- *Decaimiento espacial.* Las localidades **sin** sucursal a menos de 2 km de una que abrió ganan lo
+  mismo que la localidad con sucursal (+11.7% contra +10.4%; p = 0.53). A 5–10 km el efecto
+  desaparece. Las bandas cercanas reprueban la pre-prueba.
+- *Régimen de levantamiento censal (exploratorio).* Los Censos Económicos recorren manzana por
+  manzana las cabeceras y las localidades de 2,500+ habitantes y muestrean el resto de lo rural
+  (INEGI 2025). El 82% de las tratadas está en el primer régimen y el 98% de los controles en el
+  segundo. Pero restringir tratadas y controles al recorrido total no elimina el aumento: +9.8%, con
+  previos planos y robusto a $\bar M = 1$. La diferencia de régimen no lo explica.
+- *Fuentes que no dependen del padrón (apéndice, @tbl-fase2).* En la Encuesta Intercensal 2015, la
+  muestra del Censo 2020 y la Encuesta Intercensal 2025, la proporción de ocupados que son patrones
+  o trabajan por cuenta propia no aumenta (−1.2 puntos, con previos planos; el intervalo descarta
+  aumentos mayores a 1.8%). La luz nocturna a 1 km tampoco cambia (+0.3 puntos log); la comparación
+  con localidades lejanas reprueba la pre-prueba, pero entre localidades con sucursal según su
+  fecha de apertura los previos son planos y el efecto es nulo.
+
+El aumento es, entonces, un aumento robusto del padrón en la **zona** de la cabecera que recibió la
+sucursal, no en la localidad que la recibió. No crece con la exposición y no aparece en el agregado
+municipal de los Censos. Esa combinación encaja mejor con la ubicación de las sucursales en lugares
+donde ya se esperaba crecimiento, con un efecto de la obra (la SEDENA construyó antes de abrir) o con
+reubicación de establecimientos dentro del municipio, que con un efecto de la sucursal sobre la
+actividad. Separar esas explicaciones requiere fechas de obra o el padrón a nivel establecimiento,
+que no tenemos.
+
+**Otras variantes.** El nulo financiero no cambia con errores agrupados por estado. Con el
+pre-periodo desde 2016, las sucursales de EACP dan +2.8% (ee 2.5%): sin efecto, pero el intervalo ya
+no queda dentro de ±5%. Las variantes de muestra, comparación y covariables están en el apéndice
+siguiente (@tbl-decisiones). Sun y Abraham y Borusyak et al. coinciden con el estimador
+principal; en el panel completo del DENUE el 98.8% del peso del TWFE viene de comparar tratadas
+contra no tratadas.
+
+![DENUE: efecto en la actualización de 2024 según la distancia a la sucursal. *Notas:* Callaway y Sant'Anna (2021), diseño entre actualizaciones; cada grupo de localidades (con sucursal y vecinas sin sucursal a 0–2, 2–5 y 5–10 km) se compara con localidades sin sucursal a 10 km o más. Efecto en % de la media previa de cada grupo, con intervalo al 95%. Círculo lleno: previos planos; vacío: reprueba la prueba de tendencias previas. *Solo recorrido total* (exploratorio): tratadas y controles en cabeceras y localidades de 2,500 habitantes o más, que los Censos Económicos recorren manzana por manzana. *Fuente:* DENUE (INEGI).](../../outputs/figuras/fig_decaimiento.png){#fig-decaimiento width=100%}
+
+{{< include ../_tablas/tab_denue_espacial.md >}}
+
+: Establecimientos del DENUE según la distancia a la sucursal {#tbl-espacial}
+
+::: {.notas}
+*Notas:* Efecto de Callaway y Sant'Anna (2021) en la actualización de 2024, en % de la media previa
+de cada grupo; N es el número de localidades tratadas. Controles: localidades sin sucursal a 10 km
+o más. *Previos (p):* prueba conjunta de tendencias previas. *Recorrido total:* solo cabeceras y
+localidades de 2,500 habitantes o más (exploratorio). *Fuente:* DENUE (INEGI).
+:::
+
+# Apéndice: decisiones del análisis {.unnumbered}
+
+Simmons et al. (2011) muestran que la flexibilidad no declarada al recolectar y analizar datos
+permite presentar casi cualquier resultado como significativo, y piden seis cosas a los autores.
+Así las cumplimos:
+
+- *Regla para dejar de recolectar.* No muestreamos: usamos todos los municipios de la BDIF y todas
+  las localidades con 50 habitantes o más. La muestra, la ventana, las covariables, las familias de
+  pruebas, el umbral de equivalencia y casi todas las variantes de robustez quedaron fijos en el
+  preregistro del 29 de septiembre de 2026, antes de la corrida final; la extensión a 2025T4 y cada
+  fase posterior se preregistraron aparte. Dos decisiones son anteriores y se tomaron viendo resultados: excluir las
+  cohortes de menos de 5 municipios (26 de septiembre), porque sus efectos no tenían varianza
+  utilizable, y medir el DENUE entre actualizaciones (29 de septiembre), porque en la ventana
+  escalonada casi no cambiaba. En esa ventana el efecto en establecimientos es +0.8%, con la prueba
+  de previos reprobada.
+- *Observaciones por grupo.* 1,457 municipios tratados contra 500 en lo financiero y 1,106
+  localidades tratadas contra 21,719 en el DENUE. Todas las cohortes del panel financiero tienen 30
+  municipios o más.
+- *Todas las variables.* La tabla maestra del repositorio (`outputs/tablas/tabla_final.csv`) tiene
+  77 especificaciones. Además de las del texto y de los apéndices de las fases 2 a 4, incluye los
+  corresponsales (−0.4%, nulo informativo); la captación a plazo y a la vista y el crédito a la
+  vivienda de las EACP, y los cajeros y las terminales punto de venta privados desde 2022T4, todos
+  no informativos; y farmacias y consultorios en el DENUE (+12%, con previos planos).
+- *Condiciones fallidas.* Las especificaciones que reprueban la prueba de previos no se quitan: se
+  reportan como descriptivas. Además de las del texto, son las tarjetas de débito de las EACP, las
+  cuentas en celular, las remesas, el empleo formal en empresas micro y pequeñas, y las tiendas de
+  abarrotes y los restaurantes en el DENUE.
+- *Observaciones excluidas y covariables.* La @tbl-decisiones compara la especificación principal
+  con la que incluye cada grupo excluido y con la que no usa covariables; la variante con las
+  cohortes de menos de 5 municipios la añadimos para este apéndice. Dos exclusiones no tienen
+  variante: los 487 municipios con sucursal heredada, que no tienen periodo previo, y las
+  localidades de menos de 50 habitantes, donde un solo establecimiento mueve la tasa por mil.
+
+En lo financiero, ninguna decisión saca el intervalo de ±3%. En el DENUE, el +10% no cambia con la
+distancia de los controles (5, 10 o 20 km), el piso de población, el emparejamiento, el semestre de
+medición ni las fechas ambiguas, aunque con estas la prueba de previos cae a p = 0.045. Baja a 5%
+cuando la comparación incluye a las localidades cercanas, que también ganan, o se limita a
+municipios sin aperturas, y sube a 17% sin covariables. Sin covariables, sin el nivel previo y con
+todas las localidades, la prueba de previos se reprueba.
+
+{{< pagebreak >}}
+
+{{< include ../_tablas/tab_decisiones.md >}}
+
+: Sensibilidad a las decisiones del análisis {#tbl-decisiones}
+
+::: {.notas}
+*Notas:* Callaway y Sant'Anna (2021), doblemente robusto, errores agrupados por municipio. Efecto en
+% de la media previa de las tratadas de cada variante, con su intervalo al 90%. *Previos (p):*
+prueba conjunta de tendencias previas. Panel A: sucursales privadas por 10 mil adultos, municipio
+trimestral 2019T1–2024T4, con los aún no tratados como comparación. Panel B: establecimientos por
+mil habitantes, diseño entre actualizaciones, efecto en la actualización de 2024 contra localidades
+sin sucursal a 10 km o más. *Fechas dudosas:* municipios cuya primera sucursal
+podría ser de Banjército. *Cohortes de menos de 5 municipios:* entran 3 de las 4 aperturas aisladas;
+la de 2019T2 no tiene dos trimestres previos. *Fuente:* BDIF (CNBV); DENUE (INEGI).
+:::
+
+# Apéndice: fuentes adicionales (fase 2) {.unnumbered}
+
+Después de la corrida final integramos cinco fuentes más, cada una dirigida a una limitación de la
+evaluación. Las preregistramos el 7 de octubre de 2026, antes de estimar, y las mantenemos fuera
+de las familias de inferencia del texto principal. El estimador es el mismo (Callaway y
+Sant'Anna, doblemente robusto, errores agrupados por municipio) y los criterios también: una
+pre-prueba con p < 0.05 vuelve descriptivo el resultado, y un nulo es informativo si el intervalo
+al 90% queda dentro de ±5% de la media previa.
+
+- **Fecha de tratamiento.** El modelo de datos del Portafolio de Información de la CNBV separa
+  Banjército del Banco del Bienestar por municipio y mes desde 2022. Coincide con la BDIF en el
+  99.2% de los municipio-trimestres. Con el tratamiento observado solo 9 municipios cambian de
+  fecha y ningún efecto financiero se mueve más de 0.73 errores estándar.
+- **Emprendimiento medido en personas.** Usamos la Encuesta Intercensal 2015, la muestra del Censo
+  2020 y la Encuesta Intercensal 2025, por municipio, con una sola cohorte (aperturas entre 2020 y
+  2025). La proporción de ocupados que son patrones o trabajan por cuenta propia no aumenta: el
+  efecto es de −1.2 puntos, con previos planos, y el intervalo descarta aumentos mayores a 1.8%.
+  Ocupación e ingreso por trabajo son nulos informativos. **El +10% del DENUE no aparece cuando
+  el emprendimiento se mide en las personas y no en el padrón.**
+- **Canal de dispersión.** La proporción de hogares que recibe programas de gobierno sube 2.1
+  puntos donde abrió el banco, pero reprueba la pre-prueba: es consistente con la red de dispersión,
+  sin estar identificado.
+- **Luz nocturna (VIIRS, por localidad).** La luz a 1 km no cambia (+0.3 puntos log). La
+  comparación con localidades lejanas reprueba la pre-prueba porque, en estos datos, la luz cambia
+  distinto según el brillo de cada lugar. Comparando solo localidades con sucursal según su fecha de
+  apertura, los previos son planos y el efecto es nulo.
+- **Finanzas municipales (EFIPEM) y ENOE.** No son informativos: los intervalos son amplios y, en
+  la ENOE, el panel balanceado de municipios es pequeño.
+
+{{< include ../_tablas/tab_fase2.md >}}
+
+: Fuentes adicionales (fase 2) {#tbl-fase2}
+
+::: {.notas}
+*Notas:* Efecto de Callaway y Sant'Anna (2021) con error estándar agrupado por municipio entre
+paréntesis; en los logaritmos, el porcentaje está en puntos log × 100. *Lectura:* criterios
+preregistrados (descriptivo si la prueba de previos tiene p < 0.05; nulo informativo si se descarta
+más de 5%). EIC: Encuesta Intercensal 2015, Censo 2020 (cuestionario ampliado) y Encuesta
+Intercensal 2025, 1,461 municipios tratados contra 499. VIIRS: luz nocturna, 1,106 localidades
+contra 21,719 a 10 km o más. EFIPEM: finanzas públicas municipales. ENOE: Encuesta Nacional de
+Ocupación y Empleo, 146 municipios contra 12. *Fuente:* INEGI; Earth Observation Group (VIIRS).
+:::
+
+# Apéndice: delitos y elecciones (fase 3) {.unnumbered}
+
+El equipo propuso dos resultados más, fuera del ámbito financiero: incidencia delictiva y
+elecciones federales. Los preregistramos el 11 de octubre de 2026, antes de estimar, con los
+criterios de los apéndices anteriores. También los dejamos fuera de las familias de inferencia del
+texto principal.
+
+- **Delitos (SESNSP).** El mecanismo propuesto es doble: el efectivo de los programas sociales que
+  se retira en la sucursal y la presencia militar alrededor de ella.
+  - *Datos y diseño.* Carpetas de investigación por municipio y trimestre, de 2019 a 2025, con la
+    misma metodología del SESNSP y una tasa por 100 mil habitantes con la población fija del
+    Censo de 2020. El diseño es escalonado, igual que el financiero (1,457 municipios tratados
+    contra 499).
+  - *Resultado.* Los previos son planos en los seis delitos y ningún efecto es distinto de cero.
+    Robo a transeúnte, el canal del efectivo, cambia −0.2%; homicidio doloso, +0.1%. Tampoco se
+    mueve el placebo de denuncia (daño a la propiedad).
+  - *Potencia.* Los conteos municipales son ruidosos: los intervalos no descartan cambios de 12% a
+    50%, así que el resultado es **no informativo**, no un nulo.
+  - *Medición.* Son denuncias registradas en el municipio de la agencia del Ministerio Público, no
+    delitos ocurridos.
+- **Elecciones federales (INE).** Usamos los diputados de mayoría relativa de 2015, 2018, 2021 y
+  2024, por municipio.
+  - *Diseño.* Una sola cohorte: municipios con la primera sucursal entre las elecciones de 2021 y
+    2024, 1,375 contra 458.
+  - *Resultados.* Participación y voto por el bloque en el gobierno (Morena, PT y PVEM, con
+    composición fija en las cuatro elecciones).
+  - *La pre-prueba falla.* Antes de 2021 los municipios que después recibieron sucursal cambian
+    distinto que los controles: −5.0 puntos de participación entre 2015 y 2018 y +3.6 entre 2018
+    y 2021. Por eso el resultado es **descriptivo**.
+  - *Concurrencia.* El vaivén coincide con la concurrencia con elecciones locales, que cambia por
+    estado y año. Con la participación neta de la media estatal de cada elección los previos sí son
+    planos, y el efecto queda dentro de ±4.5%. Sin embargo, el modelo de dos vías con efectos fijos
+    estado × elección da el signo contrario.
+  - *Lectura.* No hay un efecto electoral identificado.
+  - *Ubicación.* Como diagnóstico descriptivo, donde el bloque tenía más voto en 2018 la sucursal
+    abrió algo antes: 0.7 meses por desviación estándar, dentro del estado, frente a una desviación
+    estándar del calendario de 7.9 meses.
+
+{{< include ../_tablas/tab_fase3.md >}}
+
+: Delitos y elecciones (fase 3) {#tbl-fase3}
+
+::: {.notas}
+*Notas:* Efecto de Callaway y Sant'Anna (2021) con error estándar agrupado por municipio entre
+paréntesis. *Delitos:* carpetas de investigación por 100 mil habitantes y trimestre, 2019T1–2025T4,
+1,457 municipios tratados contra 499. *Elecciones:* puntos porcentuales; efecto en 2024 de una
+cohorte con aperturas entre las elecciones de 2021 y 2024, 1,375 municipios contra 458; "neto de
+estado × elección" resta la media de cada estado en cada elección (robustez preregistrada).
+*Lectura:* criterios preregistrados, como en la @tbl-fase2. *Fuente:* SESNSP; INE.
+:::
+
+# Apéndice: efectos fijos, controles, bancarización y uso (fase 4) {.unnumbered}
+
+Hubo dos críticas al diseño: usar Callaway y Sant'Anna en lugar de una regresión con efectos fijos,
+y la forma de los controles. Respondimos con una cuarta fase, preregistrada el 14 de octubre de 2026
+antes de estimar. Además ampliamos el estudio a bancarización, uso y bienestar. Todo queda fuera de
+las familias de inferencia del texto principal.
+
+- **Regresiones con efectos fijos** (@tbl-fase4-estimadores).
+  - *Lo que dicen.* El estudio de evento TWFE clásico, el TWFE extendido de Wooldridge (2021), que
+    es una sola regresión con efectos fijos y no se sesga con efectos heterogéneos, y el DiD
+    apilado con efectos fijos de estado × evento dicen lo mismo que Callaway y Sant'Anna en
+    sucursales privadas.
+  - *La excepción.* Es el TWFE extendido con covariables: +6.8% en privadas y +11% en EACP.
+  - *De dónde viene.* Lo diagnosticamos con una regla registrada antes de correr el diagnóstico.
+    Si solo se compara a los que abren temprano contra los que abren tarde (hasta 2023T4), baja a
+    +1.3%; sin covariables, a +1.8%; y Callaway y Sant'Anna con el mismo ajuste lineal (solo
+    regresión de resultado) da +2.1%. Apunta a la extrapolación lineal contra los 500 nunca
+    tratados en los trimestres en que ya no quedan aún no tratados, pero recortar al soporte común
+    no lo baja (+7.7%): la explicación no es cerrada. Manda Callaway y Sant'Anna, como fijó la
+    regla.
+  - *Banca múltiple.* El TWFE, la imputación y el TWFE extendido sin covariables dan entre −2.2% y
+    −2.5%, significativos, con pre-prueba fallida en el último. Un desplazamiento de la banca
+    múltiple, si existe, es menor a 5%.
+- **Controles y validez** (@tbl-fase4).
+  - *Grupo de control.* Ni identificar solo por calendario, ni emparejar los nunca tratados, ni
+    quitar los controles que colindan con un municipio que abre cambia el nulo. El 92% de los nunca
+    tratados colinda con uno que abre, así que esta última prueba usa solo 66 controles.
+  - *Covariables.* Agregarlas una por una (con la tendencia previa, la distancia a la banca y la
+    región) deja el efecto entre +0.4% y +1.2%.
+  - *Derrames y placebo.* No hay derrame en los vecinos, y el placebo de fecha (2017–2021) es
+    plano.
+- **Bancarización y uso.**
+  - *Primera etapa.* Con el Portafolio de la CNBV, que separa al banco desde 2016, la primera etapa
+    vale para las 1,457 tratadas: +3,284 tarjetas de débito del banco por 10 mil adultos, con
+    previos planos.
+  - *Uso.* En los cajeros del banco hay unas 1.5 transacciones por tarjeta cada trimestre, como el
+    calendario de pago de los programas. No vemos pagos con tarjeta ni retiros en otros cajeros.
+  - *Crédito privado.* Con la serie larga que reconstruimos (BDIF menos el banco y Banjército),
+    las tarjetas de crédito de la banca múltiple no cambian (+0.8%, cota 3.5%).
+- **Uso y bienestar de los hogares (ENIGH 2016–2024).** No hay potencia; todo es descriptivo.
+  - La forma de pago solo es comparable desde 2020.
+  - Casi no hay municipios sin sucursal en la muestra.
+  - El efecto mínimo detectable va de 15% a más de 400% de la media.
+
+{{< include ../_tablas/tab_fase4_estimadores.md >}}
+
+: El mismo efecto con distintos estimadores: sucursales por 10 mil adultos (fase 4) {#tbl-fase4-estimadores}
+
+::: {.notas}
+*Notas:* Efecto en % de la media previa de los tratados e intervalo al 90% entre corchetes; 1,457
+municipios tratados y 500 de comparación, 2019T1–2024T4. *TWFE estático:* regresión con efectos
+fijos de municipio y trimestre y un indicador de tratamiento. *Estudio de evento TWFE:* la misma
+regresión con un indicador por trimestre relativo a la apertura. *TWFE extendido:* Wooldridge
+(2021), un indicador por celda cohorte × trimestre; "con covariables" interactúa las celdas con las
+covariables centradas por cohorte; "solo los que abren" excluye a los nunca tratados y termina en
+2023T4, porque desde 2024T1 todos están tratados (la cohorte de 2024T1 solo sirve de control).
+*Fuente:* BDIF (CNBV).
+:::
+
+{{< include ../_tablas/tab_fase4.md >}}
+
+: Controles, validez, bancarización y uso privado (fase 4), por 10 mil adultos {#tbl-fase4}
+
+::: {.notas}
+*Notas:* Error estándar agrupado por municipio entre paréntesis. Controles, derrames y placebo:
+Callaway y Sant'Anna (2021) o DiD apilado. *Solo municipios que alguna vez abren:* 1,248 tratados
+hasta 2023T4, con la cohorte de 2024T1 como control. *HonestDiD con suavidad:* intervalo de
+Rambachan y Roth (2023) que permite tendencias lineales ($M = 0$), para el promedio de los tres
+primeros trimestres después de la apertura. *Bancarización:* tarjetas y transacciones del Banco del
+Bienestar, 2019–2025; la media previa es casi cero, por eso no hay porcentaje. *Comercios con TPV:*
+terminales punto de venta, después del quiebre de la serie en 2022T1. *Lectura:* criterios
+preregistrados, como en la @tbl-fase2. *Fuente:* BDIF y Portafolio de Información (CNBV).
+:::
+
+# Apéndice: ¿detecta el diseño un efecto chico? {.unnumbered}
+
+Un nulo solo informa si el diseño habría visto un efecto de haberlo. Lo comprobamos agregando
+sucursales privadas ficticias a los datos, como Bertrand et al. (2004). Es un análisis exploratorio,
+fuera de las familias de inferencia, con criterios fijados antes de correrlo (`docs/decisiones.md`).
+En la atracción, cada municipio tratado recibe un número Poisson de sucursales proporcional a sus
+adultos; en el desplazamiento, cada sucursal que ya existía cierra con probabilidad igual al efecto.
+Así el efecto llega en sucursales enteras y concentrado en pocos municipios. Cubre solo las sucursales
+privadas.
+
+- **Falsos positivos.** Sin efecto y con 200 réplicas por diseño, barajar las fechas entre todos los
+  municipios de cada estado da 2% de rechazos, y barajarlas solo entre los que abren, 4%. Los errores
+  estándar no se quedan cortos.
+- **Potencia.** Barajando entre todos, un efecto de +5% se detecta 98% de las veces y uno de −5%, 90%.
+  Con ±2.8%, 72% y 44%: el efecto mínimo detectable analítico de 2.8% resulta optimista cuando el
+  efecto se concentra en pocos municipios.
+- **La regla de equivalencia.** Con un efecto verdadero de +5%, declara un nulo informativo por error
+  en 2.5% de las réplicas; con −5%, en 8%, por encima del 5% que fijamos.
+- **La comparación contra los nunca tratados.** Nuestra primera versión barajaba solo entre las
+  tratadas y dejaba fijos a los nunca tratados. Reprobó los criterios: 27% de falsos positivos, todos
+  positivos, con centro en +1.9%. Al barajar también a los nunca tratados el centro baja a +0.5%, y
+  sin ellos desaparece. Esa comparación tiene, por tanto, una deriva positiva que no depende del
+  calendario. Comparando solo por calendario, el efecto es −1.9% (intervalo al 90% de −4.2% a +0.3%),
+  con p = 0.14 al barajar fechas: no hay señal clara de desplazamiento.
+- **Lectura.** Lo que el diseño sostiene es que no hubo efectos mayores a ±5%. La cota de ±2.4% es la
+  del intervalo de la especificación principal, y depende en parte de esa comparación.
+
+# Apéndice: reproducibilidad {.unnumbered}
+
+Todo el análisis es reproducible desde el repositorio del proyecto:
+
+- `make setup`: entorno de Python (`uv`) y de R (`renv`).
+- `make descargar`, `make limpiar`, `make panel`: datos.
+- `make bateria`: la corrida completa preregistrada (unos 55 minutos; termina con `make entregables`).
+- `make entregables`: figuras, tablas y este documento.
+- `make descargar-fase2` y `make bateria-fase2`: las fuentes adicionales de la fase 2.
+- `make descargar-fase3` y `make bateria-fase3`: delitos y elecciones (el archivo del SESNSP se
+  descarga a mano; ver `docs/descarga_manual.md`).
+- `make descargar-fase4` y `make bateria-fase4`: efectos fijos, controles, derrames, bancarización,
+  uso y la ENIGH.
+- `make poder-inyectado` y `Rscript analisis/15_poder_inyectado.R diagnostico` y `calibrado`: el
+  efecto inyectado.
+
+Las decisiones, el preregistro (29 y 30 de septiembre y 2, 7, 11 y 14 de octubre de 2026) y los análisis
+exploratorios están en `docs/decisiones.md`; la auditoría de datos en `docs/data_audit.md`; el
+registro de descargas, con fuente, fecha y huella sha256, en `data/raw/MANIFEST.csv`.

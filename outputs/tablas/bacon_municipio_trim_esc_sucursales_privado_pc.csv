@@ -1,0 +1,4 @@
+type,peso,estimacion,etiqueta,resultado,twfe
+Treated vs Untreated,0.586003357920694,0.0154997546089767,municipio_trim_esc_sucursales_privado_pc,sucursales_privado_pc,0.00913094438108208
+Earlier vs Later Treated,0.294941070863663,-0.00429135813056339,municipio_trim_esc_sucursales_privado_pc,sucursales_privado_pc,0.00913094438108208
+Later vs Earlier Treated,0.119055571215644,0.011034627631015,municipio_trim_esc_sucursales_privado_pc,sucursales_privado_pc,0.00913094438108208

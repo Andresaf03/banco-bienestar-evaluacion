@@ -1,0 +1,8 @@
+lb,ub,method,Delta,Mbar,etiqueta,panel,diseno,resultado,referencia_e
+0.13842673749679,0.825261878393061,C-LF,DeltaRM,0,localidad_esc_estab_emprendimiento_pc,localidad,escalonado,estab_emprendimiento_pc,-1
+0.0327597927435157,1.08942924027624,C-LF,DeltaRM,0.25,localidad_esc_estab_emprendimiento_pc,localidad,escalonado,estab_emprendimiento_pc,-1
+-0.231407569139666,1.40643007453606,C-LF,DeltaRM,0.5,localidad_esc_estab_emprendimiento_pc,localidad,escalonado,estab_emprendimiento_pc,-1
+-0.971076182412574,2.14609868780897,C-LF,DeltaRM,1,localidad_esc_estab_emprendimiento_pc,localidad,escalonado,estab_emprendimiento_pc,-1
+-1.76357826806212,2.93860077345851,C-LF,DeltaRM,1.5,localidad_esc_estab_emprendimiento_pc,localidad,escalonado,estab_emprendimiento_pc,-1
+-2.50324688133503,3.67826938673142,C-LF,DeltaRM,2,localidad_esc_estab_emprendimiento_pc,localidad,escalonado,estab_emprendimiento_pc,-1
+0.116275667206102,0.847412948683747,Original,,,localidad_esc_estab_emprendimiento_pc,localidad,escalonado,estab_emprendimiento_pc,-1

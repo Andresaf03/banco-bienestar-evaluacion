@@ -1,0 +1,4 @@
+dimension,grupo,unidades,tratadas,att,ee,media_base,covariables,panel,diseno,resultado,ic_bajo,ic_alto,referencia,dif_vs_ref,z_dif,p_dif
+tamano_localidad,chica,652,246,5.33596875953608,9.7170028050464,420.44559516119,TRUE,municipio_trim,escalonado,cred_consumo_eacp_pc,-13.7090067760295,24.3809442951017,chica,,,
+tamano_localidad,grande,652,634,29.3445531974401,10.2401388873686,403.573196691288,TRUE,municipio_trim,escalonado,cred_consumo_eacp_pc,9.27424978150957,49.4148566133707,chica,24.0085844379041,1.70072484679671,0.0889946671527958
+tamano_localidad,mediana,652,577,11.8260402006937,6.40487459890859,377.803694513148,TRUE,municipio_trim,escalonado,cred_consumo_eacp_pc,-0.727283338662522,24.37936374005,chica,6.49007144115766,0.557663085228606,0.577074469588446

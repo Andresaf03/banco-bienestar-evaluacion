@@ -1,0 +1,5 @@
+estimador,valor,ee,etiqueta,panel,diseno,resultado,fe_tamano,ic_bajo,ic_alto
+TWFE estático,0.0132480844894295,0.0225627212189655,municipio_trim_esc_hasta_2025_sucursales_privado_pc,municipio_trim,escalonado,sucursales_privado_pc,FALSE,-0.0309740364929605,0.0574702054718195
+Sun y Abraham,0.00598418051268556,0.0139154779054163,municipio_trim_esc_hasta_2025_sucursales_privado_pc,municipio_trim,escalonado,sucursales_privado_pc,FALSE,-0.0212896550095933,0.0332580160349644
+Borusyak et al.,0.0146938412806683,0.0272994799354106,municipio_trim_esc_hasta_2025_sucursales_privado_pc,municipio_trim,escalonado,sucursales_privado_pc,FALSE,-0.0388121561894104,0.0681998387507469
+Callaway y Sant'Anna,0.00420745692267228,0.0139971578120196,municipio_trim_esc_hasta_2025_sucursales_privado_pc,municipio_trim,escalonado,sucursales_privado_pc,FALSE,-0.0232264682748096,0.0316413821201541

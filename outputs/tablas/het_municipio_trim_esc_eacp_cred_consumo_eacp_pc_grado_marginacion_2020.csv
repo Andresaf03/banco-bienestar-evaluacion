@@ -1,0 +1,4 @@
+dimension,grupo,unidades,tratadas,att,ee,media_base,covariables,panel,diseno,resultado,ic_bajo,ic_alto,referencia,dif_vs_ref,z_dif,p_dif
+grado_marginacion_2020,alta marginación,703,476,-5.53903187597123,6.85207477879696,226.004848512955,FALSE,municipio_trim,escalonado,cred_consumo_eacp_pc,-18.9688516617885,7.89078790984606,alta marginación,,,
+grado_marginacion_2020,baja marginación,851,703,23.6689008860804,9.03197984078229,523.287057257429,TRUE,municipio_trim,escalonado,cred_consumo_eacp_pc,5.96654568905531,41.3712560831055,alta marginación,29.2079327620516,2.57633682040169,0.00998533246343744
+grado_marginacion_2020,marginación media,402,278,10.4337930784745,11.8777739138508,366.326063675816,FALSE,municipio_trim,escalonado,cred_consumo_eacp_pc,-12.8462160091825,33.7138021661314,alta marginación,15.9728249544457,1.16483748825445,0.244084781077513

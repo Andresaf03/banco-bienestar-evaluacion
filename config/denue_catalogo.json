@@ -1,0 +1,3060 @@
+{
+ "fuente": "https://www.inegi.org.mx/app/descarga/?ti=6",
+ "descubierto": "2026-09-26, listando los enlaces de la página de descarga masiva (se carga por JavaScript, por eso se conserva el catálogo). Cada URL se valida con HEAD antes de descargarse.",
+ "n_archivos": 436,
+ "n_versiones": 18,
+ "archivos": [
+  {
+   "version": "2016_01",
+   "yyyymm": "201601",
+   "sector": "11",
+   "archivo": "denue_00_11_0116_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_01/denue_00_11_0116_csv.zip"
+  },
+  {
+   "version": "2016_01",
+   "yyyymm": "201601",
+   "sector": "21",
+   "archivo": "denue_00_21_0116_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_01/denue_00_21_0116_csv.zip"
+  },
+  {
+   "version": "2016_01",
+   "yyyymm": "201601",
+   "sector": "22",
+   "archivo": "denue_00_22_0116_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_01/denue_00_22_0116_csv.zip"
+  },
+  {
+   "version": "2016_01",
+   "yyyymm": "201601",
+   "sector": "23",
+   "archivo": "denue_00_23_0116_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_01/denue_00_23_0116_csv.zip"
+  },
+  {
+   "version": "2016_01",
+   "yyyymm": "201601",
+   "sector": "31-33",
+   "archivo": "denue_00_31-33_0116_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_01/denue_00_31-33_0116_csv.zip"
+  },
+  {
+   "version": "2016_01",
+   "yyyymm": "201601",
+   "sector": "43",
+   "archivo": "denue_00_43_0116_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_01/denue_00_43_0116_csv.zip"
+  },
+  {
+   "version": "2016_01",
+   "yyyymm": "201601",
+   "sector": "46111",
+   "archivo": "denue_00_46111_0116_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_01/denue_00_46111_0116_csv.zip"
+  },
+  {
+   "version": "2016_01",
+   "yyyymm": "201601",
+   "sector": "46112-46311",
+   "archivo": "denue_00_46112-46311_0116_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_01/denue_00_46112-46311_0116_csv.zip"
+  },
+  {
+   "version": "2016_01",
+   "yyyymm": "201601",
+   "sector": "46321-46531",
+   "archivo": "denue_00_46321-46531_0116_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_01/denue_00_46321-46531_0116_csv.zip"
+  },
+  {
+   "version": "2016_01",
+   "yyyymm": "201601",
+   "sector": "46591-46911",
+   "archivo": "denue_00_46591-46911_0116_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_01/denue_00_46591-46911_0116_csv.zip"
+  },
+  {
+   "version": "2016_01",
+   "yyyymm": "201601",
+   "sector": "48-49",
+   "archivo": "denue_00_48-49_0116_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_01/denue_00_48-49_0116_csv.zip"
+  },
+  {
+   "version": "2016_01",
+   "yyyymm": "201601",
+   "sector": "51",
+   "archivo": "denue_00_51_0116_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_01/denue_00_51_0116_csv.zip"
+  },
+  {
+   "version": "2016_01",
+   "yyyymm": "201601",
+   "sector": "52",
+   "archivo": "denue_00_52_0116_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_01/denue_00_52_0116_csv.zip"
+  },
+  {
+   "version": "2016_01",
+   "yyyymm": "201601",
+   "sector": "53",
+   "archivo": "denue_00_53_0116_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_01/denue_00_53_0116_csv.zip"
+  },
+  {
+   "version": "2016_01",
+   "yyyymm": "201601",
+   "sector": "54",
+   "archivo": "denue_00_54_0116_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_01/denue_00_54_0116_csv.zip"
+  },
+  {
+   "version": "2016_01",
+   "yyyymm": "201601",
+   "sector": "55",
+   "archivo": "denue_00_55_0116_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_01/denue_00_55_0116_csv.zip"
+  },
+  {
+   "version": "2016_01",
+   "yyyymm": "201601",
+   "sector": "56",
+   "archivo": "denue_00_56_0116_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_01/denue_00_56_0116_csv.zip"
+  },
+  {
+   "version": "2016_01",
+   "yyyymm": "201601",
+   "sector": "61",
+   "archivo": "denue_00_61_0116_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_01/denue_00_61_0116_csv.zip"
+  },
+  {
+   "version": "2016_01",
+   "yyyymm": "201601",
+   "sector": "62",
+   "archivo": "denue_00_62_0116_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_01/denue_00_62_0116_csv.zip"
+  },
+  {
+   "version": "2016_01",
+   "yyyymm": "201601",
+   "sector": "71",
+   "archivo": "denue_00_71_0116_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_01/denue_00_71_0116_csv.zip"
+  },
+  {
+   "version": "2016_01",
+   "yyyymm": "201601",
+   "sector": "72",
+   "archivo": "denue_00_72_0116_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_01/denue_00_72_0116_csv.zip"
+  },
+  {
+   "version": "2016_01",
+   "yyyymm": "201601",
+   "sector": "81",
+   "archivo": "denue_00_81_0116_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_01/denue_00_81_0116_csv.zip"
+  },
+  {
+   "version": "2016_01",
+   "yyyymm": "201601",
+   "sector": "93",
+   "archivo": "denue_00_93_0116_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_01/denue_00_93_0116_csv.zip"
+  },
+  {
+   "version": "2016_10",
+   "yyyymm": "201610",
+   "sector": "11",
+   "archivo": "denue_00_11_1016_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_10/denue_00_11_1016_csv.zip"
+  },
+  {
+   "version": "2016_10",
+   "yyyymm": "201610",
+   "sector": "21",
+   "archivo": "denue_00_21_1016_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_10/denue_00_21_1016_csv.zip"
+  },
+  {
+   "version": "2016_10",
+   "yyyymm": "201610",
+   "sector": "22",
+   "archivo": "denue_00_22_1016_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_10/denue_00_22_1016_csv.zip"
+  },
+  {
+   "version": "2016_10",
+   "yyyymm": "201610",
+   "sector": "23",
+   "archivo": "denue_00_23_1016_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_10/denue_00_23_1016_csv.zip"
+  },
+  {
+   "version": "2016_10",
+   "yyyymm": "201610",
+   "sector": "31-33",
+   "archivo": "denue_00_31-33_1016_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_10/denue_00_31-33_1016_csv.zip"
+  },
+  {
+   "version": "2016_10",
+   "yyyymm": "201610",
+   "sector": "43",
+   "archivo": "denue_00_43_1016_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_10/denue_00_43_1016_csv.zip"
+  },
+  {
+   "version": "2016_10",
+   "yyyymm": "201610",
+   "sector": "46111",
+   "archivo": "denue_00_46111_1016_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_10/denue_00_46111_1016_csv.zip"
+  },
+  {
+   "version": "2016_10",
+   "yyyymm": "201610",
+   "sector": "46112-46311",
+   "archivo": "denue_00_46112-46311_1016_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_10/denue_00_46112-46311_1016_csv.zip"
+  },
+  {
+   "version": "2016_10",
+   "yyyymm": "201610",
+   "sector": "46321-46531",
+   "archivo": "denue_00_46321-46531_1016_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_10/denue_00_46321-46531_1016_csv.zip"
+  },
+  {
+   "version": "2016_10",
+   "yyyymm": "201610",
+   "sector": "46591-46911",
+   "archivo": "denue_00_46591-46911_1016_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_10/denue_00_46591-46911_1016_csv.zip"
+  },
+  {
+   "version": "2016_10",
+   "yyyymm": "201610",
+   "sector": "48-49",
+   "archivo": "denue_00_48-49_1016_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_10/denue_00_48-49_1016_csv.zip"
+  },
+  {
+   "version": "2016_10",
+   "yyyymm": "201610",
+   "sector": "51",
+   "archivo": "denue_00_51_1016_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_10/denue_00_51_1016_csv.zip"
+  },
+  {
+   "version": "2016_10",
+   "yyyymm": "201610",
+   "sector": "52",
+   "archivo": "denue_00_52_1016_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_10/denue_00_52_1016_csv.zip"
+  },
+  {
+   "version": "2016_10",
+   "yyyymm": "201610",
+   "sector": "53",
+   "archivo": "denue_00_53_1016_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_10/denue_00_53_1016_csv.zip"
+  },
+  {
+   "version": "2016_10",
+   "yyyymm": "201610",
+   "sector": "54",
+   "archivo": "denue_00_54_1016_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_10/denue_00_54_1016_csv.zip"
+  },
+  {
+   "version": "2016_10",
+   "yyyymm": "201610",
+   "sector": "55",
+   "archivo": "denue_00_55_1016_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_10/denue_00_55_1016_csv.zip"
+  },
+  {
+   "version": "2016_10",
+   "yyyymm": "201610",
+   "sector": "56",
+   "archivo": "denue_00_56_1016_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_10/denue_00_56_1016_csv.zip"
+  },
+  {
+   "version": "2016_10",
+   "yyyymm": "201610",
+   "sector": "61",
+   "archivo": "denue_00_61_1016_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_10/denue_00_61_1016_csv.zip"
+  },
+  {
+   "version": "2016_10",
+   "yyyymm": "201610",
+   "sector": "62",
+   "archivo": "denue_00_62_1016_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_10/denue_00_62_1016_csv.zip"
+  },
+  {
+   "version": "2016_10",
+   "yyyymm": "201610",
+   "sector": "71",
+   "archivo": "denue_00_71_1016_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_10/denue_00_71_1016_csv.zip"
+  },
+  {
+   "version": "2016_10",
+   "yyyymm": "201610",
+   "sector": "72",
+   "archivo": "denue_00_72_1016_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_10/denue_00_72_1016_csv.zip"
+  },
+  {
+   "version": "2016_10",
+   "yyyymm": "201610",
+   "sector": "81",
+   "archivo": "denue_00_81_1016_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_10/denue_00_81_1016_csv.zip"
+  },
+  {
+   "version": "2016_10",
+   "yyyymm": "201610",
+   "sector": "93",
+   "archivo": "denue_00_93_1016_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2016_10/denue_00_93_1016_csv.zip"
+  },
+  {
+   "version": "2017_03",
+   "yyyymm": "201703",
+   "sector": "11",
+   "archivo": "denue_00_11_0317_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_03/denue_00_11_0317_csv.zip"
+  },
+  {
+   "version": "2017_03",
+   "yyyymm": "201703",
+   "sector": "21",
+   "archivo": "denue_00_21_0317_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_03/denue_00_21_0317_csv.zip"
+  },
+  {
+   "version": "2017_03",
+   "yyyymm": "201703",
+   "sector": "22",
+   "archivo": "denue_00_22_0317_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_03/denue_00_22_0317_csv.zip"
+  },
+  {
+   "version": "2017_03",
+   "yyyymm": "201703",
+   "sector": "23",
+   "archivo": "denue_00_23_0317_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_03/denue_00_23_0317_csv.zip"
+  },
+  {
+   "version": "2017_03",
+   "yyyymm": "201703",
+   "sector": "31-33",
+   "archivo": "denue_00_31-33_0317_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_03/denue_00_31-33_0317_csv.zip"
+  },
+  {
+   "version": "2017_03",
+   "yyyymm": "201703",
+   "sector": "43",
+   "archivo": "denue_00_43_0317_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_03/denue_00_43_0317_csv.zip"
+  },
+  {
+   "version": "2017_03",
+   "yyyymm": "201703",
+   "sector": "46111",
+   "archivo": "denue_00_46111_0317_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_03/denue_00_46111_0317_csv.zip"
+  },
+  {
+   "version": "2017_03",
+   "yyyymm": "201703",
+   "sector": "46112-46311",
+   "archivo": "denue_00_46112-46311_0317_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_03/denue_00_46112-46311_0317_csv.zip"
+  },
+  {
+   "version": "2017_03",
+   "yyyymm": "201703",
+   "sector": "46321-46531",
+   "archivo": "denue_00_46321-46531_0317_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_03/denue_00_46321-46531_0317_csv.zip"
+  },
+  {
+   "version": "2017_03",
+   "yyyymm": "201703",
+   "sector": "46591-46911",
+   "archivo": "denue_00_46591-46911_0317_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_03/denue_00_46591-46911_0317_csv.zip"
+  },
+  {
+   "version": "2017_03",
+   "yyyymm": "201703",
+   "sector": "48-49",
+   "archivo": "denue_00_48-49_0317_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_03/denue_00_48-49_0317_csv.zip"
+  },
+  {
+   "version": "2017_03",
+   "yyyymm": "201703",
+   "sector": "51",
+   "archivo": "denue_00_51_0317_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_03/denue_00_51_0317_csv.zip"
+  },
+  {
+   "version": "2017_03",
+   "yyyymm": "201703",
+   "sector": "52",
+   "archivo": "denue_00_52_0317_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_03/denue_00_52_0317_csv.zip"
+  },
+  {
+   "version": "2017_03",
+   "yyyymm": "201703",
+   "sector": "53",
+   "archivo": "denue_00_53_0317_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_03/denue_00_53_0317_csv.zip"
+  },
+  {
+   "version": "2017_03",
+   "yyyymm": "201703",
+   "sector": "54",
+   "archivo": "denue_00_54_0317_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_03/denue_00_54_0317_csv.zip"
+  },
+  {
+   "version": "2017_03",
+   "yyyymm": "201703",
+   "sector": "55",
+   "archivo": "denue_00_55_0317_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_03/denue_00_55_0317_csv.zip"
+  },
+  {
+   "version": "2017_03",
+   "yyyymm": "201703",
+   "sector": "56",
+   "archivo": "denue_00_56_0317_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_03/denue_00_56_0317_csv.zip"
+  },
+  {
+   "version": "2017_03",
+   "yyyymm": "201703",
+   "sector": "61",
+   "archivo": "denue_00_61_0317_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_03/denue_00_61_0317_csv.zip"
+  },
+  {
+   "version": "2017_03",
+   "yyyymm": "201703",
+   "sector": "62",
+   "archivo": "denue_00_62_0317_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_03/denue_00_62_0317_csv.zip"
+  },
+  {
+   "version": "2017_03",
+   "yyyymm": "201703",
+   "sector": "71",
+   "archivo": "denue_00_71_0317_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_03/denue_00_71_0317_csv.zip"
+  },
+  {
+   "version": "2017_03",
+   "yyyymm": "201703",
+   "sector": "72",
+   "archivo": "denue_00_72_0317_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_03/denue_00_72_0317_csv.zip"
+  },
+  {
+   "version": "2017_03",
+   "yyyymm": "201703",
+   "sector": "81",
+   "archivo": "denue_00_81_0317_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_03/denue_00_81_0317_csv.zip"
+  },
+  {
+   "version": "2017_03",
+   "yyyymm": "201703",
+   "sector": "93",
+   "archivo": "denue_00_93_0317_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_03/denue_00_93_0317_csv.zip"
+  },
+  {
+   "version": "2017_11",
+   "yyyymm": "201711",
+   "sector": "11",
+   "archivo": "denue_00_11_1117_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_11/denue_00_11_1117_csv.zip"
+  },
+  {
+   "version": "2017_11",
+   "yyyymm": "201711",
+   "sector": "21",
+   "archivo": "denue_00_21_1117_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_11/denue_00_21_1117_csv.zip"
+  },
+  {
+   "version": "2017_11",
+   "yyyymm": "201711",
+   "sector": "22",
+   "archivo": "denue_00_22_1117_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_11/denue_00_22_1117_csv.zip"
+  },
+  {
+   "version": "2017_11",
+   "yyyymm": "201711",
+   "sector": "23",
+   "archivo": "denue_00_23_1117_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_11/denue_00_23_1117_csv.zip"
+  },
+  {
+   "version": "2017_11",
+   "yyyymm": "201711",
+   "sector": "31-33",
+   "archivo": "denue_00_31-33_1117_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_11/denue_00_31-33_1117_csv.zip"
+  },
+  {
+   "version": "2017_11",
+   "yyyymm": "201711",
+   "sector": "43",
+   "archivo": "denue_00_43_1117_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_11/denue_00_43_1117_csv.zip"
+  },
+  {
+   "version": "2017_11",
+   "yyyymm": "201711",
+   "sector": "46111",
+   "archivo": "denue_00_46111_1117_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_11/denue_00_46111_1117_csv.zip"
+  },
+  {
+   "version": "2017_11",
+   "yyyymm": "201711",
+   "sector": "46112-46311",
+   "archivo": "denue_00_46112-46311_1117_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_11/denue_00_46112-46311_1117_csv.zip"
+  },
+  {
+   "version": "2017_11",
+   "yyyymm": "201711",
+   "sector": "46321-46531",
+   "archivo": "denue_00_46321-46531_1117_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_11/denue_00_46321-46531_1117_csv.zip"
+  },
+  {
+   "version": "2017_11",
+   "yyyymm": "201711",
+   "sector": "46591-46911",
+   "archivo": "denue_00_46591-46911_1117_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_11/denue_00_46591-46911_1117_csv.zip"
+  },
+  {
+   "version": "2017_11",
+   "yyyymm": "201711",
+   "sector": "48-49",
+   "archivo": "denue_00_48-49_1117_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_11/denue_00_48-49_1117_csv.zip"
+  },
+  {
+   "version": "2017_11",
+   "yyyymm": "201711",
+   "sector": "51",
+   "archivo": "denue_00_51_1117_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_11/denue_00_51_1117_csv.zip"
+  },
+  {
+   "version": "2017_11",
+   "yyyymm": "201711",
+   "sector": "52",
+   "archivo": "denue_00_52_1117_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_11/denue_00_52_1117_csv.zip"
+  },
+  {
+   "version": "2017_11",
+   "yyyymm": "201711",
+   "sector": "53",
+   "archivo": "denue_00_53_1117_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_11/denue_00_53_1117_csv.zip"
+  },
+  {
+   "version": "2017_11",
+   "yyyymm": "201711",
+   "sector": "54",
+   "archivo": "denue_00_54_1117_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_11/denue_00_54_1117_csv.zip"
+  },
+  {
+   "version": "2017_11",
+   "yyyymm": "201711",
+   "sector": "55",
+   "archivo": "denue_00_55_1117_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_11/denue_00_55_1117_csv.zip"
+  },
+  {
+   "version": "2017_11",
+   "yyyymm": "201711",
+   "sector": "56",
+   "archivo": "denue_00_56_1117_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_11/denue_00_56_1117_csv.zip"
+  },
+  {
+   "version": "2017_11",
+   "yyyymm": "201711",
+   "sector": "61",
+   "archivo": "denue_00_61_1117_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_11/denue_00_61_1117_csv.zip"
+  },
+  {
+   "version": "2017_11",
+   "yyyymm": "201711",
+   "sector": "62",
+   "archivo": "denue_00_62_1117_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_11/denue_00_62_1117_csv.zip"
+  },
+  {
+   "version": "2017_11",
+   "yyyymm": "201711",
+   "sector": "71",
+   "archivo": "denue_00_71_1117_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_11/denue_00_71_1117_csv.zip"
+  },
+  {
+   "version": "2017_11",
+   "yyyymm": "201711",
+   "sector": "72",
+   "archivo": "denue_00_72_1117_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_11/denue_00_72_1117_csv.zip"
+  },
+  {
+   "version": "2017_11",
+   "yyyymm": "201711",
+   "sector": "81",
+   "archivo": "denue_00_81_1117_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_11/denue_00_81_1117_csv.zip"
+  },
+  {
+   "version": "2017_11",
+   "yyyymm": "201711",
+   "sector": "93",
+   "archivo": "denue_00_93_1117_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2017_11/denue_00_93_1117_csv.zip"
+  },
+  {
+   "version": "2018_03",
+   "yyyymm": "201803",
+   "sector": "11",
+   "archivo": "denue_00_11_0318_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_03/denue_00_11_0318_csv.zip"
+  },
+  {
+   "version": "2018_03",
+   "yyyymm": "201803",
+   "sector": "21",
+   "archivo": "denue_00_21_0318_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_03/denue_00_21_0318_csv.zip"
+  },
+  {
+   "version": "2018_03",
+   "yyyymm": "201803",
+   "sector": "22",
+   "archivo": "denue_00_22_0318_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_03/denue_00_22_0318_csv.zip"
+  },
+  {
+   "version": "2018_03",
+   "yyyymm": "201803",
+   "sector": "23",
+   "archivo": "denue_00_23_0318_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_03/denue_00_23_0318_csv.zip"
+  },
+  {
+   "version": "2018_03",
+   "yyyymm": "201803",
+   "sector": "31-33",
+   "archivo": "denue_00_31-33_0318_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_03/denue_00_31-33_0318_csv.zip"
+  },
+  {
+   "version": "2018_03",
+   "yyyymm": "201803",
+   "sector": "43",
+   "archivo": "denue_00_43_0318_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_03/denue_00_43_0318_csv.zip"
+  },
+  {
+   "version": "2018_03",
+   "yyyymm": "201803",
+   "sector": "46111",
+   "archivo": "denue_00_46111_0318_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_03/denue_00_46111_0318_csv.zip"
+  },
+  {
+   "version": "2018_03",
+   "yyyymm": "201803",
+   "sector": "46112-46311",
+   "archivo": "denue_00_46112-46311_0318_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_03/denue_00_46112-46311_0318_csv.zip"
+  },
+  {
+   "version": "2018_03",
+   "yyyymm": "201803",
+   "sector": "46321-46531",
+   "archivo": "denue_00_46321-46531_0318_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_03/denue_00_46321-46531_0318_csv.zip"
+  },
+  {
+   "version": "2018_03",
+   "yyyymm": "201803",
+   "sector": "46591-46911",
+   "archivo": "denue_00_46591-46911_0318_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_03/denue_00_46591-46911_0318_csv.zip"
+  },
+  {
+   "version": "2018_03",
+   "yyyymm": "201803",
+   "sector": "48-49",
+   "archivo": "denue_00_48-49_0318_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_03/denue_00_48-49_0318_csv.zip"
+  },
+  {
+   "version": "2018_03",
+   "yyyymm": "201803",
+   "sector": "51",
+   "archivo": "denue_00_51_0318_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_03/denue_00_51_0318_csv.zip"
+  },
+  {
+   "version": "2018_03",
+   "yyyymm": "201803",
+   "sector": "52",
+   "archivo": "denue_00_52_0318_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_03/denue_00_52_0318_csv.zip"
+  },
+  {
+   "version": "2018_03",
+   "yyyymm": "201803",
+   "sector": "53",
+   "archivo": "denue_00_53_0318_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_03/denue_00_53_0318_csv.zip"
+  },
+  {
+   "version": "2018_03",
+   "yyyymm": "201803",
+   "sector": "54",
+   "archivo": "denue_00_54_0318_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_03/denue_00_54_0318_csv.zip"
+  },
+  {
+   "version": "2018_03",
+   "yyyymm": "201803",
+   "sector": "55",
+   "archivo": "denue_00_55_0318_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_03/denue_00_55_0318_csv.zip"
+  },
+  {
+   "version": "2018_03",
+   "yyyymm": "201803",
+   "sector": "56",
+   "archivo": "denue_00_56_0318_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_03/denue_00_56_0318_csv.zip"
+  },
+  {
+   "version": "2018_03",
+   "yyyymm": "201803",
+   "sector": "61",
+   "archivo": "denue_00_61_0318_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_03/denue_00_61_0318_csv.zip"
+  },
+  {
+   "version": "2018_03",
+   "yyyymm": "201803",
+   "sector": "62",
+   "archivo": "denue_00_62_0318_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_03/denue_00_62_0318_csv.zip"
+  },
+  {
+   "version": "2018_03",
+   "yyyymm": "201803",
+   "sector": "71",
+   "archivo": "denue_00_71_0318_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_03/denue_00_71_0318_csv.zip"
+  },
+  {
+   "version": "2018_03",
+   "yyyymm": "201803",
+   "sector": "72",
+   "archivo": "denue_00_72_0318_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_03/denue_00_72_0318_csv.zip"
+  },
+  {
+   "version": "2018_03",
+   "yyyymm": "201803",
+   "sector": "81",
+   "archivo": "denue_00_81_0318_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_03/denue_00_81_0318_csv.zip"
+  },
+  {
+   "version": "2018_03",
+   "yyyymm": "201803",
+   "sector": "93",
+   "archivo": "denue_00_93_0318_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_03/denue_00_93_0318_csv.zip"
+  },
+  {
+   "version": "2018_11",
+   "yyyymm": "201811",
+   "sector": "11",
+   "archivo": "denue_00_11_1118_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_11/denue_00_11_1118_csv.zip"
+  },
+  {
+   "version": "2018_11",
+   "yyyymm": "201811",
+   "sector": "21",
+   "archivo": "denue_00_21_1118_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_11/denue_00_21_1118_csv.zip"
+  },
+  {
+   "version": "2018_11",
+   "yyyymm": "201811",
+   "sector": "22",
+   "archivo": "denue_00_22_1118_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_11/denue_00_22_1118_csv.zip"
+  },
+  {
+   "version": "2018_11",
+   "yyyymm": "201811",
+   "sector": "23",
+   "archivo": "denue_00_23_1118_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_11/denue_00_23_1118_csv.zip"
+  },
+  {
+   "version": "2018_11",
+   "yyyymm": "201811",
+   "sector": "31-33",
+   "archivo": "denue_00_31-33_1118_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_11/denue_00_31-33_1118_csv.zip"
+  },
+  {
+   "version": "2018_11",
+   "yyyymm": "201811",
+   "sector": "43",
+   "archivo": "denue_00_43_1118_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_11/denue_00_43_1118_csv.zip"
+  },
+  {
+   "version": "2018_11",
+   "yyyymm": "201811",
+   "sector": "46111",
+   "archivo": "denue_00_46111_1118_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_11/denue_00_46111_1118_csv.zip"
+  },
+  {
+   "version": "2018_11",
+   "yyyymm": "201811",
+   "sector": "46112-46311",
+   "archivo": "denue_00_46112-46311_1118_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_11/denue_00_46112-46311_1118_csv.zip"
+  },
+  {
+   "version": "2018_11",
+   "yyyymm": "201811",
+   "sector": "46321-46531",
+   "archivo": "denue_00_46321-46531_1118_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_11/denue_00_46321-46531_1118_csv.zip"
+  },
+  {
+   "version": "2018_11",
+   "yyyymm": "201811",
+   "sector": "46591-46911",
+   "archivo": "denue_00_46591-46911_1118_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_11/denue_00_46591-46911_1118_csv.zip"
+  },
+  {
+   "version": "2018_11",
+   "yyyymm": "201811",
+   "sector": "48-49",
+   "archivo": "denue_00_48-49_1118_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_11/denue_00_48-49_1118_csv.zip"
+  },
+  {
+   "version": "2018_11",
+   "yyyymm": "201811",
+   "sector": "51",
+   "archivo": "denue_00_51_1118_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_11/denue_00_51_1118_csv.zip"
+  },
+  {
+   "version": "2018_11",
+   "yyyymm": "201811",
+   "sector": "52",
+   "archivo": "denue_00_52_1118_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_11/denue_00_52_1118_csv.zip"
+  },
+  {
+   "version": "2018_11",
+   "yyyymm": "201811",
+   "sector": "53",
+   "archivo": "denue_00_53_1118_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_11/denue_00_53_1118_csv.zip"
+  },
+  {
+   "version": "2018_11",
+   "yyyymm": "201811",
+   "sector": "54",
+   "archivo": "denue_00_54_1118_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_11/denue_00_54_1118_csv.zip"
+  },
+  {
+   "version": "2018_11",
+   "yyyymm": "201811",
+   "sector": "55",
+   "archivo": "denue_00_55_1118_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_11/denue_00_55_1118_csv.zip"
+  },
+  {
+   "version": "2018_11",
+   "yyyymm": "201811",
+   "sector": "56",
+   "archivo": "denue_00_56_1118_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_11/denue_00_56_1118_csv.zip"
+  },
+  {
+   "version": "2018_11",
+   "yyyymm": "201811",
+   "sector": "61",
+   "archivo": "denue_00_61_1118_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_11/denue_00_61_1118_csv.zip"
+  },
+  {
+   "version": "2018_11",
+   "yyyymm": "201811",
+   "sector": "62",
+   "archivo": "denue_00_62_1118_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_11/denue_00_62_1118_csv.zip"
+  },
+  {
+   "version": "2018_11",
+   "yyyymm": "201811",
+   "sector": "71",
+   "archivo": "denue_00_71_1118_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_11/denue_00_71_1118_csv.zip"
+  },
+  {
+   "version": "2018_11",
+   "yyyymm": "201811",
+   "sector": "72",
+   "archivo": "denue_00_72_1118_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_11/denue_00_72_1118_csv.zip"
+  },
+  {
+   "version": "2018_11",
+   "yyyymm": "201811",
+   "sector": "81",
+   "archivo": "denue_00_81_1118_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_11/denue_00_81_1118_csv.zip"
+  },
+  {
+   "version": "2018_11",
+   "yyyymm": "201811",
+   "sector": "93",
+   "archivo": "denue_00_93_1118_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2018_11/denue_00_93_1118_csv.zip"
+  },
+  {
+   "version": "2019_04",
+   "yyyymm": "201904",
+   "sector": "11",
+   "archivo": "denue_00_11_0419_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_04/denue_00_11_0419_csv.zip"
+  },
+  {
+   "version": "2019_04",
+   "yyyymm": "201904",
+   "sector": "21",
+   "archivo": "denue_00_21_0419_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_04/denue_00_21_0419_csv.zip"
+  },
+  {
+   "version": "2019_04",
+   "yyyymm": "201904",
+   "sector": "22",
+   "archivo": "denue_00_22_0419_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_04/denue_00_22_0419_csv.zip"
+  },
+  {
+   "version": "2019_04",
+   "yyyymm": "201904",
+   "sector": "23",
+   "archivo": "denue_00_23_0419_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_04/denue_00_23_0419_csv.zip"
+  },
+  {
+   "version": "2019_04",
+   "yyyymm": "201904",
+   "sector": "31-33",
+   "archivo": "denue_00_31-33_0419_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_04/denue_00_31-33_0419_csv.zip"
+  },
+  {
+   "version": "2019_04",
+   "yyyymm": "201904",
+   "sector": "43",
+   "archivo": "denue_00_43_0419_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_04/denue_00_43_0419_csv.zip"
+  },
+  {
+   "version": "2019_04",
+   "yyyymm": "201904",
+   "sector": "46111",
+   "archivo": "denue_00_46111_0419_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_04/denue_00_46111_0419_csv.zip"
+  },
+  {
+   "version": "2019_04",
+   "yyyymm": "201904",
+   "sector": "46112-46311",
+   "archivo": "denue_00_46112-46311_0419_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_04/denue_00_46112-46311_0419_csv.zip"
+  },
+  {
+   "version": "2019_04",
+   "yyyymm": "201904",
+   "sector": "46321-46531",
+   "archivo": "denue_00_46321-46531_0419_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_04/denue_00_46321-46531_0419_csv.zip"
+  },
+  {
+   "version": "2019_04",
+   "yyyymm": "201904",
+   "sector": "46591-46911",
+   "archivo": "denue_00_46591-46911_0419_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_04/denue_00_46591-46911_0419_csv.zip"
+  },
+  {
+   "version": "2019_04",
+   "yyyymm": "201904",
+   "sector": "48-49",
+   "archivo": "denue_00_48-49_0419_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_04/denue_00_48-49_0419_csv.zip"
+  },
+  {
+   "version": "2019_04",
+   "yyyymm": "201904",
+   "sector": "51",
+   "archivo": "denue_00_51_0419_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_04/denue_00_51_0419_csv.zip"
+  },
+  {
+   "version": "2019_04",
+   "yyyymm": "201904",
+   "sector": "52",
+   "archivo": "denue_00_52_0419_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_04/denue_00_52_0419_csv.zip"
+  },
+  {
+   "version": "2019_04",
+   "yyyymm": "201904",
+   "sector": "53",
+   "archivo": "denue_00_53_0419_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_04/denue_00_53_0419_csv.zip"
+  },
+  {
+   "version": "2019_04",
+   "yyyymm": "201904",
+   "sector": "54",
+   "archivo": "denue_00_54_0419_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_04/denue_00_54_0419_csv.zip"
+  },
+  {
+   "version": "2019_04",
+   "yyyymm": "201904",
+   "sector": "55",
+   "archivo": "denue_00_55_0419_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_04/denue_00_55_0419_csv.zip"
+  },
+  {
+   "version": "2019_04",
+   "yyyymm": "201904",
+   "sector": "56",
+   "archivo": "denue_00_56_0419_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_04/denue_00_56_0419_csv.zip"
+  },
+  {
+   "version": "2019_04",
+   "yyyymm": "201904",
+   "sector": "61",
+   "archivo": "denue_00_61_0419_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_04/denue_00_61_0419_csv.zip"
+  },
+  {
+   "version": "2019_04",
+   "yyyymm": "201904",
+   "sector": "62",
+   "archivo": "denue_00_62_0419_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_04/denue_00_62_0419_csv.zip"
+  },
+  {
+   "version": "2019_04",
+   "yyyymm": "201904",
+   "sector": "71",
+   "archivo": "denue_00_71_0419_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_04/denue_00_71_0419_csv.zip"
+  },
+  {
+   "version": "2019_04",
+   "yyyymm": "201904",
+   "sector": "72",
+   "archivo": "denue_00_72_0419_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_04/denue_00_72_0419_csv.zip"
+  },
+  {
+   "version": "2019_04",
+   "yyyymm": "201904",
+   "sector": "81",
+   "archivo": "denue_00_81_0419_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_04/denue_00_81_0419_csv.zip"
+  },
+  {
+   "version": "2019_04",
+   "yyyymm": "201904",
+   "sector": "93",
+   "archivo": "denue_00_93_0419_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_04/denue_00_93_0419_csv.zip"
+  },
+  {
+   "version": "2019_11",
+   "yyyymm": "201911",
+   "sector": "11",
+   "archivo": "denue_00_11_1119_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_11/denue_00_11_1119_csv.zip"
+  },
+  {
+   "version": "2019_11",
+   "yyyymm": "201911",
+   "sector": "21",
+   "archivo": "denue_00_21_1119_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_11/denue_00_21_1119_csv.zip"
+  },
+  {
+   "version": "2019_11",
+   "yyyymm": "201911",
+   "sector": "22",
+   "archivo": "denue_00_22_1119_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_11/denue_00_22_1119_csv.zip"
+  },
+  {
+   "version": "2019_11",
+   "yyyymm": "201911",
+   "sector": "23",
+   "archivo": "denue_00_23_1119_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_11/denue_00_23_1119_csv.zip"
+  },
+  {
+   "version": "2019_11",
+   "yyyymm": "201911",
+   "sector": "31-33",
+   "archivo": "denue_00_31-33_1119_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_11/denue_00_31-33_1119_csv.zip"
+  },
+  {
+   "version": "2019_11",
+   "yyyymm": "201911",
+   "sector": "43",
+   "archivo": "denue_00_43_1119_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_11/denue_00_43_1119_csv.zip"
+  },
+  {
+   "version": "2019_11",
+   "yyyymm": "201911",
+   "sector": "46111",
+   "archivo": "denue_00_46111_1119_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_11/denue_00_46111_1119_csv.zip"
+  },
+  {
+   "version": "2019_11",
+   "yyyymm": "201911",
+   "sector": "46112-46311",
+   "archivo": "denue_00_46112-46311_1119_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_11/denue_00_46112-46311_1119_csv.zip"
+  },
+  {
+   "version": "2019_11",
+   "yyyymm": "201911",
+   "sector": "46321-46531",
+   "archivo": "denue_00_46321-46531_1119_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_11/denue_00_46321-46531_1119_csv.zip"
+  },
+  {
+   "version": "2019_11",
+   "yyyymm": "201911",
+   "sector": "46591-46911",
+   "archivo": "denue_00_46591-46911_1119_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_11/denue_00_46591-46911_1119_csv.zip"
+  },
+  {
+   "version": "2019_11",
+   "yyyymm": "201911",
+   "sector": "48-49",
+   "archivo": "denue_00_48-49_1119_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_11/denue_00_48-49_1119_csv.zip"
+  },
+  {
+   "version": "2019_11",
+   "yyyymm": "201911",
+   "sector": "51",
+   "archivo": "denue_00_51_1119_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_11/denue_00_51_1119_csv.zip"
+  },
+  {
+   "version": "2019_11",
+   "yyyymm": "201911",
+   "sector": "52",
+   "archivo": "denue_00_52_1119_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_11/denue_00_52_1119_csv.zip"
+  },
+  {
+   "version": "2019_11",
+   "yyyymm": "201911",
+   "sector": "53",
+   "archivo": "denue_00_53_1119_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_11/denue_00_53_1119_csv.zip"
+  },
+  {
+   "version": "2019_11",
+   "yyyymm": "201911",
+   "sector": "54",
+   "archivo": "denue_00_54_1119_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_11/denue_00_54_1119_csv.zip"
+  },
+  {
+   "version": "2019_11",
+   "yyyymm": "201911",
+   "sector": "55",
+   "archivo": "denue_00_55_1119_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_11/denue_00_55_1119_csv.zip"
+  },
+  {
+   "version": "2019_11",
+   "yyyymm": "201911",
+   "sector": "56",
+   "archivo": "denue_00_56_1119_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_11/denue_00_56_1119_csv.zip"
+  },
+  {
+   "version": "2019_11",
+   "yyyymm": "201911",
+   "sector": "61",
+   "archivo": "denue_00_61_1119_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_11/denue_00_61_1119_csv.zip"
+  },
+  {
+   "version": "2019_11",
+   "yyyymm": "201911",
+   "sector": "62",
+   "archivo": "denue_00_62_1119_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_11/denue_00_62_1119_csv.zip"
+  },
+  {
+   "version": "2019_11",
+   "yyyymm": "201911",
+   "sector": "71",
+   "archivo": "denue_00_71_1119_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_11/denue_00_71_1119_csv.zip"
+  },
+  {
+   "version": "2019_11",
+   "yyyymm": "201911",
+   "sector": "72_1",
+   "archivo": "denue_00_72_1_1119_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_11/denue_00_72_1_1119_csv.zip"
+  },
+  {
+   "version": "2019_11",
+   "yyyymm": "201911",
+   "sector": "72_2",
+   "archivo": "denue_00_72_2_1119_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_11/denue_00_72_2_1119_csv.zip"
+  },
+  {
+   "version": "2019_11",
+   "yyyymm": "201911",
+   "sector": "81_1",
+   "archivo": "denue_00_81_1_1119_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_11/denue_00_81_1_1119_csv.zip"
+  },
+  {
+   "version": "2019_11",
+   "yyyymm": "201911",
+   "sector": "81_2",
+   "archivo": "denue_00_81_2_1119_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_11/denue_00_81_2_1119_csv.zip"
+  },
+  {
+   "version": "2019_11",
+   "yyyymm": "201911",
+   "sector": "93",
+   "archivo": "denue_00_93_1119_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2019_11/denue_00_93_1119_csv.zip"
+  },
+  {
+   "version": "2020_04",
+   "yyyymm": "202004",
+   "sector": "11",
+   "archivo": "denue_00_11_0420_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_04/denue_00_11_0420_csv.zip"
+  },
+  {
+   "version": "2020_04",
+   "yyyymm": "202004",
+   "sector": "21",
+   "archivo": "denue_00_21_0420_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_04/denue_00_21_0420_csv.zip"
+  },
+  {
+   "version": "2020_04",
+   "yyyymm": "202004",
+   "sector": "22",
+   "archivo": "denue_00_22_0420_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_04/denue_00_22_0420_csv.zip"
+  },
+  {
+   "version": "2020_04",
+   "yyyymm": "202004",
+   "sector": "23",
+   "archivo": "denue_00_23_0420_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_04/denue_00_23_0420_csv.zip"
+  },
+  {
+   "version": "2020_04",
+   "yyyymm": "202004",
+   "sector": "31-33",
+   "archivo": "denue_00_31-33_0420_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_04/denue_00_31-33_0420_csv.zip"
+  },
+  {
+   "version": "2020_04",
+   "yyyymm": "202004",
+   "sector": "43",
+   "archivo": "denue_00_43_0420_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_04/denue_00_43_0420_csv.zip"
+  },
+  {
+   "version": "2020_04",
+   "yyyymm": "202004",
+   "sector": "46111",
+   "archivo": "denue_00_46111_0420_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_04/denue_00_46111_0420_csv.zip"
+  },
+  {
+   "version": "2020_04",
+   "yyyymm": "202004",
+   "sector": "46112-46311",
+   "archivo": "denue_00_46112-46311_0420_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_04/denue_00_46112-46311_0420_csv.zip"
+  },
+  {
+   "version": "2020_04",
+   "yyyymm": "202004",
+   "sector": "46321-46531",
+   "archivo": "denue_00_46321-46531_0420_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_04/denue_00_46321-46531_0420_csv.zip"
+  },
+  {
+   "version": "2020_04",
+   "yyyymm": "202004",
+   "sector": "46591-46911",
+   "archivo": "denue_00_46591-46911_0420_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_04/denue_00_46591-46911_0420_csv.zip"
+  },
+  {
+   "version": "2020_04",
+   "yyyymm": "202004",
+   "sector": "48-49",
+   "archivo": "denue_00_48-49_0420_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_04/denue_00_48-49_0420_csv.zip"
+  },
+  {
+   "version": "2020_04",
+   "yyyymm": "202004",
+   "sector": "51",
+   "archivo": "denue_00_51_0420_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_04/denue_00_51_0420_csv.zip"
+  },
+  {
+   "version": "2020_04",
+   "yyyymm": "202004",
+   "sector": "52",
+   "archivo": "denue_00_52_0420_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_04/denue_00_52_0420_csv.zip"
+  },
+  {
+   "version": "2020_04",
+   "yyyymm": "202004",
+   "sector": "53",
+   "archivo": "denue_00_53_0420_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_04/denue_00_53_0420_csv.zip"
+  },
+  {
+   "version": "2020_04",
+   "yyyymm": "202004",
+   "sector": "54",
+   "archivo": "denue_00_54_0420_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_04/denue_00_54_0420_csv.zip"
+  },
+  {
+   "version": "2020_04",
+   "yyyymm": "202004",
+   "sector": "55",
+   "archivo": "denue_00_55_0420_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_04/denue_00_55_0420_csv.zip"
+  },
+  {
+   "version": "2020_04",
+   "yyyymm": "202004",
+   "sector": "56",
+   "archivo": "denue_00_56_0420_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_04/denue_00_56_0420_csv.zip"
+  },
+  {
+   "version": "2020_04",
+   "yyyymm": "202004",
+   "sector": "61",
+   "archivo": "denue_00_61_0420_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_04/denue_00_61_0420_csv.zip"
+  },
+  {
+   "version": "2020_04",
+   "yyyymm": "202004",
+   "sector": "62",
+   "archivo": "denue_00_62_0420_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_04/denue_00_62_0420_csv.zip"
+  },
+  {
+   "version": "2020_04",
+   "yyyymm": "202004",
+   "sector": "71",
+   "archivo": "denue_00_71_0420_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_04/denue_00_71_0420_csv.zip"
+  },
+  {
+   "version": "2020_04",
+   "yyyymm": "202004",
+   "sector": "72_1",
+   "archivo": "denue_00_72_1_0420_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_04/denue_00_72_1_0420_csv.zip"
+  },
+  {
+   "version": "2020_04",
+   "yyyymm": "202004",
+   "sector": "72_2",
+   "archivo": "denue_00_72_2_0420_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_04/denue_00_72_2_0420_csv.zip"
+  },
+  {
+   "version": "2020_04",
+   "yyyymm": "202004",
+   "sector": "81_1",
+   "archivo": "denue_00_81_1_0420_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_04/denue_00_81_1_0420_csv.zip"
+  },
+  {
+   "version": "2020_04",
+   "yyyymm": "202004",
+   "sector": "81_2",
+   "archivo": "denue_00_81_2_0420_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_04/denue_00_81_2_0420_csv.zip"
+  },
+  {
+   "version": "2020_04",
+   "yyyymm": "202004",
+   "sector": "93",
+   "archivo": "denue_00_93_0420_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_04/denue_00_93_0420_csv.zip"
+  },
+  {
+   "version": "2020_11",
+   "yyyymm": "202011",
+   "sector": "11",
+   "archivo": "denue_00_11_1120_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_11/denue_00_11_1120_csv.zip"
+  },
+  {
+   "version": "2020_11",
+   "yyyymm": "202011",
+   "sector": "21",
+   "archivo": "denue_00_21_1120_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_11/denue_00_21_1120_csv.zip"
+  },
+  {
+   "version": "2020_11",
+   "yyyymm": "202011",
+   "sector": "22",
+   "archivo": "denue_00_22_1120_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_11/denue_00_22_1120_csv.zip"
+  },
+  {
+   "version": "2020_11",
+   "yyyymm": "202011",
+   "sector": "23",
+   "archivo": "denue_00_23_1120_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_11/denue_00_23_1120_csv.zip"
+  },
+  {
+   "version": "2020_11",
+   "yyyymm": "202011",
+   "sector": "31-33",
+   "archivo": "denue_00_31-33_1120_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_11/denue_00_31-33_1120_csv.zip"
+  },
+  {
+   "version": "2020_11",
+   "yyyymm": "202011",
+   "sector": "43",
+   "archivo": "denue_00_43_1120_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_11/denue_00_43_1120_csv.zip"
+  },
+  {
+   "version": "2020_11",
+   "yyyymm": "202011",
+   "sector": "46111",
+   "archivo": "denue_00_46111_1120_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_11/denue_00_46111_1120_csv.zip"
+  },
+  {
+   "version": "2020_11",
+   "yyyymm": "202011",
+   "sector": "46112-46311",
+   "archivo": "denue_00_46112-46311_1120_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_11/denue_00_46112-46311_1120_csv.zip"
+  },
+  {
+   "version": "2020_11",
+   "yyyymm": "202011",
+   "sector": "46321-46531",
+   "archivo": "denue_00_46321-46531_1120_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_11/denue_00_46321-46531_1120_csv.zip"
+  },
+  {
+   "version": "2020_11",
+   "yyyymm": "202011",
+   "sector": "46591-46911",
+   "archivo": "denue_00_46591-46911_1120_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_11/denue_00_46591-46911_1120_csv.zip"
+  },
+  {
+   "version": "2020_11",
+   "yyyymm": "202011",
+   "sector": "48-49",
+   "archivo": "denue_00_48-49_1120_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_11/denue_00_48-49_1120_csv.zip"
+  },
+  {
+   "version": "2020_11",
+   "yyyymm": "202011",
+   "sector": "51",
+   "archivo": "denue_00_51_1120_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_11/denue_00_51_1120_csv.zip"
+  },
+  {
+   "version": "2020_11",
+   "yyyymm": "202011",
+   "sector": "52",
+   "archivo": "denue_00_52_1120_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_11/denue_00_52_1120_csv.zip"
+  },
+  {
+   "version": "2020_11",
+   "yyyymm": "202011",
+   "sector": "53",
+   "archivo": "denue_00_53_1120_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_11/denue_00_53_1120_csv.zip"
+  },
+  {
+   "version": "2020_11",
+   "yyyymm": "202011",
+   "sector": "54",
+   "archivo": "denue_00_54_1120_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_11/denue_00_54_1120_csv.zip"
+  },
+  {
+   "version": "2020_11",
+   "yyyymm": "202011",
+   "sector": "55",
+   "archivo": "denue_00_55_1120_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_11/denue_00_55_1120_csv.zip"
+  },
+  {
+   "version": "2020_11",
+   "yyyymm": "202011",
+   "sector": "56",
+   "archivo": "denue_00_56_1120_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_11/denue_00_56_1120_csv.zip"
+  },
+  {
+   "version": "2020_11",
+   "yyyymm": "202011",
+   "sector": "61",
+   "archivo": "denue_00_61_1120_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_11/denue_00_61_1120_csv.zip"
+  },
+  {
+   "version": "2020_11",
+   "yyyymm": "202011",
+   "sector": "62",
+   "archivo": "denue_00_62_1120_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_11/denue_00_62_1120_csv.zip"
+  },
+  {
+   "version": "2020_11",
+   "yyyymm": "202011",
+   "sector": "71",
+   "archivo": "denue_00_71_1120_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_11/denue_00_71_1120_csv.zip"
+  },
+  {
+   "version": "2020_11",
+   "yyyymm": "202011",
+   "sector": "72_1",
+   "archivo": "denue_00_72_1_1120_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_11/denue_00_72_1_1120_csv.zip"
+  },
+  {
+   "version": "2020_11",
+   "yyyymm": "202011",
+   "sector": "72_2",
+   "archivo": "denue_00_72_2_1120_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_11/denue_00_72_2_1120_csv.zip"
+  },
+  {
+   "version": "2020_11",
+   "yyyymm": "202011",
+   "sector": "81_1",
+   "archivo": "denue_00_81_1_1120_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_11/denue_00_81_1_1120_csv.zip"
+  },
+  {
+   "version": "2020_11",
+   "yyyymm": "202011",
+   "sector": "81_2",
+   "archivo": "denue_00_81_2_1120_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_11/denue_00_81_2_1120_csv.zip"
+  },
+  {
+   "version": "2020_11",
+   "yyyymm": "202011",
+   "sector": "93",
+   "archivo": "denue_00_93_1120_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2020_11/denue_00_93_1120_csv.zip"
+  },
+  {
+   "version": "2021_05",
+   "yyyymm": "202105",
+   "sector": "11",
+   "archivo": "denue_00_11_0521_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_05/denue_00_11_0521_csv.zip"
+  },
+  {
+   "version": "2021_05",
+   "yyyymm": "202105",
+   "sector": "21",
+   "archivo": "denue_00_21_0521_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_05/denue_00_21_0521_csv.zip"
+  },
+  {
+   "version": "2021_05",
+   "yyyymm": "202105",
+   "sector": "22",
+   "archivo": "denue_00_22_0521_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_05/denue_00_22_0521_csv.zip"
+  },
+  {
+   "version": "2021_05",
+   "yyyymm": "202105",
+   "sector": "23",
+   "archivo": "denue_00_23_0521_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_05/denue_00_23_0521_csv.zip"
+  },
+  {
+   "version": "2021_05",
+   "yyyymm": "202105",
+   "sector": "31-33",
+   "archivo": "denue_00_31-33_0521_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_05/denue_00_31-33_0521_csv.zip"
+  },
+  {
+   "version": "2021_05",
+   "yyyymm": "202105",
+   "sector": "43",
+   "archivo": "denue_00_43_0521_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_05/denue_00_43_0521_csv.zip"
+  },
+  {
+   "version": "2021_05",
+   "yyyymm": "202105",
+   "sector": "46111",
+   "archivo": "denue_00_46111_0521_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_05/denue_00_46111_0521_csv.zip"
+  },
+  {
+   "version": "2021_05",
+   "yyyymm": "202105",
+   "sector": "46112-46311",
+   "archivo": "denue_00_46112-46311_0521_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_05/denue_00_46112-46311_0521_csv.zip"
+  },
+  {
+   "version": "2021_05",
+   "yyyymm": "202105",
+   "sector": "46321-46531",
+   "archivo": "denue_00_46321-46531_0521_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_05/denue_00_46321-46531_0521_csv.zip"
+  },
+  {
+   "version": "2021_05",
+   "yyyymm": "202105",
+   "sector": "46591-46911",
+   "archivo": "denue_00_46591-46911_0521_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_05/denue_00_46591-46911_0521_csv.zip"
+  },
+  {
+   "version": "2021_05",
+   "yyyymm": "202105",
+   "sector": "48-49",
+   "archivo": "denue_00_48-49_0521_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_05/denue_00_48-49_0521_csv.zip"
+  },
+  {
+   "version": "2021_05",
+   "yyyymm": "202105",
+   "sector": "51",
+   "archivo": "denue_00_51_0521_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_05/denue_00_51_0521_csv.zip"
+  },
+  {
+   "version": "2021_05",
+   "yyyymm": "202105",
+   "sector": "52",
+   "archivo": "denue_00_52_0521_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_05/denue_00_52_0521_csv.zip"
+  },
+  {
+   "version": "2021_05",
+   "yyyymm": "202105",
+   "sector": "53",
+   "archivo": "denue_00_53_0521_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_05/denue_00_53_0521_csv.zip"
+  },
+  {
+   "version": "2021_05",
+   "yyyymm": "202105",
+   "sector": "54",
+   "archivo": "denue_00_54_0521_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_05/denue_00_54_0521_csv.zip"
+  },
+  {
+   "version": "2021_05",
+   "yyyymm": "202105",
+   "sector": "55",
+   "archivo": "denue_00_55_0521_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_05/denue_00_55_0521_csv.zip"
+  },
+  {
+   "version": "2021_05",
+   "yyyymm": "202105",
+   "sector": "56",
+   "archivo": "denue_00_56_0521_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_05/denue_00_56_0521_csv.zip"
+  },
+  {
+   "version": "2021_05",
+   "yyyymm": "202105",
+   "sector": "61",
+   "archivo": "denue_00_61_0521_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_05/denue_00_61_0521_csv.zip"
+  },
+  {
+   "version": "2021_05",
+   "yyyymm": "202105",
+   "sector": "62",
+   "archivo": "denue_00_62_0521_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_05/denue_00_62_0521_csv.zip"
+  },
+  {
+   "version": "2021_05",
+   "yyyymm": "202105",
+   "sector": "71",
+   "archivo": "denue_00_71_0521_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_05/denue_00_71_0521_csv.zip"
+  },
+  {
+   "version": "2021_05",
+   "yyyymm": "202105",
+   "sector": "72_1",
+   "archivo": "denue_00_72_1_0521_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_05/denue_00_72_1_0521_csv.zip"
+  },
+  {
+   "version": "2021_05",
+   "yyyymm": "202105",
+   "sector": "72_2",
+   "archivo": "denue_00_72_2_0521_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_05/denue_00_72_2_0521_csv.zip"
+  },
+  {
+   "version": "2021_05",
+   "yyyymm": "202105",
+   "sector": "81_1",
+   "archivo": "denue_00_81_1_0521_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_05/denue_00_81_1_0521_csv.zip"
+  },
+  {
+   "version": "2021_05",
+   "yyyymm": "202105",
+   "sector": "81_2",
+   "archivo": "denue_00_81_2_0521_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_05/denue_00_81_2_0521_csv.zip"
+  },
+  {
+   "version": "2021_05",
+   "yyyymm": "202105",
+   "sector": "93",
+   "archivo": "denue_00_93_0521_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_05/denue_00_93_0521_csv.zip"
+  },
+  {
+   "version": "2021_11",
+   "yyyymm": "202111",
+   "sector": "11",
+   "archivo": "denue_00_11_1121_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_11/denue_00_11_1121_csv.zip"
+  },
+  {
+   "version": "2021_11",
+   "yyyymm": "202111",
+   "sector": "21",
+   "archivo": "denue_00_21_1121_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_11/denue_00_21_1121_csv.zip"
+  },
+  {
+   "version": "2021_11",
+   "yyyymm": "202111",
+   "sector": "22",
+   "archivo": "denue_00_22_1121_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_11/denue_00_22_1121_csv.zip"
+  },
+  {
+   "version": "2021_11",
+   "yyyymm": "202111",
+   "sector": "23",
+   "archivo": "denue_00_23_1121_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_11/denue_00_23_1121_csv.zip"
+  },
+  {
+   "version": "2021_11",
+   "yyyymm": "202111",
+   "sector": "31-33",
+   "archivo": "denue_00_31-33_1121_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_11/denue_00_31-33_1121_csv.zip"
+  },
+  {
+   "version": "2021_11",
+   "yyyymm": "202111",
+   "sector": "43",
+   "archivo": "denue_00_43_1121_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_11/denue_00_43_1121_csv.zip"
+  },
+  {
+   "version": "2021_11",
+   "yyyymm": "202111",
+   "sector": "46111",
+   "archivo": "denue_00_46111_1121_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_11/denue_00_46111_1121_csv.zip"
+  },
+  {
+   "version": "2021_11",
+   "yyyymm": "202111",
+   "sector": "46112-46311",
+   "archivo": "denue_00_46112-46311_1121_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_11/denue_00_46112-46311_1121_csv.zip"
+  },
+  {
+   "version": "2021_11",
+   "yyyymm": "202111",
+   "sector": "46321-46531",
+   "archivo": "denue_00_46321-46531_1121_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_11/denue_00_46321-46531_1121_csv.zip"
+  },
+  {
+   "version": "2021_11",
+   "yyyymm": "202111",
+   "sector": "46591-46911",
+   "archivo": "denue_00_46591-46911_1121_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_11/denue_00_46591-46911_1121_csv.zip"
+  },
+  {
+   "version": "2021_11",
+   "yyyymm": "202111",
+   "sector": "48-49",
+   "archivo": "denue_00_48-49_1121_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_11/denue_00_48-49_1121_csv.zip"
+  },
+  {
+   "version": "2021_11",
+   "yyyymm": "202111",
+   "sector": "51",
+   "archivo": "denue_00_51_1121_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_11/denue_00_51_1121_csv.zip"
+  },
+  {
+   "version": "2021_11",
+   "yyyymm": "202111",
+   "sector": "52",
+   "archivo": "denue_00_52_1121_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_11/denue_00_52_1121_csv.zip"
+  },
+  {
+   "version": "2021_11",
+   "yyyymm": "202111",
+   "sector": "53",
+   "archivo": "denue_00_53_1121_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_11/denue_00_53_1121_csv.zip"
+  },
+  {
+   "version": "2021_11",
+   "yyyymm": "202111",
+   "sector": "54",
+   "archivo": "denue_00_54_1121_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_11/denue_00_54_1121_csv.zip"
+  },
+  {
+   "version": "2021_11",
+   "yyyymm": "202111",
+   "sector": "55",
+   "archivo": "denue_00_55_1121_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_11/denue_00_55_1121_csv.zip"
+  },
+  {
+   "version": "2021_11",
+   "yyyymm": "202111",
+   "sector": "56",
+   "archivo": "denue_00_56_1121_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_11/denue_00_56_1121_csv.zip"
+  },
+  {
+   "version": "2021_11",
+   "yyyymm": "202111",
+   "sector": "61",
+   "archivo": "denue_00_61_1121_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_11/denue_00_61_1121_csv.zip"
+  },
+  {
+   "version": "2021_11",
+   "yyyymm": "202111",
+   "sector": "62",
+   "archivo": "denue_00_62_1121_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_11/denue_00_62_1121_csv.zip"
+  },
+  {
+   "version": "2021_11",
+   "yyyymm": "202111",
+   "sector": "71",
+   "archivo": "denue_00_71_1121_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_11/denue_00_71_1121_csv.zip"
+  },
+  {
+   "version": "2021_11",
+   "yyyymm": "202111",
+   "sector": "72_1",
+   "archivo": "denue_00_72_1_1121_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_11/denue_00_72_1_1121_csv.zip"
+  },
+  {
+   "version": "2021_11",
+   "yyyymm": "202111",
+   "sector": "72_2",
+   "archivo": "denue_00_72_2_1121_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_11/denue_00_72_2_1121_csv.zip"
+  },
+  {
+   "version": "2021_11",
+   "yyyymm": "202111",
+   "sector": "81_1",
+   "archivo": "denue_00_81_1_1121_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_11/denue_00_81_1_1121_csv.zip"
+  },
+  {
+   "version": "2021_11",
+   "yyyymm": "202111",
+   "sector": "81_2",
+   "archivo": "denue_00_81_2_1121_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_11/denue_00_81_2_1121_csv.zip"
+  },
+  {
+   "version": "2021_11",
+   "yyyymm": "202111",
+   "sector": "93",
+   "archivo": "denue_00_93_1121_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2021_11/denue_00_93_1121_csv.zip"
+  },
+  {
+   "version": "2022_05",
+   "yyyymm": "202205",
+   "sector": "11",
+   "archivo": "denue_00_11_0522_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_05/denue_00_11_0522_csv.zip"
+  },
+  {
+   "version": "2022_05",
+   "yyyymm": "202205",
+   "sector": "21",
+   "archivo": "denue_00_21_0522_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_05/denue_00_21_0522_csv.zip"
+  },
+  {
+   "version": "2022_05",
+   "yyyymm": "202205",
+   "sector": "22",
+   "archivo": "denue_00_22_0522_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_05/denue_00_22_0522_csv.zip"
+  },
+  {
+   "version": "2022_05",
+   "yyyymm": "202205",
+   "sector": "23",
+   "archivo": "denue_00_23_0522_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_05/denue_00_23_0522_csv.zip"
+  },
+  {
+   "version": "2022_05",
+   "yyyymm": "202205",
+   "sector": "31-33",
+   "archivo": "denue_00_31-33_0522_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_05/denue_00_31-33_0522_csv.zip"
+  },
+  {
+   "version": "2022_05",
+   "yyyymm": "202205",
+   "sector": "43",
+   "archivo": "denue_00_43_0522_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_05/denue_00_43_0522_csv.zip"
+  },
+  {
+   "version": "2022_05",
+   "yyyymm": "202205",
+   "sector": "46111",
+   "archivo": "denue_00_46111_0522_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_05/denue_00_46111_0522_csv.zip"
+  },
+  {
+   "version": "2022_05",
+   "yyyymm": "202205",
+   "sector": "46112-46311",
+   "archivo": "denue_00_46112-46311_0522_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_05/denue_00_46112-46311_0522_csv.zip"
+  },
+  {
+   "version": "2022_05",
+   "yyyymm": "202205",
+   "sector": "46321-46531",
+   "archivo": "denue_00_46321-46531_0522_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_05/denue_00_46321-46531_0522_csv.zip"
+  },
+  {
+   "version": "2022_05",
+   "yyyymm": "202205",
+   "sector": "46591-46911",
+   "archivo": "denue_00_46591-46911_0522_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_05/denue_00_46591-46911_0522_csv.zip"
+  },
+  {
+   "version": "2022_05",
+   "yyyymm": "202205",
+   "sector": "48-49",
+   "archivo": "denue_00_48-49_0522_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_05/denue_00_48-49_0522_csv.zip"
+  },
+  {
+   "version": "2022_05",
+   "yyyymm": "202205",
+   "sector": "51",
+   "archivo": "denue_00_51_0522_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_05/denue_00_51_0522_csv.zip"
+  },
+  {
+   "version": "2022_05",
+   "yyyymm": "202205",
+   "sector": "52",
+   "archivo": "denue_00_52_0522_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_05/denue_00_52_0522_csv.zip"
+  },
+  {
+   "version": "2022_05",
+   "yyyymm": "202205",
+   "sector": "53",
+   "archivo": "denue_00_53_0522_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_05/denue_00_53_0522_csv.zip"
+  },
+  {
+   "version": "2022_05",
+   "yyyymm": "202205",
+   "sector": "54",
+   "archivo": "denue_00_54_0522_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_05/denue_00_54_0522_csv.zip"
+  },
+  {
+   "version": "2022_05",
+   "yyyymm": "202205",
+   "sector": "55",
+   "archivo": "denue_00_55_0522_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_05/denue_00_55_0522_csv.zip"
+  },
+  {
+   "version": "2022_05",
+   "yyyymm": "202205",
+   "sector": "56",
+   "archivo": "denue_00_56_0522_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_05/denue_00_56_0522_csv.zip"
+  },
+  {
+   "version": "2022_05",
+   "yyyymm": "202205",
+   "sector": "61",
+   "archivo": "denue_00_61_0522_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_05/denue_00_61_0522_csv.zip"
+  },
+  {
+   "version": "2022_05",
+   "yyyymm": "202205",
+   "sector": "62",
+   "archivo": "denue_00_62_0522_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_05/denue_00_62_0522_csv.zip"
+  },
+  {
+   "version": "2022_05",
+   "yyyymm": "202205",
+   "sector": "71",
+   "archivo": "denue_00_71_0522_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_05/denue_00_71_0522_csv.zip"
+  },
+  {
+   "version": "2022_05",
+   "yyyymm": "202205",
+   "sector": "72_1",
+   "archivo": "denue_00_72_1_0522_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_05/denue_00_72_1_0522_csv.zip"
+  },
+  {
+   "version": "2022_05",
+   "yyyymm": "202205",
+   "sector": "72_2",
+   "archivo": "denue_00_72_2_0522_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_05/denue_00_72_2_0522_csv.zip"
+  },
+  {
+   "version": "2022_05",
+   "yyyymm": "202205",
+   "sector": "81_1",
+   "archivo": "denue_00_81_1_0522_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_05/denue_00_81_1_0522_csv.zip"
+  },
+  {
+   "version": "2022_05",
+   "yyyymm": "202205",
+   "sector": "81_2",
+   "archivo": "denue_00_81_2_0522_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_05/denue_00_81_2_0522_csv.zip"
+  },
+  {
+   "version": "2022_05",
+   "yyyymm": "202205",
+   "sector": "93",
+   "archivo": "denue_00_93_0522_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_05/denue_00_93_0522_csv.zip"
+  },
+  {
+   "version": "2022_11",
+   "yyyymm": "202211",
+   "sector": "11",
+   "archivo": "denue_00_11_1122_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_11/denue_00_11_1122_csv.zip"
+  },
+  {
+   "version": "2022_11",
+   "yyyymm": "202211",
+   "sector": "21",
+   "archivo": "denue_00_21_1122_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_11/denue_00_21_1122_csv.zip"
+  },
+  {
+   "version": "2022_11",
+   "yyyymm": "202211",
+   "sector": "22",
+   "archivo": "denue_00_22_1122_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_11/denue_00_22_1122_csv.zip"
+  },
+  {
+   "version": "2022_11",
+   "yyyymm": "202211",
+   "sector": "23",
+   "archivo": "denue_00_23_1122_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_11/denue_00_23_1122_csv.zip"
+  },
+  {
+   "version": "2022_11",
+   "yyyymm": "202211",
+   "sector": "31-33",
+   "archivo": "denue_00_31-33_1122_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_11/denue_00_31-33_1122_csv.zip"
+  },
+  {
+   "version": "2022_11",
+   "yyyymm": "202211",
+   "sector": "43",
+   "archivo": "denue_00_43_1122_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_11/denue_00_43_1122_csv.zip"
+  },
+  {
+   "version": "2022_11",
+   "yyyymm": "202211",
+   "sector": "46111",
+   "archivo": "denue_00_46111_1122_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_11/denue_00_46111_1122_csv.zip"
+  },
+  {
+   "version": "2022_11",
+   "yyyymm": "202211",
+   "sector": "46112-46311",
+   "archivo": "denue_00_46112-46311_1122_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_11/denue_00_46112-46311_1122_csv.zip"
+  },
+  {
+   "version": "2022_11",
+   "yyyymm": "202211",
+   "sector": "46321-46531",
+   "archivo": "denue_00_46321-46531_1122_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_11/denue_00_46321-46531_1122_csv.zip"
+  },
+  {
+   "version": "2022_11",
+   "yyyymm": "202211",
+   "sector": "46591-46911",
+   "archivo": "denue_00_46591-46911_1122_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_11/denue_00_46591-46911_1122_csv.zip"
+  },
+  {
+   "version": "2022_11",
+   "yyyymm": "202211",
+   "sector": "48-49",
+   "archivo": "denue_00_48-49_1122_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_11/denue_00_48-49_1122_csv.zip"
+  },
+  {
+   "version": "2022_11",
+   "yyyymm": "202211",
+   "sector": "51",
+   "archivo": "denue_00_51_1122_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_11/denue_00_51_1122_csv.zip"
+  },
+  {
+   "version": "2022_11",
+   "yyyymm": "202211",
+   "sector": "52",
+   "archivo": "denue_00_52_1122_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_11/denue_00_52_1122_csv.zip"
+  },
+  {
+   "version": "2022_11",
+   "yyyymm": "202211",
+   "sector": "53",
+   "archivo": "denue_00_53_1122_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_11/denue_00_53_1122_csv.zip"
+  },
+  {
+   "version": "2022_11",
+   "yyyymm": "202211",
+   "sector": "54",
+   "archivo": "denue_00_54_1122_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_11/denue_00_54_1122_csv.zip"
+  },
+  {
+   "version": "2022_11",
+   "yyyymm": "202211",
+   "sector": "55",
+   "archivo": "denue_00_55_1122_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_11/denue_00_55_1122_csv.zip"
+  },
+  {
+   "version": "2022_11",
+   "yyyymm": "202211",
+   "sector": "56",
+   "archivo": "denue_00_56_1122_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_11/denue_00_56_1122_csv.zip"
+  },
+  {
+   "version": "2022_11",
+   "yyyymm": "202211",
+   "sector": "61",
+   "archivo": "denue_00_61_1122_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_11/denue_00_61_1122_csv.zip"
+  },
+  {
+   "version": "2022_11",
+   "yyyymm": "202211",
+   "sector": "62",
+   "archivo": "denue_00_62_1122_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_11/denue_00_62_1122_csv.zip"
+  },
+  {
+   "version": "2022_11",
+   "yyyymm": "202211",
+   "sector": "71",
+   "archivo": "denue_00_71_1122_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_11/denue_00_71_1122_csv.zip"
+  },
+  {
+   "version": "2022_11",
+   "yyyymm": "202211",
+   "sector": "72_1",
+   "archivo": "denue_00_72_1_1122_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_11/denue_00_72_1_1122_csv.zip"
+  },
+  {
+   "version": "2022_11",
+   "yyyymm": "202211",
+   "sector": "72_2",
+   "archivo": "denue_00_72_2_1122_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_11/denue_00_72_2_1122_csv.zip"
+  },
+  {
+   "version": "2022_11",
+   "yyyymm": "202211",
+   "sector": "81_1",
+   "archivo": "denue_00_81_1_1122_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_11/denue_00_81_1_1122_csv.zip"
+  },
+  {
+   "version": "2022_11",
+   "yyyymm": "202211",
+   "sector": "81_2",
+   "archivo": "denue_00_81_2_1122_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_11/denue_00_81_2_1122_csv.zip"
+  },
+  {
+   "version": "2022_11",
+   "yyyymm": "202211",
+   "sector": "93",
+   "archivo": "denue_00_93_1122_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2022_11/denue_00_93_1122_csv.zip"
+  },
+  {
+   "version": "2023_11",
+   "yyyymm": "202311",
+   "sector": "11",
+   "archivo": "denue_00_11_1123_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2023_11/denue_00_11_1123_csv.zip"
+  },
+  {
+   "version": "2023_11",
+   "yyyymm": "202311",
+   "sector": "21",
+   "archivo": "denue_00_21_1123_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2023_11/denue_00_21_1123_csv.zip"
+  },
+  {
+   "version": "2023_11",
+   "yyyymm": "202311",
+   "sector": "22",
+   "archivo": "denue_00_22_1123_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2023_11/denue_00_22_1123_csv.zip"
+  },
+  {
+   "version": "2023_11",
+   "yyyymm": "202311",
+   "sector": "23",
+   "archivo": "denue_00_23_1123_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2023_11/denue_00_23_1123_csv.zip"
+  },
+  {
+   "version": "2023_11",
+   "yyyymm": "202311",
+   "sector": "31-33",
+   "archivo": "denue_00_31-33_1123_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2023_11/denue_00_31-33_1123_csv.zip"
+  },
+  {
+   "version": "2023_11",
+   "yyyymm": "202311",
+   "sector": "43",
+   "archivo": "denue_00_43_1123_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2023_11/denue_00_43_1123_csv.zip"
+  },
+  {
+   "version": "2023_11",
+   "yyyymm": "202311",
+   "sector": "46111",
+   "archivo": "denue_00_46111_1123_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2023_11/denue_00_46111_1123_csv.zip"
+  },
+  {
+   "version": "2023_11",
+   "yyyymm": "202311",
+   "sector": "46112-46311",
+   "archivo": "denue_00_46112-46311_1123_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2023_11/denue_00_46112-46311_1123_csv.zip"
+  },
+  {
+   "version": "2023_11",
+   "yyyymm": "202311",
+   "sector": "46321-46531",
+   "archivo": "denue_00_46321-46531_1123_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2023_11/denue_00_46321-46531_1123_csv.zip"
+  },
+  {
+   "version": "2023_11",
+   "yyyymm": "202311",
+   "sector": "46591-46911",
+   "archivo": "denue_00_46591-46911_1123_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2023_11/denue_00_46591-46911_1123_csv.zip"
+  },
+  {
+   "version": "2023_11",
+   "yyyymm": "202311",
+   "sector": "48-49",
+   "archivo": "denue_00_48-49_1123_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2023_11/denue_00_48-49_1123_csv.zip"
+  },
+  {
+   "version": "2023_11",
+   "yyyymm": "202311",
+   "sector": "51",
+   "archivo": "denue_00_51_1123_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2023_11/denue_00_51_1123_csv.zip"
+  },
+  {
+   "version": "2023_11",
+   "yyyymm": "202311",
+   "sector": "52",
+   "archivo": "denue_00_52_1123_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2023_11/denue_00_52_1123_csv.zip"
+  },
+  {
+   "version": "2023_11",
+   "yyyymm": "202311",
+   "sector": "53",
+   "archivo": "denue_00_53_1123_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2023_11/denue_00_53_1123_csv.zip"
+  },
+  {
+   "version": "2023_11",
+   "yyyymm": "202311",
+   "sector": "54",
+   "archivo": "denue_00_54_1123_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2023_11/denue_00_54_1123_csv.zip"
+  },
+  {
+   "version": "2023_11",
+   "yyyymm": "202311",
+   "sector": "55",
+   "archivo": "denue_00_55_1123_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2023_11/denue_00_55_1123_csv.zip"
+  },
+  {
+   "version": "2023_11",
+   "yyyymm": "202311",
+   "sector": "56",
+   "archivo": "denue_00_56_1123_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2023_11/denue_00_56_1123_csv.zip"
+  },
+  {
+   "version": "2023_11",
+   "yyyymm": "202311",
+   "sector": "61",
+   "archivo": "denue_00_61_1123_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2023_11/denue_00_61_1123_csv.zip"
+  },
+  {
+   "version": "2023_11",
+   "yyyymm": "202311",
+   "sector": "62",
+   "archivo": "denue_00_62_1123_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2023_11/denue_00_62_1123_csv.zip"
+  },
+  {
+   "version": "2023_11",
+   "yyyymm": "202311",
+   "sector": "71",
+   "archivo": "denue_00_71_1123_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2023_11/denue_00_71_1123_csv.zip"
+  },
+  {
+   "version": "2023_11",
+   "yyyymm": "202311",
+   "sector": "72_1",
+   "archivo": "denue_00_72_1_1123_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2023_11/denue_00_72_1_1123_csv.zip"
+  },
+  {
+   "version": "2023_11",
+   "yyyymm": "202311",
+   "sector": "72_2",
+   "archivo": "denue_00_72_2_1123_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2023_11/denue_00_72_2_1123_csv.zip"
+  },
+  {
+   "version": "2023_11",
+   "yyyymm": "202311",
+   "sector": "81_1",
+   "archivo": "denue_00_81_1_1123_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2023_11/denue_00_81_1_1123_csv.zip"
+  },
+  {
+   "version": "2023_11",
+   "yyyymm": "202311",
+   "sector": "81_2",
+   "archivo": "denue_00_81_2_1123_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2023_11/denue_00_81_2_1123_csv.zip"
+  },
+  {
+   "version": "2023_11",
+   "yyyymm": "202311",
+   "sector": "93",
+   "archivo": "denue_00_93_1123_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2023_11/denue_00_93_1123_csv.zip"
+  },
+  {
+   "version": "2024_05",
+   "yyyymm": "202405",
+   "sector": "11",
+   "archivo": "denue_00_11_0524_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_05/denue_00_11_0524_csv.zip"
+  },
+  {
+   "version": "2024_05",
+   "yyyymm": "202405",
+   "sector": "21",
+   "archivo": "denue_00_21_0524_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_05/denue_00_21_0524_csv.zip"
+  },
+  {
+   "version": "2024_05",
+   "yyyymm": "202405",
+   "sector": "22",
+   "archivo": "denue_00_22_0524_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_05/denue_00_22_0524_csv.zip"
+  },
+  {
+   "version": "2024_05",
+   "yyyymm": "202405",
+   "sector": "23",
+   "archivo": "denue_00_23_0524_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_05/denue_00_23_0524_csv.zip"
+  },
+  {
+   "version": "2024_05",
+   "yyyymm": "202405",
+   "sector": "31-33",
+   "archivo": "denue_00_31-33_0524_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_05/denue_00_31-33_0524_csv.zip"
+  },
+  {
+   "version": "2024_05",
+   "yyyymm": "202405",
+   "sector": "43",
+   "archivo": "denue_00_43_0524_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_05/denue_00_43_0524_csv.zip"
+  },
+  {
+   "version": "2024_05",
+   "yyyymm": "202405",
+   "sector": "46111",
+   "archivo": "denue_00_46111_0524_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_05/denue_00_46111_0524_csv.zip"
+  },
+  {
+   "version": "2024_05",
+   "yyyymm": "202405",
+   "sector": "46112-46311",
+   "archivo": "denue_00_46112-46311_0524_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_05/denue_00_46112-46311_0524_csv.zip"
+  },
+  {
+   "version": "2024_05",
+   "yyyymm": "202405",
+   "sector": "46321-46531",
+   "archivo": "denue_00_46321-46531_0524_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_05/denue_00_46321-46531_0524_csv.zip"
+  },
+  {
+   "version": "2024_05",
+   "yyyymm": "202405",
+   "sector": "46591-46911",
+   "archivo": "denue_00_46591-46911_0524_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_05/denue_00_46591-46911_0524_csv.zip"
+  },
+  {
+   "version": "2024_05",
+   "yyyymm": "202405",
+   "sector": "48-49",
+   "archivo": "denue_00_48-49_0524_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_05/denue_00_48-49_0524_csv.zip"
+  },
+  {
+   "version": "2024_05",
+   "yyyymm": "202405",
+   "sector": "51",
+   "archivo": "denue_00_51_0524_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_05/denue_00_51_0524_csv.zip"
+  },
+  {
+   "version": "2024_05",
+   "yyyymm": "202405",
+   "sector": "52",
+   "archivo": "denue_00_52_0524_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_05/denue_00_52_0524_csv.zip"
+  },
+  {
+   "version": "2024_05",
+   "yyyymm": "202405",
+   "sector": "53",
+   "archivo": "denue_00_53_0524_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_05/denue_00_53_0524_csv.zip"
+  },
+  {
+   "version": "2024_05",
+   "yyyymm": "202405",
+   "sector": "54",
+   "archivo": "denue_00_54_0524_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_05/denue_00_54_0524_csv.zip"
+  },
+  {
+   "version": "2024_05",
+   "yyyymm": "202405",
+   "sector": "55",
+   "archivo": "denue_00_55_0524_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_05/denue_00_55_0524_csv.zip"
+  },
+  {
+   "version": "2024_05",
+   "yyyymm": "202405",
+   "sector": "56",
+   "archivo": "denue_00_56_0524_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_05/denue_00_56_0524_csv.zip"
+  },
+  {
+   "version": "2024_05",
+   "yyyymm": "202405",
+   "sector": "61",
+   "archivo": "denue_00_61_0524_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_05/denue_00_61_0524_csv.zip"
+  },
+  {
+   "version": "2024_05",
+   "yyyymm": "202405",
+   "sector": "62",
+   "archivo": "denue_00_62_0524_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_05/denue_00_62_0524_csv.zip"
+  },
+  {
+   "version": "2024_05",
+   "yyyymm": "202405",
+   "sector": "71",
+   "archivo": "denue_00_71_0524_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_05/denue_00_71_0524_csv.zip"
+  },
+  {
+   "version": "2024_05",
+   "yyyymm": "202405",
+   "sector": "72_1",
+   "archivo": "denue_00_72_1_0524_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_05/denue_00_72_1_0524_csv.zip"
+  },
+  {
+   "version": "2024_05",
+   "yyyymm": "202405",
+   "sector": "72_2",
+   "archivo": "denue_00_72_2_0524_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_05/denue_00_72_2_0524_csv.zip"
+  },
+  {
+   "version": "2024_05",
+   "yyyymm": "202405",
+   "sector": "81_1",
+   "archivo": "denue_00_81_1_0524_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_05/denue_00_81_1_0524_csv.zip"
+  },
+  {
+   "version": "2024_05",
+   "yyyymm": "202405",
+   "sector": "81_2",
+   "archivo": "denue_00_81_2_0524_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_05/denue_00_81_2_0524_csv.zip"
+  },
+  {
+   "version": "2024_05",
+   "yyyymm": "202405",
+   "sector": "93",
+   "archivo": "denue_00_93_0524_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_05/denue_00_93_0524_csv.zip"
+  },
+  {
+   "version": "2024_11",
+   "yyyymm": "202411",
+   "sector": "11",
+   "archivo": "denue_00_11_1124_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_11/denue_00_11_1124_csv.zip"
+  },
+  {
+   "version": "2024_11",
+   "yyyymm": "202411",
+   "sector": "21",
+   "archivo": "denue_00_21_1124_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_11/denue_00_21_1124_csv.zip"
+  },
+  {
+   "version": "2024_11",
+   "yyyymm": "202411",
+   "sector": "22",
+   "archivo": "denue_00_22_1124_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_11/denue_00_22_1124_csv.zip"
+  },
+  {
+   "version": "2024_11",
+   "yyyymm": "202411",
+   "sector": "23",
+   "archivo": "denue_00_23_1124_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_11/denue_00_23_1124_csv.zip"
+  },
+  {
+   "version": "2024_11",
+   "yyyymm": "202411",
+   "sector": "31-33",
+   "archivo": "denue_00_31-33_1124_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_11/denue_00_31-33_1124_csv.zip"
+  },
+  {
+   "version": "2024_11",
+   "yyyymm": "202411",
+   "sector": "43",
+   "archivo": "denue_00_43_1124_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_11/denue_00_43_1124_csv.zip"
+  },
+  {
+   "version": "2024_11",
+   "yyyymm": "202411",
+   "sector": "46111",
+   "archivo": "denue_00_46111_1124_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_11/denue_00_46111_1124_csv.zip"
+  },
+  {
+   "version": "2024_11",
+   "yyyymm": "202411",
+   "sector": "46112-46311",
+   "archivo": "denue_00_46112-46311_1124_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_11/denue_00_46112-46311_1124_csv.zip"
+  },
+  {
+   "version": "2024_11",
+   "yyyymm": "202411",
+   "sector": "46321-46531",
+   "archivo": "denue_00_46321-46531_1124_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_11/denue_00_46321-46531_1124_csv.zip"
+  },
+  {
+   "version": "2024_11",
+   "yyyymm": "202411",
+   "sector": "46591-46911",
+   "archivo": "denue_00_46591-46911_1124_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_11/denue_00_46591-46911_1124_csv.zip"
+  },
+  {
+   "version": "2024_11",
+   "yyyymm": "202411",
+   "sector": "48-49",
+   "archivo": "denue_00_48-49_1124_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_11/denue_00_48-49_1124_csv.zip"
+  },
+  {
+   "version": "2024_11",
+   "yyyymm": "202411",
+   "sector": "51",
+   "archivo": "denue_00_51_1124_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_11/denue_00_51_1124_csv.zip"
+  },
+  {
+   "version": "2024_11",
+   "yyyymm": "202411",
+   "sector": "52",
+   "archivo": "denue_00_52_1124_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_11/denue_00_52_1124_csv.zip"
+  },
+  {
+   "version": "2024_11",
+   "yyyymm": "202411",
+   "sector": "53",
+   "archivo": "denue_00_53_1124_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_11/denue_00_53_1124_csv.zip"
+  },
+  {
+   "version": "2024_11",
+   "yyyymm": "202411",
+   "sector": "54",
+   "archivo": "denue_00_54_1124_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_11/denue_00_54_1124_csv.zip"
+  },
+  {
+   "version": "2024_11",
+   "yyyymm": "202411",
+   "sector": "55",
+   "archivo": "denue_00_55_1124_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_11/denue_00_55_1124_csv.zip"
+  },
+  {
+   "version": "2024_11",
+   "yyyymm": "202411",
+   "sector": "56",
+   "archivo": "denue_00_56_1124_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_11/denue_00_56_1124_csv.zip"
+  },
+  {
+   "version": "2024_11",
+   "yyyymm": "202411",
+   "sector": "61",
+   "archivo": "denue_00_61_1124_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_11/denue_00_61_1124_csv.zip"
+  },
+  {
+   "version": "2024_11",
+   "yyyymm": "202411",
+   "sector": "62",
+   "archivo": "denue_00_62_1124_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_11/denue_00_62_1124_csv.zip"
+  },
+  {
+   "version": "2024_11",
+   "yyyymm": "202411",
+   "sector": "71",
+   "archivo": "denue_00_71_1124_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_11/denue_00_71_1124_csv.zip"
+  },
+  {
+   "version": "2024_11",
+   "yyyymm": "202411",
+   "sector": "72_1",
+   "archivo": "denue_00_72_1_1124_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_11/denue_00_72_1_1124_csv.zip"
+  },
+  {
+   "version": "2024_11",
+   "yyyymm": "202411",
+   "sector": "72_2",
+   "archivo": "denue_00_72_2_1124_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_11/denue_00_72_2_1124_csv.zip"
+  },
+  {
+   "version": "2024_11",
+   "yyyymm": "202411",
+   "sector": "81_1",
+   "archivo": "denue_00_81_1_1124_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_11/denue_00_81_1_1124_csv.zip"
+  },
+  {
+   "version": "2024_11",
+   "yyyymm": "202411",
+   "sector": "81_2",
+   "archivo": "denue_00_81_2_1124_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_11/denue_00_81_2_1124_csv.zip"
+  },
+  {
+   "version": "2024_11",
+   "yyyymm": "202411",
+   "sector": "93",
+   "archivo": "denue_00_93_1124_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2024_11/denue_00_93_1124_csv.zip"
+  },
+  {
+   "version": "2025_05",
+   "yyyymm": "202505",
+   "sector": "11",
+   "archivo": "denue_00_11_0525_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2025_05/denue_00_11_0525_csv.zip"
+  },
+  {
+   "version": "2025_05",
+   "yyyymm": "202505",
+   "sector": "21",
+   "archivo": "denue_00_21_0525_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2025_05/denue_00_21_0525_csv.zip"
+  },
+  {
+   "version": "2025_05",
+   "yyyymm": "202505",
+   "sector": "22",
+   "archivo": "denue_00_22_0525_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2025_05/denue_00_22_0525_csv.zip"
+  },
+  {
+   "version": "2025_05",
+   "yyyymm": "202505",
+   "sector": "23",
+   "archivo": "denue_00_23_0525_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2025_05/denue_00_23_0525_csv.zip"
+  },
+  {
+   "version": "2025_05",
+   "yyyymm": "202505",
+   "sector": "31-33",
+   "archivo": "denue_00_31-33_0525_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2025_05/denue_00_31-33_0525_csv.zip"
+  },
+  {
+   "version": "2025_05",
+   "yyyymm": "202505",
+   "sector": "43",
+   "archivo": "denue_00_43_0525_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2025_05/denue_00_43_0525_csv.zip"
+  },
+  {
+   "version": "2025_05",
+   "yyyymm": "202505",
+   "sector": "46111",
+   "archivo": "denue_00_46111_0525_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2025_05/denue_00_46111_0525_csv.zip"
+  },
+  {
+   "version": "2025_05",
+   "yyyymm": "202505",
+   "sector": "46112-46311",
+   "archivo": "denue_00_46112-46311_0525_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2025_05/denue_00_46112-46311_0525_csv.zip"
+  },
+  {
+   "version": "2025_05",
+   "yyyymm": "202505",
+   "sector": "46321-46531",
+   "archivo": "denue_00_46321-46531_0525_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2025_05/denue_00_46321-46531_0525_csv.zip"
+  },
+  {
+   "version": "2025_05",
+   "yyyymm": "202505",
+   "sector": "46591-46911",
+   "archivo": "denue_00_46591-46911_0525_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2025_05/denue_00_46591-46911_0525_csv.zip"
+  },
+  {
+   "version": "2025_05",
+   "yyyymm": "202505",
+   "sector": "48-49",
+   "archivo": "denue_00_48-49_0525_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2025_05/denue_00_48-49_0525_csv.zip"
+  },
+  {
+   "version": "2025_05",
+   "yyyymm": "202505",
+   "sector": "51",
+   "archivo": "denue_00_51_0525_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2025_05/denue_00_51_0525_csv.zip"
+  },
+  {
+   "version": "2025_05",
+   "yyyymm": "202505",
+   "sector": "52",
+   "archivo": "denue_00_52_0525_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2025_05/denue_00_52_0525_csv.zip"
+  },
+  {
+   "version": "2025_05",
+   "yyyymm": "202505",
+   "sector": "53",
+   "archivo": "denue_00_53_0525_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2025_05/denue_00_53_0525_csv.zip"
+  },
+  {
+   "version": "2025_05",
+   "yyyymm": "202505",
+   "sector": "54",
+   "archivo": "denue_00_54_0525_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2025_05/denue_00_54_0525_csv.zip"
+  },
+  {
+   "version": "2025_05",
+   "yyyymm": "202505",
+   "sector": "55",
+   "archivo": "denue_00_55_0525_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2025_05/denue_00_55_0525_csv.zip"
+  },
+  {
+   "version": "2025_05",
+   "yyyymm": "202505",
+   "sector": "56",
+   "archivo": "denue_00_56_0525_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2025_05/denue_00_56_0525_csv.zip"
+  },
+  {
+   "version": "2025_05",
+   "yyyymm": "202505",
+   "sector": "61",
+   "archivo": "denue_00_61_0525_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2025_05/denue_00_61_0525_csv.zip"
+  },
+  {
+   "version": "2025_05",
+   "yyyymm": "202505",
+   "sector": "62",
+   "archivo": "denue_00_62_0525_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2025_05/denue_00_62_0525_csv.zip"
+  },
+  {
+   "version": "2025_05",
+   "yyyymm": "202505",
+   "sector": "71",
+   "archivo": "denue_00_71_0525_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2025_05/denue_00_71_0525_csv.zip"
+  },
+  {
+   "version": "2025_05",
+   "yyyymm": "202505",
+   "sector": "72_1",
+   "archivo": "denue_00_72_1_0525_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2025_05/denue_00_72_1_0525_csv.zip"
+  },
+  {
+   "version": "2025_05",
+   "yyyymm": "202505",
+   "sector": "72_2",
+   "archivo": "denue_00_72_2_0525_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2025_05/denue_00_72_2_0525_csv.zip"
+  },
+  {
+   "version": "2025_05",
+   "yyyymm": "202505",
+   "sector": "81_1",
+   "archivo": "denue_00_81_1_0525_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2025_05/denue_00_81_1_0525_csv.zip"
+  },
+  {
+   "version": "2025_05",
+   "yyyymm": "202505",
+   "sector": "81_2",
+   "archivo": "denue_00_81_2_0525_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2025_05/denue_00_81_2_0525_csv.zip"
+  },
+  {
+   "version": "2025_05",
+   "yyyymm": "202505",
+   "sector": "93",
+   "archivo": "denue_00_93_0525_csv.zip",
+   "url": "https://www.inegi.org.mx/contenidos/masiva/denue/2025_05/denue_00_93_0525_csv.zip"
+  }
+ ]
+}
