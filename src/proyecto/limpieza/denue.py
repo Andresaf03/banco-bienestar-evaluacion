@@ -34,6 +34,9 @@ SALIDA_LOC = INTERIM / "denue_localidad.parquet"
 SALIDA_MUN = INTERIM / "denue_municipio.parquet"
 SALIDA_COB = INTERIM / "denue_cobertura.parquet"
 _RE_PARTE = re.compile(r"^(loc|mun|pts)_(\d{4}_\d{2})_(.+)\.parquet$")
+# Nombres de clase corregidos el 2026-11-17 (ver `denue_clasificacion.py`); las partes descargadas
+# antes conservan los viejos.
+RENOMBRES = {"casas_empeno": "banca_desarrollo", "uniones_credito": "otras_intermediarias"}
 
 
 def partes(prefijo: str) -> dict[str, list[Path]]:
@@ -55,6 +58,7 @@ def _consolidar(prefijo: str, llaves: list[str]) -> pd.DataFrame:
     marcos = []
     for version, rutas in sorted(por_version.items()):
         d = pd.concat([pd.read_parquet(r) for r in rutas], ignore_index=True)
+        d["clase"] = d["clase"].astype(str).replace(RENOMBRES)
         d = (
             d.groupby(llaves, observed=True)[["n_estab", "n_micro", "empleo_est"]]
             .sum()

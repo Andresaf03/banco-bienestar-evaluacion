@@ -1,0 +1,271 @@
+cota,corte,sucursales_localidades,poblacion_tipo,grupo_tipo,grupo,poblacion,km_media,pct_a_5km,pct_a_10km,pct_a_20km
+central,2019Q1,514,total,nacional,todas,126014024.0,9.481,54.23,67.722,84.255
+central,2019Q1,514,total,marginacion,Alto,7910567.0,19.802,13.732,28.186,58.683
+central,2019Q1,514,total,marginacion,Bajo,15648790.0,14.296,31.702,46.984,74.779
+central,2019Q1,514,total,marginacion,Medio,9156682.0,17.546,19.442,35.711,65.914
+central,2019Q1,514,total,marginacion,Muy alto,3517600.0,22.041,13.288,26.354,58.45
+central,2019Q1,514,total,marginacion,Muy bajo,89780385.0,6.417,66.877,79.706,91.041
+central,2019Q1,514,total,tamano,15 mil o más,80317202.0,4.251,77.047,86.352,94.017
+central,2019Q1,514,total,tamano,"2,500 a 15 mil",18713294.0,15.752,21.408,44.938,75.046
+central,2019Q1,514,total,tamano,"menos de 2,500",26983528.0,20.698,9.077,28.07,61.582
+central,2019Q1,514,65 y más,nacional,todas,10315853.012,9.526,55.808,67.839,82.975
+central,2019Q1,514,65 y más,marginacion,Alto,710078.252,20.319,11.944,25.162,56.568
+central,2019Q1,514,65 y más,marginacion,Bajo,1362535.829,15.482,29.042,43.306,71.753
+central,2019Q1,514,65 y más,marginacion,Medio,816658.292,18.608,17.375,33.751,62.88
+central,2019Q1,514,65 y más,marginacion,Muy alto,246183.794,21.557,13.164,26.419,58.289
+central,2019Q1,514,65 y más,marginacion,Muy bajo,7180396.844,5.883,71.059,82.012,90.848
+central,2019Q1,514,65 y más,tamano,15 mil o más,6510560.0,3.474,81.06,89.218,94.813
+central,2019Q1,514,65 y más,tamano,"2,500 a 15 mil",1408222.969,16.577,21.456,42.719,71.06
+central,2019Q1,514,65 y más,tamano,"menos de 2,500",2397070.042,21.82,7.404,24.533,57.823
+central,2021Q4,523,total,nacional,todas,126014024.0,9.158,54.525,68.232,84.592
+central,2021Q4,523,total,marginacion,Alto,7910567.0,19.764,13.885,28.374,58.837
+central,2021Q4,523,total,marginacion,Bajo,15648790.0,14.241,31.702,46.984,74.794
+central,2021Q4,523,total,marginacion,Medio,9156682.0,17.542,19.442,35.711,65.933
+central,2021Q4,523,total,marginacion,Muy alto,3517600.0,22.041,13.288,26.354,58.45
+central,2021Q4,523,total,marginacion,Muy bajo,89780385.0,5.978,67.278,80.404,91.496
+central,2021Q4,523,total,tamano,15 mil o más,80317202.0,3.799,77.463,87.101,94.463
+central,2021Q4,523,total,tamano,"2,500 a 15 mil",18713294.0,15.624,21.547,45.077,75.274
+central,2021Q4,523,total,tamano,"menos de 2,500",26983528.0,20.625,9.121,28.124,61.67
+central,2021Q4,523,65 y más,nacional,todas,10315853.012,9.339,56.148,68.164,83.129
+central,2021Q4,523,65 y más,marginacion,Alto,710078.252,20.28,12.101,25.358,56.726
+central,2021Q4,523,65 y más,marginacion,Bajo,1362535.829,15.448,29.042,43.306,71.764
+central,2021Q4,523,65 y más,marginacion,Medio,816658.292,18.604,17.375,33.751,62.899
+central,2021Q4,523,65 y más,marginacion,Muy alto,246183.794,21.557,13.164,26.419,58.289
+central,2021Q4,523,65 y más,marginacion,Muy bajo,7180396.844,5.625,71.531,82.459,91.048
+central,2021Q4,523,65 y más,tamano,15 mil o más,6510560.0,3.23,81.558,89.686,94.984
+central,2021Q4,523,65 y más,tamano,"2,500 a 15 mil",1408222.969,16.459,21.605,42.868,71.292
+central,2021Q4,523,65 y más,tamano,"menos de 2,500",2397070.042,21.75,7.426,24.567,57.881
+central,2022Q4,1266,total,nacional,todas,126014024.0,5.577,65.084,80.434,92.731
+central,2022Q4,1266,total,marginacion,Alto,7910567.0,13.51,24.132,44.61,76.282
+central,2022Q4,1266,total,marginacion,Bajo,15648790.0,8.185,49.619,70.01,90.344
+central,2022Q4,1266,total,marginacion,Medio,9156682.0,10.828,34.946,57.319,83.835
+central,2022Q4,1266,total,marginacion,Muy alto,3517600.0,15.777,23.15,41.401,70.142
+central,2022Q4,1266,total,marginacion,Muy bajo,89780385.0,3.489,76.104,89.294,96.388
+central,2022Q4,1266,total,tamano,15 mil o más,80317202.0,2.049,84.799,93.562,98.174
+central,2022Q4,1266,total,tamano,"2,500 a 15 mil",18713294.0,8.619,46.194,71.614,89.72
+central,2022Q4,1266,total,tamano,"menos de 2,500",26983528.0,13.971,19.502,47.477,78.617
+central,2022Q4,1266,65 y más,nacional,todas,10315853.012,5.674,66.093,79.702,91.964
+central,2022Q4,1266,65 y más,marginacion,Alto,710078.252,14.208,21.594,41.065,74.349
+central,2022Q4,1266,65 y más,marginacion,Bajo,1362535.829,9.02,46.129,66.245,88.523
+central,2022Q4,1266,65 y más,marginacion,Medio,816658.292,11.589,32.339,54.763,81.987
+central,2022Q4,1266,65 y más,marginacion,Muy alto,246183.794,15.388,22.468,40.933,70.925
+central,2022Q4,1266,65 y más,marginacion,Muy bajo,7180396.844,3.189,79.617,90.242,96.214
+central,2022Q4,1266,65 y más,tamano,15 mil o más,6510560.0,1.581,88.541,95.236,98.557
+central,2022Q4,1266,65 y más,tamano,"2,500 a 15 mil",1408222.969,8.898,46.818,69.967,88.322
+central,2022Q4,1266,65 y más,tamano,"menos de 2,500",2397070.042,14.896,16.447,43.229,76.196
+central,2023Q4,2493,total,nacional,todas,126014024.0,3.347,76.361,90.479,97.144
+central,2023Q4,2493,total,marginacion,Alto,7910567.0,7.133,49.001,75.114,93.735
+central,2023Q4,2493,total,marginacion,Bajo,15648790.0,5.065,64.323,83.962,95.777
+central,2023Q4,2493,total,marginacion,Medio,9156682.0,7.023,53.086,76.976,92.708
+central,2023Q4,2493,total,marginacion,Muy alto,3517600.0,8.854,42.34,67.715,88.419
+central,2023Q4,2493,total,marginacion,Muy bajo,89780385.0,2.123,84.577,95.238,98.477
+central,2023Q4,2493,total,tamano,15 mil o más,80317202.0,1.045,91.335,98.666,99.554
+central,2023Q4,2493,total,tamano,"2,500 a 15 mil",18713294.0,4.397,71.432,88.746,96.742
+central,2023Q4,2493,total,tamano,"menos de 2,500",26983528.0,9.47,35.212,67.313,90.25
+central,2023Q4,2493,65 y más,nacional,todas,10315853.012,3.421,76.252,89.486,96.822
+central,2023Q4,2493,65 y más,marginacion,Alto,710078.252,7.418,45.755,73.559,93.818
+central,2023Q4,2493,65 y más,marginacion,Bajo,1362535.829,5.503,61.13,81.545,95.124
+central,2023Q4,2493,65 y más,marginacion,Medio,816658.292,7.464,50.246,75.608,92.023
+central,2023Q4,2493,65 y más,marginacion,Muy alto,246183.794,8.435,42.745,69.127,90.291
+central,2023Q4,2493,65 y más,marginacion,Muy bajo,7180396.844,1.999,86.244,94.845,98.211
+central,2023Q4,2493,65 y más,tamano,15 mil o más,6510560.0,0.812,93.603,98.934,99.574
+central,2023Q4,2493,65 y más,tamano,"2,500 a 15 mil",1408222.969,4.298,72.356,88.145,96.507
+central,2023Q4,2493,65 y más,tamano,"menos de 2,500",2397070.042,9.992,31.414,64.614,89.534
+central,2024Q4,2877,total,nacional,todas,126014024.0,2.816,79.437,92.757,98.129
+central,2024Q4,2877,total,marginacion,Alto,7910567.0,5.885,55.401,81.486,96.069
+central,2024Q4,2877,total,marginacion,Bajo,15648790.0,4.397,67.657,87.563,97.023
+central,2024Q4,2877,total,marginacion,Medio,9156682.0,5.87,58.057,81.026,95.413
+central,2024Q4,2877,total,marginacion,Muy alto,3517600.0,6.927,49.988,76.775,93.58
+central,2024Q4,2877,total,marginacion,Muy bajo,89780385.0,1.798,86.943,96.478,98.959
+central,2024Q4,2877,total,tamano,15 mil o más,80317202.0,0.803,93.419,99.529,99.79
+central,2024Q4,2877,total,tamano,"2,500 a 15 mil",18713294.0,3.434,77.4,92.853,98.323
+central,2024Q4,2877,total,tamano,"menos de 2,500",26983528.0,8.38,39.233,72.532,93.052
+central,2024Q4,2877,65 y más,nacional,todas,10315853.012,2.874,78.929,91.758,97.95
+central,2024Q4,2877,65 y más,marginacion,Alto,710078.252,6.099,51.949,79.988,96.294
+central,2024Q4,2877,65 y más,marginacion,Bajo,1362535.829,4.743,64.551,85.483,96.636
+central,2024Q4,2877,65 y más,marginacion,Medio,816658.292,6.142,55.431,79.861,95.123
+central,2024Q4,2877,65 y más,marginacion,Muy alto,246183.794,6.631,49.869,78.011,94.963
+central,2024Q4,2877,65 y más,marginacion,Muy bajo,7180396.844,1.7,87.994,95.938,98.787
+central,2024Q4,2877,65 y más,tamano,15 mil o más,6510560.0,0.604,95.199,99.678,99.862
+central,2024Q4,2877,65 y más,tamano,"2,500 a 15 mil",1408222.969,3.267,78.148,92.447,98.297
+central,2024Q4,2877,65 y más,tamano,"menos de 2,500",2397070.042,8.808,35.197,69.843,92.552
+optimista,2019Q1,1131,total,nacional,todas,126014024.0,7.686,60.03,73.965,88.149
+optimista,2019Q1,1131,total,marginacion,Alto,7910567.0,16.537,21.323,36.45,67.145
+optimista,2019Q1,1131,total,marginacion,Bajo,15648790.0,11.919,40.567,57.877,80.704
+optimista,2019Q1,1131,total,marginacion,Medio,9156682.0,14.745,25.939,45.167,74.632
+optimista,2019Q1,1131,total,marginacion,Muy alto,3517600.0,17.237,20.219,38.169,68.513
+optimista,2019Q1,1131,total,marginacion,Muy bajo,89780385.0,5.074,71.87,84.415,93.446
+optimista,2019Q1,1131,total,tamano,15 mil o más,80317202.0,3.573,79.817,88.945,95.414
+optimista,2019Q1,1131,total,tamano,"2,500 a 15 mil",18713294.0,12.207,36.294,58.014,81.424
+optimista,2019Q1,1131,total,tamano,"menos de 2,500",26983528.0,16.792,17.596,40.44,71.189
+optimista,2019Q1,1131,65 y más,nacional,todas,10315853.012,7.951,60.721,73.185,86.808
+optimista,2019Q1,1131,65 y más,marginacion,Alto,710078.252,17.407,18.002,33.131,64.991
+optimista,2019Q1,1131,65 y más,marginacion,Bajo,1362535.829,13.158,36.822,53.738,77.894
+optimista,2019Q1,1131,65 y más,marginacion,Medio,816658.292,15.905,23.634,42.819,71.497
+optimista,2019Q1,1131,65 y más,marginacion,Muy alto,246183.794,17.834,18.195,35.165,65.96
+optimista,2019Q1,1131,65 y más,marginacion,Muy bajo,7180396.844,4.784,75.157,85.593,93.114
+optimista,2019Q1,1131,65 y más,tamano,15 mil o más,6510560.0,2.955,83.468,90.978,95.97
+optimista,2019Q1,1131,65 y más,tamano,"2,500 a 15 mil",1408222.969,13.337,34.548,54.442,77.801
+optimista,2019Q1,1131,65 y más,tamano,"menos de 2,500",2397070.042,18.355,14.314,35.868,67.216
+optimista,2021Q4,1137,total,nacional,todas,126014024.0,7.426,60.078,74.257,88.443
+optimista,2021Q4,1137,total,marginacion,Alto,7910567.0,16.537,21.323,36.45,67.145
+optimista,2021Q4,1137,total,marginacion,Bajo,15648790.0,11.876,40.567,57.877,80.704
+optimista,2021Q4,1137,total,marginacion,Medio,9156682.0,14.743,25.939,45.167,74.634
+optimista,2021Q4,1137,total,marginacion,Muy alto,3517600.0,17.237,20.219,38.169,68.513
+optimista,2021Q4,1137,total,marginacion,Muy bajo,89780385.0,4.717,71.937,84.824,93.858
+optimista,2021Q4,1137,total,tamano,15 mil o más,80317202.0,3.197,79.883,89.391,95.86
+optimista,2021Q4,1137,total,tamano,"2,500 a 15 mil",18713294.0,12.143,36.326,58.046,81.456
+optimista,2021Q4,1137,total,tamano,"menos de 2,500",26983528.0,16.743,17.599,40.452,71.211
+optimista,2021Q4,1137,65 y más,nacional,todas,10315853.012,7.811,60.766,73.298,86.923
+optimista,2021Q4,1137,65 y más,marginacion,Alto,710078.252,17.407,18.002,33.131,64.991
+optimista,2021Q4,1137,65 y más,marginacion,Bajo,1362535.829,13.134,36.822,53.738,77.895
+optimista,2021Q4,1137,65 y más,marginacion,Medio,816658.292,15.904,23.634,42.819,71.498
+optimista,2021Q4,1137,65 y más,marginacion,Muy alto,246183.794,17.834,18.195,35.165,65.96
+optimista,2021Q4,1137,65 y más,marginacion,Muy bajo,7180396.844,4.588,75.221,85.756,93.278
+optimista,2021Q4,1137,65 y más,tamano,15 mil o más,6510560.0,2.761,83.532,91.149,96.141
+optimista,2021Q4,1137,65 y más,tamano,"2,500 a 15 mil",1408222.969,13.277,34.579,54.473,77.832
+optimista,2021Q4,1137,65 y más,tamano,"menos de 2,500",2397070.042,18.316,14.315,35.872,67.227
+optimista,2022Q4,1762,total,nacional,todas,126014024.0,4.885,69.374,83.435,93.982
+optimista,2022Q4,1762,total,marginacion,Alto,7910567.0,11.733,30.802,51.364,81.45
+optimista,2022Q4,1762,total,marginacion,Bajo,15648790.0,7.281,55.515,75.494,91.852
+optimista,2022Q4,1762,total,marginacion,Medio,9156682.0,9.233,42.349,65.435,87.733
+optimista,2022Q4,1762,total,marginacion,Muy alto,3517600.0,13.008,29.987,50.47,77.458
+optimista,2022Q4,1762,total,marginacion,Muy bajo,89780385.0,3.102,79.488,90.772,96.742
+optimista,2022Q4,1762,total,tamano,15 mil o más,80317202.0,1.806,86.904,94.66,98.351
+optimista,2022Q4,1762,total,tamano,"2,500 a 15 mil",18713294.0,7.332,56.58,76.761,91.456
+optimista,2022Q4,1762,total,tamano,"menos de 2,500",26983528.0,12.354,26.071,54.65,82.727
+optimista,2022Q4,1762,65 y más,nacional,todas,10315853.012,5.034,69.729,82.549,93.246
+optimista,2022Q4,1762,65 y más,marginacion,Alto,710078.252,12.507,27.13,47.697,79.702
+optimista,2022Q4,1762,65 y más,marginacion,Bajo,1362535.829,8.083,51.695,71.945,90.247
+optimista,2022Q4,1762,65 y más,marginacion,Medio,816658.292,10.131,39.02,62.044,85.524
+optimista,2022Q4,1762,65 y más,marginacion,Muy alto,246183.794,13.357,27.438,47.654,76.614
+optimista,2022Q4,1762,65 y más,marginacion,Muy bajo,7180396.844,2.851,82.307,91.536,96.602
+optimista,2022Q4,1762,65 y más,tamano,15 mil o más,6510560.0,1.375,90.265,96.174,98.715
+optimista,2022Q4,1762,65 y más,tamano,"2,500 a 15 mil",1408222.969,7.653,56.152,74.951,90.227
+optimista,2022Q4,1762,65 y más,tamano,"menos de 2,500",2397070.042,13.433,21.929,50.005,80.165
+optimista,2023Q4,2652,total,nacional,todas,126014024.0,3.175,77.443,91.326,97.436
+optimista,2023Q4,2652,total,marginacion,Alto,7910567.0,6.713,51.485,77.131,94.664
+optimista,2023Q4,2652,total,marginacion,Bajo,15648790.0,4.956,64.829,84.62,96.027
+optimista,2023Q4,2652,total,marginacion,Medio,9156682.0,6.528,56.048,79.272,93.825
+optimista,2023Q4,2652,total,marginacion,Muy alto,3517600.0,7.864,46.033,71.462,91.644
+optimista,2023Q4,2652,total,marginacion,Muy bajo,89780385.0,2.027,85.341,95.754,98.521
+optimista,2023Q4,2652,total,tamano,15 mil o más,80317202.0,0.974,91.907,99.105,99.554
+optimista,2023Q4,2652,total,tamano,"2,500 a 15 mil",18713294.0,4.087,73.885,89.957,97.145
+optimista,2023Q4,2652,total,tamano,"menos de 2,500",26983528.0,9.091,36.859,69.123,91.335
+optimista,2023Q4,2652,65 y más,nacional,todas,10315853.012,3.279,77.105,90.167,97.084
+optimista,2023Q4,2652,65 y más,marginacion,Alto,710078.252,7.053,47.8,75.342,94.647
+optimista,2023Q4,2652,65 y más,marginacion,Bajo,1362535.829,5.394,61.59,82.173,95.379
+optimista,2023Q4,2652,65 y más,marginacion,Medio,816658.292,6.993,53.16,77.7,93.036
+optimista,2023Q4,2652,65 y más,marginacion,Muy alto,246183.794,7.68,45.548,72.012,92.778
+optimista,2023Q4,2652,65 y más,marginacion,Muy bajo,7180396.844,1.931,86.752,95.19,98.257
+optimista,2023Q4,2652,65 y más,tamano,15 mil o más,6510560.0,0.764,94.027,99.195,99.574
+optimista,2023Q4,2652,65 y más,tamano,"2,500 a 15 mil",1408222.969,4.029,74.277,89.254,96.903
+optimista,2023Q4,2652,65 y más,tamano,"menos de 2,500",2397070.042,9.669,32.805,66.181,90.429
+optimista,2024Q4,2878,total,nacional,todas,126014024.0,2.815,79.459,92.757,98.129
+optimista,2024Q4,2878,total,marginacion,Alto,7910567.0,5.885,55.401,81.486,96.069
+optimista,2024Q4,2878,total,marginacion,Bajo,15648790.0,4.397,67.657,87.563,97.023
+optimista,2024Q4,2878,total,marginacion,Medio,9156682.0,5.87,58.057,81.026,95.413
+optimista,2024Q4,2878,total,marginacion,Muy alto,3517600.0,6.927,49.988,76.775,93.58
+optimista,2024Q4,2878,total,marginacion,Muy bajo,89780385.0,1.796,86.973,96.478,98.959
+optimista,2024Q4,2878,total,tamano,15 mil o más,80317202.0,0.801,93.453,99.529,99.79
+optimista,2024Q4,2878,total,tamano,"2,500 a 15 mil",18713294.0,3.434,77.4,92.853,98.323
+optimista,2024Q4,2878,total,tamano,"menos de 2,500",26983528.0,8.38,39.233,72.532,93.052
+optimista,2024Q4,2878,65 y más,nacional,todas,10315853.012,2.874,78.934,91.758,97.95
+optimista,2024Q4,2878,65 y más,marginacion,Alto,710078.252,6.099,51.949,79.988,96.294
+optimista,2024Q4,2878,65 y más,marginacion,Bajo,1362535.829,4.743,64.551,85.483,96.636
+optimista,2024Q4,2878,65 y más,marginacion,Medio,816658.292,6.142,55.431,79.861,95.123
+optimista,2024Q4,2878,65 y más,marginacion,Muy alto,246183.794,6.631,49.869,78.011,94.963
+optimista,2024Q4,2878,65 y más,marginacion,Muy bajo,7180396.844,1.699,88.002,95.938,98.787
+optimista,2024Q4,2878,65 y más,tamano,15 mil o más,6510560.0,0.603,95.208,99.678,99.862
+optimista,2024Q4,2878,65 y más,tamano,"2,500 a 15 mil",1408222.969,3.267,78.148,92.447,98.297
+optimista,2024Q4,2878,65 y más,tamano,"menos de 2,500",2397070.042,8.808,35.197,69.843,92.552
+pesimista,2019Q1,483,total,nacional,todas,126014024.0,9.756,53.996,67.274,83.733
+pesimista,2019Q1,483,total,marginacion,Alto,7910567.0,20.076,13.167,27.258,58.168
+pesimista,2019Q1,483,total,marginacion,Bajo,15648790.0,14.752,31.31,46.284,73.879
+pesimista,2019Q1,483,total,marginacion,Medio,9156682.0,18.069,19.177,35.099,64.958
+pesimista,2019Q1,483,total,marginacion,Muy alto,3517600.0,22.662,12.706,25.655,57.991
+pesimista,2019Q1,483,total,marginacion,Muy bajo,89780385.0,6.623,66.717,79.37,90.627
+pesimista,2019Q1,483,total,tamano,15 mil o más,80317202.0,4.359,76.974,86.126,93.903
+pesimista,2019Q1,483,total,tamano,"2,500 a 15 mil",18713294.0,16.221,20.759,44.089,73.973
+pesimista,2019Q1,483,total,tamano,"menos de 2,500",26983528.0,21.337,8.654,27.238,60.232
+pesimista,2019Q1,483,65 y más,nacional,todas,10315853.012,9.8,55.605,67.43,82.517
+pesimista,2019Q1,483,65 y más,marginacion,Alto,710078.252,20.59,11.47,24.44,55.964
+pesimista,2019Q1,483,65 y más,marginacion,Bajo,1362535.829,16.045,28.628,42.457,70.694
+pesimista,2019Q1,483,65 y más,marginacion,Medio,816658.292,19.132,17.166,33.231,62.134
+pesimista,2019Q1,483,65 y más,marginacion,Muy alto,246183.794,21.976,12.386,25.604,58.018
+pesimista,2019Q1,483,65 y más,marginacion,Muy bajo,7180396.844,6.07,70.942,81.744,90.544
+pesimista,2019Q1,483,65 y más,tamano,15 mil o más,6510560.0,3.564,81.013,89.026,94.758
+pesimista,2019Q1,483,65 y más,tamano,"2,500 a 15 mil",1408222.969,17.076,20.81,41.832,70.08
+pesimista,2019Q1,483,65 y más,tamano,"menos de 2,500",2397070.042,22.466,7.035,23.813,56.577
+pesimista,2021Q4,487,total,nacional,todas,126014024.0,9.457,54.236,67.755,84.036
+pesimista,2021Q4,487,total,marginacion,Alto,7910567.0,20.076,13.167,27.258,58.168
+pesimista,2021Q4,487,total,marginacion,Bajo,15648790.0,14.707,31.31,46.284,73.879
+pesimista,2021Q4,487,total,marginacion,Medio,9156682.0,18.067,19.177,35.099,64.96
+pesimista,2021Q4,487,total,marginacion,Muy alto,3517600.0,22.662,12.706,25.655,57.991
+pesimista,2021Q4,487,total,marginacion,Muy bajo,89780385.0,6.21,67.053,80.046,91.051
+pesimista,2021Q4,487,total,tamano,15 mil o más,80317202.0,3.92,77.347,86.875,94.349
+pesimista,2021Q4,487,total,tamano,"2,500 a 15 mil",18713294.0,16.17,20.759,44.089,74.025
+pesimista,2021Q4,487,total,tamano,"menos de 2,500",26983528.0,21.281,8.662,27.26,60.283
+pesimista,2021Q4,487,65 y más,nacional,todas,10315853.012,9.637,55.898,67.728,82.639
+pesimista,2021Q4,487,65 y más,marginacion,Alto,710078.252,20.59,11.47,24.44,55.964
+pesimista,2021Q4,487,65 y más,marginacion,Bajo,1362535.829,16.02,28.628,42.457,70.694
+pesimista,2021Q4,487,65 y más,marginacion,Medio,816658.292,19.131,17.166,33.231,62.136
+pesimista,2021Q4,487,65 y más,marginacion,Muy alto,246183.794,21.976,12.386,25.604,58.018
+pesimista,2021Q4,487,65 y más,marginacion,Muy bajo,7180396.844,5.839,71.363,82.172,90.72
+pesimista,2021Q4,487,65 y más,tamano,15 mil o más,6510560.0,3.33,81.476,89.494,94.929
+pesimista,2021Q4,487,65 y más,tamano,"2,500 a 15 mil",1408222.969,17.03,20.81,41.832,70.132
+pesimista,2021Q4,487,65 y más,tamano,"menos de 2,500",2397070.042,22.423,7.039,23.822,56.607
+pesimista,2022Q4,958,total,nacional,todas,126014024.0,6.539,62.231,77.275,90.977
+pesimista,2022Q4,958,total,marginacion,Alto,7910567.0,14.523,21.117,41.456,73.945
+pesimista,2022Q4,958,total,marginacion,Bajo,15648790.0,9.343,44.898,64.651,87.73
+pesimista,2022Q4,958,total,marginacion,Medio,9156682.0,12.147,30.921,52.057,79.958
+pesimista,2022Q4,958,total,marginacion,Muy alto,3517600.0,17.711,20.309,38.504,68.102
+pesimista,2022Q4,958,total,marginacion,Muy bajo,89780385.0,4.337,73.711,86.722,95.064
+pesimista,2022Q4,958,total,tamano,15 mil o más,80317202.0,2.393,83.525,92.292,97.688
+pesimista,2022Q4,958,total,tamano,"2,500 a 15 mil",18713294.0,10.794,38.427,64.474,86.229
+pesimista,2022Q4,958,total,tamano,"menos de 2,500",26983528.0,15.926,15.36,41.453,74.294
+pesimista,2022Q4,958,65 y más,nacional,todas,10315853.012,6.475,63.66,77.136,90.32
+pesimista,2022Q4,958,65 y más,marginacion,Alto,710078.252,15.063,19.291,38.365,71.968
+pesimista,2022Q4,958,65 y más,marginacion,Bajo,1362535.829,10.115,42.066,61.284,85.96
+pesimista,2022Q4,958,65 y más,marginacion,Medio,816658.292,12.836,28.535,49.831,78.182
+pesimista,2022Q4,958,65 y más,marginacion,Muy alto,246183.794,16.777,20.045,38.589,69.468
+pesimista,2022Q4,958,65 y más,marginacion,Muy bajo,7180396.844,3.858,77.636,88.405,95.057
+pesimista,2022Q4,958,65 y más,tamano,15 mil o más,6510560.0,1.83,87.4,94.566,98.252
+pesimista,2022Q4,958,65 y más,tamano,"2,500 a 15 mil",1408222.969,10.8,39.918,63.434,84.823
+pesimista,2022Q4,958,65 y más,tamano,"menos de 2,500",2397070.042,16.551,13.13,37.844,72.004
+pesimista,2023Q4,1744,total,nacional,todas,126014024.0,4.605,70.209,86.17,95.149
+pesimista,2023Q4,1744,total,marginacion,Alto,7910567.0,8.902,39.197,66.615,90.425
+pesimista,2023Q4,1744,total,marginacion,Bajo,15648790.0,6.632,54.27,75.704,92.949
+pesimista,2023Q4,1744,total,marginacion,Medio,9156682.0,9.061,43.561,67.34,87.656
+pesimista,2023Q4,1744,total,marginacion,Muy alto,3517600.0,12.055,34.53,60.532,83.414
+pesimista,2023Q4,1744,total,marginacion,Muy bajo,89780385.0,3.127,79.835,92.642,97.173
+pesimista,2023Q4,1744,total,tamano,15 mil o más,80317202.0,1.457,88.697,97.325,99.171
+pesimista,2023Q4,1744,total,tamano,"2,500 a 15 mil",18713294.0,7.229,55.566,80.02,92.972
+pesimista,2023Q4,1744,total,tamano,"menos de 2,500",26983528.0,12.158,25.332,57.23,84.69
+pesimista,2023Q4,1744,65 y más,nacional,todas,10315853.012,4.502,70.937,85.401,94.95
+pesimista,2023Q4,1744,65 y más,marginacion,Alto,710078.252,8.972,37.772,65.334,90.712
+pesimista,2023Q4,1744,65 y más,marginacion,Bajo,1362535.829,7.001,52.007,73.533,92.398
+pesimista,2023Q4,1744,65 y más,marginacion,Medio,816658.292,9.336,41.372,66.534,87.377
+pesimista,2023Q4,1744,65 y más,marginacion,Muy alto,246183.794,10.709,35.971,62.716,86.786
+pesimista,2023Q4,1744,65 y más,marginacion,Muy bajo,7180396.844,2.823,82.37,92.561,96.995
+pesimista,2023Q4,1744,65 y más,tamano,15 mil o más,6510560.0,1.137,91.317,97.841,99.335
+pesimista,2023Q4,1744,65 y más,tamano,"2,500 a 15 mil",1408222.969,6.835,57.984,79.612,92.671
+pesimista,2023Q4,1744,65 y más,tamano,"menos de 2,500",2397070.042,12.271,23.192,55.015,84.381
+pesimista,2024Q4,2878,total,nacional,todas,126014024.0,2.815,79.459,92.757,98.129
+pesimista,2024Q4,2878,total,marginacion,Alto,7910567.0,5.885,55.401,81.486,96.069
+pesimista,2024Q4,2878,total,marginacion,Bajo,15648790.0,4.397,67.657,87.563,97.023
+pesimista,2024Q4,2878,total,marginacion,Medio,9156682.0,5.87,58.057,81.026,95.413
+pesimista,2024Q4,2878,total,marginacion,Muy alto,3517600.0,6.927,49.988,76.775,93.58
+pesimista,2024Q4,2878,total,marginacion,Muy bajo,89780385.0,1.796,86.973,96.478,98.959
+pesimista,2024Q4,2878,total,tamano,15 mil o más,80317202.0,0.801,93.453,99.529,99.79
+pesimista,2024Q4,2878,total,tamano,"2,500 a 15 mil",18713294.0,3.434,77.4,92.853,98.323
+pesimista,2024Q4,2878,total,tamano,"menos de 2,500",26983528.0,8.38,39.233,72.532,93.052
+pesimista,2024Q4,2878,65 y más,nacional,todas,10315853.012,2.874,78.934,91.758,97.95
+pesimista,2024Q4,2878,65 y más,marginacion,Alto,710078.252,6.099,51.949,79.988,96.294
+pesimista,2024Q4,2878,65 y más,marginacion,Bajo,1362535.829,4.743,64.551,85.483,96.636
+pesimista,2024Q4,2878,65 y más,marginacion,Medio,816658.292,6.142,55.431,79.861,95.123
+pesimista,2024Q4,2878,65 y más,marginacion,Muy alto,246183.794,6.631,49.869,78.011,94.963
+pesimista,2024Q4,2878,65 y más,marginacion,Muy bajo,7180396.844,1.699,88.002,95.938,98.787
+pesimista,2024Q4,2878,65 y más,tamano,15 mil o más,6510560.0,0.603,95.208,99.678,99.862
+pesimista,2024Q4,2878,65 y más,tamano,"2,500 a 15 mil",1408222.969,3.267,78.148,92.447,98.297
+pesimista,2024Q4,2878,65 y más,tamano,"menos de 2,500",2397070.042,8.808,35.197,69.843,92.552

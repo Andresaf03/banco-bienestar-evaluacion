@@ -5,6 +5,8 @@
 #   Rscript analisis/15_poder_inyectado.R verificar    # comprueba el código, sin réplicas
 #   Rscript analisis/15_poder_inyectado.R medir 12     # segundos por réplica; no muestra estimaciones
 #   Rscript analisis/15_poder_inyectado.R diagnostico  # de dónde sale el centro de las fechas barajadas
+#   PODER_RESULTADO=sucursales_bm_pc Rscript analisis/15_poder_inyectado.R diagnostico
+#                                                      # lo mismo para banca múltiple (o EACP); 2026-11-18
 #   Rscript analisis/15_poder_inyectado.R calibrado    # potencia con fechas barajadas entre todas
 #
 # Se agregan sucursales privadas ficticias a los datos y se estima con la especificación base del
@@ -36,8 +38,11 @@ source(here::here("analisis", "00_utils.R"))
 source(here::here("analisis", "02_cs_did.R"))
 
 CFG <- PARAMS$poder_inyectado
-RESULTADO <- "sucursales_privado_pc"
-CONTEO <- "sucursales_privado"
+# El resultado se puede cambiar solo para el diagnóstico (revisión final del 2026-11-18): las salidas
+# de otro resultado llevan su nombre como sufijo y no pisan las de sucursales privadas.
+RESULTADO <- Sys.getenv("PODER_RESULTADO", "sucursales_privado_pc")
+CONTEO <- sub("_pc$", "", RESULTADO)
+SUFIJO <- if (identical(RESULTADO, "sucursales_privado_pc")) "" else paste0("_", RESULTADO)
 ADULTOS <- "poblacion_adulta_fija"
 POR_ADULTOS <- 1e4
 Z90 <- stats::qnorm(0.95)
@@ -250,7 +255,7 @@ diagnostico <- function() {
     list(nombre = "barajadas_solo_abren", muestra = abren, barajar = reasignar_fechas)
   )
   filas <- lapply(casos, function(k) {
-    ruta <- sprintf("poder_diagnostico_%s_r%d", k$nombre, CFG$replicas$reasignadas)
+    ruta <- sprintf("poder_diagnostico_%s_r%d%s", k$nombre, CFG$replicas$reasignadas, SUFIJO)
     archivo <- file.path(RUTA_INTERMEDIOS, paste0(ruta, ".csv"))
     if (file.exists(archivo)) {
       x <- fread(archivo)
@@ -263,12 +268,24 @@ diagnostico <- function() {
     message(sprintf("%s: %d fallidas", k$nombre, sum(!is.na(x$error))))
     fila_diagnostico(k$nombre, k$muestra, x)
   })
-  # La de la corrida principal: fechas barajadas entre tratadas, con las nunca tratadas fijas.
-  previa <- fread(file.path(RUTA_INTERMEDIOS,
-                            sprintf("poder_reasignadas_sin_efecto_r%d.csv", CFG$replicas$reasignadas)))
+  # Fechas barajadas entre tratadas, con las nunca tratadas fijas: para privadas es la corrida
+  # principal sin efecto; para otro resultado se corre aquí.
+  previa_ruta <- if (identical(SUFIJO, "")) {
+    sprintf("poder_reasignadas_sin_efecto_r%d", CFG$replicas$reasignadas)
+  } else {
+    sprintf("poder_diagnostico_barajadas_entre_tratadas_r%d%s", CFG$replicas$reasignadas, SUFIJO)
+  }
+  archivo <- file.path(RUTA_INTERMEDIOS, paste0(previa_ruta, ".csv"))
+  previa <- if (file.exists(archivo)) fread(archivo) else {
+    x <- rbindlist(parallel::mclapply(seq_len(CFG$replicas$reasignadas), replica_diagnostico,
+                                      muestra = base, barajar = reasignar_fechas,
+                                      mc.cores = CFG$nucleos))
+    guardar_intermedio(x, previa_ruta)
+    x
+  }
   filas[[3]] <- fila_diagnostico("barajadas_entre_tratadas", base, previa)
-  res <- rbindlist(filas)
-  guardar_tabla(res, "poder_inyectado_diagnostico")
+  res <- rbindlist(filas)[, resultado := RESULTADO]
+  guardar_tabla(res, paste0("poder_inyectado_diagnostico", SUFIJO))
   print(res)
   invisible(res)
 }

@@ -1,0 +1,7 @@
+tipo,termino,valor,ee,ic_bajo,ic_alto,panel,diseno,resultado
+simple,ATT,-4.83512978025489,4.62757519962152,-13.9050105072638,4.23475094675403,localidad_f6,actualizaciones,estab_emprendimiento_pc
+group,17,-4.83512978025489,4.81634698079661,-14.2749963996645,4.60473683915469,localidad_f6,actualizaciones,estab_emprendimiento_pc
+dynamic,-10,0.862572671110338,0.334886741652498,0.0883452942343742,1.6368000479863,localidad_f6,actualizaciones,estab_emprendimiento_pc
+dynamic,-9,1.5082737119375,5.19929752212381,-10.5120244410682,13.5285718649432,localidad_f6,actualizaciones,estab_emprendimiento_pc
+dynamic,0,-1.41285716566557,1.14067810244975,-4.05000013155801,1.22428580022686,localidad_f6,actualizaciones,estab_emprendimiento_pc
+dynamic,1,-8.25740239484421,8.43646880433856,-27.7617431168688,11.2469383271804,localidad_f6,actualizaciones,estab_emprendimiento_pc

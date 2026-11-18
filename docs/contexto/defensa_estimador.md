@@ -42,16 +42,19 @@ Casi todas las regresiones con efectos fijos dicen lo mismo que CS. **La excepci
 TWFE extendido con covariables, que da +6.8% en privadas y +11% en EACP. Depende de comparar
 contra los 500 municipios que nunca abren: si se compara solo a los que abren temprano contra los
 que abren tarde (hasta 2023T4), baja a **+1.3% (ee 1.3%)**. Tampoco es el ajuste por covariables
-en sí: CS con el mismo ajuste lineal (solo regresión de resultado) da +2.1% (ee 1.7%). Lo que no
-cierra es que recortar al soporte común no lo baje (+7.7%), así que una atracción pequeña está
-menos acotada que el desplazamiento.
+en sí: CS con el mismo ajuste lineal (solo regresión de resultado) da +2.1% (ee 1.7%). Recortar
+al soporte común no lo baja (+7.7%), pero la prueba de efecto inyectado (2026-11-04/05) mostró que
+comparar contra los nunca tratados tiene una deriva positiva: con fechas barajadas al azar entre
+las tratadas da +1.9%, y solo por calendario el efecto es −1.9% (de −4.2% a +0.3%). Por eso lo que
+se sostiene es ±5% en las dos direcciones, no que la atracción esté menos acotada.
 
 Así que:
 - **"No desplazó a la banca privada"** no depende del estimador en sucursales privadas: ninguno da
   un efecto negativo significativo. En banca múltiple sola, el TWFE, BJS y el TWFE extendido sin
   covariables dan entre −2.2% y −2.5%. Es pequeño (menor a 5%) y, en el extendido, con pre-prueba
   fallida; CS da −0.2%.
-- **"Tampoco la atrajo"** depende de esa única especificación.
+- **"Tampoco la atrajo"** se sostiene dentro de ±5%: la única especificación que da más (+6.8%)
+  descansa en la comparación con deriva, y solo por calendario el efecto es −1.9%.
 
 Las regresiones con efectos fijos son además menos precisas: el IC90 del TWFE llega a 4.6% de la
 media y el de BJS a 5.6%. Por eso CS es el principal.

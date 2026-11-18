@@ -73,6 +73,13 @@ Directorio de establecimientos georreferenciado. Se descarga por streaming (el c
 
 ## `data/interim/anillos.parquet` (334,656 filas)
 
+🔴 **Subconteo en los controles (revisión del 2026-11-17).** Los puntos (`pts_*`) solo cubren los
+1,975 municipios que alguna vez tuvieron sucursal, así que un anillo centrado en un control de
+otro municipio solo cuenta los establecimientos que caen dentro de esos municipios: los 802
+controles fuera de ellos tienen 10.3 establecimientos a 1 km contra 105 en su propia localidad.
+`panel_anillo` es solo descriptivo y no entra a ninguna estimación; las bandas de distancia del
+decaimiento usan los conteos por localidad y no tienen este problema.
+
 | variable | descripción | tipo | unidad | fuente |
 |---|---|---|---|---|
 | `cve_loc` | Centro del anillo (localidad) | str | — | INEGI |

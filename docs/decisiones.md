@@ -1215,6 +1215,374 @@ La afirmación de que una atracción pequeña estaba menos acotada que el despla
 las conclusiones del trabajo final, con un apéndice nuevo, y las láminas 10 y 14 del deck de PPII.
 `entregables/03_presentacion/` no se tocó: lo reemplaza el deck de `06_politica_publica/`.
 
+## Preregistro de la fase 6 — programas, conveniencia y el DENUE (2026-11-17)
+
+Se fija **antes** de descargar el padrón de beneficiarios, de construir los paneles nuevos y de
+estimar. Plan aprobado en `~/.claude/plans/buenas-ya-tuvimos-nuestra-hazy-hartmanis.md` (copia de
+trabajo de Andrés).
+
+**Origen.** Comentarios de la presentación del 17-nov-2026:
+- del profesor: pulir la historia causal de la atracción, ver si el resultado aguanta sin los nunca
+  tratados, medir si aumentó la **cantidad** de programas o solo la **conveniencia**, y ver el
+  DENUE con más detalle;
+- de Fernando: revisar los radios y la interpretación;
+- de Luis: ver si el banco distribuye los programas mejor que antes.
+
+La hipótesis de trabajo del equipo: si el banco sobre todo dispersa programas y eso aumentó lo que
+se cobra cerca, el +10% del DENUE podría ser gasto local y no solo medición.
+
+**Transparencia.** Ya se vieron todos los resultados de las fases 0 a 5 y del efecto inyectado.
+Además, durante la exploración del 2026-11-17 se vieron:
+- La descomposición cruda del +10% del DENUE por sector (sin covariables, tratadas contra
+  controles a ≥10 km, 2019S2 → 2024S2): comercio al por menor (46) 40%, alimentos y hospedaje (72)
+  17%, manufactura (31-33) 15%, otros servicios (81) 14%, financiero (52) y gobierno (93) 3.5%
+  cada uno.
+- Los efectos por banda en niveles, que salen de las tablas `decaimiento_*` ya publicadas: 7.24,
+  1.51, 0.49 y 0.04 establecimientos por mil para la propia localidad, 0–2, 2–5 y 5–10 km.
+- La estructura del consolidado estatal del padrón (`conest/2022T2.xlsx`: beneficiarios por
+  programa y estado, sin montos), sin cruzarlo con el tratamiento.
+
+No se ha visto ningún dato municipal del padrón ni se ha estimado nada de lo que sigue.
+
+Nada de esto toca la especificación principal, la maestra, la tabla final ni sus familias. Va en
+`analisis/16_fase6.R`, `construccion/panel_fase6.py` y `variables/accesibilidad.py`, con salidas
+`fase6_*`.
+
+**Criterios.** Los de siempre:
+- pre-prueba fallida (Wald previa p < 0.05) = descriptivo;
+- nulo informativo = no significativo y con el IC90 dentro de ±5% de la media previa de las
+  tratadas;
+- Romano–Wolf dentro de cada familia y BH sobre todas las especificaciones de la fase;
+- MDE80 y cota del IC90 siempre;
+- regla 10: cada cohorte con al menos dos periodos previos con dato.
+
+### A. ¿Más programas? (familia `programas`, con Romano–Wolf)
+
+**Datos.** Padrón Único de Beneficiarios de la Secretaría de Bienestar (pub.bienestar.gob.mx). La
+lista de historia (`/v2/api/resume/publish/history`) trae, por programa × periodo, un agregado
+municipal (`/data/v2/hist/mun/<prog>/..._m.zip`). **Solo se bajan los `_m`**; nunca los `_p`, que
+listan personas con nombre. Programas que paga el banco: Pensión para el Bienestar de las Personas
+Adultas Mayores (S176), discapacidad (S286), becas de educación básica (S072) y media superior
+(S311), Jóvenes Escribiendo el Futuro (S283), Sembrando Vida (S287), Jóvenes Construyendo el Futuro
+(S280/U280) e hijos de madres trabajadoras (S174). La lista final, la periodicidad y las columnas
+se fijan en una adenda de datos **antes de estimar**.
+
+**Diseño.** CS doblemente robusto en el municipio, con aún no tratados como control, las tres
+covariables financieras (`log_poblacion_2020`, `indice_marginacion_2020`, `banca_mun_2019`),
+errores agrupados por municipio y el G de la BDIF (`G_trimestre`) llevado a la periodicidad del
+padrón.
+- Si hay bimestres de 2019 a 2025, el panel es semestral (tres bimestres por semestre, promedio de
+  beneficiarios y suma de recursos).
+- Si los años 2019–2020 son anuales, el panel es anual (cohortes 2022, 2023 y 2024; previos
+  2019–2021).
+- Muestra: los municipios del panel financiero (sin ya tratados ni fechas dudosas por
+  Banjército).
+
+**Resultados.**
+- **A1 (principal):** cobertura de la pensión de adultos mayores = beneficiarios de S176 / población
+  de 65 años o más del Censo 2020 (fija) × 100.
+- **A2:** beneficiarios de los programas de la lista por mil habitantes (población del Censo 2020,
+  fija). Son intervenciones: una persona con dos programas cuenta dos veces.
+- **A3:** recursos de esos programas por habitante, en pesos reales (INPC, base 2024). Solo si el
+  `_m` trae montos.
+
+**Robustez** (no entra en la familia): agregar la proporción de 65+ como covariable, porque los
+cambios nacionales de la pensión (de 68 a 65 años en 2021, aumentos del monto) pegan distinto según
+la edad de la población; y solo nunca tratados como control.
+
+**Advertencia.** El padrón registra el municipio de residencia del beneficiario, no dónde cobra.
+Por eso A mide el **alcance** de los programas entre los residentes, que es justo la pregunta de
+la cantidad.
+
+**Lectura** (fijada antes):
+- A1 o A2 suben con previos planos → "más programas: la sucursal amplía el alcance".
+- Nulo informativo en A1 y A2 → "misma cobertura: cambió dónde se cobra, no cuánto se recibe"
+  (conveniencia).
+- Pre-prueba fallida → descriptivo.
+
+### B. Conveniencia y "¿distribuye mejor que antes?" (descriptivo)
+
+Criterio: el Objetivo prioritario 3 del Programa Institucional 2020–2024 del banco (asegurar
+apoyos ampliando la dispersión y bajar los tiempos y costos de traslado; `literatura/`).
+
+- **B1. Acceso.** Distancia de la población a la localidad con sucursal del banco más cercana, con
+  los puntos de ITER 2020 (población total y de 65+), en 2019T1, 2021T4, 2022T4, 2023T4 y 2024T4.
+  - Indicadores: distancia media ponderada y proporción de la población a ≤5, ≤10 y ≤20 km.
+  - Cortes: por grado de marginación municipal y por tamaño de localidad (&lt;2,500, 2,500–15
+    mil, 15 mil o más).
+  - Sucursales heredadas: abiertas desde 2019T1.
+  - Localidades con `fecha_ambigua`: dos cotas. Cota optimista: todas abren en el G del
+    municipio. Cota pesimista: solo cuentan desde 2024T4.
+- **B2. Cobro local.** Transacciones en los cajeros del banco (Portafolio, Power Pivot, tipo 34)
+  por beneficiario del padrón en los municipios tratados, por semestre desde la apertura, contra
+  los 3 cobros por semestre que implica el pago bimestral.
+- **B3. ENIF 2021 contra 2024** (microdatos, factores de expansión). Entre quienes reciben apoyos
+  de gobierno (`P3_4`): proporción que los cobra en cuenta y tiempo a la sucursal que usan
+  (`P10_3_1/2`), en localidades de menos y de más de 15 mil habitantes. Es nacional, sin municipio.
+
+### C. DENUE con más detalle (localidad, diseño entre actualizaciones)
+
+Especificación base: ATT(17, 18), controles a ≥10 km, covariables base, errores agrupados por
+municipio y placebo ATT(17, 8).
+
+- **C1. Por sector** (familia `denue_sectores`, con Romano–Wolf): establecimientos por mil
+  habitantes en comercio al por menor (46), alimentos y hospedaje (72), otros servicios (81),
+  manufactura (31-33) y el resto.
+  - **Prueba de composición:** consumo amplio (46 + 72 + 81) contra el resto, en % de la media
+    previa de cada uno. La diferencia se calcula con la covarianza de las funciones de influencia,
+    como en `08_disenos_alternativos.R`.
+  - Canal de gasto: diferencia positiva y significativa. Medición: diferencia ≈ 0.
+  - Las tortillerías y panaderías (3118) quedan en manufactura: el SCIAN a 2 dígitos no las separa,
+    y dejarlas en el resto juega en contra del canal.
+- **C2.** Emprendimiento sin los SCIAN 52 ni 93 (quita la sucursal misma y las oficinas de
+  gobierno).
+- **C3. Reubicación dentro del municipio.**
+  - Falsas tratadas: localidades sin sucursal a ≥10 km de cualquier sucursal, en municipios cuya
+    primera apertura cae entre 2020S1 y 2024S1, con la cohorte g = 17.
+  - Controles: localidades sin sucursal a ≥10 km en municipios sin apertura en la ventana BDIF.
+  - Si hay reubicación hacia la zona de la sucursal, el efecto es negativo.
+  - **C3b.** La especificación base con controles a ≥10 km **y** en municipios sin apertura, para
+    situar el +10.4% (≥10 km) y el +5.2% (municipal).
+- **C4. Dosis por intensidad de programas.**
+  - Terciles municipales de la cobertura previa de programas: A2 en el primer periodo del padrón
+    de 2019. Si no existe, la proporción de 65+ del Censo 2020.
+  - CS dentro de cada tercil, con tratadas y controles del mismo tercil, y el contraste T3 − T1
+    (muestras de municipios distintos, así que las varianzas se suman).
+  - Canal de gasto: el efecto crece con el tercil.
+- **C5. Radios en niveles** (reexpresión de efectos causales; las bandas que reprueban se marcan).
+  - Bandas: propia, [0, 1), [1, 2), [2, 3), [3, 5), [5, 7.5) y [7.5, 10) km, contra los mismos
+    controles a ≥10 km.
+  - Para cada banda: el efecto en establecimientos por mil y los establecimientos implicados (ATT ×
+    población / 1,000, con su IC).
+  - La proporción del total implicado que cae en la localidad con sucursal.
+- **C6. Placebo de cabeceras.**
+  - Falsas tratadas: cabeceras municipales sin sucursal, a ≥10 km de cualquier sucursal, en
+    municipios sin apertura, con la cohorte g = 17.
+  - Controles: los controles base a ≥10 km que no son cabecera.
+  - C6b: lo mismo con los controles de 2,500 habitantes o más, dentro del régimen de recorrido
+    total de los Censos.
+  - Si las cabeceras sin sucursal ganan lo mismo, el +10% es de cabecera o de medición.
+
+**Lectura del +10% del DENUE** (fijada antes; se escribe en el trabajo final tal como salga):
+- **"Efecto de zona compatible con el gasto de los programas"** solo si se cumplen las tres:
+  1. C1: la diferencia entre consumo amplio y el resto es positiva, con p &lt; 0.05 y ambos con
+     previos planos;
+  2. C4: T3 − T1 es positivo, con p &lt; 0.05;
+  3. C6: el placebo no es significativo y su IC90 queda por debajo de +5.2% (la mitad del efecto).
+  - Aun así no se afirma causalidad plena: siguen el gradiente nulo por exposición (2022 ≈
+    2023–24) y la sensibilidad de HonestDiD en M̄ = 1.
+- **"Medición o efecto de cabecera"** si C6 es significativo y de +5.2% o más.
+- **"No se distingue entre gasto y medición"** en cualquier otro caso.
+- Un C3 negativo y significativo reconcilia el efecto de zona con el nulo de los Censos Económicos
+  municipales, pero no decide la lectura por sí solo.
+
+### D. Nunca tratados
+
+- Una tabla única con el grupo de control del lado financiero: base, solo nunca tratados, solo los
+  que abren, nunca tratados emparejados, sin vecinos tratados y el apilado (limpios contra solo
+  nunca tratados). Son estimaciones ya hechas (`rob_*`, `fase4_controles.csv`, `apilado_*`), más
+  la deriva del efecto inyectado.
+- Para el DENUE: las variantes de control ya estimadas más C3, C3b y C6.
+- **Opcional, solo con el visto bueno de Andrés** (por tiempo): el diagnóstico de deriva
+  (`15_poder_inyectado.R diagnostico`) para banca múltiple y EACP, con los criterios del
+  2026-11-04.
+
+### Lo que no se hace
+
+- **Volver a bajar el DENUE para separar altas de establecimientos:** son ~2 h 15 min, y
+  `fecha_alta` es la entrada al directorio, no la apertura del negocio.
+- **Montos por programa de la ENIGH** (claves P101–P108): la muestra municipal rota y el MDE80 va
+  de 15% a 480%.
+- **Controles aún no tratados en el DENUE entre actualizaciones:** ninguna localidad abre después
+  de 2024S1.
+
+### Adenda de datos de la fase 6 (2026-11-17, antes de estimar)
+
+**El padrón no tiene el historial agregado que suponía el bloque A.** Revisión del portal
+pub.bienestar.gob.mx:
+- **Historia de padrones** (`/v2/api/resume/publish/history`): 28 filas, todas de programas ya
+  terminados (S155, S241, E003, U012…). Ninguno de los ocho que paga el banco. Se guardó en
+  `data/raw/pub_bienestar/historia_2026-11-17.json` como evidencia.
+- **Consolidado municipal vigente** (`/data/v2/cons/consMpo<edo>.xlsx`): beneficiarios únicos y
+  monto por municipio. Es **una sola foto**, con corte de octubre de 2026 y el último periodo
+  publicado de cada programa.
+  - El monto suma periodos distintos (trimestrales, bimestrales y anuales; hay restos de 2022), así
+    que solo sirve para comparar municipios entre sí.
+  - Claves INEGI: 2,469 de 2,478 cruzan con el Censo 2020; las 9 restantes son municipios creados
+    después y van con el crosswalk.
+  - 187,928 beneficiarios (0.4%) vienen sin municipio y se descartan.
+- **Periodos anteriores de los programas vigentes.** La pensión de adultos mayores tiene bimestres
+  desde enero de 2019, pero **solo como listas de personas con nombre e importe** (unos 200 MB por
+  bimestre, ~9 GB en total). Por el preregistro no se bajan.
+- El consolidado estatal trimestral (`conest/<AAAA>T<q>.xlsx`, desde 2019T1) trae beneficiarios
+  por programa y estado: no permite un DiD municipal.
+
+**Decisión (Andrés, 2026-11-17): adenda sin historial.**
+- **A deja de ser causal; la familia `programas` desaparece.** La cantidad se responde con:
+  - **A-EIC:** la proporción de hogares que reciben programas (Encuesta Intercensal 2015, Censo
+    2020 y EIC 2025) ya está estimada en la fase 2: +2.07 puntos (ee 0.72), pero el placebo
+    2015→2020 da −3.19 y reprueba la pre-prueba. Por la regla es **descriptiva**; no se vuelve a
+    estimar.
+  - **A-foto (descriptivo):** corte transversal de octubre de 2026 por municipio, con beneficiarios
+    únicos por cada 100 habitantes (Censo 2020) y monto por habitante. Compara a las tratadas
+    (2022T1–2024T1) con los nunca tratados y los ya tratados, en bruto y ajustado por las
+    covariables financieras, la proporción de 65+ y efectos fijos de estado. Sin periodo previo no
+    es causal, y así se dirá.
+  - **Siguiente paso:** pedir por transparencia el agregado municipal por bimestre de la pensión
+    de adultos mayores y de las becas.
+- **B2:** el denominador es la foto de beneficiarios únicos de octubre de 2026, contra las
+  transacciones en los cajeros del banco del Portafolio en 2026.
+- **C4:** se usa el respaldo preregistrado, la proporción de 65+ del Censo 2020 (`pob65_mas /
+  pobtot`), que además es previa al tratamiento. La foto de 2026 no sirve para la dosis porque es
+  posterior.
+- BH se aplica sobre las especificaciones restantes de la fase (C1–C6).
+
+### Resultados de la fase 6 (corrida del 2026-11-17)
+
+`make panel-fase6 descriptivos-fase6 fase6`, unos 3 min; registro en
+`outputs/logs/fase6_20261117_192439.log`. Salidas `outputs/tablas/fase6_*.csv`. La prueba de humo
+(scratchpad, `PROYECTO_NBOOT=49`) dio los mismos puntos y errores estándar: los ee salen de la
+función de influencia y no dependen del bootstrap.
+
+**A. ¿Más programas? No se puede afirmar** (`fase6_pub_*`, descriptivo).
+- En la foto de octubre de 2026, los municipios tratados tienen 5.2 beneficiarios más por cada 100
+  habitantes (ee 1.7) y 411 pesos más por habitante (ee 96) que los municipios sin apertura. Es
+  condicional en las covariables financieras, la proporción de 65+ y efectos fijos de estado.
+- Los ya tratados también tienen más: +4.6 beneficiarios y +530 pesos.
+- Sin periodo previo no se distingue de que el banco haya abierto donde ya había más beneficiarios.
+- La EIC (+2.07 puntos de hogares con programas) sigue reprobando la pre-prueba.
+
+**B. Conveniencia: el acceso sí cambió mucho** (descriptivo).
+- **B1, distancia de los 65+ a la sucursal del banco más cercana** (`fase6_accesibilidad.csv`):
+  - promedio: de 8.0 km en 2019T1 a 2.9 km en 2024T4 (cota pesimista: de 9.8 km). *Corregido el
+    2026-11-18: con la versión central, de 9.5 km a 2.9 km (ver la revisión abajo).*
+  - a 10 km o menos: de 73% a 92% (cota pesimista en 2019: 67%);
+  - en municipios de marginación muy alta: de 35% a 78% a ≤10 km;
+  - en localidades de menos de 2,500 habitantes: de 36% a 70%.
+  - Casi todo el cambio ocurre entre 2021T4 y 2023T4. Solo cuenta sucursales del banco; los pagos
+    previos por Telecomm, mesas de atención o tarjetas de otros bancos no están medidos.
+- **B2, cobro local** (`fase6_cobro_local.csv`, ene–jul 2026): por beneficiario único y por
+  bimestre hay 0.54 transacciones en cajeros del banco en los municipios tratados, 0.36 en los ya
+  tratados y 0.02 en los que no tienen sucursal. Más de la mitad de los pagos bimestrales pasa por
+  un cajero del banco en el propio municipio; el resto se cobra en ventanilla o en otros canales, que
+  no se observan.
+- **B3, ENIF** (`fase6_enif_apoyos.csv`), entre quienes reciben apoyos de gobierno:
+  - con cuenta para recibirlos: de 63% (2021) a 91% (2024); en localidades de menos de 2,500
+    habitantes, de 61% a 93%;
+  - usaron una sucursal: de 35% a 51%;
+  - tiempo a la sucursal en localidades de menos de 2,500: mediana de 40 minutos en los dos años
+    (media de 57 a 50 minutos).
+
+**C. DENUE con más detalle.**
+- **C5, radios en niveles** (`fase6_radios_*`): el **87%** de los establecimientos de más está en
+  la localidad con sucursal, unos 57 mil (ee 8.7 mil). *Corregido el 2026-11-18: ese reparto usa el
+  ATT sin ponderar; ponderado por población, la localidad con sucursal tiene 60% y lo robusto es que
+  más del 90% está a menos de 3 km (ver la revisión abajo).* Por banda:
+  - 0–1 km: 2.4%, con previos planos;
+  - 1–2 km: 4.7%; 2–3 km: 3.5%; 3–5 km: 2.0%, las tres con pre-prueba fallida;
+  - más allá de 5 km: ≈ 0.
+  - El perfil "plano" del % salía de medir cada banda contra su propia media: **la lectura del
+    2026-10-02 ("no se concentra en la localidad con sucursal") se retira.**
+- **C1, por sector** (`fase6_sectores.csv`, `fase6_composicion.csv`):
+  - comercio al por menor +7.9%, alimentos +9.4% y otros servicios +7.6%: los tres reprueban la
+    pre-prueba;
+  - manufactura +18.2% (Wald 0.69) y el resto +14.3% (Wald 0.71), con previos planos y Romano–Wolf
+    p &lt; 0.01;
+  - composición: consumo amplio − resto = −6.2 puntos (p = 0.045), en contra del canal de gasto.
+    Además el consumo amplio reprueba la pre-prueba.
+- **C2:** sin los SCIAN 52 ni 93, +9.9%, pero reprueba (Wald 0.010).
+- **C3, reubicación:** las localidades lejanas de los municipios que abren ganan +0.71 por mil
+  contra las de municipios sin apertura (25.6% de una media de 2.8; p = 0.10). Reprueba la
+  pre-prueba (0.048). **No hay señal de reubicación:** el signo es el contrario.
+- **C3b:** con controles a ≥10 km **y** en municipios sin apertura, el efecto es el mismo +10.4%
+  (Wald 0.037). El +5.2% de la variante "municipal" venía de controles a menos de 10 km de una
+  sucursal, que también ganan, no de usar municipios nunca tratados.
+- **C4, dosis por proporción de 65+:** T1 +12.9%, T2 +9.5%, T3 +13.9%; T3 − T1 = +1.0 puntos
+  (p = 0.82). Sin gradiente.
+- **C6, placebo de cabeceras** (159 cabeceras sin sucursal): −2.7% (ee 8.5%; Wald 0.20), no
+  informativo. C6b (controles de 2,500+): −8.2%, reprueba.
+- **Lectura preregistrada** (`fase6_lectura_denue.csv`): **"no se distingue entre gasto y
+  medición"**. No se cumple ninguna de las condiciones: el efecto no se concentra en el consumo, no
+  crece con la proporción de 65+ y el placebo de cabeceras no es preciso.
+  - El aumento sí se concentra en la localidad con sucursal (C5) y no depende de comparar contra
+    municipios nunca tratados (C3b).
+  - Sigue sin dosis por exposición y sin reflejo en los Censos municipales, la EIC ni VIIRS.
+
+**D. Nunca tratados** (`fase6_controles.csv`).
+- Financiero: ninguna variante del grupo de control sale de ±5% en el centro.
+  - Privadas: de −1.95% (solo los que abren) a +2.3% (emparejados).
+  - Solo nunca tratados: +0.9% (privadas), −1.6% (banca múltiple) y +2.8% (EACP).
+  - Las cotas van de 2.0% a 7.4% (la mayor, en la muestra emparejada de 320 contra 320).
+- La deriva al barajar fechas (+1.9%) está en `fase6_deriva_nunca_tratados.csv`. El diagnóstico
+  para banca múltiple y EACP se corrió el 2026-11-18 (abajo).
+- DENUE: las variantes de control dan de +9.7% a +10.4%, salvo las que usan controles cercanos a
+  una sucursal (municipal 5.2%, todos 4.9%) o sin covariables (17.3%).
+
+**Lectura para el trabajo final.**
+- El banco cumplió su objetivo de acercar el cobro: los adultos mayores quedaron, en promedio, a
+  menos de 3 km de una sucursal, y 9 de cada 10 beneficiarios ya cobran en cuenta. Si eso aumentó
+  la cantidad de programas no se puede saber con datos públicos.
+- El aumento del DENUE se concentra en la localidad con sucursal, pero no se puede atribuir al
+  gasto de los programas ni descartar como medición.
+
+### Revisión de código de la fase 6 (2026-11-18)
+
+Revisión del código y del texto antes de cerrar. Cinco correcciones; ninguna cambia la lectura
+preregistrada del DENUE ni el nulo financiero.
+
+1. **El texto decía que el IC90 descarta ±5% "con cualquier grupo de control".** Es falso para
+   los nunca tratados emparejados (cota 7.4%, 320 contra 320) y para EACP solo con nunca tratados
+   (6.3%). Lo que vale para todas las variantes es el centro (de −1.9% a +2.3% en privadas). Se
+   corrigieron el resumen, el hallazgo 3 y las conclusiones del trabajo final.
+2. **Acceso, versión central.** La cota optimista abría desde 2019T1 todas las sucursales de los
+   municipios heredados de Bansefi, lo que exageraba el acceso de 2019.
+   - Se agregó una versión central (`apertura_central`): en cada municipio con varias sucursales,
+     las localidades abren en orden de población cuando el conteo municipal de la BDIF alcanza la
+     suya.
+   - Es la que se reporta: los 65+ pasan de 9.5 km a 2.9 km; a ≤10 km, de 68% a 92%; en
+     marginación muy alta, de 26% a 78%; en localidades de menos de 2,500 habitantes, de 25% a 70%.
+   - Las cotas (8.0 y 9.8 km en 2019) van en la nota de la tabla.
+3. **Radios: el ATT sin ponderar no da totales.** Multiplicar el efecto promedio por localidad por
+   la población del grupo solo da los establecimientos implicados si el efecto por mil no depende
+   del tamaño.
+   - Con la población como peso (`estimar_ponderado`), la localidad con sucursal pasa de 87% a
+     60.5% (26.7 mil, ee 12.1 mil), y las vecinas a 0–3 km suman 32.7%.
+   - Lo robusto a las dos versiones es que **más del 90% está a menos de 3 km** (93.3% ponderado,
+     97.7% sin ponderar).
+   - El efecto ponderado de la propia localidad (3.4 por mil) es menor que el promedio (7.2): las
+     localidades grandes ganan menos por habitante, y las vecinas grandes a menos de 1 km ganan
+     más (6.0 contra 2.5). Esto es compatible con un crecimiento de la mancha urbana junto a la
+     cabecera.
+4. **Cobro local: claves.** Las transacciones del Portafolio vienen en claves vigentes del INEGI y
+   no se pasaban por el crosswalk. Se perdían 16 municipios nuevos, el 0.6% de las transacciones.
+   Corregido; la razón sigue en 0.54 por beneficiario y bimestre.
+5. **Foto del padrón: grupo tratado.** Incluía 5 aperturas fuera de 2022T1–2024T1. Ahora el grupo
+   es exactamente la muestra financiera (1,457) y las demás van a `otras_aperturas`, que sale del
+   contraste. La diferencia ajustada queda en +5.2 beneficiarios por cada 100 habitantes (ee 1.7).
+
+### Diagnóstico de deriva en banca múltiple y EACP (2026-11-18, exploratorio)
+
+El opcional de D, autorizado por Andrés. Mismos tres diseños y criterios que el del 2026-11-04 para
+sucursales privadas, con 200 réplicas cada uno (`PODER_RESULTADO=<resultado> Rscript
+analisis/15_poder_inyectado.R diagnostico`). Salidas
+`outputs/tablas/poder_inyectado_diagnostico_sucursales_{bm,eacp}_pc.csv`.
+
+| Fechas barajadas | Banca múltiple: centro (falsos positivos) | EACP: centro (falsos positivos) |
+|---|---|---|
+| Entre tratadas, nunca tratadas fijas | +1.00% (0%) | +2.56% (15%) |
+| Entre todas las unidades | −0.39% (2.5%) | +1.25% (4%) |
+| Solo entre las que abren | +0.09% (2%) | −0.06% (2%) |
+| **Estimación real:** base / solo por calendario | −0.24% / −0.18% | +1.45% / −3.32% (p de aleatorización 0.14) |
+
+- **La deriva positiva de comparar contra los nunca tratados aparece en las tres series:** +1.9% en
+  privadas, +1.0% en banca múltiple y +2.6% en EACP. En EACP llega a 15% de falsos positivos.
+- **Solo por calendario no hay señal de atracción en ninguna.**
+  - Banca múltiple: −0.2% (cota 1.9%): nulo informativo también así.
+  - EACP: −3.3% (cota 7.0%; p = 0.14). **No se descarta un desplazamiento de EACP de hasta 7%.**
+- Cambia la frase de las conclusiones: en EACP, el ±5% vale con la especificación principal (cota
+  4.3%), pero no comparando solo por calendario. Va en limitaciones, en las conclusiones y en el
+  apéndice del efecto inyectado.
+
 ## Propuestas y pendientes
 
 > **Nota del 2026-09-26.** El rediseño cierra P-1, P-2, P-6 y P-7 en el sentido que indica la

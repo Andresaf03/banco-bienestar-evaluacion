@@ -314,3 +314,19 @@ enigh:
   frecuencia: "bienal (2016–2024)"
   metodo_descarga: "automatica"
   estado: descargada
+
+pub_bienestar:
+  nombre: "Secretaría de Bienestar, Padrón Único de Beneficiarios (PUB): agregados municipales por programa y periodo"
+  descripcion: >
+    Consolidado municipal vigente (beneficiarios únicos y monto por municipio; una sola foto, corte
+    oct-2026), enlazado desde `/pub/agregado`. La historia de padrones (`/v2/api/resume/publish/history`,
+    de `/pub/historyProgram`) solo trae agregados de programas terminados; los periodos anteriores de
+    los programas vigentes solo existen como listas de personas con nombre, que no se bajan.
+  url_pagina: "https://pub.bienestar.gob.mx/pub/agregado"
+  url_base: "https://pub.bienestar.gob.mx"
+  ruta_historia: "/v2/api/resume/publish/history"
+  ruta_consolidado_municipal: "/data/v2/cons/consMpo{edo}.xlsx"
+  uso: "Fase 6 (adenda): denominador de B2 y corte transversal descriptivo de beneficiarios y montos por municipio"
+  frecuencia: "foto única (corte de octubre de 2026)"
+  metodo_descarga: "automatica"
+  estado: descargada

@@ -8,7 +8,7 @@ QUARTO   ?= quarto
 
 FUENTES  := cnbv_bdif cnbv_portafolio denue babien inegi_mg conapo_marginacion conapo_proyecciones inegi_censo literatura inegi_ce enif banxico_remesas imss
 
-.PHONY: help setup descargar $(addprefix descargar-,$(FUENTES)) auditar limpiar tratamiento anillos panel matching descriptivos estimar robustez heterogeneidad inferencia alternativos bateria bateria-financiera bateria-fase1 bateria-alternativos reporte entregables test lint descargar-fase2 limpiar-fase2 panel-fase2 fase2 bateria-fase2 descargar-fase3 limpiar-fase3 panel-fase3 fase3 bateria-fase3 diagnosticos descargar-fase4 limpiar-fase4 panel-fase4 fase4 bateria-fase4 presentacion-cdaii presentacion-ppii uso poder-inyectado app-datos app app-build publicar-repo
+.PHONY: help setup descargar $(addprefix descargar-,$(FUENTES)) auditar limpiar tratamiento anillos panel matching descriptivos estimar robustez heterogeneidad inferencia alternativos bateria bateria-financiera bateria-fase1 bateria-alternativos reporte entregables test lint descargar-fase2 limpiar-fase2 panel-fase2 fase2 bateria-fase2 descargar-fase3 limpiar-fase3 panel-fase3 fase3 bateria-fase3 diagnosticos descargar-fase4 limpiar-fase4 panel-fase4 fase4 bateria-fase4 presentacion-cdaii presentacion-ppii uso poder-inyectado app-datos app app-build publicar-repo descargar-fase6 limpiar-fase6 panel-fase6 descriptivos-fase6 fase6 bateria-fase6
 
 help:
 	@echo "Objetivos:"
@@ -40,6 +40,8 @@ help:
 	@echo "  bateria-fase3         fase 3: delitos y elecciones (analisis/11_fase3.R) y entregables"
 	@echo "  descargar-fase4       fase 4: ENIGH 2016–2024 (datos abiertos del INEGI; FORCE=1)"
 	@echo "  bateria-fase4         fase 4: efectos fijos, controles, derrames, bancarización, uso y ENIGH (analisis/13_fase4.R)"
+	@echo "  descargar-fase6       fase 6: consolidado municipal del padrón de Bienestar (agregados; FORCE=1)"
+	@echo "  bateria-fase6         fase 6: acceso, cobro local, ENIF, DENUE por sector, radios, placebos (analisis/16_fase6.R)"
 	@echo "  test                  pytest"
 	@echo "  lint                  ruff check + format --check"
 
@@ -261,3 +263,23 @@ fase4:
 	$(RSCRIPT) analisis/13_fase4.R todo
 
 bateria-fase4: limpiar-fase4 panel-fase4 fase4 entregables
+
+# Fase 6 (preregistro y adenda 2026-11-17, docs/decisiones.md): programas, conveniencia y el DENUE
+# con más detalle. Parte de `panel_localidad` y del padrón de Bienestar; fuera de la maestra.
+descargar-fase6:
+	$(PY) -m proyecto.descarga fase6 $(FORCE_FLAG)
+
+limpiar-fase6:
+	$(PY) -m proyecto.limpieza fase6
+
+panel-fase6:
+	$(PY) -m proyecto.construccion.panel_fase6
+
+descriptivos-fase6:
+	$(PY) -m proyecto.variables.accesibilidad
+	$(PY) -m proyecto.utils.fase6_descriptivos
+
+fase6:
+	$(RSCRIPT) analisis/16_fase6.R todo
+
+bateria-fase6: limpiar-fase6 panel-fase6 descriptivos-fase6 fase6 entregables

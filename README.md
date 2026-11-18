@@ -23,14 +23,20 @@ materias: **Tópicos de Política Pública II** y **Ciencia de Datos Aplicada II
 2. **No atrajo ni desplazó a la banca privada.** Sucursales privadas +0.007 por 10 mil adultos
    (ee 0.009), +0.7% de la media previa; banca múltiple −0.2% y EACP +1.5%. Una prueba de efecto
    inyectado muestra que el diseño detecta un efecto de ±5% entre 90% y 98% de las veces: se
-   descartan efectos mayores a ±5%.
+   descartan efectos mayores a ±5%. Con otros grupos de control (solo nunca tratados, solo los que
+   abren, emparejados) el centro va de −1.9% a +2.3%.
 3. **Las cuentas casi no dan crédito.** Donde abre, el banco suma +1,316 contratos de captación y
    +6.2 créditos por 10 mil adultos (exploratorio). En 2025T4 tenía 0.5 créditos por cada 100
    cuentas, contra 61 en la banca múltiple.
-4. **El aumento del DENUE no es de la sucursal.** Los establecimientos suben 10.4% en las
-   localidades con sucursal, pero lo mismo en las vecinas a menos de 2 km, sin dosis por antigüedad
-   y sin reflejo en los Censos Económicos (−0.9%) ni en la Encuesta Intercensal (dueños de negocio
-   −1.2 puntos). Se lee como medición del padrón, no como efecto.
+4. **Acercó el cobro de los programas.** Los adultos de 65 años o más pasaron de 9.5 km a 2.9 km de
+   una sucursal del banco, y los que viven a 10 km o menos, de 68% a 92% (en los municipios de
+   marginación muy alta, de 26% a 78%). Si llegaron *más* programas no se puede saber con datos
+   públicos: el padrón por municipio y periodo solo existe como listas de personas.
+5. **Un aumento del DENUE que no se puede atribuir.** Los establecimientos suben 10.4% en las
+   localidades con sucursal, y más del 90% del aumento queda a menos de 3 km de ella. Pero no se
+   concentra en el comercio, no crece con la antigüedad de la sucursal ni con los adultos mayores, y
+   no aparece en los Censos Económicos (−0.9%) ni en la Encuesta Intercensal. Con la regla
+   preregistrada, no se distingue entre gasto de los programas y medición del padrón.
 
 ![Estudio de evento de las sucursales privadas por 10 mil adultos](outputs/figuras/ppii_evento_privadas.png)
 
@@ -48,7 +54,7 @@ Documentos listos para leer, en `entregables/renderizados/`:
 | [`trabajo_final.pdf`](entregables/renderizados/trabajo_final.pdf) | PPII | Trabajo final (versión de noviembre; se entrega el 7 de diciembre de 2026) |
 | [`metodologia.pdf`](entregables/renderizados/metodologia.pdf) | PPII | Descripción de la metodología |
 | [`propuesta_v1_entregada.pdf`](entregables/01_propuesta/propuesta_v1_entregada.pdf) | PPII | Propuesta |
-| [`presentacion_ppii.pdf`](entregables/renderizados/presentacion_ppii.pdf) (y `.pptx`) | PPII | Presentación de 12 minutos con notas del presentador |
+| [`presentacion_ppii.pdf`](entregables/renderizados/presentacion_ppii.pdf) (y `.pptx`) | PPII | Presentación de 12 minutos con notas del presentador, tal como se dio el 17 de noviembre; el trabajo final incorpora los comentarios de esa sesión (acceso al cobro y una lectura más fina del DENUE) |
 | [`presentacion_cdaii.pdf`](entregables/renderizados/presentacion_cdaii.pdf) (y `.pptx`) | CDA II | Presentación de la aplicación |
 
 Los PDF y los `.pptx` se generan desde las fuentes del repositorio (`make entregables`,
@@ -89,6 +95,7 @@ mano siguiendo `docs/descarga_manual.md`.
 | INEGI: DENUE, Censos Económicos, Censo 2020, Encuesta Intercensal, Marco Geoestadístico, ENOE, ENIGH, EFIPEM | Actividad local, población, covariables y límites |
 | CONAPO | Índice de marginación y proyecciones de población |
 | IMSS, Banxico, SESNSP, INE, VIIRS (Zenodo) | Empleo formal, remesas, delitos, elecciones y luz nocturna |
+| Secretaría de Bienestar (Padrón Único de Beneficiarios, agregado municipal); INEGI y CNBV (ENIF 2021 y 2024) | Beneficiarios por municipio y acceso al cobro de los programas |
 
 Las tablas derivadas sí están: estimaciones en `outputs/tablas/`, figuras en `outputs/figuras/` y los
 datos agregados de la aplicación en `app/public/datos/`.
@@ -105,6 +112,7 @@ make descargar     # descargas idempotentes; FORCE=1 para volver a bajar
 make limpiar       # data/interim/*.parquet y docs/diccionarios/
 make panel         # paneles en data/processed/
 make bateria       # corrida preregistrada completa (~55 min)
+make bateria-fase6 # acceso al cobro, ENIF y pruebas del DENUE de la fase 6 (~3 min)
 make entregables   # figuras, tablas, trabajo_final.pdf y presentación
 make test          # pytest
 ```
@@ -131,7 +139,7 @@ En macOS, si `git` o `make` fallan por la licencia de Xcode, usa los binarios de
 config/          fuentes.yaml (URL y estado de cada fuente) · parametros.yaml (periodo, umbrales, semillas)
 data/            raw/ · manual/ · interim/ · processed/            [sin datos; solo MANIFEST.csv]
 src/proyecto/    descarga/ · limpieza/ · construccion/ · variables/ · utils/   (Python)
-analisis/        00_utils … 15_poder_inyectado                                  (R)
+analisis/        00_utils … 16_fase6                                            (R)
 outputs/         tablas/ (estimaciones en CSV) · figuras/
 entregables/     01_propuesta … 06_politica_publica · _tablas/ · renderizados/ (PDF y pptx)
 app/             aplicación web (Vite, React, MapLibre, Observable Plot)
@@ -142,8 +150,9 @@ GUIA.md          guía completa: datos, diseño, resultados, problemas y pregunt
 
 ## Documentación
 
-- [`GUIA.md`](GUIA.md): todo el proyecto en un solo documento, con las preguntas probables y cómo
-  responderlas.
+- [`GUIA.md`](GUIA.md): todo el proyecto en un solo documento.
+- [`docs/contexto/preguntas_defensa.md`](docs/contexto/preguntas_defensa.md): las preguntas probables,
+  con la cifra y dónde está cada respuesta.
 - [`docs/decisiones.md`](docs/decisiones.md): preregistro, adendas y decisiones con fecha.
 - [`docs/data_audit.md`](docs/data_audit.md): qué permiten los datos y qué no.
 - [`docs/diccionarios/`](docs/diccionarios/): variables de cada fuente y de cada panel.

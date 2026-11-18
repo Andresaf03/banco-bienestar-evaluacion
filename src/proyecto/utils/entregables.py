@@ -789,6 +789,10 @@ def generar() -> list[Path]:
             },
         ),
     }
+    # Fase 6: módulo aparte; cada tabla se omite si faltan sus insumos (`make bateria-fase6`).
+    from proyecto.utils.entregables_fase6 import TABLAS_FASE6
+
+    tablas.update(TABLAS_FASE6)
     escritos = []
     for nombre, f in tablas.items():
         contenido = f()

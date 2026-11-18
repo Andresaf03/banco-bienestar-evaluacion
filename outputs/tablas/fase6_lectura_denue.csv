@@ -1,0 +1,5 @@
+condicion,cumple,lectura
+"C1 consumo amplio > resto (p < 0.05, ambos con previos planos)",FALSE,no se distingue entre gasto y medición
+C4 T3 > T1 en % (p < 0.05),FALSE,no se distingue entre gasto y medición
+C6 placebo no significativo y con IC90 < +5.2%,FALSE,no se distingue entre gasto y medición
+C6 placebo significativo y de +5.2% o más (medición),FALSE,no se distingue entre gasto y medición

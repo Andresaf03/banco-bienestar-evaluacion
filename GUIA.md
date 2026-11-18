@@ -395,6 +395,10 @@ del municipio. **No** lo leemos como efecto causal de la sucursal.
 
 ## 12. Preguntas probables y cómo responderlas
 
+> La versión completa y vigente (2026-11-18), con las preguntas de la presentación de PPII, está en
+> `docs/contexto/preguntas_defensa.md`. Lo de abajo es la versión de octubre, corregida donde la
+> fase 6 cambió la lectura.
+
 **¿Por qué no TWFE?** Con adopción escalonada y efectos heterogéneos, el TWFE promedia
 comparaciones "prohibidas" con pesos que pueden ser negativos (Goodman-Bacon, 2021). Lo reportamos
 como contraste. En el panel completo del DENUE, el 98.8% de su peso viene de comparar tratadas
@@ -407,14 +411,15 @@ rurales. Con nunca tratados como control el nulo financiero no cambia; está en 
 grande. Además, el municipio entre actualizaciones reprueba su placebo (−19.8, ee 6.9). La BDIF sí
 es municipal porque así se publica.
 
-**¿El +10% del DENUE no es un efecto?** Es un aumento robusto en el padrón, pero:
+**¿El +10% del DENUE no es un efecto?** Es un aumento robusto en el padrón, concentrado a menos de
+3 km de la sucursal (más del 90%), pero:
 
 - no crece con la exposición;
-- se extiende a las vecinas sin sucursal;
-- no aparece en los Censos Económicos;
-- comercio y salud reprueban la pre-prueba.
+- no se concentra en el comercio, que ya crecía más antes de abrir;
+- no es mayor donde viven más adultos mayores;
+- no aparece en los Censos Económicos.
 
-Lo reportamos como hecho, no como efecto.
+Con la regla preregistrada de la fase 6, no se distingue entre gasto de los programas y medición.
 
 **¿Y si la diferencia es por cómo el INEGI levanta el censo?** Lo probamos: dentro del mismo régimen
 de levantamiento el aumento se mantiene. No es eso.
@@ -422,8 +427,9 @@ de levantamiento el aumento se mantiene. No es eso.
 **¿Por qué excluyen al propio banco?** Porque dispersa programas sociales en cuentas propias: sus
 cuentas suben por construcción. Lo medimos aparte, como primera etapa.
 
-**¿Cómo saben que el nulo no es falta de potencia?** Por la prueba de equivalencia. Los intervalos
-al 90% descartan efectos mayores a ±2–4%, por debajo del +7.6% de Bruhn y Love (2014).
+**¿Cómo saben que el nulo no es falta de potencia?** Por la prueba de equivalencia y el efecto
+inyectado. Los intervalos al 90% descartan efectos mayores a ±5%, por debajo del +7.6% de Bruhn y
+Love (2014), y un efecto de ±5% inyectado en los datos se detecta entre 90% y 98% de las veces.
 
 **¿Qué pasa con Banjército?** Se descuenta con el Portafolio de la CNBV. Los 8 municipios dudosos
 salen; incluirlos no cambia nada.
@@ -569,3 +575,21 @@ correr `make bateria-fase2`.
   identificado: falla la pre-prueba.
 - La validez externa sigue abierta: la ENOE no tiene potencia con la muestra balanceada.
 
+
+## 17. Fase 6: programas, acceso y el DENUE (17 de noviembre)
+
+Después de presentar en PPII nos preguntaron cuatro cosas. Preregistro, adenda y resultados en
+`docs/decisiones.md`; código en `variables/accesibilidad.py`, `utils/fase6_descriptivos.py`,
+`construccion/panel_fase6.py` y `analisis/16_fase6.R` (`make bateria-fase6`, unos 3 minutos).
+
+| Pregunta | Respuesta | Tipo |
+|---|---|---|
+| ¿Más programas o más conveniencia? | Más cerca: los 65+ pasaron de 9.5 km a 2.9 km de una sucursal del banco; 91% de quienes reciben apoyos tienen cuenta para cobrarlos (63% en 2021). Si llegaron **más** programas no se puede saber: el padrón histórico por municipio solo existe como listas con nombre. | descriptivo |
+| ¿Cumple su objetivo de dispersar mejor? | En acceso, sí: a ≤10 km de 68% a 92% de los 65+, y en marginación muy alta de 26% a 78%. Es el Objetivo 3 de su Programa Institucional. | descriptivo |
+| Los radios del DENUE | En niveles, más del 90% del aumento está a menos de 3 km de la sucursal (93% ponderando por población). El perfil "plano" salía de medir cada banda en % de su propia media. | reexpresión causal |
+| ¿Es gasto de los programas? | No se distingue: no se concentra en consumo, no crece con la proporción de 65+, el placebo de cabeceras es impreciso. | preregistrado |
+| ¿Aguanta sin los nunca tratados? | Sí. Financiero: ninguna variante sale de ±5%. DENUE: con controles solo de municipios sin apertura, el mismo +10.4%. | causal |
+
+**Cómo cambia la lectura.** Ya no decimos que el +10% del DENUE "no es de la sucursal" ni que "se
+extiende a las vecinas": se concentra en la localidad con sucursal, pero no lo podemos atribuir al
+gasto de los programas ni descartar como medición.

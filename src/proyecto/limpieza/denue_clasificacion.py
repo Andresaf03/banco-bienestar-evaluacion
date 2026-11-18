@@ -6,8 +6,14 @@ Cada establecimiento del DENUE trae `codigo_act` (SCIAN 2018, 6 dígitos). Se cl
   subconjunto de micronegocios de 0 a 5 personas, proxy de autoempleo / informalidad).
 - `consumo`: comercio al por menor (46) y servicios de alimentos y bebidas (722).
 - `salud`: servicios médicos (62) y farmacias (46411, dentro de comercio al por menor).
-- `financiero`: banca múltiple (5221), cajas de ahorro popular y otras instituciones de ahorro
-  (5223), uniones de crédito (5224) y casas de empeño (5222).
+- `financiero`: banca múltiple (5221), instituciones de fomento económico o banca de desarrollo
+  (5222, que incluye al propio Banco del Bienestar), uniones de crédito y cajas de ahorro (5223) y
+  otras intermediarias no bursátiles, como sofomes y casas de empeño (5224).
+
+  Hasta el 2026-11-17 las clases 5222 y 5224 se llamaban `casas_empeno` y `uniones_credito`; las
+  partes ya descargadas conservan esos nombres y `limpieza/denue.py` los traduce (`RENOMBRES`). La
+  serie de 5222 sigue a la red del banco: en las localidades con sucursal nueva pasa de 27
+  establecimientos (2022_11) a 740–832.
 
 Un establecimiento puede caer en varios bloques (una farmacia es `consumo` y `salud`); los
 conteos por bloque no son excluyentes y así se documenta en el diccionario.
@@ -41,9 +47,9 @@ CLASES: dict[str, list[tuple[str, tuple[str, ...]]]] = {
     ],
     "financiero": [
         ("banca_multiple", ("5221",)),
-        ("casas_empeno", ("5222",)),
+        ("banca_desarrollo", ("5222",)),
         ("cajas_ahorro", ("5223",)),
-        ("uniones_credito", ("5224",)),
+        ("otras_intermediarias", ("5224",)),
         ("otros_financiero", ("523", "524", "525")),
     ],
 }

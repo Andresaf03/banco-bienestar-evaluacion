@@ -11,6 +11,11 @@
 #      unidad, así que el bootstrap de `did` coincide con el ee agrupado.
 #   3. fig_decaimiento: efecto del DENUE en % por banda de distancia, con todas las localidades y
 #      solo dentro del régimen de recorrido total de los Censos Económicos.
+#   4. fig_radios (fase 6, C5): el mismo efecto **en niveles** por bandas finas, por mil habitantes
+#      y en establecimientos implicados.
+#   5. fig_acceso (fase 6, B1): adultos de 65 o más a 10 km o menos de una sucursal del banco, por
+#      grado de marginación del municipio.
+# Las figuras de la fase 6 se omiten si sus tablas no existen (`make bateria-fase6`).
 #
 # Salidas: outputs/figuras/fig_*.png. Sin título dentro de la imagen: el título, las notas y la fuente
 # van en el pie de cada figura del documento. Ejes con unidades, sin líneas punteadas y colores que se
@@ -127,10 +132,61 @@ fig_decaimiento <- function() {
   invisible(d)
 }
 
+existe_tabla <- function(nombre) file.exists(file.path(RUTA_TABLAS, paste0(nombre, ".csv")))
+
+fig_radios <- function(resultado = "estab_emprendimiento_pc") {
+  nombre <- paste0("fase6_radios_", resultado)
+  if (!existe_tabla(nombre)) return(message("sin ", nombre, ": se omite fig_radios"))
+  d <- tabla(nombre)
+  d[, banda := factor(banda, levels = banda,
+                      labels = c("Con\nsucursal", sub(" km", "", banda[-1])))]
+  d[, previos := fifelse(pre_wald_p < 0.05, "reprueba pre-prueba", "previos planos")]
+  largo <- rbindlist(list(
+    d[, .(banda, previos, medida = "Por mil habitantes (sin ponderar)", valor = att, ee)],
+    d[, .(banda, previos, medida = "Establecimientos implicados (miles, ponderado)",
+          valor = estab_implicados / 1000, ee = estab_implicados_ee / 1000)]
+  ))
+  largo[, medida := factor(medida, c("Por mil habitantes (sin ponderar)",
+                                      "Establecimientos implicados (miles, ponderado)"))]
+  p <- ggplot(largo, aes(x = banda, y = valor, shape = previos)) +
+    geom_hline(yintercept = 0, colour = "grey40") +
+    geom_pointrange(aes(ymin = valor - 1.96 * ee, ymax = valor + 1.96 * ee), colour = "#1b4965") +
+    scale_shape_manual(values = c("previos planos" = 16, "reprueba pre-prueba" = 1)) +
+    facet_wrap(~ medida, scales = "free_y") +
+    labs(x = "Localidad con sucursal y vecinas sin sucursal, por km de distancia",
+         y = "Efecto en la actualización de 2024", shape = NULL) +
+    tema
+  guardar_figura(p, "fig_radios", ancho = 10, alto = 4.5)
+  invisible(d)
+}
+
+fig_acceso <- function() {
+  if (!existe_tabla("fase6_accesibilidad")) return(message("sin fase6_accesibilidad: se omite"))
+  d <- tabla("fase6_accesibilidad")[poblacion_tipo == "65 y más" & cota == "central" &
+                                      grupo_tipo %in% c("nacional", "marginacion")]
+  niveles <- c("Muy bajo", "Bajo", "Medio", "Alto", "Muy alto")
+  femenino <- c("Muy bajo" = "muy baja", "Bajo" = "baja", "Medio" = "media", "Alto" = "alta",
+                "Muy alto" = "muy alta")
+  d[, grupo := fifelse(grupo_tipo == "nacional", "Nacional", paste("Marginación", femenino[grupo]))]
+  d[, grupo := factor(grupo, c("Nacional", paste("Marginación", femenino[niveles])))]
+  d[, fecha := factor(corte, levels = sort(unique(corte)), labels = sub("Q", "T", sort(unique(corte))))]
+  p <- ggplot(d, aes(x = fecha, y = pct_a_10km, group = grupo, colour = grupo)) +
+    geom_line(linewidth = 0.8) +
+    geom_point(size = 1.8) +
+    scale_colour_manual(values = c("black", "#cfe1ec", "#8fb8d3", "#4f8fba", "#1f6391", "#0b3954")) +
+    scale_y_continuous(limits = c(0, 100)) +
+    labs(x = NULL, y = "% de los adultos de 65 o más a 10 km o menos", colour = NULL) +
+    tema
+  guardar_figura(p, "fig_acceso", ancho = 9, alto = 4.8)
+  invisible(d)
+}
+
 figuras_todo <- function() {
   fig_resumen_efectos()
   fig_evento_financiero()
   fig_decaimiento()
+  fig_radios()
+  fig_acceso()
   message("figuras en ", RUTA_FIGURAS)
 }
 
