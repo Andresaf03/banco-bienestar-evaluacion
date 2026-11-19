@@ -198,10 +198,9 @@ cualquier localidad con sucursal.
 
 ## Primera etapa: el banco abrió cuentas donde llegó
 
-La @fig-evento muestra el salto en sucursales totales: de cero a +2 por 10 mil adultos en el trimestre
-de apertura, con previos planos. Las cuentas propias del banco suben con claridad (@tbl-primera).
-Con el Portafolio de la CNBV, que separa al banco desde 2016, la primera etapa vale para las 1,457
-tratadas: +3,284 tarjetas de débito por 10 mil adultos.
+Las sucursales totales saltan de cero a +2 por 10 mil adultos en el trimestre de apertura, con
+previos planos (@fig-evento), y las cuentas del banco suben con claridad (@tbl-primera): con el
+Portafolio de la CNBV, +3,284 tarjetas de débito por 10 mil adultos en las 1,457 tratadas.
 
 ## Más cerca, no necesariamente más
 
@@ -225,17 +224,16 @@ rechazamos la hipótesis nula, y el intervalo al 90% de esta especificación que
 En los municipios tratados, que suman 28 millones de adultos, eso equivale a unas 60 de sus 2,600
 sucursales privadas; en la discusión explicamos por qué sostenemos ±5%. Banca múltiple,
 −0.2% (±2.8%); EACP, +1.5% (±4.3%). Los tres son nulos informativos con previos planos y Romano–Wolf
-p ≥ 0.70. La captación y el crédito privados cambian −0.2% y −0.1%, y las tarjetas de crédito
-privadas, con una serie larga que reconstruimos, +0.8%. El resultado se sostiene con el panel hasta 2025, con
-regresiones de efectos fijos, otros grupos de control, un placebo de fecha y sin derrames a los
-vecinos (apéndice, @tbl-fase4-estimadores). Tampoco depende de comparar contra los municipios que
+p ≥ 0.70. La captación y el crédito privados cambian −0.2% y −0.1%; las tarjetas de crédito
+privadas, con una serie larga que reconstruimos, +0.8%, y los corresponsales, −0.4%. El resultado se sostiene con el panel hasta 2025, con
+regresiones de efectos fijos, otros grupos de control, un placebo de fecha, ponderando por
+población y sin derrames a los vecinos (apéndices, @tbl-fase4-estimadores y @tbl-preguntas). Tampoco depende de comparar contra los municipios que
 nunca abren: con otros grupos de control, el centro queda entre −1.9% y +2.3% (@tbl-controles).
 La única excepción es el TWFE extendido de Wooldridge con covariables (+6.8%), que se apoya
 justamente en esa comparación.
 
-El crédito al consumo de las EACP (+4.3%, significativo después de Romano–Wolf) no lo leemos como
-efecto: en el DiD apilado los previos suben de forma continua hasta la apertura (Wald previa
-p < 0.001).
+El crédito al consumo de las EACP (+4.3%, significativo tras Romano–Wolf) no es efecto: en el DiD
+apilado los previos suben hasta la apertura (Wald previa p < 0.001).
 
 ## Actividad económica local
 
@@ -256,8 +254,8 @@ antes de estimar, no lo atribuimos al gasto de los programas ni lo descartamos c
 
 ## Heterogeneidad: desierto bancario
 
-En la actividad financiera no hay diferencias entre municipios con y sin banca múltiple previa
-(q ≥ 0.6; @tbl-hetero). En el DENUE el aumento es mayor en los desiertos bancarios (12.3% contra
+En la actividad financiera no hay diferencias entre municipios con y sin banca múltiple previa, ni
+por marginación o tamaño (q ≥ 0.6; @tbl-hetero). En el DENUE el aumento es mayor en los desiertos bancarios (12.3% contra
 5.3%, q = 0.04).
 
 # Discusión
@@ -282,8 +280,9 @@ municipio no medimos si llegaron más programas, y la seguridad y el voto quedan
 (apéndice, @tbl-fase3).
 
 **Implicaciones de política.** Construir sucursales públicas acercó el cobro de los programas,
-sobre todo en los municipios más marginados, pero no profundizó el sistema financiero local ni movió
-la actividad económica de forma atribuible. Si el objetivo es inclusión financiera con efectos
+sobre todo en los municipios más marginados, a un costo de construcción del orden de 5,800 pesos
+por cada adulto mayor que quedó a 10 km o menos (IMCO 2022; apéndice), pero no profundizó el
+sistema financiero local ni movió la actividad económica de forma atribuible. Si el objetivo es inclusión financiera con efectos
 reales, importa lo que la sucursal ofrece —crédito y ahorro con condiciones atractivas— más que su
 presencia física.
 
@@ -312,6 +311,8 @@ la sucursal o su ubicación?) y las cuentas activas y saldos del banco (¿se usa
 ::: {.small}
 
 Aportela, Fernando. 1999. "Effects of Financial Access on Savings by Low-Income People." Unpublished, Banco de México.
+
+Arkhangelsky, Dmitry, Susan Athey, David A. Hirshberg, Guido W. Imbens, and Stefan Wager. 2021. "Synthetic Difference-in-Differences." *American Economic Review* 111 (12): 4088–4118.
 
 Auditoría Superior de la Federación. 2023. *Control interno y gobernanza del Banco del Bienestar, S.N.C., I.B.D.* Auditoría combinada de cumplimiento y desempeño 2022-2-06HJO-21-0018-2023, Cuenta Pública 2022.
 
@@ -372,6 +373,8 @@ Sun, Liyang, and Sarah Abraham. 2021. "Estimating Dynamic Treatment Effects in E
 Wing, Coady, Seth M. Freedman, and Alex Hollingsworth. 2024. "Stacked Difference-in-Differences." NBER Working Paper 32054.
 
 Wooldridge, Jeffrey M. 2021. "Two-Way Fixed Effects, the Two-Way Mundlak Regression, and Difference-in-Differences Estimators." SSRN Working Paper 3906345.
+
+Wooldridge, Jeffrey M. 2023. "Simple Approaches to Nonlinear Difference-in-Differences with Panel Data." *Econometrics Journal* 26 (3): C31–C66.
 
 :::
 
@@ -913,6 +916,59 @@ privadas.
   y en banca múltiple. La cota de ±2.4% es la del intervalo de la especificación principal, y
   depende en parte de esa comparación. En EACP no se descarta un desplazamiento pequeño.
 
+# Apéndice: preguntas de evaluación y alternativas {.unnumbered}
+
+Las decisiones que un evaluador cuestionaría, con lo que hicimos y lo que no. Lo nuevo de esta
+sección (la @tbl-preguntas y el costo) es exploratorio y se corrió al final, con todos los
+resultados a la vista (`analisis/17_preguntas.R`).
+
+- **¿Por qué no una discontinuidad o una variable instrumental?** La ubicación no siguió una regla
+  con umbral, y los candidatos a instrumento —inmuebles federales disponibles, zonas prioritarias
+  (ASF 2023)— afectan por sí mismos la actividad del lugar: no cumplen la exclusión. La adopción
+  escalonada sí da variación en el calendario, que es lo que usa el diseño.
+- **¿Por qué no control sintético o DiD sintético?** Están pensados para pocas unidades tratadas
+  (Arkhangelsky et al. 2021). Con 1,457 tratados escalonados, el estimador de Callaway y Sant'Anna,
+  el DiD apilado y la imputación de Borusyak et al. (2024) cubren lo mismo y coinciden
+  (@tbl-fase4-estimadores).
+- **¿Por qué tasas y no conteos con Poisson?** Con el denominador fijo, el efecto sobre la tasa es el
+  efecto sobre el conteo dividido entre una constante, y lo reportamos en % de la media previa. Un
+  modelo de Poisson (Wooldridge 2023) supondría tendencias paralelas en proporciones y no en
+  niveles; no lo estimamos.
+- **¿El nulo depende de dar el mismo peso a un municipio chico que a uno grande?** No. Ponderando
+  por la población adulta, las sucursales privadas cambian +1.6%, con cota de 3.5% (@tbl-preguntas).
+- **¿Y si la banca privada reaccionó a la obra con más anticipación?** Con dos trimestres de
+  anticipación, +0.6% (cota 4.0%). Por sector, banca múltiple y EACP pierden precisión.
+- **¿Y a más largo plazo?** En los primeros dos años después de abrir, con solo las 466 aperturas de
+  2022 para que la composición no cambie, −0.6% (cota 2.8%).
+- **¿La banca respondió con corresponsales o cajeros en vez de sucursales?** Los corresponsales no
+  cambian (−0.4%, cota 1.6%). Cajeros y terminales punto de venta solo existen por sector desde
+  2022T4 y no son informativos.
+- **¿Hay efectos en algún tipo de municipio?** Tampoco por grado de marginación ni por tamaño
+  (q ≥ 0.6), además del desierto bancario (@tbl-hetero).
+- **¿Los errores estándar ignoran la correlación entre municipios cercanos?** Agrupando por estado,
+  el error estándar de las sucursales privadas apenas cambia (1.04% contra 1.01% de la media).
+- **¿Por qué excluyen a los 487 municipios con sucursal heredada?** No tienen periodo previo sin
+  sucursal: no pueden ser tratados en la ventana, y como control ya tenían el canal de dispersión.
+- **¿Por qué no fechan con la obra?** No hay fechas públicas por sucursal; las pedimos por
+  transparencia. Es la principal limitación para separar la construcción de la apertura.
+- **¿Valió la pena?** Fuera del alcance causal, un orden de magnitud: la inversión en construcción
+  de 2020 y 2021 fue de 14,290 millones de pesos de 2022 (IMCO 2022), y unos 2.5 millones de
+  adultos mayores quedaron a 10 km o menos de una sucursal (entre 1.9 y 2.5 millones con las cotas
+  de la @tbl-acceso). Son unos 5,800 pesos por persona, sin contar la operación ni a los demás
+  beneficiarios.
+
+{{< include ../_tablas/tab_preguntas.md >}}
+
+: Sucursales privadas, de banca múltiple y de EACP: tres preguntas de evaluación {#tbl-preguntas}
+
+::: {.notas}
+*Notas:* Efecto en % de la media previa de los tratados y, entre paréntesis, el mayor valor absoluto
+del intervalo al 90%. *Ponderado:* Callaway y Sant'Anna (2021) con la población adulta fija de cada
+municipio como peso. *Anticipación:* el tratamiento empieza a contar dos trimestres antes de la
+apertura. *Primeros dos años:* promedio de los efectos de 0 a 8 trimestres después de abrir, solo
+con las cohortes que se observan esos nueve trimestres. Exploratorio. *Fuente:* BDIF (CNBV).
+:::
+
 # Apéndice: reproducibilidad {.unnumbered}
 
 Todo el análisis es reproducible desde el repositorio del proyecto:
@@ -929,7 +985,7 @@ Todo el análisis es reproducible desde el repositorio del proyecto:
 - `make poder-inyectado` y `Rscript analisis/15_poder_inyectado.R diagnostico` y `calibrado`: el
   efecto inyectado.
 - `make descargar-fase6` y `make bateria-fase6`: acceso al cobro, ENIF y las pruebas del DENUE de
-  la fase 6.
+  la fase 6; `Rscript analisis/17_preguntas.R`: las robusteces del apéndice de preguntas.
 
 Las decisiones, el preregistro (29 y 30 de septiembre, 2, 7, 11 y 14 de octubre y 17 de noviembre de 2026) y los análisis
 exploratorios están en `docs/decisiones.md`; la auditoría de datos en `docs/data_audit.md`; el

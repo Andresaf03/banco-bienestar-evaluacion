@@ -210,7 +210,37 @@ def tabla_controles() -> str:
     return _md(filas, ["Grupo de control", *[s[1] for s in series], "Tratados / controles"])
 
 
+PREGUNTAS = [
+    ("ponderado por población adulta", "Ponderado por población adulta"),
+    ("anticipación de dos trimestres", "Anticipación de dos trimestres"),
+    ("promedio e = 0…8, composición fija", "Primeros dos años, cohortes 2022"),
+]
+
+
+def tabla_preguntas() -> str:
+    """Robusteces de la revisión final (`analisis/17_preguntas.R`), en % de la media y su cota."""
+    c = _leer("rev_preguntas_financiero.csv")
+    if c.empty:
+        return ""
+    series = ["sucursales_privado_pc", "sucursales_bm_pc", "sucursales_eacp_pc"]
+    filas = []
+    for variante, nombre in PREGUNTAS:
+        fila = [nombre]
+        for resultado in series:
+            sub = c[(c["resultado"] == resultado) & (c["variante"] == variante)]
+            fila.append(
+                ""
+                if sub.empty
+                else f"{_pct(sub.iloc[0]['efecto_pct'])} ({sub.iloc[0]['cota_pct']:.1f}%)"
+            )
+        sub = c[(c["resultado"] == series[0]) & (c["variante"] == variante)]
+        fila.append("" if sub.empty else f"{int(sub.iloc[0]['tratadas']):,}")
+        filas.append(fila)
+    return _md(filas, ["Variante", "Privadas", "Banca múltiple", "EACP", "Tratados"])
+
+
 TABLAS_FASE6 = {
+    "tab_preguntas.md": tabla_preguntas,
     "tab_acceso.md": tabla_acceso,
     "tab_radios.md": tabla_radios,
     "tab_denue_fase6.md": tabla_denue_fase6,

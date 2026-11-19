@@ -1583,6 +1583,30 @@ analisis/15_poder_inyectado.R diagnostico`). Salidas
   4.3%), pero no comparando solo por calendario. Va en limitaciones, en las conclusiones y en el
   apéndice del efecto inyectado.
 
+### Preguntas de evaluación (2026-11-18, exploratorio)
+
+Revisión final en el papel de los evaluadores. Se corrieron tres robusteces del nulo financiero, con
+todos los resultados a la vista (`analisis/17_preguntas.R`, `rev_preguntas_financiero.csv`):
+
+| Variante | Privadas | Banca múltiple | EACP |
+|---|---|---|---|
+| Ponderado por población adulta | +1.6% (cota 3.5%) | +0.3% (5.2%) | +2.6% (5.9%) |
+| Anticipación de dos trimestres | +0.6% (4.0%) | −4.6% (9.0%; Wald 0.06) | +4.6% (9.7%) |
+| Primeros dos años, cohortes 2022 (466), composición fija | −0.6% (2.8%) | −2.2% (5.2%) | +0.6% (4.3%) |
+
+- El nulo de sucursales privadas se mantiene en las tres variantes. Banca múltiple y EACP, por
+  separado, pierden precisión con δ = 2.
+- Costo (orden de magnitud, no causal): 14,290 millones de pesos de 2022 en construcción 2020–2021
+  (IMCO 2022), entre unos 2.5 millones de adultos mayores que quedaron a 10 km o menos (1.9–2.5
+  millones con las cotas): unos 5,800 pesos por persona.
+- Respuestas ya existentes que el texto no decía:
+  - corresponsales −0.4% (cota 1.6%);
+  - sin heterogeneidad financiera por marginación ni por tamaño (q ≥ 0.6);
+  - con cluster por estado, el ee de privadas pasa de 1.01% a 1.04% de la media.
+- El trabajo final suma un apéndice, "Preguntas de evaluación y alternativas" (Tabla 17), con las
+  alternativas no usadas y por qué: discontinuidad o instrumentos, DiD sintético (Arkhangelsky et
+  al. 2021), Poisson (Wooldridge 2023), heredados, fechas de obra.
+
 ## Propuestas y pendientes
 
 > **Nota del 2026-09-26.** El rediseño cierra P-1, P-2, P-6 y P-7 en el sentido que indica la

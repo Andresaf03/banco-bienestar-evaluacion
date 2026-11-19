@@ -7,7 +7,7 @@ admitir antes de que la señalen. Las cifras vienen de `outputs/tablas/` y está
 Numeración del PDF:
 - Tablas: 1 descriptivas · 2 primera etapa · 3 acceso · 4 banca privada · 5 grupos de control · 6
   actividad · 7 desierto bancario · 8 calendario · 9–11 DENUE por distancia y fase 6 · 12
-  decisiones · 13–16 fases 2–4.
+  decisiones · 13–16 fases 2–4 · 17 preguntas de evaluación.
 - Figuras: 1 evento · 2 acceso · 3 resumen · 4 radios en niveles · 5 radios en %.
 
 ---
@@ -212,3 +212,86 @@ de seguimiento. No dice nada de una banca pública que sí preste, como la de Br
 **¿Y la seguridad y el voto?**
 - Delitos: previos planos y efectos cercanos a cero, pero sin precisión (cotas de 12% a 50%).
 - Elecciones: la pre-prueba falla; es descriptivo (Tabla 14).
+
+---
+
+## E. "¿Por qué no…?" (lo que preguntaría un evaluador; apéndice "Preguntas de evaluación")
+
+Las robusteces de esta sección son exploratorias y se corrieron al final (`analisis/17_preguntas.R`,
+Tabla 17 del PDF; `outputs/tablas/rev_preguntas_financiero.csv`).
+
+**¿Por qué no una regresión discontinua o variables instrumentales?**
+No hay un umbral que asigne la sucursal. Los candidatos a instrumento (inmuebles federales
+disponibles, zonas prioritarias) afectan por sí mismos la actividad del lugar: fallan la exclusión.
+Lo que sí hay es variación en el calendario, y eso usa el DiD escalonado.
+
+**¿Por qué no control sintético o DiD sintético (Arkhangelsky et al. 2021)?**
+Están pensados para pocas unidades tratadas. Con 1,457 tratados escalonados, Callaway y Sant'Anna,
+el apilado y la imputación (BJS) cubren lo mismo y coinciden.
+
+**¿Por qué no Poisson, si las sucursales son conteos?**
+Con el denominador fijo, el efecto sobre la tasa es el efecto sobre el conteo entre una constante, y
+lo reportamos en % de la media. Un Poisson (Wooldridge 2023) cambiaría el supuesto a tendencias
+paralelas en proporciones. No lo estimamos; es una extensión razonable.
+
+**¿Dar el mismo peso a un municipio de 2 mil adultos que a uno de 200 mil no sesga el resultado?**
+Ponderando por la población adulta: privadas +1.6% (cota 3.5%), banca múltiple +0.3% (5.2%) y
+EACP +2.6% (5.9%). El nulo de privadas se mantiene.
+
+**¿Y si la banca reaccionó a la obra antes de la apertura?**
+- Con un trimestre de anticipación: +0.7%.
+- Con dos: +0.6% (cota 4.0%).
+- Por sector, banca múltiple (−4.6%) y EACP (+4.6%) pierden precisión (cotas de 9–10%).
+
+**¿Y si el efecto tarda más de lo que miden?**
+En los primeros dos años con composición fija (las 466 aperturas de 2022): −0.6% (cota 2.8%). El
+estudio de evento llega a 11 trimestres para las primeras cohortes, sin tendencia.
+
+**¿Y si la banca respondió con corresponsales, cajeros o terminales en vez de sucursales?**
+Corresponsales −0.4% (cota 1.6%). Cajeros (−2.9%, cota 7.4%) y terminales (−0.9%, cota 7.5%) solo
+existen por sector desde 2022T4 y no son informativos.
+
+**¿No hay efectos en algún subgrupo?**
+En lo financiero, ni por desierto bancario, ni por marginación, ni por tamaño (q ≥ 0.6). En el
+DENUE, el aumento es mayor en desiertos (12.3% contra 5.3%) y en marginación alta (13.4% contra
+5.2% en baja).
+
+**¿Correlación espacial de los errores?**
+Agrupando por estado, el ee de privadas pasa de 1.01% a 1.04% de la media. No usamos la Wald con 32
+clusters, porque es inestable con 19 previos.
+
+**¿Por qué el ee de la función de influencia y no el bootstrap de `did`?**
+El bootstrap agrupado de `did` 2.3 promedia por cluster y, con municipios desiguales, infla la
+varianza unas 10 veces. Lo guardamos como `ee_boot` y lo usamos solo para las bandas de las figuras.
+
+**¿Por qué 10 km para los controles del DENUE?**
+Antes, el 91% de los "nunca tratados" estaba en un municipio que abrió sucursal. Con 5 y 20 km el
+efecto es el mismo (+10.0% y +10.4%). Lo que lo baja es incluir localidades cercanas a una sucursal.
+
+**¿Por qué no el DENUE por establecimiento (altas, cierres, sobrevivencia)?**
+El crudo no se guardó (13 GB); volver a bajarlo son unas 2 h 15 min, y `fecha_alta` es la entrada al
+directorio, no la apertura del negocio. No separaría "negocio nuevo" de "ya existía sin registro".
+
+**¿Por qué no la ENIGH para medir bienestar o uso?**
+Su muestra municipal rota y es chica: el efecto mínimo detectable va de 15% a 480%. Todo lo que sale
+es descriptivo.
+
+**¿Por qué no compararon contra Banco Azteca, que pagaba programas antes?**
+La BDIF separa por sector, no por institución, y el Portafolio de la CNBV solo separa a la banca de
+desarrollo. No hay datos públicos por banco comercial y municipio.
+
+**¿Por qué no entrevistas o trabajo de campo?**
+Fuera del alcance de una evaluación con datos administrativos de todos los municipios. Sería la
+forma de separar la obra de la apertura en algunos casos, como complemento.
+
+**¿Valió la pena el gasto?**
+No hacemos costo-beneficio causal. Como orden de magnitud: la construcción costó 14,290 millones de
+pesos en 2020–2021 (IMCO 2022) y unos 2.5 millones de adultos mayores quedaron a 10 km o menos
+(1.9–2.5 millones con las cotas), es decir, unos 5,800 pesos por persona.
+- *Debilidad:* es solo construcción, sin operación ni los demás beneficiarios, y la distancia es la
+  de la red del banco, sin otros puntos de pago.
+
+**¿Por qué cambiaron la lectura del DENUE después de la presentación?**
+No la cambiamos: la precisamos con pruebas preregistradas el mismo día. "Aparece igual en las
+vecinas" era un artefacto de medir en %. La conclusión (no se puede atribuir) sigue, ahora con más
+evidencia. Todo está fechado en `docs/decisiones.md`.
