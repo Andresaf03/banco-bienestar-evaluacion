@@ -180,9 +180,9 @@ poder-inyectado:
 	$(RSCRIPT) analisis/15_poder_inyectado.R diagnostico
 	$(RSCRIPT) analisis/15_poder_inyectado.R calibrado
 
-# Aplicación web (Ciencia de Datos Aplicada II, app/): exporta resultados y panel a JSON (sin
-# estimar), corre la referencia de R para validar el laboratorio y simplifica el mapa.
-app-datos: uso
+# Aplicación web (Ciencia de Datos Aplicada II, app/): regenera los diagnósticos que borra la
+# batería y el bloque de uso, exporta JSON, valida el laboratorio en R y simplifica el mapa.
+app-datos: diagnosticos uso
 	$(PY) app/datos/exportar.py
 	$(RSCRIPT) app/datos/referencia_cs.R
 	[ -d app/node_modules ] || npm ci --prefix app

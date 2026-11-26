@@ -536,6 +536,8 @@ respecto de lo observable, pero esas diferencias son justamente las que el estim
 robusto condiciona. Lo que no puede descartar es una selección por tendencias no observadas: eso es
 lo que miden las pre-pruebas y la sensibilidad de Rambachan y Roth.
 
+{{< pagebreak >}}
+
 {{< include ../_tablas/tab_calendario.md >}}
 
 : Predictores de la fecha de apertura entre los municipios tratados {#tbl-calendario}
@@ -546,6 +548,8 @@ previas estandarizadas. Coeficientes en meses de adelanto (−) o atraso (+) por
 de cada predictor; errores robustos a heterocedasticidad entre paréntesis. Descriptivo, no
 preregistrado. *Fuente:* BDIF (CNBV), CONAPO e INEGI.
 :::
+
+{{< pagebreak >}}
 
 **DiD apilado.** Construimos una pila por cohorte, con sus tratadas y sus controles limpios (nunca
 tratados o aún no tratados al cierre de la ventana), en una ventana de evento de −8 a +7
@@ -608,7 +612,11 @@ siguiente (@tbl-decisiones). Sun y Abraham y Borusyak et al. coinciden con el es
 principal; en el panel completo del DENUE el 98.8% del peso del TWFE viene de comparar tratadas
 contra no tratadas.
 
+{{< pagebreak >}}
+
 ![DENUE: efecto en la actualización de 2024 según la distancia a la sucursal. *Notas:* Callaway y Sant'Anna (2021), diseño entre actualizaciones; cada grupo de localidades (con sucursal y vecinas sin sucursal a 0–2, 2–5 y 5–10 km) se compara con localidades sin sucursal a 10 km o más. Efecto en % de la media previa de cada grupo, con intervalo al 95%. Círculo lleno: previos planos; vacío: reprueba la prueba de tendencias previas. *Solo recorrido total* (exploratorio): tratadas y controles en cabeceras y localidades de 2,500 habitantes o más, que los Censos Económicos recorren manzana por manzana. *Fuente:* DENUE (INEGI).](../../outputs/figuras/fig_decaimiento.png){#fig-decaimiento width=100%}
+
+{{< pagebreak >}}
 
 {{< include ../_tablas/tab_denue_espacial.md >}}
 
@@ -620,6 +628,8 @@ de cada grupo; N es el número de localidades tratadas. Controles: localidades s
 o más. *Previos (p):* prueba conjunta de tendencias previas. *Recorrido total:* solo cabeceras y
 localidades de 2,500 habitantes o más (exploratorio). *Fuente:* DENUE (INEGI).
 :::
+
+{{< pagebreak >}}
 
 {{< include ../_tablas/tab_radios.md >}}
 
@@ -634,6 +644,8 @@ que, multiplicado por la población del grupo, da los establecimientos implicado
 *% del total:* participación de cada grupo en la suma de los establecimientos implicados. *Previos
 (p):* prueba conjunta de tendencias previas. *Fuente:* DENUE (INEGI); Censo 2020 (INEGI).
 :::
+
+{{< pagebreak >}}
 
 {{< include ../_tablas/tab_denue_fase6.md >}}
 
@@ -650,6 +662,8 @@ apertura. *Placebo:* cabeceras municipales sin sucursal en municipios sin apertu
 abierto. *Lectura:* criterios preregistrados; "descriptivo" = reprueba la prueba de tendencias
 previas. *Fuente:* DENUE (INEGI).
 :::
+
+{{< pagebreak >}}
 
 # Apéndice: decisiones del análisis {.unnumbered}
 
@@ -710,6 +724,8 @@ podría ser de Banjército. *Cohortes de menos de 5 municipios:* entran 3 de las
 la de 2019T2 no tiene dos trimestres previos. *Fuente:* BDIF (CNBV); DENUE (INEGI).
 :::
 
+{{< pagebreak >}}
+
 # Apéndice: fuentes adicionales (fase 2) {.unnumbered}
 
 Después de la corrida final integramos cinco fuentes más, cada una dirigida a una limitación de la
@@ -739,6 +755,8 @@ al 90% queda dentro de ±5% de la media previa.
 - **Finanzas municipales (EFIPEM) y ENOE.** No son informativos: los intervalos son amplios y, en
   la ENOE, el panel balanceado de municipios es pequeño.
 
+{{< pagebreak >}}
+
 {{< include ../_tablas/tab_fase2.md >}}
 
 : Fuentes adicionales (fase 2) {#tbl-fase2}
@@ -752,6 +770,8 @@ Intercensal 2025, 1,461 municipios tratados contra 499. VIIRS: luz nocturna, 1,1
 contra 21,719 a 10 km o más. EFIPEM: finanzas públicas municipales. ENOE: Encuesta Nacional de
 Ocupación y Empleo, 146 municipios contra 12. *Fuente:* INEGI; Earth Observation Group (VIIRS).
 :::
+
+{{< pagebreak >}}
 
 # Apéndice: delitos y elecciones (fase 3) {.unnumbered}
 
@@ -791,6 +811,8 @@ texto principal.
     abrió algo antes: 0.7 meses por desviación estándar, dentro del estado, frente a una desviación
     estándar del calendario de 7.9 meses.
 
+{{< pagebreak >}}
+
 {{< include ../_tablas/tab_fase3.md >}}
 
 : Delitos y elecciones (fase 3) {#tbl-fase3}
@@ -803,6 +825,8 @@ cohorte con aperturas entre las elecciones de 2021 y 2024, 1,375 municipios cont
 estado × elección" resta la media de cada estado en cada elección (robustez preregistrada).
 *Lectura:* criterios preregistrados, como en la @tbl-fase2. *Fuente:* SESNSP; INE.
 :::
+
+{{< pagebreak >}}
 
 # Apéndice: efectos fijos, controles, bancarización y uso (fase 4) {.unnumbered}
 
@@ -853,6 +877,8 @@ las familias de inferencia del texto principal.
   - Casi no hay municipios sin sucursal en la muestra.
   - El efecto mínimo detectable va de 15% a más de 400% de la media.
 
+{{< pagebreak >}}
+
 {{< include ../_tablas/tab_fase4_estimadores.md >}}
 
 : El mismo efecto con distintos estimadores: sucursales por 10 mil adultos (fase 4) {#tbl-fase4-estimadores}
@@ -868,6 +894,8 @@ covariables centradas por cohorte; "solo los que abren" excluye a los nunca trat
 *Fuente:* BDIF (CNBV).
 :::
 
+{{< pagebreak >}}
+
 {{< include ../_tablas/tab_fase4.md >}}
 
 : Controles, validez, bancarización y uso privado (fase 4), por 10 mil adultos {#tbl-fase4}
@@ -882,6 +910,8 @@ Bienestar, 2019–2025; la media previa es casi cero, por eso no hay porcentaje.
 terminales punto de venta, después del quiebre de la serie en 2022T1. *Lectura:* criterios
 preregistrados, como en la @tbl-fase2. *Fuente:* BDIF y Portafolio de Información (CNBV).
 :::
+
+{{< pagebreak >}}
 
 # Apéndice: ¿detecta el diseño un efecto chico? {.unnumbered}
 
@@ -957,6 +987,8 @@ resultados a la vista (`analisis/17_preguntas.R`).
   de la @tbl-acceso). Son unos 5,800 pesos por persona, sin contar la operación ni a los demás
   beneficiarios.
 
+{{< pagebreak >}}
+
 {{< include ../_tablas/tab_preguntas.md >}}
 
 : Sucursales privadas, de banca múltiple y de EACP: tres preguntas de evaluación {#tbl-preguntas}
@@ -968,6 +1000,8 @@ municipio como peso. *Anticipación:* el tratamiento empieza a contar dos trimes
 apertura. *Primeros dos años:* promedio de los efectos de 0 a 8 trimestres después de abrir, solo
 con las cohortes que se observan esos nueve trimestres. Exploratorio. *Fuente:* BDIF (CNBV).
 :::
+
+{{< pagebreak >}}
 
 # Apéndice: reproducibilidad {.unnumbered}
 

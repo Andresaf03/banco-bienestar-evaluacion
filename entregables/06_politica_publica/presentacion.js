@@ -491,7 +491,7 @@ function usoCuentas() {
 }
 
 function actividad() {
-  const s = lamina("El aumento del DENUE no es de la sucursal", "Resultados");
+  const s = lamina("El DENUE aumenta cerca de las sucursales", "Resultados");
   figura(s, "ppii_decaimiento", { x: 0.35, y: 1.15, wMax: 5.6 });
   cifra(s, { x: 6.3, y: 1.15, w: 3.2, valor: K.denue_pct,
     etiqueta: "establecimientos del DENUE en localidades con sucursal" });
@@ -504,12 +504,12 @@ function actividad() {
     `${K.ce_tratadas} municipios.`);
   notas(s, "Actividad económica", [
     `En actividad económica, el DENUE muestra ${sinSigno(K.denue_pct)} más establecimientos en las`,
-    "localidades con sucursal en la actualización censal de 2024. Pero no se comporta como",
-    `efecto de la sucursal. Las vecinas sin sucursal a menos de 2 km ganan lo mismo, ${K.dec_0_2};`,
+    "localidades con sucursal en la actualización censal de 2024. Las vecinas sin sucursal",
+    `a menos de 2 km ganan una proporción parecida, ${K.dec_0_2};`,
     `a 5–10 km, ${K.dec_5_10}. No hay dosis: las aperturas de 2022 dan ${K.expo_temprana} y las`,
     `de 2023–24, ${K.expo_tardia}. Y no aparece en los Censos Económicos, ${K.ce_pct}, ni en los`,
-    `dueños de negocio de la Encuesta Intercensal, ${K.eic_negocio} puntos. Lo leemos como un`,
-    "aumento del padrón en la zona de la cabecera, no como efecto de la sucursal.",
+    `dueños de negocio de la Encuesta Intercensal, ${K.eic_negocio} puntos. Las pruebas de la fase 6`,
+    "no permiten distinguir entre el gasto de los programas y cambios de medición.",
   ]);
 }
 
@@ -539,8 +539,8 @@ function interpretacion() {
     contenido: "Límites: ubicación no aleatoria" });
   notas(s, "Interpretación y política", [
     "¿Qué aprendemos? Primero, el banco funcionó como red de dispersión, no como banco: abrió",
-    "cuentas para recibir transferencias, pero sin crédito no hay canal que transmita la",
-    "expansión a la banca privada ni a la actividad local. Brasil es el contraste: allí la banca",
+    "cuentas para recibir transferencias y dio poco crédito. En la banca privada descartamos",
+    "cambios grandes, y el mecanismo del aumento del DENUE sigue abierto. En Brasil la banca",
     "pública prestó y los municipios crecieron. Segundo, acceso no es uso: las cuentas existen,",
     "pero se usan para retirar los apoyos. Tercero, si el objetivo es inclusión con efectos",
     "reales, importa qué ofrece la sucursal, crédito y ahorro en buenas condiciones, más que",
@@ -560,7 +560,7 @@ function conclusiones() {
   const puntos = [
     `Bancarizó, pero casi no presta: +${K.uso_cred} créditos por +${K.uso_capt} cuentas.`,
     `No atrajo ni desplazó a la banca privada: se descarta más de ${K.sesoi}.`,
-    "El +10% del DENUE no es de la sucursal.",
+    "El aumento del DENUE se concentra cerca de la sucursal. Su mecanismo queda abierto.",
   ];
   puntos.forEach((p, i) => numerado(s, { x: MARGEN, y: 1.3 + i * 1.0, w: 9, numero: i + 1,
     contenido: p }));
@@ -573,8 +573,8 @@ function conclusiones() {
     "Cerramos con tres frases. El banco bancarizó, pero casi no presta: donde abre suma",
     `${K.uso_capt} cuentas y solo ${K.uso_cred} créditos por 10 mil adultos. No atrajo ni desplazó a`,
     `la banca privada: descartamos cambios mayores a ${K.sesoi} en sucursales privadas. Y el`,
-    "aumento de 10% en el DENUE no es de la sucursal. Para la política: abrir sucursales no",
-    "basta; importa lo que ofrecen. Gracias.",
+    "aumento del DENUE se concentra cerca de la sucursal. Las pruebas no distinguen gasto de",
+    "medición. Gracias.",
   ]);
 }
 
@@ -641,7 +641,7 @@ function respaldoDesierto() {
     "La segunda pregunta. En lo financiero no hay diferencias entre municipios con y sin banca",
     `múltiple previa (q ≥ ${K.het_q_fin_min}). En el DENUE el aumento es mayor en los desiertos,`,
     `${K.het_denue_sin} contra ${K.het_denue_con} (q = ${K.het_q_denue}), la dirección que`,
-    "predice la literatura, pero el aumento mismo no es de la sucursal.",
+    "predice la literatura. Las pruebas no identifican el mecanismo del aumento.",
   ], { respaldo: true });
 }
 

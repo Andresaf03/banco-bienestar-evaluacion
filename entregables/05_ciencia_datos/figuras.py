@@ -329,6 +329,9 @@ def cifras(t: pd.DataFrame, mapa: dict[str, int], sesoi: float) -> dict:
     banc = _leer("fase4_bancarizacion")
     tarjetas = _fila(banc, resultado="tarjetas_debito_bb_pc", estimador="Callaway y Sant'Anna")
     perm = _fila(_leer("fase4_permutacion"), resultado="sucursales_privado_pc")
+    acceso = _leer("fase6_accesibilidad").query(
+        "cota == 'central' and poblacion_tipo == '65 y más' and grupo_tipo == 'nacional'"
+    )
     etwfe = _fila(
         _leer("fase4_efectos_fijos"), etiqueta="municipio_trim_f4_esc_etwfe_sucursales_privado_pc"
     )
@@ -379,6 +382,8 @@ def cifras(t: pd.DataFrame, mapa: dict[str, int], sesoi: float) -> dict:
         "etwfe_cov_pct": _pct(100 * etwfe["valor"] / etwfe["media_base"]),
         "etwfe_abren_pct": _pct(etwfe_abren["efecto_pct"]),
         "denue_pct": _pct(denue["efecto_pct"]),
+        "acceso_km_2019": _num(_fila(acceso, corte="2019Q1")["km_media"], 1),
+        "acceso_km_2024": _num(_fila(acceso, corte="2024Q4")["km_media"], 1),
     }
 
 

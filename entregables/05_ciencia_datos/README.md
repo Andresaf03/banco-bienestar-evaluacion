@@ -1,7 +1,8 @@
 # Presentación para Ciencia de Datos Aplicada II
 
 Deck de 10 láminas (≤10 min) sobre el mismo proyecto: motivación, pregunta, aperturas, datos,
-especificación (Callaway y Sant'Anna) y resultados financieros. Formato **.pptx para importar a
+especificación (Callaway y Sant'Anna), resultados financieros y cierre con acceso al cobro y DENUE.
+Formato **.pptx para importar a
 Google Slides**, con notas del presentador en cada lámina. Firma: Andrés Álvarez Flores.
 
 ```bash

@@ -225,7 +225,7 @@ function datos() {
     valign: "top", paraSpaceAfter: 14, isTextBox: true, objectName: "fuentes" });
   const tiles = [
     { valor: CIFRAS.n_municipios, etiqueta: "municipios en un panel trimestral 2019–2024" },
-    { valor: "1 comando", etiqueta: "make bateria reproduce todo" },
+    { valor: "Reproducible", etiqueta: "Batería principal y fases documentadas en el README" },
   ];
   tiles.forEach((t, i) => cifra(s, { x: 6.3, y: 1.2 + i * 1.75, w: 3.2, ...t }));
   pie(s, "Descargas con hash · Parquet · claves de 5 dígitos, nunca por nombre · pruebas con pytest");
@@ -237,7 +237,7 @@ function datos() {
     "99.9% con la CNBV. Todo " +
     "corre como un pipeline: descargas idempotentes registradas con su hash, datos intermedios en " +
     "Parquet, claves municipales de cinco dígitos sin unir nunca por nombre, más de cien pruebas " +
-    "automáticas y un solo comando que reproduce la batería completa en menos de una hora. El " +
+    "automáticas. El README documenta la batería principal y las fases adicionales. El " +
     `resultado es un panel de ${CIFRAS.n_municipios} municipios por trimestre.`);
 }
 
@@ -346,9 +346,9 @@ function conclusiones() {
   pres.addSection({ title: "Cierre" });
   const s = lamina("Conclusiones", "Cierre");
   const puntos = [
-    "El banco bancarizó: cuentas y tarjetas propias, cuyo uso sigue el pago de los programas.",
-    `No atrajo ni desplazó a la banca privada: se descarta más de ${CIFRAS.priv_cota}.`,
-    "Para política: importa qué ofrece la sucursal (crédito, ahorro), no solo dónde está.",
+    `El banco acercó el cobro: de ${CIFRAS.acceso_km_2019} a ${CIFRAS.acceso_km_2024} km en promedio para adultos de 65 años o más.`,
+    `Banca privada: el intervalo principal al 90% queda dentro de ${CIFRAS.priv_cota}.`,
+    `DENUE: ${CIFRAS.denue_pct} en localidades con sucursal. No se distingue entre gasto y medición.`,
   ];
   puntos.forEach((p, i) => {
     const y = 1.3 + i * 1.0;
@@ -362,14 +362,12 @@ function conclusiones() {
     fontSize: 22, bold: true, color: C.accent1, margin: 0, align: "right", isTextBox: true,
     objectName: "gracias" });
   s.addNotes(
-    "Tres conclusiones. Uno: el banco sí bancarizó, en cuentas y tarjetas propias, aunque el uso " +
-    "sigue los pagos de los programas. Dos: no atrajo ni desplazó a la banca privada; puedo " +
-    `descartar efectos mayores a ${CIFRAS.priv_cota} en sucursales privadas. Tres, para política: ` +
-    "abrir sucursales no basta para mover al sistema financiero; importa qué ofrecen, crédito y " +
-    "ahorro, no solo dónde están. Si preguntan por la actividad económica: con el DENUE, las " +
-    `localidades con sucursal ganan ${CIFRAS.denue_pct} de establecimientos en la actualización ` +
-    "censal de 2024, pero el efecto no crece con la exposición, aparece igual en las localidades " +
-    "vecinas y no se ve en los Censos Económicos: es medición, no efecto de la sucursal. Gracias.");
+    `Entre 2019 y 2024, la distancia media para adultos de 65 años o más bajó de ${CIFRAS.acceso_km_2019} ` +
+    `a ${CIFRAS.acceso_km_2024} km. Es una medida descriptiva. En la especificación principal, ` +
+    `el intervalo al 90% para las sucursales privadas queda dentro de ${CIFRAS.priv_cota}. ` +
+    `El DENUE sube ${CIFRAS.denue_pct} en localidades con sucursal en la actualización de 2024. ` +
+    "El aumento se concentra cerca de la sucursal, pero las pruebas no distinguen el gasto de los " +
+    "programas de cambios de medición. La app muestra los resultados de acceso y del DENUE por radio.");
 }
 
 // --- Tema y salida ----------------------------------------------------------------------------

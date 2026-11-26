@@ -110,12 +110,22 @@ los instala `renv`), Quarto para los PDF, Node 18 o más reciente para la aplica
 make setup         # entorno de Python (uv) y paquetes de R (renv)
 make descargar     # descargas idempotentes; FORCE=1 para volver a bajar
 make limpiar       # data/interim/*.parquet y docs/diccionarios/
-make panel         # paneles en data/processed/
-make bateria       # corrida preregistrada completa (~55 min)
-make bateria-fase6 # acceso al cobro, ENIF y pruebas del DENUE de la fase 6 (~3 min)
-make entregables   # figuras, tablas, trabajo_final.pdf y presentación
-make test          # pytest
+make bateria       # corrida principal preregistrada (~55 min)
+make descargar-fase2 && make bateria-fase2
+make descargar-fase3 && make bateria-fase3
+make descargar-fase4 && make bateria-fase4
+make uso
+make poder-inyectado
+make descargar-fase6 && make bateria-fase6
+Rscript analisis/17_preguntas.R
+make entregables   # PDF final con todas las fases
+make app-datos     # diagnósticos, uso y exportación de datos
+make presentacion-cdaii presentacion-ppii
 ```
+
+Algunas fuentes requieren descarga manual. Consulta [la guía de descargas](docs/descarga_manual.md)
+antes de estimar. `make bateria` limpia salidas por especificación, por eso las fases adicionales
+se corren después. `make app-datos` regenera el diagnóstico de soporte común que usa la app.
 
 Las descargas se identifican con un user-agent del proyecto. Para que incluya un correo de contacto,
 define `PROYECTO_CONTACTO` antes de descargar:

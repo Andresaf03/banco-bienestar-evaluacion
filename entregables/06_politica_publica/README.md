@@ -46,7 +46,7 @@ versionan; `make` corre `npm ci` la primera vez.
 | 9 | Banca privada | 50 | Luis |
 | 10 | ¿Aguanta? | 50 | Luis |
 | 11 | ¿Se usan las cuentas? | 30 | Luis |
-| 12 | El aumento del DENUE no es de la sucursal | 35 | Luis |
+| 12 | El DENUE aumenta cerca de las sucursales | 35 | Luis |
 | 13 | Interpretación y política | 90 | Luis |
 | 14 | Conclusiones | 30 | Luis |
 | | **Total** | **650 (10:50)** | |
